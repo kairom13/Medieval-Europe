@@ -25,4 +25,5 @@ public class Fief {
 		this.type = type;
 		this.ID = ID;
 	}
+	
 }

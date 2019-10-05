@@ -8,11 +8,14 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Month;
 
 public class MedievalEurope extends JFrame {
 	
 	final static int CHARACTER = 0;
-	final static int TITLE = 1;
+	final static int FIEF = 1;
 	
 	final static int WIDTH = 800;
 	final static int HEIGHT = 800;
@@ -39,6 +42,7 @@ public class MedievalEurope extends JFrame {
 		int startChar = 3;
 
 		readData(CHARACTER);
+		readData(FIEF);
 		start(startChar, false, charList.get(startChar).getGenderInt());
 		
 		pane.add(mainCards, BorderLayout.CENTER);
@@ -913,7 +917,7 @@ public class MedievalEurope extends JFrame {
 							
 							Relation r = new Relation(self.getID(), choice.getID(), type);
 							
-							System.out.println(r);
+							//System.out.println(r);
 							self.setRelation(r);
 							choice.setRelation(r.getInverse());
 							
@@ -1005,7 +1009,7 @@ public class MedievalEurope extends JFrame {
 				System.out.println(e.getMessage());
 			}
 		}
-		else if(type == TITLE) {
+		else if(type == FIEF) {
 			/**
 			 * Fief ID (int)
 			 * Name (String)
@@ -1052,20 +1056,26 @@ public class MedievalEurope extends JFrame {
 				System.out.println(e.getMessage());
 			}
 		}
-		else if(type == TITLE) {
+		else if(type == FIEF) {
 			fiefList.clear();
 			try {
-				BufferedReader reader = new BufferedReader(new FileReader(new File("src/characters.txt")));
+				BufferedReader reader = new BufferedReader(new FileReader(new File("src/fiefs.txt")));
 				String line;
 				while(!((line = reader.readLine()) == null)) {
 					String[] values = line.split(";");
-					int fiefID = Integer.parseInt(values[1]);
+					int fiefID = Integer.parseInt(values[0]);
 					
 					Fief fief;
 					if(fiefID < fiefList.size())
 						fief = fiefList.get(fiefID);
 					else
-						fief = new Fief(fiefID, values[2], Integer.parseInt(values[3]));
+						fief = new Fief(fiefID, values[1], Integer.parseInt(values[2]));
+
+					Character ruler = charList.get(Integer.parseInt(values[3]));
+					
+					System.out.println(getDate(values[4]));
+					System.out.println(getDate(values[5]));
+					
 				}
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
@@ -1073,6 +1083,48 @@ public class MedievalEurope extends JFrame {
 		}
 		else
 			System.out.println("Error: Invalid Type");
+	}
+	public static LocalDate getDate(String date) {
+		String[] parts = date.split(" ");
+		if(parts.length == 3)
+			return LocalDate.of(Integer.parseInt(parts[2]), getMonth(parts[1]), Integer.parseInt(parts[0]));
+		else if(parts.length == 1)
+			return LocalDate.of(Integer.parseInt(parts[0]), 6, 15);
+		else if(parts[0].contains(".")) {
+			return LocalDate.of(Integer.parseInt(parts[1]), 6, 15);
+		}
+		else
+			return LocalDate.of(Integer.parseInt(parts[1]), getMonth(parts[0]), 15);
+	}
+	public static int getMonth(String m) {
+		if(m.equals("January"))
+			return 1;
+		else if(m.equals("February"))
+			return 2;
+		else if(m.equals("March"))
+			return 3;
+		else if(m.equals("April"))
+			return 4;
+		else if(m.equals("May"))
+			return 5;
+		else if(m.equals("June"))
+			return 6;
+		else if(m.equals("July"))
+			return 7;
+		else if(m.equals("August"))
+			return 8;
+		else if(m.equals("September"))
+			return 9;
+		else if(m.equals("October"))
+			return 10;
+		else if(m.equals("November"))
+			return 11;
+		else if(m.equals("December"))
+			return 12;
+		else {
+			System.out.println("Invalid Month Error: " + m);
+			return -1;
+		}
 	}
 	public static void setCharacters() {
 		for(int i = 0; i < charList.size(); ++i) {

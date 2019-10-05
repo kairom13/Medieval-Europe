@@ -127,51 +127,70 @@ public class Character {
 		return spouses;
 	}
 	public boolean isSpouse(int id) {
-		for(int i = 0; i < spouses.size(); i++) {
-			Character c = spouses.get(i);
-			if(c.getID() == id) {
-				return true;
+		if(spouses.get(0) == null)
+			return false;
+		else {
+			for(int i = 0; i < spouses.size(); i++) {
+				Character c = spouses.get(i);
+				if(c.getID() == id) {
+					return true;
+				}
 			}
+			return false;
 		}
-		return false;
 	}
 	public Character removeSpouse(int id) {
-		for(int i = 0; i < spouses.size(); i++) {
-			Character c = spouses.get(i);
-			if(c.getID() == id) {
-				spouses.remove(i);
-				return c;
+		if(spouses.get(0) == null)
+			return null;
+		else {
+			for(int i = 0; i < spouses.size(); i++) {
+				Character c = spouses.get(i);
+				if(c.getID() == id) {
+					spouses.remove(i);
+					return c;
+				}
 			}
+			
+			return null;
 		}
-		
-		return null;
 	}
 	
 	public void addChild(Character child) {
-		children.add(child);
+		if(children.size() == 0 || children.get(0) != null)
+			children.add(child);
+		else
+			children.set(0, child);
 	}
 	public ArrayList<Character> getChildren() {
 		return children;
 	}
 	public boolean isChild(int id) {
-		for(int i = 0; i < children.size(); i++) {
-			Character c = children.get(i);
-			if(c.getID() == id) {
-				return true;
+		if(children.get(0) == null)
+			return false;
+		else {
+			for(int i = 0; i < children.size(); i++) {
+				Character c = children.get(i);
+				if(c.getID() == id) {
+					return true;
+				}
 			}
+			return false;
 		}
-		return false;
 	}
 	public Character removeChild(int id) {
-		for(int i = 0; i < children.size(); i++) {
-			Character c = children.get(i);
-			if(c.getID() == id) {
-				children.remove(i);
-				return c;
+		if(children.get(0) == null)
+			return null;
+		else {
+			for(int i = 0; i < children.size(); i++) {
+				Character c = children.get(i);
+				if(c.getID() == id) {
+					children.remove(i);
+					return c;
+				}
 			}
+			
+			return null;
 		}
-		
-		return null;
 	}
 	
 	public void setID(int id) {
