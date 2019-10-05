@@ -14,6 +14,9 @@ public class MedievalEurope extends JFrame {
 	final static int CHARACTER = 0;
 	final static int TITLE = 1;
 	
+	final static int WIDTH = 800;
+	final static int HEIGHT = 800;
+	
 	protected static ArrayList<Character> charList = new ArrayList<Character>();
 	private static ArrayList<Title> titleList = new ArrayList<Title>();
 	
@@ -28,7 +31,7 @@ public class MedievalEurope extends JFrame {
 	}
 	public MedievalEurope() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(500, 500);
+		setSize(WIDTH, HEIGHT);
 		setResizable(false);
 		
 		Container pane = getContentPane();
@@ -46,21 +49,11 @@ public class MedievalEurope extends JFrame {
 		Character person = charList.get(id);
 	
 		JButton editButton = new JButton("Edit");
-		editButton.setBounds(440, 10, 50, 20);
-		editButton.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				CardLayout cl = (CardLayout) (mainCards.getLayout());
-				start(id, !edit, person.getGenderInt());
-				cl.show(mainCards, "Main Card");
-			}
-			
-		});
+		editButton.setBounds(WIDTH-60, 10, 50, 20);
 		
 		if(edit) {
 			JTextField nmLabel = new JTextField(person.getName());
-			nmLabel.setBounds(175, 10, 150, 20);
+			nmLabel.setBounds(WIDTH/2 - 75, 10, 150, 20);
 			
 			JLabel bday = new JLabel("Birthday:");
 			bday.setBounds(10, 70, 70, 20);
@@ -249,11 +242,12 @@ public class MedievalEurope extends JFrame {
 						person.setBirthday(bdayLabel.getText());
 						person.setDeathday(ddayLabel.getText());
 					}
+
+					printData(CHARACTER);
 					
 					start(id, !edit, gender);
 					cl.show(mainCards, "Main Card");
 				}
-				
 			});
 
 			mainCard.add(genderLabel);
@@ -272,8 +266,9 @@ public class MedievalEurope extends JFrame {
 		}
 		else {		
 			JLabel nmLabel = new JLabel(person.getName());
+			nmLabel.setFont(new Font("Helvetica", Font.BOLD, 24));
 			int width = (int) Math.ceil(nmLabel.getPreferredSize().getWidth());
-			nmLabel.setBounds(250-(width/2), 10, width, 20);
+			nmLabel.setBounds((WIDTH-width)/2, 10, width, 50);
 			
 			JLabel genderLabel = new JLabel("Gender: " + person.getGender());
 			genderLabel.setBounds(10, 40, 100, 20);
@@ -533,6 +528,16 @@ public class MedievalEurope extends JFrame {
 				
 			JLabel issue = new JLabel("Children:");
 			issue.setBounds(10, 220, 100, 20);
+			
+			editButton.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					CardLayout cl = (CardLayout) (mainCards.getLayout());
+					start(id, !edit, person.getGenderInt());
+					cl.show(mainCards, "Main Card");
+				}
+			});
 
 			mainCard.add(genderLabel);
 			mainCard.add(spouseLabel);
@@ -616,6 +621,8 @@ public class MedievalEurope extends JFrame {
 				
 				JLabel spouseLabel = new JLabel("Spouses:");
 				spouseLabel.setBounds(10, 190, 80, 20);
+
+				person.addSpouse(null);
 				
 				Character child = charList.get(r_inv.getRelation());
 				person.addChild(child);
@@ -650,6 +657,8 @@ public class MedievalEurope extends JFrame {
 				JLabel spouseName = new JLabel(spouse.getName());
 				spouseName.setBounds(100, 190, 80, 20);
 				
+				person.addChild(null);
+				
 				JLabel issue = new JLabel("Children:");
 				issue.setBounds(10, 220, 150, 20);
 				
@@ -675,6 +684,9 @@ public class MedievalEurope extends JFrame {
 				
 				JLabel spouseLabel = new JLabel("Spouses:");
 				spouseLabel.setBounds(10, 190, 80, 20);
+				
+				person.addSpouse(null);
+				person.addChild(null);
 				
 				JLabel issue = new JLabel("Children:");
 				issue.setBounds(10, 220, 150, 20);
@@ -702,6 +714,9 @@ public class MedievalEurope extends JFrame {
 				
 				JLabel spouseLabel = new JLabel("Spouses:");
 				spouseLabel.setBounds(10, 190, 80, 20);
+
+				person.addSpouse(null);
+				person.addChild(null);
 				
 				JLabel issue = new JLabel("Children:");
 				issue.setBounds(10, 220, 150, 20);
@@ -747,6 +762,8 @@ public class MedievalEurope extends JFrame {
 				
 				person.setBirthday(bdayLabel.getText());
 				person.setDeathday(ddayLabel.getText());
+				
+				printData(CHARACTER);
 				
 				start(person.getID(), false, person.getGenderInt());
 				cl.show(mainCards, "Main Card");
@@ -920,7 +937,62 @@ public class MedievalEurope extends JFrame {
 	}
 	public static void printData(int type) {
 		if(type == CHARACTER) {
-			
+			try {
+				BufferedWriter writer = new BufferedWriter(new FileWriter(new File("src/characters.txt")));
+				String line = "";
+				
+				for(int i = 0; i < charList.size(); ++i) {
+					Character person = charList.get(i);
+					
+					line = line + person.getID() + ";" + person.getName() + ";" + person.getGenderInt() + ";"
+							+ person.getBirthday() + ";" + person.getDeathday() + ";";
+					if(person.getFather() == null)
+						line = line + "-1;";
+					else
+						line = line + person.getFather().getID() + ";";
+					
+					if(person.getMother() == null)
+						line = line + "-1;";
+					else
+						line = line + person.getMother().getID() + ";";
+					
+					if(person.getSpouses().get(0) == null)
+						line = line + "-1";
+					else
+						for(int s = 0; s < person.getSpouses().size(); s++) {
+							Character spouse = person.getSpouses().get(s);
+							
+							if(s == 0)
+								line = line + spouse.getID();
+							else
+								line = line + "," + spouse.getID();
+
+						}
+					
+					line = line + ";";
+					
+					if(person.getChildren().get(0) == null)
+						line = line + "-1";
+					else
+						for(int c = 0; c < person.getChildren().size(); ++c) {
+							Character child = person.getChildren().get(c);
+							
+							if(c == 0)
+								line = line + child.getID();
+							else
+								line = line + "," + child.getID();
+						}
+						
+					line = line + ";\n";
+				}
+				
+				writer.write(line);
+				
+				writer.close();
+			}
+			catch(IOException e) {
+				System.out.println(e.getMessage());
+			}
 		}
 		else if(type == TITLE) {
 			
