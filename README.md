@@ -1,2 +1,14 @@
 # Medieval-Europe
-A Java application that stores information on the rulers of medieval Europe, including relationships and titles, wrapped in an intuitive GUI
+A Java application that is a database of medieval European nobles and rulers.
+
+Current Features:
+- Documents a noble's familial relationships
+- Editable
+
+Future Features:
+- Expanded descriptions of each noble, including life events
+- Inclusion of information sources
+- Inclusion of a noble's titles and held fiefs
+- Maps of lands held by noble
+- Inclusion of vassal/suzerain relationships
+- Profiles of fiefdoms
