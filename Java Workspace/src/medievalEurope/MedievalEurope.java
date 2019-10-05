@@ -18,7 +18,7 @@ public class MedievalEurope extends JFrame {
 	final static int HEIGHT = 800;
 	
 	protected static ArrayList<Character> charList = new ArrayList<Character>();
-	private static ArrayList<Title> titleList = new ArrayList<Title>();
+	private static ArrayList<Fief> fiefList = new ArrayList<Fief>();
 	
 	static JPanel mainCards = new JPanel(new CardLayout());
 	final static String NCHAR = "New Character Card";
@@ -783,7 +783,7 @@ public class MedievalEurope extends JFrame {
 	public static void chooseCharacter(Character self, int type, String search) {
 		JPanel chooseCharCard = new JPanel(null);
 		
-		System.out.println("relation: " + type);
+		//System.out.println("relation: " + type);
 		
 		JButton back = new JButton("Back");
 		back.setBounds(10, 10, 60, 20);
@@ -866,7 +866,7 @@ public class MedievalEurope extends JFrame {
 	public static JPanel getPossibleChars(JPanel panel, Character self, int type, String search) {
 		panel.removeAll();
 
-		System.out.println("relation: " + type);
+		//System.out.println("relation: " + type);
 		
 		int level = 0;
 		
@@ -937,6 +937,17 @@ public class MedievalEurope extends JFrame {
 	}
 	public static void printData(int type) {
 		if(type == CHARACTER) {
+			/**
+			 * Character ID (int)
+			 * Name (String)
+			 * Gender (int, Female: -1, Male: 1)
+			 * Birthday (String)
+			 * Deathday (String)
+			 * Father (int, Character ID)
+			 * Mother (int, Character ID)
+			 * Spouses (ints, Character ID, separated by ",")
+			 * Children (ints, Character ID, separated by ",")
+			 */
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter(new File("src/characters.txt")));
 				String line = "";
@@ -995,7 +1006,14 @@ public class MedievalEurope extends JFrame {
 			}
 		}
 		else if(type == TITLE) {
-			
+			/**
+			 * Fief ID (int)
+			 * Name (String)
+			 * Fief Type (int)
+			 * Ruler ID (int)
+			 * Ruler Start Date (String)
+			 * Ruler End Date (String)
+			 */
 		}
 		else
 			System.out.println("Error: Invalid Type");
@@ -1035,7 +1053,23 @@ public class MedievalEurope extends JFrame {
 			}
 		}
 		else if(type == TITLE) {
-			
+			fiefList.clear();
+			try {
+				BufferedReader reader = new BufferedReader(new FileReader(new File("src/characters.txt")));
+				String line;
+				while(!((line = reader.readLine()) == null)) {
+					String[] values = line.split(";");
+					int fiefID = Integer.parseInt(values[1]);
+					
+					Fief fief;
+					if(fiefID < fiefList.size())
+						fief = fiefList.get(fiefID);
+					else
+						fief = new Fief(fiefID, values[2], Integer.parseInt(values[3]));
+				}
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
 		}
 		else
 			System.out.println("Error: Invalid Type");

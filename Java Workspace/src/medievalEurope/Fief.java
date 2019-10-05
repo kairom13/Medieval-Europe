@@ -2,7 +2,7 @@ package medievalEurope;
 
 import java.util.*;
 
-public class Title {
+public class Fief {
 	
 	private int ID;
 	private String name;
@@ -20,10 +20,9 @@ public class Title {
 	
 	private ArrayList<Character> rulers;
 
-	public Title(String name, int type) {
+	public Fief(int ID, String name, int type) {
 		this.name = name;
 		this.type = type;
-		
-		ID = count++;
+		this.ID = ID;
 	}
 }

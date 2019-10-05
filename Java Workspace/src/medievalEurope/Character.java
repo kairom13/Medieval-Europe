@@ -17,7 +17,7 @@ public class Character {
 	private ArrayList<Relation> relations = new ArrayList<Relation>();
 	private ArrayList<Character> spouses = new ArrayList<Character>();
 	private ArrayList<Character> children = new ArrayList<Character>();
-	private ArrayList<Title> titles = new ArrayList<Title>();
+	private ArrayList<Fief> titles = new ArrayList<Fief>();
 	
 	final static int FEMALE = -1;
 	final static int MALE = 1;
