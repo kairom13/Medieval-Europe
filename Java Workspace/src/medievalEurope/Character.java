@@ -17,7 +17,7 @@ public class Character {
 	private ArrayList<Relation> relations = new ArrayList<Relation>();
 	private ArrayList<Character> spouses = new ArrayList<Character>();
 	private ArrayList<Character> children = new ArrayList<Character>();
-	private ArrayList<Fief> titles = new ArrayList<Fief>();
+	private ArrayList<Title> titles = new ArrayList<Title>();
 	
 	final static int FEMALE = -1;
 	final static int MALE = 1;
@@ -29,12 +29,6 @@ public class Character {
 	public Character() {
 		
 	}
-	public Character(int id, String name, int gender) {
-		this.name = name;
-		this.gender = gender;
-		count++;
-		ID = id;
-	}
 	public Character(String name, int gender) {
 		this.name = name;
 		this.gender = gender;
@@ -44,13 +38,13 @@ public class Character {
 	
 	public void setRelation(Relation r) {
 		if(r.getType() == Relation.CHILD)
-			addChild(charList.get(r.getRelation()));
+			addChild(charList.get(r.getTarget()));
 		else if(r.getType() == Relation.MOTHER)
-			setMother(charList.get(r.getRelation()));
+			setMother(charList.get(r.getTarget()));
 		else if(r.getType() == Relation.FATHER)
-			setFather(charList.get(r.getRelation()));
+			setFather(charList.get(r.getTarget()));
 		else if(r.getType() == Relation.SPOUSE)
-			addSpouse(charList.get(r.getRelation()));
+			addSpouse(charList.get(r.getTarget()));
 	}
 	public void addRelation(Relation r) {
 		relations.add(r);
@@ -191,6 +185,13 @@ public class Character {
 			
 			return null;
 		}
+	}
+	
+	public void addTitle(Title t) {
+		titles.add(t);
+	}
+	public ArrayList<Title> getTitles() {
+		return titles;
 	}
 	
 	public void setID(int id) {

@@ -16,12 +16,14 @@ public class MedievalEurope extends JFrame {
 	
 	final static int CHARACTER = 0;
 	final static int FIEF = 1;
+	final static int TITLE = 2;
 	
 	final static int WIDTH = 800;
 	final static int HEIGHT = 800;
 	
 	protected static ArrayList<Character> charList = new ArrayList<Character>();
 	private static ArrayList<Fief> fiefList = new ArrayList<Fief>();
+	private static ArrayList<Title> titleList = new ArrayList<Title>();
 	
 	static JPanel mainCards = new JPanel(new CardLayout());
 	final static String NCHAR = "New Character Card";
@@ -43,6 +45,7 @@ public class MedievalEurope extends JFrame {
 
 		readData(CHARACTER);
 		readData(FIEF);
+		readData(TITLE);
 		start(startChar, false, charList.get(startChar).getGenderInt());
 		
 		pane.add(mainCards, BorderLayout.CENTER);
@@ -532,6 +535,72 @@ public class MedievalEurope extends JFrame {
 				
 			JLabel issue = new JLabel("Children:");
 			issue.setBounds(10, 220, 100, 20);
+
+			JPanel panel = new JPanel(null);
+			int level = 0;
+			int labelWidth = 150;
+			
+			for(int i = 0; i < person.getTitles().size(); ++i) {
+				Title title = person.getTitles().get(i);
+				
+				JLabel label = new JLabel(title.getTitle());
+				int w = (int) Math.ceil(label.getPreferredSize().getWidth());
+				label.setBounds(50 + (labelWidth - w)/2, 8 + 45*level, w, 20);
+				
+				JLabel reign = new JLabel("(" + title.getStart().getYear() + " - " + title.getEnd().getYear() + ")");
+				w = (int) Math.ceil(reign.getPreferredSize().getWidth());
+				reign.setBounds(50 + (labelWidth - w)/2, 23 + 45*level, w, 20);
+				
+				if(title.getPredecessor() != null) {
+					JButton back = new JButton("<");
+					//back.setFont(new Font("Helvetica", 16, Font.BOLD));
+					back.setBounds(10, 10 + 45*level, 30, 30);
+					back.addActionListener(new ActionListener() {
+
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							CardLayout cl = (CardLayout) (mainCards.getLayout());
+							Character p = title.getPredecessor().getRuler();
+							start(p.getID(), false, p.getGenderInt());
+							cl.show(mainCards, "Main Card");
+						}
+					});
+					panel.add(back);				
+				}
+				
+				if(title.getSuccessor() != null) {
+					JButton next = new JButton(">");
+					//next.setFont(new Font("Helvetica", 16, Font.BOLD));
+					next.setBounds(labelWidth + 60, 10 + 45*level, 30, 30);
+					next.addActionListener(new ActionListener() {
+
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							CardLayout cl = (CardLayout) (mainCards.getLayout());
+							Character p = title.getSuccessor().getRuler();
+							start(p.getID(), false, p.getGenderInt());
+							cl.show(mainCards, "Main Card");
+						}
+					});
+					panel.add(next);
+				}
+				
+				panel.add(label);
+				panel.add(reign);
+				
+				level++;
+			}
+			
+			panel.setPreferredSize(new Dimension(labelWidth + 100, 20 + level*55));
+			
+			JPanel scrollPanel = new JPanel(new BorderLayout());
+			scrollPanel.setBounds(WIDTH - labelWidth - 120, 90, labelWidth + 104, 400);
+
+			JScrollPane scrollPane = new JScrollPane(panel);
+			
+			scrollPanel.add(scrollPane, BorderLayout.CENTER);
+			
+			mainCard.add(scrollPanel);
 			
 			editButton.addActionListener(new ActionListener() {
 
@@ -628,7 +697,7 @@ public class MedievalEurope extends JFrame {
 
 				person.addSpouse(null);
 				
-				Character child = charList.get(r_inv.getRelation());
+				Character child = charList.get(r_inv.getTarget());
 				person.addChild(child);
 				child.setRelation(r);
 				
@@ -654,7 +723,7 @@ public class MedievalEurope extends JFrame {
 				JLabel spouseLabel = new JLabel("Spouses:");
 				spouseLabel.setBounds(10, 190, 80, 20);
 				
-				Character spouse = charList.get(r_inv.getRelation());
+				Character spouse = charList.get(r_inv.getTarget());
 				person.addSpouse(spouse);
 				spouse.addSpouse(person);
 				
@@ -676,7 +745,7 @@ public class MedievalEurope extends JFrame {
 				JLabel dadLabel = new JLabel("Father:");
 				dadLabel.setBounds(10, 130, 60, 20);
 				
-				Character dad = charList.get(r_inv.getRelation());
+				Character dad = charList.get(r_inv.getTarget());
 				person.setFather(dad);
 				dad.addChild(person);
 				
@@ -708,7 +777,7 @@ public class MedievalEurope extends JFrame {
 				JLabel momLabel = new JLabel("Mother:");
 				momLabel.setBounds(10, 160, 60, 20);
 				
-				Character mom = charList.get(r_inv.getRelation());
+				Character mom = charList.get(r_inv.getTarget());
 				
 				JLabel momName = new JLabel(mom.getName());
 				momName.setBounds(80, 130, 60, 20);
@@ -856,10 +925,9 @@ public class MedievalEurope extends JFrame {
 		
 		JPanel scrollPanel = new JPanel(new BorderLayout());
 		scrollPanel.setBounds(100, 50, 350, 400);
-		chooseCharCard.add(scrollPanel);
 
 		JScrollPane scrollPane = new JScrollPane(panel);
-		scrollPane.setPreferredSize(new Dimension(250, 400));
+		//scrollPane.setPreferredSize(new Dimension(250, 400));
 		
 		scrollPanel.add(scrollPane, BorderLayout.CENTER);
 		
@@ -935,7 +1003,7 @@ public class MedievalEurope extends JFrame {
 				}
 			}
 		}
-		panel.setPreferredSize(new Dimension(400, 20 + level*55));
+		panel.setPreferredSize(new Dimension(320, 20 + level*55));
 		
 		return panel;
 	}
@@ -1012,11 +1080,19 @@ public class MedievalEurope extends JFrame {
 		else if(type == FIEF) {
 			/**
 			 * Fief ID (int)
-			 * Name (String)
+			 * Fief Name (String)
 			 * Fief Type (int)
+			 */
+		}
+		else if(type == TITLE) {
+			/**
+			 * Title ID (int)
+			 * Fief ID (int)
 			 * Ruler ID (int)
 			 * Ruler Start Date (String)
 			 * Ruler End Date (String)
+			 * Predecessor Title ID (int)
+			 * Successor Title ID (int)
 			 */
 		}
 		else
@@ -1057,26 +1133,45 @@ public class MedievalEurope extends JFrame {
 			}
 		}
 		else if(type == FIEF) {
-			fiefList.clear();
+			titleList.clear();
 			try {
 				BufferedReader reader = new BufferedReader(new FileReader(new File("src/fiefs.txt")));
 				String line;
 				while(!((line = reader.readLine()) == null)) {
 					String[] values = line.split(";");
-					int fiefID = Integer.parseInt(values[0]);
 					
-					Fief fief;
-					if(fiefID < fiefList.size())
-						fief = fiefList.get(fiefID);
-					else
-						fief = new Fief(fiefID, values[1], Integer.parseInt(values[2]));
-
-					Character ruler = charList.get(Integer.parseInt(values[3]));
-					
-					System.out.println(getDate(values[4]));
-					System.out.println(getDate(values[5]));
-					
+					fiefList.add(new Fief(Integer.parseInt(values[0]), values[1], Integer.parseInt(values[2])));
 				}
+				
+				reader.close();
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		else if(type == TITLE) {
+			titleList.clear();
+			try {
+				BufferedReader reader = new BufferedReader(new FileReader(new File("src/titles.txt")));
+				String line;
+				while(!((line = reader.readLine()) == null)) {
+					String[] values = line.split(";");
+					
+					Character ruler = charList.get(Integer.parseInt(values[2]));
+					Fief fief = fiefList.get(Integer.parseInt(values[1]));
+					
+					Title title = new Title(getDate(values[3], 0), fief, ruler, getDate(values[4], 1));
+					
+					if(title.getID() != Integer.parseInt(values[0]))
+						System.out.println("Error: Mismatched IDs. ID Read: " + values[0] + ", ID Set: " + title.getID());
+					else {
+						title.addRelation(new Relation(title.getID(), Integer.parseInt(values[5]), Relation.PREDECESSOR));
+						title.addRelation(new Relation(title.getID(), Integer.parseInt(values[6]), Relation.SUCCESSOR));
+					}
+					
+					titleList.add(title);
+				}
+				setTitles();
+				reader.close();
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
@@ -1084,17 +1179,36 @@ public class MedievalEurope extends JFrame {
 		else
 			System.out.println("Error: Invalid Type");
 	}
-	public static LocalDate getDate(String date) {
+	public static LocalDate getDate(String date, int relation) {
+		int START = 0;
+		int END = 1;
 		String[] parts = date.split(" ");
 		if(parts.length == 3)
 			return LocalDate.of(Integer.parseInt(parts[2]), getMonth(parts[1]), Integer.parseInt(parts[0]));
-		else if(parts.length == 1)
-			return LocalDate.of(Integer.parseInt(parts[0]), 6, 15);
-		else if(parts[0].contains(".")) {
-			return LocalDate.of(Integer.parseInt(parts[1]), 6, 15);
+		else if(parts.length == 1) {
+			if(relation == START)
+				return LocalDate.of(Integer.parseInt(parts[0]), 6, 15);
+			else if(relation == END)
+				return LocalDate.of(Integer.parseInt(parts[0]), 6, 14);
+			else
+				return null;
 		}
-		else
-			return LocalDate.of(Integer.parseInt(parts[1]), getMonth(parts[0]), 15);
+		else if(parts[0].contains(".")) {
+			if(relation == START)
+				return LocalDate.of(Integer.parseInt(parts[1]), 6, 15);
+			else if(relation == END)
+				return LocalDate.of(Integer.parseInt(parts[1]), 6, 14);
+			else
+				return null;
+		}
+		else {
+			if(relation == START)
+				return LocalDate.of(Integer.parseInt(parts[1]), getMonth(parts[0]), 15);
+			else if(relation == END)
+				return LocalDate.of(Integer.parseInt(parts[1]), getMonth(parts[0]), 14);
+			else
+				return null;
+		}
 	}
 	public static int getMonth(String m) {
 		if(m.equals("January"))
@@ -1126,6 +1240,29 @@ public class MedievalEurope extends JFrame {
 			return -1;
 		}
 	}
+	public static void setTitles() {
+		for(int i = 0; i < titleList.size(); ++i) {
+			Title title = titleList.get(i);
+			ArrayList<Relation> relations = title.getRelations();
+			for(int j = 0; j < relations.size(); ++j) {
+				Relation r = relations.get(j);
+				Title target = new Title();
+				if(r.getTarget() == -1)
+					target = null;
+				else
+					target = titleList.get(r.getTarget());
+				
+				if(r.getType() == Relation.PREDECESSOR)
+					title.setPredecessor(target);
+					//System.out.println(target.getID() + " not able to be predecessor of " + title.getID());
+				else if(r.getType() == Relation.SUCCESSOR)
+					title.setSuccessor(target);
+					//System.out.println(target.getID() + " not able to be successor of " + title.getID());
+				else
+					System.out.println("Error: Invalid Relation Type");
+			}
+		}
+	}
 	public static void setCharacters() {
 		for(int i = 0; i < charList.size(); ++i) {
 			Character person = charList.get(i);
@@ -1133,10 +1270,10 @@ public class MedievalEurope extends JFrame {
 			for(int j = 0; j < relations.size(); ++j) {
 				Relation r = relations.get(j);
 				Character target = new Character();
-				if(r.getRelation() == -1)
+				if(r.getTarget() == -1)
 					target = null;
 				else
-					target = charList.get(r.getRelation());
+					target = charList.get(r.getTarget());
 				
 				if(r.getType() == Relation.MOTHER)
 					person.setMother(target);

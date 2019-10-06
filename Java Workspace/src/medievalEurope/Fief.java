@@ -18,12 +18,22 @@ public class Fief {
 	public final static int BISHOPRIC = 5;
 	public final static int ARCHBISHOPRIC = 6;
 	
-	private ArrayList<Character> rulers;
+	private ArrayList<Title> titles = new ArrayList<Title>();
 
 	public Fief(int ID, String name, int type) {
 		this.name = name;
 		this.type = type;
 		this.ID = ID;
+	}
+	
+	public void addTitle(Title t) {
+		titles.add(t);
+	}
+	public String getName() {
+		return name;
+	}
+	public int getType() {
+		return type;
 	}
 	
 }
