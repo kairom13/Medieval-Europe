@@ -58,6 +58,9 @@ public class Title {
 		else if(fief.getType() == Fief.ARCHBISHOPRIC)
 			name = "Archbishop of " + fief.getName();
 	}
+	public void setName(String nm) {
+		name = nm;
+	}
 	public String getTitle() {
 		return name;
 	}

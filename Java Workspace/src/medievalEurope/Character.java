@@ -5,6 +5,7 @@ import java.util.*;
 public class Character {
 
 	private String name;
+	private String nickname;
 	private int ID = 0;
 	
 	private static ArrayList<Character> charList = medievalEurope.MedievalEurope.charList;
@@ -82,6 +83,9 @@ public class Character {
 	}
 	public String getDeathday() {
 		return deathday;
+	}
+	public void setName(String nm) {
+		name = nm;
 	}
 	public String getName() {
 		return name;
@@ -192,6 +196,13 @@ public class Character {
 	}
 	public ArrayList<Title> getTitles() {
 		return titles;
+	}
+	
+	public void setNickName(String n) {
+		nickname = n;
+	}
+	public String getNickName() {
+		return nickname;
 	}
 	
 	public void setID(int id) {

@@ -29,6 +29,7 @@ public class MedievalEurope extends JFrame {
 	final static String NCHAR = "New Character Card";
 	final static String MCARD = "Main Card";
 	final static String CCHAR = "Choose Character Card";
+	final static String FPCARD = "Fief Page Card";
 
 	public static void main(String[] args) {
 		MedievalEurope frame = new MedievalEurope();
@@ -59,8 +60,17 @@ public class MedievalEurope extends JFrame {
 		editButton.setBounds(WIDTH-60, 10, 50, 20);
 		
 		if(edit) {
+			JLabel nameLabel = new JLabel("Name:");
+			nameLabel.setBounds(WIDTH/2 - 115, 10, 40, 20);
+			
 			JTextField nmLabel = new JTextField(person.getName());
 			nmLabel.setBounds(WIDTH/2 - 75, 10, 150, 20);
+
+			JLabel nnameLabel = new JLabel("Nickname:");
+			nnameLabel.setBounds(WIDTH/2 - 145, 45, 70, 20);
+			
+			JTextField nicknameLabel = new JTextField(person.getNickName());
+			nicknameLabel.setBounds((WIDTH-150)/2, 45, 150, 20);
 			
 			JLabel bday = new JLabel("Birthday:");
 			bday.setBounds(10, 70, 70, 20);
@@ -245,6 +255,8 @@ public class MedievalEurope extends JFrame {
 					CardLayout cl = (CardLayout) (mainCards.getLayout());
 					
 					if(edit) {
+						person.setName(nmLabel.getText());
+						person.setNickName(nicknameLabel.getText());
 						person.setGender(gender);
 						person.setBirthday(bdayLabel.getText());
 						person.setDeathday(ddayLabel.getText());
@@ -257,6 +269,10 @@ public class MedievalEurope extends JFrame {
 				}
 			});
 
+			mainCard.add(nameLabel);
+			mainCard.add(nnameLabel);
+			mainCard.add(nmLabel);
+			mainCard.add(nicknameLabel);
 			mainCard.add(genderLabel);
 			mainCard.add(switchGender);
 			mainCard.add(issue);
@@ -276,6 +292,10 @@ public class MedievalEurope extends JFrame {
 			nmLabel.setFont(new Font("Helvetica", Font.BOLD, 24));
 			int width = (int) Math.ceil(nmLabel.getPreferredSize().getWidth());
 			nmLabel.setBounds((WIDTH-width)/2, 10, width, 50);
+
+			JLabel nicknameLabel = new JLabel(person.getNickName());
+			width = (int) Math.ceil(nicknameLabel.getPreferredSize().getWidth());
+			nicknameLabel.setBounds((WIDTH-width)/2, 45, width, 20);
 			
 			JLabel genderLabel = new JLabel("Gender: " + person.getGender());
 			genderLabel.setBounds(10, 40, 100, 20);
@@ -313,18 +333,20 @@ public class MedievalEurope extends JFrame {
 		
 					@Override
 					public void mouseEntered(MouseEvent e) {
-						CardLayout cl = (CardLayout) (mainCards.getLayout());
 						dadName.setForeground(Color.BLUE);
 						dadName.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-						cl.show(mainCards, "Main Card");
+						
+						mainCard.revalidate();
+						mainCard.repaint();
 					}
 		
 					@Override
 					public void mouseExited(MouseEvent e) {
-						CardLayout cl = (CardLayout) (mainCards.getLayout());
 						dadName.setForeground(Color.BLACK);
 						dadName.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-						cl.show(mainCards, "Main Card");
+						
+						mainCard.revalidate();
+						mainCard.repaint();
 					}
 					
 				});
@@ -359,18 +381,20 @@ public class MedievalEurope extends JFrame {
 		
 					@Override
 					public void mouseEntered(MouseEvent e) {
-						CardLayout cl = (CardLayout) (mainCards.getLayout());
 						momName.setForeground(Color.BLUE);
 						momName.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-						cl.show(mainCards, "Main Card");
+						
+						mainCard.revalidate();
+						mainCard.repaint();
 					}
 		
 					@Override
 					public void mouseExited(MouseEvent e) {
-						CardLayout cl = (CardLayout) (mainCards.getLayout());
 						momName.setForeground(Color.BLACK);
 						momName.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-						cl.show(mainCards, "Main Card");
+						
+						mainCard.revalidate();
+						mainCard.repaint();
 					}
 					
 				});
@@ -416,18 +440,20 @@ public class MedievalEurope extends JFrame {
 		
 						@Override
 						public void mouseEntered(MouseEvent e) {
-							CardLayout cl = (CardLayout) (mainCards.getLayout());
 							spouseName.setForeground(Color.BLUE);
 							spouseName.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-							cl.show(mainCards, "Main Card");
+							
+							mainCard.revalidate();
+							mainCard.repaint();
 						}
 		
 						@Override
 						public void mouseExited(MouseEvent e) {
-							CardLayout cl = (CardLayout) (mainCards.getLayout());
 							spouseName.setForeground(Color.BLACK);
 							spouseName.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-							cl.show(mainCards, "Main Card");
+							
+							mainCard.revalidate();
+							mainCard.repaint();
 						}
 						
 					});
@@ -462,18 +488,20 @@ public class MedievalEurope extends JFrame {
 				
 								@Override
 								public void mouseEntered(MouseEvent e) {
-									CardLayout cl = (CardLayout) (mainCards.getLayout());
 									childLabel.setForeground(Color.BLUE);
 									childLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-									cl.show(mainCards, "Main Card");
+									
+									mainCard.revalidate();
+									mainCard.repaint();
 								}
 				
 								@Override
 								public void mouseExited(MouseEvent e) {
-									CardLayout cl = (CardLayout) (mainCards.getLayout());
 									childLabel.setForeground(Color.BLACK);
 									childLabel.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-									cl.show(mainCards, "Main Card");
+
+									mainCard.revalidate();
+									mainCard.repaint();
 								}
 							});
 							
@@ -513,18 +541,20 @@ public class MedievalEurope extends JFrame {
 		
 						@Override
 						public void mouseEntered(MouseEvent e) {
-							CardLayout cl = (CardLayout) (mainCards.getLayout());
 							childLabel.setForeground(Color.BLUE);
 							childLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-							cl.show(mainCards, "Main Card");
+							
+							mainCard.revalidate();
+							mainCard.repaint();
 						}
 		
 						@Override
 						public void mouseExited(MouseEvent e) {
-							CardLayout cl = (CardLayout) (mainCards.getLayout());
 							childLabel.setForeground(Color.BLACK);
 							childLabel.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-							cl.show(mainCards, "Main Card");
+
+							mainCard.revalidate();
+							mainCard.repaint();
 						}
 						
 					});
@@ -535,17 +565,60 @@ public class MedievalEurope extends JFrame {
 				
 			JLabel issue = new JLabel("Children:");
 			issue.setBounds(10, 220, 100, 20);
-
+			
 			JPanel panel = new JPanel(null);
 			int level = 0;
 			int labelWidth = 150;
+
+			JLabel heldTitles = new JLabel("Titles Held:");
+			int w = (int) Math.ceil(heldTitles.getPreferredSize().getWidth());
+			heldTitles.setBounds(WIDTH - labelWidth - 120, 65, w, 20);
+			mainCard.add(heldTitles);
 			
 			for(int i = 0; i < person.getTitles().size(); ++i) {
 				Title title = person.getTitles().get(i);
 				
 				JLabel label = new JLabel(title.getTitle());
-				int w = (int) Math.ceil(label.getPreferredSize().getWidth());
+				w = (int) Math.ceil(label.getPreferredSize().getWidth());
 				label.setBounds(50 + (labelWidth - w)/2, 8 + 45*level, w, 20);
+				label.addMouseListener(new MouseListener() {
+					
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						CardLayout cl = (CardLayout) (mainCards.getLayout());
+						fiefPage(title.getFief());
+						cl.show(mainCards, "Fief Page Card");
+					}
+	
+					@Override
+					public void mousePressed(MouseEvent e) {
+						
+					}
+	
+					@Override
+					public void mouseReleased(MouseEvent e) {
+						
+					}
+	
+					@Override
+					public void mouseEntered(MouseEvent e) {
+						label.setForeground(Color.BLUE);
+						label.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+						mainCard.revalidate();
+						mainCard.repaint();
+					}
+	
+					@Override
+					public void mouseExited(MouseEvent e) {
+						label.setForeground(Color.BLACK);
+						label.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+						
+						mainCard.revalidate();
+						mainCard.repaint();
+					}
+					
+				});
 				
 				JLabel reign = new JLabel("(" + title.getStart().getYear() + " - " + title.getEnd().getYear() + ")");
 				w = (int) Math.ceil(reign.getPreferredSize().getWidth());
@@ -612,10 +685,11 @@ public class MedievalEurope extends JFrame {
 				}
 			});
 
+			mainCard.add(nmLabel);
+			mainCard.add(nicknameLabel);
 			mainCard.add(genderLabel);
 			mainCard.add(spouseLabel);
 			mainCard.add(issue);
-			mainCard.add(nmLabel);
 			mainCard.add(bdayLabel);
 			mainCard.add(ddayLabel);
 			mainCard.add(dadLabel);
@@ -1007,6 +1081,19 @@ public class MedievalEurope extends JFrame {
 		
 		return panel;
 	}
+	public static void fiefPage(Fief f) {
+		JPanel fiefPageCard = new JPanel(null);
+		
+		JLabel nmLabel = new JLabel(f.getName());
+		nmLabel.setFont(new Font("Helvetica", Font.BOLD, 24));
+		int width = (int) Math.ceil(nmLabel.getPreferredSize().getWidth());
+		nmLabel.setBounds((WIDTH-width)/2, 10, width, 50);
+		fiefPageCard.add(nmLabel);
+		
+		
+		
+		mainCards.add(fiefPageCard, FPCARD);
+	}
 	public static void printData(int type) {
 		if(type == CHARACTER) {
 			/**
@@ -1027,8 +1114,8 @@ public class MedievalEurope extends JFrame {
 				for(int i = 0; i < charList.size(); ++i) {
 					Character person = charList.get(i);
 					
-					line = line + person.getID() + ";" + person.getName() + ";" + person.getGenderInt() + ";"
-							+ person.getBirthday() + ";" + person.getDeathday() + ";";
+					line = line + person.getID() + ";" + person.getName() + ";" + person.getNickName() + ";"
+					+ person.getGenderInt() + ";" + person.getBirthday() + ";" + person.getDeathday() + ";";
 					if(person.getFather() == null)
 						line = line + "-1;";
 					else
@@ -1107,20 +1194,21 @@ public class MedievalEurope extends JFrame {
 				while(!((line = reader.readLine()) == null)) {
 					String[] values = line.split(";");
 					Character person = new Character(values[1], -1);
-					person.setGender(Integer.parseInt(values[2]));
+					person.setNickName(values[2]);
+					person.setGender(Integer.parseInt(values[3]));
 					
-					person.setBirthday(values[3]);
-					person.setDeathday(values[4]);
+					person.setBirthday(values[4]);
+					person.setDeathday(values[5]);
 					
 					if(person.getID() != Integer.parseInt(values[0]))
 						System.out.println("Error: Mismatched IDs. ID Read: " + values[0] + ", ID Set: " + person.getID());
 					else {
-						person.addRelation(new Relation(person.getID(), Integer.parseInt(values[5]), Relation.FATHER));
-						person.addRelation(new Relation(person.getID(), Integer.parseInt(values[6]), Relation.MOTHER));
-						String[] spouse = values[7].split(",");
+						person.addRelation(new Relation(person.getID(), Integer.parseInt(values[6]), Relation.FATHER));
+						person.addRelation(new Relation(person.getID(), Integer.parseInt(values[7]), Relation.MOTHER));
+						String[] spouse = values[8].split(",");
 						for(int i = 0; i < spouse.length; ++i)
 							person.addRelation(new Relation(person.getID(), Integer.parseInt(spouse[i]), Relation.SPOUSE));
-						String[] issue = values[8].split(",");
+						String[] issue = values[9].split(",");
 						for(int i = 0; i < issue.length; ++i)
 							person.addRelation(new Relation(person.getID(), Integer.parseInt(issue[i]), Relation.CHILD));
 					}
