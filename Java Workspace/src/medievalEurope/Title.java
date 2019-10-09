@@ -3,15 +3,9 @@ package medievalEurope;
 import java.time.*;
 import java.util.ArrayList;
 
-public class Title {
-	private int ID;
+public class Title extends Entity {
 	private static int count = 0;
-	
-	private String name;
-	
-	private LocalDate startDate;
-	private LocalDate endDate;
-	
+
 	private Character ruler;
 	private Fief fief;
 	
@@ -21,48 +15,40 @@ public class Title {
 	private ArrayList<Relation> relations = new ArrayList<Relation>();
 	
 	public Title() {
-		
+		super();
 	}
 	public Title(LocalDate startDate, Fief fief, Character ruler, LocalDate endDate) {
-		ID = count++;
+		super(count++, startDate, endDate);
 		
-		this.startDate = startDate;
-		this.endDate = endDate;
-		
-		this.ruler = ruler;
-		this.ruler.addTitle(this);
-		
+		this.ruler = ruler;		
 		this.fief = fief;
-		this.fief.addTitle(this);
-		
-		setName();
-	}
-	public Title(Character ruler) {
-		this.ruler = ruler;
+
+		super.setName(setName());
+
 		this.ruler.addTitle(this);
+		this.fief.addTitle(this);
 	}
 	
-	private void setName() {
+	private String setName() {
 		if(fief.getType() == Fief.COUNTY)
-			name = "Count of " + fief.getName();
+			return "Count of " + fief.getName();
 		else if(fief.getType() == Fief.DUCHY)
-			name = "Duke of " + fief.getName();
+			return "Duke of " + fief.getName();
 		else if(fief.getType() == Fief.KINGDOM)
-			name = "King of " + fief.getName();
+			return "King of " + fief.getName();
 		else if(fief.getType() == Fief.EMPIRE)
-			name = "Emperor of " + fief.getName();
+			return "Emperor of " + fief.getName();
 		else if(fief.getType() == Fief.MARGRAVIATE)
-			name = "Margrave of " + fief.getName();
+			return "Margrave of " + fief.getName();
 		else if(fief.getType() == Fief.BISHOPRIC)
-			name = "Bishop of " + fief.getName();
+			return "Bishop of " + fief.getName();
 		else if(fief.getType() == Fief.ARCHBISHOPRIC)
-			name = "Archbishop of " + fief.getName();
-	}
-	public void setName(String nm) {
-		name = nm;
+			return "Archbishop of " + fief.getName();
+		else
+			return null;
 	}
 	public String getTitle() {
-		return name;
+		return super.getName();
 	}
 	
 	public void addRelation(Relation r) {
@@ -87,21 +73,12 @@ public class Title {
 		return successor;
 	}
 	
-	public Fief getFief() {
-		return fief;
-	}
-	public Character getRuler() {
-		return ruler;
-	}
-	
-	public LocalDate getStart() {
-		return startDate;
-	}
-	public LocalDate getEnd() {
-		return endDate;
-	}
-	
-	public int getID() { 
-		return ID;
+	public boolean contains(Title t) {
+		if(t.getStartDate().isBefore(super.getEndDate())) // The title begins in the middle of this title (means overlap)
+			return true;
+		else if(t.getEndDate().isAfter(super.getStartDate())) // The title ends in the middle of this title (means overlap)
+			return true;
+		else
+			return false;
 	}
 }

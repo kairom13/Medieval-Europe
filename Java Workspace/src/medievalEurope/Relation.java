@@ -22,23 +22,23 @@ public class Relation {
 	final static int PREDECESSOR = 4;
 	final static int SUCCESSOR = 5;
 	
-	private int self;
-	private int target;
+	private Entity self;
+	private Entity target;
 	private int type;
 	
-	public Relation(int self, int target, int type) {
+	public Relation(Entity self, Entity target, int type) {
 		this.self = self;
 		this.target = target;
 		this.type = type;
 	}
 	
-	public int getTarget() {
+	public Entity getTarget() {
 		return target;
 	}
 	public int getType() {
 		return type;
 	}
-	public int getSelf() {
+	public Entity getSelf() {
 		return self;
 	}
 	public Relation getInverse() {
@@ -46,7 +46,7 @@ public class Relation {
 		if(type == MOTHER || type == FATHER)
 			t = CHILD;
 		else if(type == CHILD) {
-			if(charList.get(self).getGenderInt() == Character.MALE)
+			if(((Character) self).getGenderInt() == Character.MALE)
 				t = FATHER;
 			else
 				t = MOTHER;

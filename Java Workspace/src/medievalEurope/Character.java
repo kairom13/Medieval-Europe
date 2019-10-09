@@ -2,11 +2,9 @@ package medievalEurope;
 
 import java.util.*;
 
-public class Character {
+public class Character extends Entity {
 
-	private String name;
 	private String nickname;
-	private int ID = 0;
 	
 	private static ArrayList<Character> charList = medievalEurope.MedievalEurope.charList;
 	
@@ -31,21 +29,19 @@ public class Character {
 		
 	}
 	public Character(String name, int gender) {
-		this.name = name;
+		super(count++, name);
 		this.gender = gender;
-		
-		ID = count++;
 	}
 	
 	public void setRelation(Relation r) {
 		if(r.getType() == Relation.CHILD)
-			addChild(charList.get(r.getTarget()));
+			addChild((Character) r.getTarget());
 		else if(r.getType() == Relation.MOTHER)
-			setMother(charList.get(r.getTarget()));
+			setMother((Character) r.getTarget());
 		else if(r.getType() == Relation.FATHER)
-			setFather(charList.get(r.getTarget()));
+			setFather((Character) r.getTarget());
 		else if(r.getType() == Relation.SPOUSE)
-			addSpouse(charList.get(r.getTarget()));
+			addSpouse((Character) r.getTarget());
 	}
 	public void addRelation(Relation r) {
 		relations.add(r);
@@ -83,12 +79,6 @@ public class Character {
 	}
 	public String getDeathday() {
 		return deathday;
-	}
-	public void setName(String nm) {
-		name = nm;
-	}
-	public String getName() {
-		return name;
 	}
 	public void setMother(Character mom) {
 		mother = mom;
@@ -205,14 +195,7 @@ public class Character {
 		return nickname;
 	}
 	
-	public void setID(int id) {
-		ID = id;
-	}
-	public int getID() {
-		return ID;
-	}
-	
 	public String toString() {
-		return ID + ": " + name;
+		return super.getID() + ": " + super.getName();
 	}
 }
