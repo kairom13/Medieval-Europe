@@ -1,0 +1,209 @@
+04249886:
+  History:
+    '1158': Pitten inherited by Styria
+    '1194': Town built
+    11th Century: Under county of Pitten
+    '1241': Raided by Mongols
+    '1246': Location of Hungarian victory over Austria
+    '1278': Part of Habsburg conquest of Styria
+    '1379': Became part of Inner Austria
+    '1490': Reconquered by Maximilian I
+    August 1487: Conquered by Matthias Corvinus
+  Kind: City
+  Misc: ''
+  Name: Weiner Neustadt
+08164e19:
+  History:
+    '1263': Mentioned under Homberg family
+    '1293': "Went to H\xFCnenberg family"
+    12th Century: First mention
+    '1393': Bought freedom; went to Lucerne City
+    '1803': Went to Canton of Aargau
+  Kind: City
+  Misc: ''
+  Name: Merenschwand
+0e374304:
+  History:
+    '1237': Given to Duchy of Burgundy by treaty
+    '679': Oldest mention
+    '843': Given to Lotharingia in Treaty of Verdun
+  Kind: City
+  Misc: "Lordship included Poncey, Auxonne, and Magny-l\xE9s-Auxonne"
+  Name: "Ath\xE9e"
+15b214e2:
+  History:
+    '1086': Mentioned in deed
+    '810': Built by Aquileia
+  Kind: Abbey
+  Misc: ''
+  Name: Irschen
+1689e2d9:
+  History:
+    '1027': Founded by Radbot von Habsburg
+  Kind: Abbey
+  Misc: Loosely under Habsburgs
+  Name: Muri
+250f5420:
+  History:
+    '1153': First mentioned; owned by {Muri} Abbey
+    '1239': Given to {Kappel} Abbey
+    '1415': Went to Zurich
+    '1614': Back to {Muri} Abbey
+  Kind: City
+  Misc: ''
+  Name: Beinwil
+2733d384:
+  History:
+    '769': Foundation charter
+  Kind: Abbey
+  Misc: Part of Bishopric of Freising
+  Name: Innichen
+359d2b5f:
+  History:
+    '1020': Built by Radbot
+    '1415': Lost to Swiss
+    '1500': Nearby forests cleared
+  Kind: Castle
+  Misc: ''
+  Name: Habsburg
+37ba0ac8:
+  History:
+    '1072': Mentioned in deed
+    '1135': Extinction of Counts of Lurn, passed to Ortenburg
+    '1418': Passed to Celje
+    '1456': Passed to Habsburgs
+    '891': Mentioned in deed
+  Kind: City
+  Misc: Center for Upper Carinthia, from Villach up to Lienz
+  Name: Lurnfeld
+392fd948:
+  History:
+    '1030': First mentioned in deed of Brixen
+    '1127': Purchased by Tyrol
+  Kind: City
+  Misc: Under Patriarchiate of Aquileia
+  Name: Lienz
+3a390363:
+  History:
+    '1027': Gained Norital
+    '1091': Gained Puster Valley
+    '1165': Gave Puster Valley to Andechs-Meran
+    11th Century: Gave Inntal and Eisack Valley to Tyrol
+    '901': Founded
+  Kind: City
+  Misc: Seat of Bishopric of Brixen
+  Name: Brixen
+431faa70:
+  History:
+    '1384': Kyburgs lose land to Bern after Burgdorferkrieg
+  Kind: City
+  Misc: Part of Heimberg
+  Name: Homberg
+442ae236:
+  History:
+    '1240': First mentioned under Carinthian Duke Bernhard von Sponheim
+    '1292': Held under Gorizia
+    '1308': Became fief of Salzburg
+    '1385': Held by Ortenburg
+    '1418': Inherited by Celje
+    '1456': Inherited by Habsburgs
+  Kind: City
+  Misc: Border between Tyrol and Carinthia
+  Name: Oberdraubing
+57b81eb1:
+  History:
+    '1150': Subordinate to William IV for protection
+    '1173': Donation by Count Stephen II to Saint-Vivant de Vergy
+    '1237': Transferred to Duchy of Burgundy by treaty
+    '843': Area went to Lotharingia in Treaty of Verdun
+    '870': Establishment of monastery at Saint-Vivant-en-Amous
+  Kind: City
+  Misc: ''
+  Name: Auxonne
+6e42043c:
+  History:
+    '901': Gained Brixen
+  Kind: Abbey
+  Misc: Seat of Bishopric in 6th - 10th centuries
+  Name: "S\xE4ben"
+6f649909:
+  History:
+    '1180': Acquired by Andechs
+    '1280': Sold to Tyrol
+    '1429': Became capital of Tyrol
+  Kind: City
+  Misc: From Roman Times
+  Name: Innsbruck
+771e9550:
+  History:
+    '1185': First mentioned
+    '1309': Eschenbach possessions confiscated by Habsburgs
+    '1339': Placed under Lords of Hallwyl
+    '1344': Citizenship contract with Zug
+    '1403': Citizenship contract with Zurich
+    '1495': Vogt rights gained by Zurich from Lords of Hallwyl
+    '1527': Abolished, incorporated into Zurich
+  Kind: Abbey
+  Misc: ''
+  Name: Kappel
+'80133299':
+  History:
+    '1363': Passed to Habsburgs
+    13th Century: Elevated to city under Tyrol
+    '857': First Mentioned
+  Kind: City
+  Misc: ''
+  Name: Meran
+87263d68:
+  History:
+    '1027': Given to Bishop of Trent
+    '1277': Conquered by Tyrol
+    '1363': Passed to Habsburgs
+    '679': First mentioned, for Bavarian immigrants
+  Kind: City
+  Misc: ''
+  Name: Bozen
+906301d6:
+  History:
+    '1153': First mentioned; owned by Muri Abbey
+  Kind: City
+  Misc: ''
+  Name: Aristau
+9445a18a:
+  History:
+    ? ''
+    : ''
+  Kind: Duchy
+  Misc: ''
+  Name: Burgundy
+a400e45f:
+  History:
+    '1228': First mention of parish church
+  Kind: City
+  Misc: Largely under bishopric of Trent
+  Name: Malosco
+ae11cfe4:
+  History:
+    '1140': Erected
+    '1166': Mentioned in deed
+    '1418': Passed to Celje
+    '1456': Passed to Habsburgs
+  Kind: Castle
+  Misc: ''
+  Name: Ortenburg
+d32b5ffd:
+  History:
+    '1200': Neuhaus Castle erected by Tyrol
+    '923': First mentioned in deed of Salzburg
+  Kind: City
+  Misc: ''
+  Name: Terlan
+eae104a6:
+  History:
+    '1189': First mentioned
+    '1267': Muri Abbey gain rights
+    '1394': Bought freedom; went to Lucerne City
+    '1803': Part of Canton of Aargau
+  Kind: City
+  Misc: ''
+  Name: Benzenschwil
