@@ -1,0 +1,29 @@
+1c7334ef:
+  Birth Date: ''
+  Children: {}
+  Death Date: ''
+  Father: d6e0b126
+  Gender: 1
+  Mother: d6e0b126
+  Name: Matilda
+  Spouses:
+    9bbf2f4a: Charles
+9bbf2f4a:
+  Birth Date: ''
+  Children: {}
+  Death Date: ''
+  Father: d6e0b126
+  Gender: 0
+  Mother: d6e0b126
+  Name: Charles
+  Spouses:
+    1c7334ef: Matilda
+a426ce40:
+  Birth Date: ''
+  Children: {}
+  Death Date: ''
+  Father: d6e0b126
+  Gender: 1
+  Mother: d6e0b126
+  Name: Luanne
+  Spouses: {}
