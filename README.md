@@ -1,5 +1,5 @@
 # Medieval-Europe
-A Java application that is a database of medieval European nobles and rulers.
+A Python application that is a database of medieval European nobles and rulers.
 
 Current Features:
 - Documents a noble's familial relationships
