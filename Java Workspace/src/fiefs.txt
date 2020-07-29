@@ -1,7 +1,0 @@
-0;Vermandois;0;
-1;Troyes;0;
-2;Meaux;0;
-3;Soissons;0;
-4;Saxony;1;
-5;Bavaria;1;
-6;Cologne;6;
