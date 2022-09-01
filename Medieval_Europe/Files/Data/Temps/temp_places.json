@@ -1,0 +1,1236 @@
+{
+    "9cbcf2b3": {
+        "Attributes": {
+            "Name": "Tonnere",
+            "Latitude": "47.8558",
+            "Longitude": "3.9714"
+        },
+        "Events": {},
+        "Reign List": [
+            "35b4e9f4",
+            "0d695c9c",
+            "6a470885",
+            "d28b278e",
+            "53701540",
+            "6e5d2882"
+        ]
+    },
+    "4abd8735": {
+        "Attributes": {
+            "Name": "Auxerre",
+            "Latitude": "47.7979",
+            "Longitude": "3.5729"
+        },
+        "Events": {},
+        "Reign List": [
+            "93742053",
+            "3d854d12",
+            "9ddc2409",
+            "23c69636",
+            "db34ce1d",
+            "37478608",
+            "c6f539f4",
+            "0d493f06",
+            "95adfe00",
+            "5cdc4b4b"
+        ]
+    },
+    "115baf21": {
+        "Attributes": {
+            "Name": "Rethel",
+            "Latitude": "49.5115",
+            "Longitude": "4.3664"
+        },
+        "Events": {},
+        "Reign List": [
+            "6399bafb",
+            "d4734810",
+            "f30dec0f",
+            "a7978f35",
+            "f46d52ee"
+        ]
+    },
+    "4bdf226c": {
+        "Attributes": {
+            "Name": "Pontarlier",
+            "Latitude": "46.9023",
+            "Longitude": "6.3558"
+        },
+        "Events": {},
+        "Reign List": [
+            "f6682136",
+            "df08292c",
+            "e8104db8",
+            "5a40173c",
+            "708a00de",
+            "bec12993",
+            "6ee4cacf",
+            "5eeed9ee",
+            "53e2822c",
+            "3d8fd594",
+            "c5a6861e",
+            "19b1454e",
+            "49fc9c97",
+            "131abe6b",
+            "f78a81c3",
+            "c1720aed",
+            "7b667344",
+            "c218151a",
+            "2b29dabd",
+            "89b5a07f",
+            "43f627e5"
+        ]
+    },
+    "97deb534": {
+        "Attributes": {
+            "Name": "Nevers",
+            "Latitude": "46.9871",
+            "Longitude": "3.1572"
+        },
+        "Events": {},
+        "Reign List": [
+            "3efc8dad",
+            "e8f9b51b",
+            "6088a3c5",
+            "787a31db",
+            "df116238",
+            "55235065",
+            "6de25f52"
+        ]
+    },
+    "4328b446": {
+        "Attributes": {
+            "Name": "Arras",
+            "Latitude": "50.29",
+            "Longitude": "2.78"
+        },
+        "Events": {},
+        "Reign List": [
+            "c14427d8",
+            "c62ada3e",
+            "72cba135",
+            "04d5187f",
+            "6349bf34",
+            "9a1d02e5",
+            "2e712a06",
+            "edf358c7",
+            "b08d90ba",
+            "d5c93449"
+        ]
+    },
+    "57175a44": {
+        "Attributes": {
+            "Name": "Lille",
+            "Latitude": "50.64",
+            "Longitude": "3.06"
+        },
+        "Events": {},
+        "Reign List": [
+            "c626f2a6",
+            "6b2036fc",
+            "7c21863c",
+            "eb7552ee",
+            "7e06a0cd"
+        ]
+    },
+    "f8b7ec2e": {
+        "Attributes": {
+            "Name": "Ghent",
+            "Latitude": "51.05",
+            "Longitude": "3.72"
+        },
+        "Events": {},
+        "Reign List": [
+            "c626f2a6",
+            "6b2036fc",
+            "7c21863c",
+            "eb7552ee",
+            "7e06a0cd"
+        ]
+    },
+    "e813455b": {
+        "Attributes": {
+            "Name": "Bruges",
+            "Latitude": "51.21",
+            "Longitude": "3.22"
+        },
+        "Events": {},
+        "Reign List": [
+            "c626f2a6",
+            "6b2036fc",
+            "7c21863c",
+            "eb7552ee",
+            "7e06a0cd"
+        ]
+    },
+    "21f4f1e7": {
+        "Attributes": {
+            "Name": "Barby",
+            "Latitude": "49.52",
+            "Longitude": "4.31"
+        },
+        "Events": {},
+        "Reign List": [
+            "6399bafb",
+            "d4734810",
+            "f30dec0f",
+            "a7978f35",
+            "f46d52ee"
+        ]
+    },
+    "05ef3cac": {
+        "Attributes": {
+            "Name": "Hohenstaufen",
+            "Latitude": "48.74",
+            "Longitude": "9.72"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "7610094f": {
+        "Attributes": {
+            "Name": "Schonau",
+            "Latitude": "49.435",
+            "Longitude": "8.81"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a008242e": {
+        "Attributes": {
+            "Name": "Northeim",
+            "Latitude": "51.71",
+            "Longitude": "10"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "09d7c501": {
+        "Attributes": {
+            "Name": "Hardeg",
+            "Latitude": "51.65",
+            "Longitude": "9.83"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "955fa50e": {
+        "Attributes": {
+            "Name": "Brunswick",
+            "Latitude": "52.26",
+            "Longitude": "10.52"
+        },
+        "Events": {},
+        "Reign List": [
+            "bace1394",
+            "501e9983",
+            "0f33a676",
+            "203e3c23",
+            "b7fdf548",
+            "13a50125",
+            "54a15bbf",
+            "6bc185e1"
+        ]
+    },
+    "58aaf3b5": {
+        "Attributes": {
+            "Name": "Werden",
+            "Latitude": "51.387",
+            "Longitude": "7"
+        },
+        "Events": {},
+        "Reign List": [
+            "c8be2402",
+            "ea81a8f1"
+        ]
+    },
+    "70c5e209": {
+        "Attributes": {
+            "Name": "Helmstedt",
+            "Latitude": "52.23",
+            "Longitude": "11.01"
+        },
+        "Events": {},
+        "Reign List": [
+            "c8be2402",
+            "ea81a8f1"
+        ]
+    },
+    "ce34c4a9": {
+        "Attributes": {
+            "Name": "Haldensleben",
+            "Latitude": "52.29",
+            "Longitude": "11.41"
+        },
+        "Events": {},
+        "Reign List": [
+            "c230a1db",
+            "9861e968",
+            "d921bf55"
+        ]
+    },
+    "3e7af8ff": {
+        "Attributes": {
+            "Name": "Corvey",
+            "Latitude": "51.78",
+            "Longitude": "9.41"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c8cd5771": {
+        "Attributes": {
+            "Name": "Walbeck",
+            "Latitude": "52.28",
+            "Longitude": "11.07"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "62427b20": {
+        "Attributes": {
+            "Name": "Weferlingen",
+            "Latitude": "52.31",
+            "Longitude": "11.06"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "2f9f6312": {
+        "Attributes": {
+            "Name": "Siestedt",
+            "Latitude": "52.32",
+            "Longitude": "11.09"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "ecd86ef4": {
+        "Attributes": {
+            "Name": "Ribbensdorf",
+            "Latitude": "52.33",
+            "Longitude": "11.1"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "875d03dc": {
+        "Attributes": {
+            "Name": "Klinze",
+            "Latitude": "52.35",
+            "Longitude": "11.12"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "454d5bd0": {
+        "Attributes": {
+            "Name": "Everingen",
+            "Latitude": "52.37",
+            "Longitude": "11.1"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "982d1adf": {
+        "Attributes": {
+            "Name": "Belsdorf",
+            "Latitude": "52.34",
+            "Longitude": "11.15"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "83b9c65c": {
+        "Attributes": {
+            "Name": "Behnsdorf",
+            "Latitude": "52.315",
+            "Longitude": "11.15"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "12e014e1": {
+        "Attributes": {
+            "Name": "Eickendorf",
+            "Latitude": "52.37",
+            "Longitude": "11.14"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "f6ea5aac": {
+        "Attributes": {
+            "Name": "Hodingen",
+            "Latitude": "52.3",
+            "Longitude": "11.104"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "691c9076": {
+        "Attributes": {
+            "Name": "Eschenrode",
+            "Latitude": "52.284",
+            "Longitude": "11.115"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "6621a0ea": {
+        "Attributes": {
+            "Name": "Seggerde",
+            "Latitude": "52.345",
+            "Longitude": "11.08"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "67e74f42": {
+        "Attributes": {
+            "Name": "Dohren",
+            "Latitude": "52.34",
+            "Longitude": "11.02"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "c78e05fd": {
+        "Attributes": {
+            "Name": "Gutenswegen",
+            "Latitude": "52.23",
+            "Longitude": "11.49"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "165f8950": {
+        "Attributes": {
+            "Name": "Rottmersleben",
+            "Latitude": "52.21",
+            "Longitude": "11.4"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "6337e4a8": {
+        "Attributes": {
+            "Name": "Santersleben",
+            "Latitude": "52.19",
+            "Longitude": "11.45"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "94b774c4": {
+        "Attributes": {
+            "Name": "Germersleben",
+            "Latitude": "52.21",
+            "Longitude": "11.34"
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "c0756bfe": {
+        "Attributes": {
+            "Name": "Schaumburg",
+            "Latitude": "52.2",
+            "Longitude": "9.2"
+        },
+        "Events": {},
+        "Reign List": [
+            "b911a4de",
+            "4fb69d8d",
+            "69340b15",
+            "36bc3fad",
+            "b3eb7d09",
+            "7822897c",
+            "caae36bc"
+        ]
+    },
+    "7775f04f": {
+        "Attributes": {
+            "Name": "Rinteln",
+            "Latitude": "52.2",
+            "Longitude": "9.08"
+        },
+        "Events": {},
+        "Reign List": [
+            "36bc3fad",
+            "b3eb7d09",
+            "7822897c",
+            "caae36bc"
+        ]
+    },
+    "f3eff717": {
+        "Attributes": {
+            "Name": "Stadthagen",
+            "Latitude": "52.32",
+            "Longitude": "9.205"
+        },
+        "Events": {},
+        "Reign List": [
+            "36bc3fad",
+            "b3eb7d09",
+            "7822897c",
+            "caae36bc"
+        ]
+    },
+    "6f4fe754": {
+        "Attributes": {
+            "Name": "Goldbeck",
+            "Latitude": "52.105",
+            "Longitude": "9.155"
+        },
+        "Events": {},
+        "Reign List": [
+            "b911a4de",
+            "4fb69d8d",
+            "69340b15",
+            "36bc3fad",
+            "b3eb7d09",
+            "7822897c",
+            "caae36bc"
+        ]
+    },
+    "2a2342d4": {
+        "Attributes": {
+            "Name": "Rodenberg",
+            "Latitude": "52.31",
+            "Longitude": "9.36"
+        },
+        "Events": {},
+        "Reign List": [
+            "36bc3fad",
+            "b3eb7d09",
+            "7822897c",
+            "caae36bc"
+        ]
+    },
+    "89503c2e": {
+        "Attributes": {
+            "Name": "Dassel",
+            "Latitude": "51.8",
+            "Longitude": "9.69"
+        },
+        "Events": {},
+        "Reign List": [
+            "fa0b1d3b",
+            "f05009b8"
+        ]
+    },
+    "e4d75306": {
+        "Attributes": {
+            "Name": "Nienover",
+            "Latitude": "51.68",
+            "Longitude": "9.52"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "03fef77b": {
+        "Attributes": {
+            "Name": "Boyneburg",
+            "Latitude": "51.1",
+            "Longitude": "10"
+        },
+        "Events": {},
+        "Reign List": [
+            "0e17265c"
+        ]
+    },
+    "19b56ee6": {
+        "Attributes": {
+            "Name": "Dunkirk",
+            "Latitude": "51.03",
+            "Longitude": "2.37"
+        },
+        "Events": {},
+        "Reign List": [
+            "6b2036fc",
+            "7c21863c",
+            "eb7552ee",
+            "7e06a0cd",
+            "c626f2a6"
+        ]
+    },
+    "4967cb81": {
+        "Attributes": {
+            "Name": "Cologne",
+            "Latitude": "50.94",
+            "Longitude": "6.96"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "7a3983bc": {
+        "Attributes": {
+            "Name": "Bonn",
+            "Latitude": "50.735",
+            "Longitude": "7.1"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b2a4566a": {
+        "Attributes": {
+            "Name": "Mainz",
+            "Latitude": "50",
+            "Longitude": "8.274"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d89674dc": {
+        "Attributes": {
+            "Name": "Heidelberg",
+            "Latitude": "49.41",
+            "Longitude": "8.715"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "5dd53536": {
+        "Attributes": {
+            "Name": "Habsburg",
+            "Latitude": "47.46",
+            "Longitude": "8.18"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "7edfa2ea": {
+        "Attributes": {
+            "Name": "Zurich",
+            "Latitude": "47.37",
+            "Longitude": "8.54"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "db481c12": {
+        "Attributes": {
+            "Name": "Feldkirch",
+            "Latitude": "47.24",
+            "Longitude": "9.6"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "f9dbff94": {
+        "Attributes": {
+            "Name": "Bludenz",
+            "Latitude": "47.16",
+            "Longitude": "9.81"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "17edc056": {
+        "Attributes": {
+            "Name": "Bregenz",
+            "Latitude": "47.5",
+            "Longitude": "9.75"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "cfb507e8": {
+        "Attributes": {
+            "Name": "Innsbruck",
+            "Latitude": "47.27",
+            "Longitude": "11.39"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2346aedb": {
+        "Attributes": {
+            "Name": "Salzburg",
+            "Latitude": "47.8",
+            "Longitude": "13.05"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a892345c": {
+        "Attributes": {
+            "Name": "Nuremberg",
+            "Latitude": "49.45",
+            "Longitude": "11.08"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "39397bb6": {
+        "Attributes": {
+            "Name": "Hannover",
+            "Latitude": "52.37",
+            "Longitude": "9.74"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1b0ad119": {
+        "Attributes": {
+            "Name": "Gottingen",
+            "Latitude": "51.53",
+            "Longitude": "9.935"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d746d4e2": {
+        "Attributes": {
+            "Name": "Halberstadt",
+            "Latitude": "51.895",
+            "Longitude": "11.05"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "dedf8a62": {
+        "Attributes": {
+            "Name": "Hildesheim",
+            "Latitude": "52.15",
+            "Longitude": "9.95"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b2b4aa8a": {
+        "Attributes": {
+            "Name": "Magdeburg",
+            "Latitude": "52.125",
+            "Longitude": "11.635"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c8e3bcbd": {
+        "Attributes": {
+            "Name": "Wittenberg",
+            "Latitude": "51.865",
+            "Longitude": "12.64"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "0f6ac04b": {
+        "Attributes": {
+            "Name": "Quedlinburg",
+            "Latitude": "51.79",
+            "Longitude": "11.14"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "ca6f5730": {
+        "Attributes": {
+            "Name": "Ballenstedt",
+            "Latitude": "51.72",
+            "Longitude": "11.23"
+        },
+        "Events": {},
+        "Reign List": [
+            "3959093a",
+            "1ef77ee4",
+            "0a226cf1",
+            "399a8fcb",
+            "36f148ff"
+        ]
+    },
+    "7247872a": {
+        "Attributes": {
+            "Name": "Orlamunde",
+            "Latitude": "50.775",
+            "Longitude": "11.52"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "9d73cbb9": {
+        "Attributes": {
+            "Name": "Weimar",
+            "Latitude": "50.98",
+            "Longitude": "11.33"
+        },
+        "Events": {},
+        "Reign List": [
+            "577ff418",
+            "063f1135",
+            "0e06276e",
+            "2b3cb896",
+            "8e06ab08",
+            "bc2c77ce",
+            "5629fed1"
+        ]
+    },
+    "3be841a8": {
+        "Attributes": {
+            "Name": "Supplingenburg",
+            "Latitude": "52.25",
+            "Longitude": "10.91"
+        },
+        "Events": {},
+        "Reign List": [
+            "47a091d5",
+            "2d48130f",
+            "d4488877"
+        ]
+    },
+    "0e97f24e": {
+        "Attributes": {
+            "Name": "Aschersleben",
+            "Latitude": "51.76",
+            "Longitude": "11.46"
+        },
+        "Events": {},
+        "Reign List": [
+            "3959093a",
+            "1ef77ee4",
+            "0a226cf1",
+            "399a8fcb",
+            "36f148ff"
+        ]
+    },
+    "380160f7": {
+        "Attributes": {
+            "Name": "Freckleben",
+            "Latitude": "51.7",
+            "Longitude": "11.545"
+        },
+        "Events": {
+            "0c19f2c8": {
+                "Date": "762",
+                "Content": "First documented mention in the Fulda foundation book"
+            },
+            "88039671": {
+                "Date": "10/22/973",
+                "Content": "Transferred from Abbot Werner of Fulda to Archbishop Adalbert of Magdeburg"
+            },
+            "646063d9": {
+                "Date": "12th Century",
+                "Content": "Became a fief of the Margraviate of the Nordmark"
+            },
+            "8e76ff70": {
+                "Date": "3/15/1130",
+                "Content": "Last count, Udo of Stade and Freckleben, was killed and the county became an imperial fief"
+            },
+            "92adf957": {
+                "Date": "1166",
+                "Content": "Given to Archbishop Wichmann of Magdeburg"
+            }
+        },
+        "Reign List": []
+    },
+    "5432823e": {
+        "Attributes": {
+            "Name": "Anhalt",
+            "Latitude": "51.67",
+            "Longitude": "11.19"
+        },
+        "Events": {
+            "656b2d6a": {
+                "Date": "1123",
+                "Content": "Originally built"
+            },
+            "1f45566c": {
+                "Date": "1252",
+                "Content": "Went to older Aschersleber line, used as headquarters"
+            },
+            "93917ec6": {
+                "Date": "1315",
+                "Content": "Fell out of favor when the line died out"
+            }
+        },
+        "Reign List": [
+            "36f148ff"
+        ]
+    },
+    "051b8416": {
+        "Attributes": {
+            "Name": "Nienburg",
+            "Latitude": "51.84",
+            "Longitude": "11.77"
+        },
+        "Events": {
+            "45b9384c": {
+                "Date": "8/8/1004",
+                "Content": "Consecrated by Henry II"
+            },
+            "1f2ad8af": {
+                "Date": "unknown",
+                "Content": "Had numerous properties, including Harzgerode, Niemitsch, and Lubben"
+            },
+            "7bf6ef6e": {
+                "Date": "1166",
+                "Content": "Transferred to Mageburg (exchanged for Schonburg Castle, Oberwesel, and Jugenheim farm"
+            },
+            "87e2b2c1": {
+                "Date": "1563",
+                "Content": "Given to Principality of Anhalt-Kothen"
+            }
+        },
+        "Reign List": []
+    },
+    "56e9d09f": {
+        "Attributes": {
+            "Name": "Harzgerode",
+            "Latitude": "51.64",
+            "Longitude": "11.14"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "0ef7b085": {
+        "Attributes": {
+            "Name": "Stauffenburg",
+            "Latitude": "51.82",
+            "Longitude": "10.17"
+        },
+        "Events": {
+            "5a193e9f": {
+                "Date": "11th Century",
+                "Content": "Built by the Counts of Katlenburg"
+            }
+        },
+        "Reign List": []
+    },
+    "25265c5b": {
+        "Attributes": {
+            "Name": "Gittelde",
+            "Latitude": "51.795",
+            "Longitude": "10.19"
+        },
+        "Events": {
+            "55f25283": {
+                "Date": "953",
+                "Content": "Exchange b/w Billungs and Mauritius monastery in Magdeburg"
+            },
+            "76efae4e": {
+                "Date": "unknown",
+                "Content": "Counts of Katlenburg appointed as bailiffs"
+            }
+        },
+        "Reign List": []
+    },
+    "f44fb672": {
+        "Attributes": {
+            "Name": "Wulften",
+            "Latitude": "51.66",
+            "Longitude": "10.18"
+        },
+        "Events": {
+            "39233d15": {
+                "Date": "7/6/889",
+                "Content": "Adalgar, Count in Liesgau, was enfeoffed with the town and Kalefeld"
+            },
+            "d9511d6e": {
+                "Date": "1502",
+                "Content": "A church was built by the patrons, the nobles of Hardenburg"
+            },
+            "95b19eaa": {
+                "Date": "1567",
+                "Content": "Became part of the Principality of Grubenhagen"
+            }
+        },
+        "Reign List": []
+    },
+    "7aaf8ee9": {
+        "Attributes": {
+            "Name": "Katlenburg",
+            "Latitude": "51.68",
+            "Longitude": "10.1"
+        },
+        "Events": {},
+        "Reign List": [
+            "dd31d9fa",
+            "9a0b30ce",
+            "47e568c1",
+            "8e604b90",
+            "3f1b1aa2",
+            "97bc0db7",
+            "00b5394d"
+        ]
+    },
+    "dd293c9f": {
+        "Attributes": {
+            "Name": "Einbeck",
+            "Latitude": "51.82",
+            "Longitude": "9.867"
+        },
+        "Events": {},
+        "Reign List": [
+            "dd31d9fa",
+            "9a0b30ce",
+            "47e568c1",
+            "8e604b90",
+            "3f1b1aa2",
+            "97bc0db7",
+            "00b5394d"
+        ]
+    },
+    "1051f067": {
+        "Attributes": {
+            "Name": "Hus Aren",
+            "Latitude": "52.285",
+            "Longitude": "9.013"
+        },
+        "Events": {
+            "f71a67fa": {
+                "Date": "12th Century",
+                "Content": "Castle likely built"
+            },
+            "4fadcfc4": {
+                "Date": "1170",
+                "Content": "Hermann von Arnhem recieved it as a fief from Dietrich von Werben"
+            },
+            "39d3bb2f": {
+                "Date": "1180",
+                "Content": "Given to Obernkirchen Abbey"
+            },
+            "ecd6e3da": {
+                "Date": "1302",
+                "Content": "Demolished"
+            }
+        },
+        "Reign List": []
+    },
+    "812e2ef3": {
+        "Attributes": {
+            "Name": "Springe",
+            "Latitude": "52.21",
+            "Longitude": "9.55"
+        },
+        "Events": {
+            "027de605": {
+                "Date": "1013",
+                "Content": "First mentioned as Hallerspringe"
+            },
+            "77001a71": {
+                "Date": "after 1282",
+                "Content": "Counts of Hallermund erected a castle here"
+            }
+        },
+        "Reign List": []
+    },
+    "0220748c": {
+        "Attributes": {
+            "Name": "Pattensen",
+            "Latitude": "52.265",
+            "Longitude": "9.76"
+        },
+        "Events": {
+            "fd9d6870": {
+                "Date": "1210",
+                "Content": "Part of the County of Hallermund"
+            },
+            "de64df7b": {
+                "Date": "1256",
+                "Content": "Transferred to Welfs"
+            }
+        },
+        "Reign List": []
+    },
+    "e39c6c51": {
+        "Attributes": {
+            "Name": "Montfaucon",
+            "Latitude": "47.24",
+            "Longitude": "6.08"
+        },
+        "Events": {},
+        "Reign List": [
+            "80b38723",
+            "b188c837"
+        ]
+    },
+    "ad9e059a": {
+        "Attributes": {
+            "Name": "Montbeliard",
+            "Latitude": "47.51",
+            "Longitude": "6.8"
+        },
+        "Events": {},
+        "Reign List": [
+            "5fa57304",
+            "2d63c951",
+            "70d0ffa0",
+            "7d77cb9d",
+            "54973870"
+        ]
+    },
+    "4ca2a761": {
+        "Attributes": {
+            "Name": "Belfort",
+            "Latitude": "47.64",
+            "Longitude": "6.86"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "01a21103": {
+        "Attributes": {
+            "Name": "Hericourt",
+            "Latitude": "47.575",
+            "Longitude": "6.76"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2af3ecce": {
+        "Attributes": {
+            "Name": "Pfirt",
+            "Latitude": "47.495",
+            "Longitude": "7.315"
+        },
+        "Events": {},
+        "Reign List": []
+    }
+}

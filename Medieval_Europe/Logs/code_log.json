@@ -1,0 +1,20 @@
+{
+    "000_Init": [
+        "000_Init",
+        "001_Set Window Size. Height: 960, Width: 1706",
+        "002_Reading Files",
+        "003_Opened \"titles.json\"",
+        "004_Finished reading \"titles.json\"",
+        "005_Opened \"people.json\"",
+        "006_Finished reading \"people.json\"",
+        "007_Opened \"places.json\"",
+        "008_Finished reading \"places.json\"",
+        "009_Correcting Reign Order",
+        "010_Created Page Generator Object",
+        "011_Generating view_object_list"
+    ],
+    "001_view_object_list": [
+        "000_Viewing Person",
+        "001_Add list of objects"
+    ]
+}

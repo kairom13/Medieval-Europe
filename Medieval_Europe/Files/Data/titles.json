@@ -1,0 +1,1542 @@
+{
+    "018439d8": {
+        "Attributes": {
+            "Realm Name": "Castile",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "fbf2598f"
+        ]
+    },
+    "05a6cd4a": {
+        "Attributes": {
+            "Realm Name": "Artois",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "04d5187f",
+            "6349bf34",
+            "9a1d02e5",
+            "edf358c7",
+            "72cba135",
+            "c14427d8",
+            "d5c93449",
+            "c62ada3e",
+            "2e712a06",
+            "b08d90ba"
+        ]
+    },
+    "192ed49e": {
+        "Attributes": {
+            "Realm Name": "Austria",
+            "Realm Title": "Archduchy",
+            "Male Ruler Title": "Archduke",
+            "Female Ruler Title": "Archduchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1be1737a": {
+        "Attributes": {
+            "Realm Name": "Luxembourg",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c7868bef"
+        ]
+    },
+    "268745ec": {
+        "Attributes": {
+            "Realm Name": "Brandenburg",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2b1fa0a6": {
+        "Attributes": {
+            "Realm Name": "France",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "1e389ed6",
+            "c42fe750",
+            "87173ba1",
+            "dac4e81f",
+            "8e3addf5",
+            "7f72a286",
+            "72029946",
+            "1098c315",
+            "a3c81376",
+            "a167b38e",
+            "eb0339d5",
+            "37c8efd8",
+            "038b2e85"
+        ]
+    },
+    "35500a0c": {
+        "Attributes": {
+            "Realm Name": "Austria",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "2da18a58",
+            "ad9ac234",
+            "cd746e86",
+            "ab75f02e",
+            "033f0687"
+        ]
+    },
+    "43f9c65d": {
+        "Attributes": {
+            "Realm Name": "Hainaut",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "485707ef": {
+        "Attributes": {
+            "Realm Name": "Austria",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "342f056f",
+            "4eca1e39",
+            "dd49c24e",
+            "3cb7cd73",
+            "784b8aff",
+            "bb857c9e",
+            "f9051dd7",
+            "08757c9f"
+        ]
+    },
+    "48e79d8e": {
+        "Attributes": {
+            "Realm Name": "Inner Austria",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": true,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "4b13d8a1": {
+        "Attributes": {
+            "Realm Name": "the Rhine",
+            "Realm Title": "County Palatine",
+            "Male Ruler Title": "Count Palatine",
+            "Female Ruler Title": "Countess Palatine"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "018e03a6",
+            "665b17dc",
+            "bb21a77a",
+            "9304e1d4",
+            "e50b31d4",
+            "50a0ed46",
+            "cc98571d",
+            "9d68d993",
+            "c7ed155d",
+            "a8922d4c",
+            "9cd91f4c"
+        ]
+    },
+    "58ace651": {
+        "Attributes": {
+            "Realm Name": "Bavaria",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "37d725b4",
+            "f1af2fa5",
+            "072c2320",
+            "d975bac8",
+            "2a1ac062",
+            "db184018",
+            "5cfef6eb",
+            "e093a789",
+            "0cd3f14f",
+            "99d71469",
+            "5f1269c4",
+            "aae3c032",
+            "b68fb3e7",
+            "28b31cbf",
+            "81cae3ef",
+            "efb655ca",
+            "6bdecf46",
+            "f455f19a",
+            "2c7ff9cd",
+            "04af5e05",
+            "5d51b47a",
+            "87bc18b6",
+            "27f1d41d",
+            "6660e9e3"
+        ]
+    },
+    "5cfe6321": {
+        "Attributes": {
+            "Realm Name": "Lorraine",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "695a33e7",
+            "e71c3f25"
+        ]
+    },
+    "630f5c9a": {
+        "Attributes": {
+            "Realm Name": "Germany",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "6bd80567": {
+        "Attributes": {
+            "Realm Name": "Auvergne",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "b1856e79",
+            "b210ec6f",
+            "bbf9d782",
+            "ff6c9b36",
+            "c1e9641a",
+            "6248075b",
+            "6ded2c52"
+        ]
+    },
+    "6d43cb6e": {
+        "Attributes": {
+            "Realm Name": "Zeeland",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "6e53bd75": {
+        "Attributes": {
+            "Realm Name": "Styria",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "523db081",
+            "58d02ec4",
+            "c3d79da0",
+            "bcce7ea1"
+        ]
+    },
+    "6ed12aa2": {
+        "Attributes": {
+            "Realm Name": "Lothier",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "69c89eb0"
+        ]
+    },
+    "705ba4a2": {
+        "Attributes": {
+            "Realm Name": "Saxony",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6042f3a9",
+            "a06203dc",
+            "b2d71a25",
+            "932227ed",
+            "bb1de3a7",
+            "f32e00c3",
+            "61dfab02",
+            "86bdc605",
+            "1dc92baa",
+            "9f67e721",
+            "3eaaff7d"
+        ]
+    },
+    "71a577db": {
+        "Attributes": {
+            "Realm Name": "Merania",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6e2e9892",
+            "656c1f13"
+        ]
+    },
+    "74a346d3": {
+        "Attributes": {
+            "Realm Name": "Rethel",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "d4734810",
+            "f30dec0f",
+            "f46d52ee",
+            "6399bafb",
+            "a7978f35"
+        ]
+    },
+    "7732aebc": {
+        "Attributes": {
+            "Realm Name": "Charolais",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "79c88faa": {
+        "Attributes": {
+            "Realm Name": "Guelders",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "82b727c8": {
+        "Attributes": {
+            "Realm Name": "Bourbon",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6214b8b0",
+            "a1e95026"
+        ]
+    },
+    "84e4630c": {
+        "Attributes": {
+            "Realm Name": "Limburg",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f5164ff2"
+        ]
+    },
+    "91577082": {
+        "Attributes": {
+            "Realm Name": "Zutphen",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "91a6c95a": {
+        "Attributes": {
+            "Realm Name": "Namur",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "9cbecf40": {
+        "Attributes": {
+            "Realm Name": "Franconia",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a1477a56": {
+        "Attributes": {
+            "Realm Name": "Chalon",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f24586b0",
+            "b8f79986"
+        ]
+    },
+    "b12c4342": {
+        "Attributes": {
+            "Realm Name": "Holland",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b2e391eb": {
+        "Attributes": {
+            "Realm Name": "Flanders",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6b2036fc",
+            "7c21863c",
+            "7e06a0cd",
+            "c626f2a6",
+            "eb7552ee",
+            "3b963071"
+        ]
+    },
+    "c372ca76": {
+        "Attributes": {
+            "Realm Name": "Nevers",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "787a31db",
+            "df116238",
+            "6088a3c5",
+            "6de25f52",
+            "43070645",
+            "e8f9b51b",
+            "3efc8dad",
+            "55235065"
+        ]
+    },
+    "cd2b5a9e": {
+        "Attributes": {
+            "Realm Name": "Tyrol",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "dc0a407c": {
+        "Attributes": {
+            "Realm Name": "East Francia",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f495eefc"
+        ]
+    },
+    "de90e73e": {
+        "Attributes": {
+            "Realm Name": "Burgundy",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "87a8e1b2",
+            "b578c01d",
+            "e80ba20d",
+            "8917e0dd",
+            "d6525431",
+            "64ec2e74",
+            "3c6c10b3",
+            "3903aad9",
+            "3d2fedc5",
+            "4bd4f0a4",
+            "93199d07"
+        ]
+    },
+    "dea06d0a": {
+        "Attributes": {
+            "Realm Name": "Auxerre",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "23c69636",
+            "3d854d12",
+            "c6f539f4",
+            "db34ce1d",
+            "37478608",
+            "0d493f06",
+            "93742053",
+            "95adfe00",
+            "5cdc4b4b",
+            "9ddc2409"
+        ]
+    },
+    "e9e0bc4e": {
+        "Attributes": {
+            "Realm Name": "Swabia",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "1c726999",
+            "1c61e795",
+            "1f9a7a3b",
+            "efdcd438"
+        ]
+    },
+    "ee6de42c": {
+        "Attributes": {
+            "Realm Name": "Burgundy",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "3d8fd594",
+            "c5a6861e",
+            "5a40173c",
+            "19b1454e",
+            "e8104db8",
+            "131abe6b",
+            "53e2822c",
+            "c1720aed",
+            "f6682136",
+            "5eeed9ee",
+            "6ee4cacf",
+            "bec12993",
+            "49fc9c97",
+            "f78a81c3",
+            "df08292c",
+            "708a00de",
+            "2b29dabd",
+            "89b5a07f",
+            "43f627e5",
+            "c218151a",
+            "7b667344"
+        ]
+    },
+    "f31c2324": {
+        "Attributes": {
+            "Realm Name": "Brabant",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "58d6e996"
+        ]
+    },
+    "fb5a6b3f": {
+        "Attributes": {
+            "Realm Name": "Boulogne",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f54b18b9",
+            "29557cb7",
+            "3be82837",
+            "822348bf",
+            "3a7159f1",
+            "c6083014",
+            "76cd0392"
+        ]
+    },
+    "ff9b06b5": {
+        "Attributes": {
+            "Realm Name": "Tonnerre",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6a470885",
+            "0d695c9c",
+            "d28b278e",
+            "35b4e9f4",
+            "6e5d2882",
+            "53701540"
+        ]
+    },
+    "046fb781": {
+        "Attributes": {
+            "Realm Name": "Hungary",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2616636f": {
+        "Attributes": {
+            "Realm Name": "Rome",
+            "Realm Title": "Empire",
+            "Male Ruler Title": "Emperor",
+            "Female Ruler Title": "Empress"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "78bdbe89",
+            "06dad7df",
+            "e41befab",
+            "2a3498c1",
+            "a7ed1b0d",
+            "713846a3",
+            "ad7fae44",
+            "45c96dc6",
+            "11fca1da",
+            "1bdbd49f",
+            "665018a6",
+            "e888ae89",
+            "d1817fa6",
+            "a3b56c01",
+            "3175456d",
+            "83526285",
+            "49447dc3",
+            "3056ac2f"
+        ]
+    },
+    "c12e7dc3": {
+        "Attributes": {
+            "Realm Name": "Lower Lorraine",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "191f4c44"
+        ]
+    },
+    "6e251dbf": {
+        "Attributes": {
+            "Realm Name": "Brunswick-Luneburg",
+            "Realm Title": "Duchy",
+            "Male Ruler Title": "Duke",
+            "Female Ruler Title": "Duchess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "adaab79d"
+        ]
+    },
+    "7c226520": {
+        "Attributes": {
+            "Realm Name": "the Nordmark",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": "Margravine"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "33402ccb": {
+        "Attributes": {
+            "Realm Name": "Styria",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": "Margravine"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "64097654",
+            "a8c348fa",
+            "affa8ec9",
+            "630f773f"
+        ]
+    },
+    "7cee1085": {
+        "Attributes": {
+            "Realm Name": "West Francia",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "2bb6a358",
+            "b19e6b3e"
+        ]
+    },
+    "859d6e25": {
+        "Attributes": {
+            "Realm Name": "Cologne",
+            "Realm Title": "Archbishopric",
+            "Male Ruler Title": "Archbishop",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "310fa51e"
+        ]
+    },
+    "9e9ece27": {
+        "Attributes": {
+            "Realm Name": "Worms",
+            "Realm Title": "Prince-Bishopric",
+            "Male Ruler Title": "Prince-Bishop",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c9edc354"
+        ]
+    },
+    "bb551d84": {
+        "Attributes": {
+            "Realm Name": "Ballenstedt",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "399a8fcb",
+            "36f148ff",
+            "0a226cf1",
+            "3959093a",
+            "1ef77ee4"
+        ]
+    },
+    "8b8acbf4": {
+        "Attributes": {
+            "Realm Name": "Northeim",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f6af5955",
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3"
+        ]
+    },
+    "7963ae47": {
+        "Attributes": {
+            "Realm Name": "Magdeburg",
+            "Realm Title": "Prince Archbishopric",
+            "Male Ruler Title": "Prince Archbishop",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "8ff96853",
+            "c1b3cceb",
+            "d7afe0eb"
+        ]
+    },
+    "1af9faa8": {
+        "Attributes": {
+            "Realm Name": "Brunswick",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6bc185e1",
+            "13a50125",
+            "bace1394",
+            "501e9983",
+            "0f33a676",
+            "203e3c23",
+            "b7fdf548",
+            "54a15bbf"
+        ]
+    },
+    "0f08eaba": {
+        "Attributes": {
+            "Realm Name": "Werden-Helmstedt",
+            "Realm Title": "Abbey",
+            "Male Ruler Title": "Abbot",
+            "Female Ruler Title": "Abbess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c8be2402",
+            "ea81a8f1"
+        ]
+    },
+    "3c76371e": {
+        "Attributes": {
+            "Realm Name": "Haldensleben",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c230a1db",
+            "9861e968",
+            "d921bf55"
+        ]
+    },
+    "c4f80d89": {
+        "Attributes": {
+            "Realm Name": "Walbeck",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "1c0eb5ff",
+            "a00b0c50",
+            "a6fdd89d",
+            "52fe6190",
+            "517cc7b1",
+            "b26a41d2",
+            "4e0ee5e9"
+        ]
+    },
+    "32fb7d79": {
+        "Attributes": {
+            "Realm Name": "Corvey",
+            "Realm Title": "Abbey",
+            "Male Ruler Title": "Abbot",
+            "Female Ruler Title": "Abbess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "651b67f2"
+        ]
+    },
+    "8e55b7fe": {
+        "Attributes": {
+            "Realm Name": "Supplinburg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "2d48130f",
+            "d4488877",
+            "47a091d5"
+        ]
+    },
+    "80563cb2": {
+        "Attributes": {
+            "Realm Name": "Plotzkau",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "e8911482"
+        ]
+    },
+    "e7fe8d9b": {
+        "Attributes": {
+            "Realm Name": "Schaumburg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "b911a4de",
+            "4fb69d8d",
+            "69340b15",
+            "36bc3fad",
+            "b3eb7d09",
+            "7822897c",
+            "caae36bc"
+        ]
+    },
+    "72a99993": {
+        "Attributes": {
+            "Realm Name": "Dassel",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "fa0b1d3b",
+            "f05009b8"
+        ]
+    },
+    "3099254f": {
+        "Attributes": {
+            "Realm Name": "Boyneburg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "0e17265c"
+        ]
+    },
+    "507c3c8f": {
+        "Attributes": {
+            "Realm Name": "Macon",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "30a416b3",
+            "2e1ae1f9",
+            "b28e39db",
+            "e760e26f",
+            "1d84c576",
+            "df3023a1"
+        ]
+    },
+    "bed1c841": {
+        "Attributes": {
+            "Realm Name": "Weimar",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "2b3cb896",
+            "063f1135",
+            "0e06276e",
+            "577ff418",
+            "8e06ab08",
+            "bc2c77ce",
+            "5629fed1"
+        ]
+    },
+    "40f65728": {
+        "Attributes": {
+            "Realm Name": "Orlamunde",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "65b92303"
+        ]
+    },
+    "1587dc5a": {
+        "Attributes": {
+            "Realm Name": "Katlenburg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "00b5394d",
+            "3f1b1aa2",
+            "97bc0db7",
+            "dd31d9fa",
+            "9a0b30ce",
+            "47e568c1",
+            "8e604b90"
+        ]
+    },
+    "c71cce0a": {
+        "Attributes": {
+            "Realm Name": "Hallermund",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "4597df71",
+            "74a8050d",
+            "5594bc1e",
+            "c32699af"
+        ]
+    },
+    "79b58ae6": {
+        "Attributes": {
+            "Realm Name": "Rheineck",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "620a2fe4": {
+        "Attributes": {
+            "Realm Name": "Montbeliard",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "61e2d810",
+            "e02367f0",
+            "54973870",
+            "7d77cb9d",
+            "70d0ffa0",
+            "2d63c951",
+            "5fa57304"
+        ]
+    },
+    "599cf8bb": {
+        "Attributes": {
+            "Realm Name": "Wurttemberg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "db4bf5c2",
+            "718a4152",
+            "04870f7a",
+            "90db34a8",
+            "f8584130"
+        ]
+    },
+    "d7e0c764": {
+        "Attributes": {
+            "Realm Name": "Montfaucon",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "b188c837",
+            "80b38723"
+        ]
+    },
+    "3e379b7d": {
+        "Attributes": {
+            "Realm Name": "Belfort",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "13b29381"
+        ]
+    },
+    "7946f526": {
+        "Attributes": {
+            "Realm Name": "Hericourt",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6fbbd682"
+        ]
+    },
+    "f07e4860": {
+        "Attributes": {
+            "Realm Name": "Pfirt",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "3d13b797",
+            "fa250466"
+        ]
+    },
+    "68ea1cb5": {
+        "Attributes": {
+            "Realm Name": "Arlay",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "67529f26",
+            "7a0acfcd",
+            "acebbc3a"
+        ]
+    },
+    "9af39c82": {
+        "Attributes": {
+            "Realm Name": "Vitteaux",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "801db182"
+        ]
+    },
+    "0cfb44fa": {
+        "Attributes": {
+            "Realm Name": "La Riviere",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "82d1d7d3"
+        ]
+    }
+}
