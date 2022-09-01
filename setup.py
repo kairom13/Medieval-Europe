@@ -39,6 +39,7 @@ build_exe_options = {
 
 bdist_mac_options = {
     "bundle_name": name,
+    "iconfile": 'Medieval_European_Database_icon.png'
 }
 
 bdist_dmg_options = {
