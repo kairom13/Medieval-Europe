@@ -26,4 +26,4 @@ jobs:
     - name: Detect OS Version
       run: echo $OSTYPE
     - name: Build setup.py for Mac
-      run: pip install cx_Freeze; python ${PWD}/setup.py bdist_mac
+      run: pip install cx_Freeze PyQt5; python ${PWD}/setup.py bdist_mac
