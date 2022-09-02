@@ -8,25 +8,16 @@ If everything works well you should find a subdirectory in the build
 subdirectory that contains the files needed to run the application
 """
 
-import sys
-import pathlib
-
 from cx_Freeze import Executable, setup
+
+## For Mac: python ./setup.py bdist_mac
+## For Windows: python ./setup.py bdist_msi
 
 try:
     from cx_Freeze.hooks import get_qt_plugins_paths
 except ImportError:
     include_files = []
 else:
-    # Inclusion of extra plugins (new in cx_Freeze 6.8b2)
-    # cx_Freeze imports automatically the following plugins depending of the
-    # use of some modules:
-    # imageformats - QtGui
-    # platforms - QtGui
-    # mediaservice - QtMultimedia
-    # printsupport - QtPrintSupport
-    #
-    # So, "platforms" is used here for demonstration purposes.
     include_files = get_qt_plugins_paths("PyQt5", "platforms")
 
 name = 'Medieval European Database'

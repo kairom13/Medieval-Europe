@@ -664,44 +664,48 @@ class PageGenerator:
         ############ Events Group #############
         page.layout.addWidget(EventsWidget(self.window, True, person), 1, 1)
 
-        ################ Place Group ################
-        # placeGroup = QGroupBox('Associated Places')
-        # placeGroup.layout = QVBoxLayout()
-        # placeGroup.setLayout(placeGroup.layout)
+        # ################ Place Group ################
+        # reignGroup = QGroupBox('Places')
+        # reignGroup.layout = QVBoxLayout()
+        # reignGroup.setLayout(reignGroup.layout)
+        # reignGroup.layout.setSpacing(0)
         #
-        # placeScrollWidget = QWidget()
-        # placeScrollWidget.layout = QVBoxLayout()
-        # placeScrollWidget.setLayout(placeScrollWidget.layout)
+        # addReignButton = QPushButton('Add')
+        # # Choose title to add from list
+        # addReignButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Place', 'Search Text': '', 'Subject': person, 'Connection': 'Reign'}))
         #
-        # usedTitleList = []
+        # addButtonLayout = QHBoxLayout()
+        # addButtonLayout.addStretch(1)
+        # addButtonLayout.addWidget(addReignButton)
+        # reignGroup.layout.addLayout(addButtonLayout)
         #
-        # for r in person.reignList:
-        #     reignObject = person.reignList[r]
+        # reignScrollWidget = QWidget()
+        # reignScrollWidget.layout = QVBoxLayout()
+        # reignScrollWidget.setLayout(reignScrollWidget.layout)
         #
-        #     placeTitleID = reignObject.titleID
+        # for p, place in person.placeList.items():
+        #     placeLabel = QHBoxLayout()
+        #     placeLabel.addStretch(1)
         #
-        #     if placeTitleID not in usedTitleList:
-        #         usedTitleList.append(placeTitleID)
-        #         placeTitle = self.window.titleList[placeTitleID]
+        #     info = place.getAttribute('Name') + ' (' + place.getAttribute('Latitude') + ', ' + place.getAttribute('Longitude') + ')'
         #
-        #         for p in placeTitle.placeList:
-        #             placeObject = placeTitle.placeList[p]
+        #     placeLabel.addWidget(QLabel(info))
         #
-        #             placeScrollWidget.layout.addWidget(EditPlaceWidget({'Window': self.window, 'Place': placeObject}))
+        #     placeLabel.addStretch(1)
         #
-        # placeScrollWidget.layout.addWidget(EditPlaceWidget({'Window': self.window, 'Place': Place(self.logger, '', '')}))
+        #     reignScrollWidget.layout.addLayout(placeLabel)
         #
-        # placeScrollWidget.layout.addStretch(1)
+        # reignScrollWidget.layout.addStretch(1)
         #
         # ## Create scrolling mechanics
-        # placeScroll = QScrollArea()
+        # reignScroll = QScrollArea()
         #
-        # placeScroll.setWidget(placeScrollWidget)
-        # placeScroll.setWidgetResizable(True)
+        # reignScroll.setWidget(reignScrollWidget)
+        # reignScroll.setWidgetResizable(True)
         #
-        # placeGroup.layout.addWidget(placeScroll)
+        # reignGroup.layout.addWidget(reignScroll)
         #
-        # page.layout.addWidget(placeGroup, 2, 1, 1, 1)
+        # page.layout.addWidget(reignGroup, 2, 1)  # Add at row 2 and column 1
 
         return page
 
@@ -1063,6 +1067,8 @@ class PageGenerator:
 
             reignLabel.addWidget(QLabel(rulerName))
             reignLabel.addWidget(QLabel(reignObject.getDateString()))
+
+            reignLabel.addWidget(RemoveConnectionButton(self.window, place, reignObject))
 
             reignLabel.addStretch(1)
 

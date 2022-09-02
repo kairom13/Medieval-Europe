@@ -1232,5 +1232,123 @@
         },
         "Events": {},
         "Reign List": []
+    },
+    "352b0472": {
+        "Attributes": {
+            "Name": "Scheyern",
+            "Latitude": "48.5",
+            "Longitude": "11.45"
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "133524a3": {
+        "Attributes": {
+            "Name": "Geisenfeld",
+            "Latitude": "48.685",
+            "Longitude": "11.61"
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "b438e516": {
+        "Attributes": {
+            "Name": "Kuhnbach",
+            "Latitude": "48.49",
+            "Longitude": "11.19"
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "234e474b": {
+        "Attributes": {
+            "Name": "Wittelsbach Castle",
+            "Latitude": "48.47",
+            "Longitude": "11.175"
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "4961981e": {
+        "Attributes": {
+            "Name": "Ensdorf",
+            "Latitude": "49.34",
+            "Longitude": "11.935"
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "1876e310": {
+        "Attributes": {
+            "Name": "Kelheim",
+            "Latitude": "48.92",
+            "Longitude": "11.87"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "246cf315": {
+        "Attributes": {
+            "Name": "Indersdorf",
+            "Latitude": "48.358",
+            "Longitude": "11.382"
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "dc36f3e4": {
+        "Attributes": {
+            "Name": "Pettendorf",
+            "Latitude": "49.06",
+            "Longitude": "12.01"
+        },
+        "Events": {
+            "e6540ccc": {
+                "Date": "1505",
+                "Content": "Given to Palatinate-Neuburg following the Landshut War of Succession"
+            }
+        },
+        "Reign List": [
+            "79cb170d"
+        ]
+    },
+    "f844fc1a": {
+        "Attributes": {
+            "Name": "Lengenfeld",
+            "Latitude": "49.21",
+            "Longitude": "12.04"
+        },
+        "Events": {
+            "336aab98": {
+                "Date": "1505",
+                "Content": "Given to Palatinate-Neuburg following Landshut War of Succession"
+            }
+        },
+        "Reign List": [
+            "79cb170d"
+        ]
+    },
+    "338e6cfb": {
+        "Attributes": {
+            "Name": "Waldeck (Upper Palatinate)",
+            "Latitude": "49.86",
+            "Longitude": "11.95"
+        },
+        "Events": {},
+        "Reign List": [
+            "79cb170d"
+        ]
     }
 }

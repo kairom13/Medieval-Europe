@@ -198,6 +198,12 @@ class RemoveConnectionButton(QPushButton):
                 person = self.subject.getConnectedReign('Ruler')
                 self.window.page_factory('edit_person_page', {'Person': person})
 
+            elif self.connection == 'Reign':
+                self.window.logger.log('Code', 'Removing ' + str(self.target.getName()) + ' as ' + str(self.connection) + ' with ' + str(self.subject.getName()))
+
+                self.subject.removeReign(self.target)
+                self.target.removePlace(self.subject)
+
             else:
                 print(str(self.connection) + ' is not a valid relation for removal')
 

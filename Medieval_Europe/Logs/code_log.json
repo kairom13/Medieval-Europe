@@ -15,6 +15,33 @@
     ],
     "001_view_object_list": [
         "000_Viewing Person",
-        "001_Add list of objects"
+        "001_Add list of objects",
+        "002_Found 70 instances of \"p\" in object list",
+        "003_Found 22 instances of \"pe\" in object list",
+        "004_Found 2 instances of \"pet\" in object list",
+        "005_Clicked to view Frederick I, Lord of Pettendorf",
+        "006_Generating display_person_page"
+    ],
+    "002_display_person_page": [
+        "000_Displaying Frederick I, Lord of Pettendorf",
+        "001_Add Name Widget",
+        "002_Add null spouse",
+        "003_Add Child With No Spouse: Frederick II",
+        "004_Add Spouse: Sigena of Leinungen",
+        "005_Viewing Reign as part of Frederick I",
+        "006_Viewing Reign as part of Frederick I",
+        "007_Generating display_place_page"
+    ],
+    "003_display_place_page": [
+        "000_Displaying Place",
+        "001_Displaying Name: Waldeck (Upper Palatinate)",
+        "002_Generating edit_place_page"
+    ],
+    "004_edit_place_page": [
+        "000_Editing Place: Waldeck (Upper Palatinate) Place",
+        "001_Can edit Name: Waldeck (Upper Palatinate)",
+        "002_Can edit Latitude: 49.86",
+        "003_Can edit Longitude: 11.95",
+        "004_Removing Frederick I, Lord of Pettendorf as Reign with Waldeck (Upper Palatinate) Place"
     ]
 }
