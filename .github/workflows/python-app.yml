@@ -25,5 +25,5 @@ jobs:
         python-version: "3.10"
     - name: Detect OS Version
       run: echo $OSTYPE
-    - name: Build setup.py for Mac
-      run: pip install cx_Freeze PyQt5; python ${PWD}/setup.py bdist_mac
+    - name: Build setup.py
+      run: pip install cx_Freeze PyQt5; python ${PWD}/setup.py build
