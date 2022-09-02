@@ -4742,7 +4742,7 @@
                     "0439d9a8"
                 ]
             },
-            "Father": null,
+            "Father": "09d1e10f",
             "Mother": null
         },
         "Events": {},
@@ -4757,7 +4757,7 @@
                     "Predecessor": "db184018",
                     "Successor": "f1af2fa5"
                 },
-                "Is Primary": false,
+                "Is Primary": true,
                 "Merged Reigns": {
                     "Junior": [],
                     "Senior": -1
@@ -6306,7 +6306,8 @@
         "Connections": {
             "Spouses": {
                 "unknown_spouse": [
-                    "ddde17e7"
+                    "ddde17e7",
+                    "b9c45dd0"
                 ]
             },
             "Father": "4dcbb3b7",
@@ -6710,7 +6711,7 @@
                     "e0b7a369"
                 ]
             },
-            "Father": null,
+            "Father": "b9c45dd0",
             "Mother": null
         },
         "Events": {},
@@ -12312,6 +12313,296 @@
             "Mother": null
         },
         "Events": {},
+        "Reign List": {}
+    },
+    "b9c45dd0": {
+        "Attributes": {
+            "Name": "Albert I",
+            "Nickname": "",
+            "Birth Date": "7/25/1336",
+            "Death Date": "12/13/1404"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "e059fc4c",
+                    "c15ff17f",
+                    "82dcf466"
+                ]
+            },
+            "Father": "7684ebe8",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "e059fc4c": {
+        "Attributes": {
+            "Name": "Katherine",
+            "Nickname": "",
+            "Birth Date": "1361",
+            "Death Date": "1400"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "b9c45dd0",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "c15ff17f": {
+        "Attributes": {
+            "Name": "Joanna",
+            "Nickname": "",
+            "Birth Date": "1362",
+            "Death Date": "1386"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "b9c45dd0",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "09d1e10f": {
+        "Attributes": {
+            "Name": "Otto V",
+            "Nickname": "of Scheyern",
+            "Birth Date": "1083",
+            "Death Date": "8/4/1156"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "c88e238b"
+                ],
+                "c4039030": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {
+            "2f6bfc72": {
+                "Date": "",
+                "Content": "Vogt of Geisenfeld, K\u00fchbach, St. Ulrich, Weihenstephan and the Bishopric of Freising"
+            },
+            "862a5f88": {
+                "Date": "1121",
+                "Content": "Became vogt of Ensdorf and Indersdorf"
+            }
+        },
+        "Reign List": {
+            "f28f031e": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "8/4/1156"
+                },
+                "Connections": {
+                    "Title": "e4a3886c",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "c4039030": {
+        "Attributes": {
+            "Name": "Heilika",
+            "Nickname": "of Lengenfeld",
+            "Birth Date": "1103",
+            "Death Date": "9/14/1170"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "09d1e10f": []
+            },
+            "Father": "a1ca71e5",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "a1ca71e5": {
+        "Attributes": {
+            "Name": "Frederick III",
+            "Nickname": "",
+            "Birth Date": "1070",
+            "Death Date": "1112-1119"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "c4039030",
+                    "571951bd"
+                ]
+            },
+            "Father": "d2a4010c",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "571951bd": {
+        "Attributes": {
+            "Name": "Heilwiga",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1160"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "a1ca71e5",
+            "Mother": null
+        },
+        "Events": {
+            "42ff2640": {
+                "Date": "1112-1119",
+                "Content": "Inherited Lordship of Waldeck from her father"
+            },
+            "d8f911b9": {
+                "Date": "",
+                "Content": "Married Gebhard of Leuchtenberg"
+            }
+        },
+        "Reign List": {}
+    },
+    "d2a4010c": {
+        "Attributes": {
+            "Name": "Frederick II",
+            "Nickname": "",
+            "Birth Date": "1050",
+            "Death Date": ""
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "a1ca71e5"
+                ]
+            },
+            "Father": "3a25cbe2",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "3a25cbe2": {
+        "Attributes": {
+            "Name": "Frederick I",
+            "Nickname": "",
+            "Birth Date": "1025",
+            "Death Date": "1060"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "d2a4010c"
+                ],
+                "d93bd63b": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "79cb170d": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "1060"
+                },
+                "Connections": {
+                    "Title": "49b31af1",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "37ece9b0": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "1060"
+                },
+                "Connections": {
+                    "Title": "df4d53de",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "d93bd63b": {
+        "Attributes": {
+            "Name": "Sigena",
+            "Nickname": "of Leinungen",
+            "Birth Date": "1025",
+            "Death Date": "before 1110"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "3a25cbe2": []
+            },
+            "Father": "b4ed79ea",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "b4ed79ea": {
+        "Attributes": {
+            "Name": "Goswin",
+            "Nickname": "the Elder",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "d93bd63b"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {
+            "80ec1528": {
+                "Date": "",
+                "Content": "Count of Morungen and Gatersleben"
+            }
+        },
         "Reign List": {}
     }
 }

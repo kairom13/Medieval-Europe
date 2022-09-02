@@ -1538,5 +1538,56 @@
         "Reign List": [
             "82d1d7d3"
         ]
+    },
+    "e4a3886c": {
+        "Attributes": {
+            "Realm Name": "Scheyern",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f28f031e"
+        ]
+    },
+    "49b31af1": {
+        "Attributes": {
+            "Realm Name": "Pettendorf",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "79cb170d"
+        ]
+    },
+    "df4d53de": {
+        "Attributes": {
+            "Realm Name": "Waldeck (Upper Palatinate)",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "37ece9b0"
+        ]
     }
 }

@@ -88,7 +88,7 @@ class CustomObject(ABC):
     def check_argument(self, arg, connection=None):
         if isinstance(arg, str):
             return arg
-        elif arg.__class__.__name__ in('Person', 'Title', 'Reign', 'Place'):
+        elif arg.__class__.__name__ in ('Person', 'Title', 'Reign', 'Place'):
             return arg.getID()
         else:
             self.logger.log('Error', str(arg) + ' is an invalid type for ' + str(connection) + '.')
@@ -189,6 +189,7 @@ class Person(CustomObject):
         self.setName()
         
         self.reignList = {}  # {reign.id: reignObject}
+        self.placeList = {}  # {place.id: placeObject
 
     ## Set this person's name as the full name
     def setName(self):
@@ -483,6 +484,15 @@ class Person(CustomObject):
         self.reignList.update({newReign.getID(): newReign})
         
         return newReign
+
+    ## Add place to place list
+    def addPlace(self, placeObject):
+        placeID = placeObject.getID()
+
+        if placeID in self.placeList:
+            self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
+        else:
+            self.placeList.update({placeID: placeObject})
         
     ## Get Dictionary of values
     def getDict(self):
@@ -804,7 +814,7 @@ class Reign(CustomObject):
             self.isJunior = True
             self.connection('Add', reign.getID(), 'Senior')
             
-            self.mergedReigns['Junior'] = [] ## Remove all junior reigns from the list
+            self.mergedReigns['Junior'] = []  # Remove all junior reigns from the list
         elif relation == 'Junior':
             ## Add <reign> as a junior to this reign
             self.mergedReigns[relation].append(reign.getID())
@@ -813,19 +823,14 @@ class Reign(CustomObject):
             self.logger.log('Error', str(relation) + ' is not a valid relation for merging reigns')
 
     def addPlace(self, placeObject):
-        # if isinstance(place, str):
-        #     placeID = place
-        # elif isinstance(place, Place):
-        #     placeID = place.id
-        # else:
-        #     print('ERROR: Cannot add ' + str(place) + ' as Place. Invalid type')
-
         placeID = placeObject.getID()
 
         if placeID in self.placeList:
             self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
         else:
+            self.getConnectedReign('Ruler').addPlace(placeObject)
             self.placeList.update({placeID: placeObject})
+            self.connection('Add', placeID, 'Place')
         
     def isEmpty(self):
         if self.titleID != '':
@@ -886,6 +891,8 @@ class Place(CustomObject):
                 self.updateEvent(e, init_dict['Events'][e])
 
             self.reignList = init_dict['Reign List']
+            for r in self.reignList:
+                self.connection('Add', r, 'Reign')
 
         self.setName()
 
@@ -900,6 +907,7 @@ class Place(CustomObject):
                 self.logger.log('Warning', '{' + reignID + '} already in list for {' + self.getID() + '}')
             else:
                 self.reignList.append(reignID)
+                self.connection('Add', reignID, 'Reign')
 
     def hasReign(self, reign):
         reignID = self.check_argument(reign, 'Reign')
