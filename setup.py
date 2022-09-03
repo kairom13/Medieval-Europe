@@ -9,6 +9,7 @@ subdirectory that contains the files needed to run the application
 """
 
 from cx_Freeze import Executable, setup
+import sys
 
 ## For Mac: python ./setup.py bdist_mac
 ## For Windows: python ./setup.py bdist_msi
@@ -19,6 +20,11 @@ except ImportError:
     include_files = []
 else:
     include_files = get_qt_plugins_paths("PyQt5", "platforms")
+
+# base="Win32GUI" should be used only for Windows GUI app
+base = None
+if sys.platform == "win32":
+    base = "Win32GUI"
 
 name = 'Medieval European Database'
 
@@ -45,7 +51,7 @@ setup(
     version="0.1",
     description="Sample cx_Freeze PyQt5 script",
     options={
-        #"build_exe": build_exe_options,
+        "build_msi": build_exe_options,
         "bdist_mac": bdist_mac_options
     },
     executables=executables,

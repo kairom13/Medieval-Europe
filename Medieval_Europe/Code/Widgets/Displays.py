@@ -188,7 +188,7 @@ class PlaceMap(QWidget):
                 map_coords = {'x': self.adjustCoords['X Origin'] + (p[0] - self.adjustCoords['Left']) * self.adjustCoords['Ratio'],
                     'y': self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - p[1]) * self.adjustCoords['Ratio']}
 
-                poly_points.append(QPoint(round(map_coords['x'], 0), round(map_coords['y'], 0)))
+                poly_points.append(QPoint(int(round(map_coords['x'], 0)), int(round(map_coords['y'], 0))))
 
                 part_index += 1
 
@@ -203,11 +203,11 @@ class PlaceMap(QWidget):
 
             if self.selectedPlace is not None and p['Object'].getID() == self.selectedPlace.getID():
                 painter.setPen(QPen(Qt.blue, 1, Qt.SolidLine))
-                painter.drawEllipse(p['Map Coords'][0] - radius, p['Map Coords'][1] - radius, radius * 2, radius * 2)
-                painter.drawText(p['Map Coords'][0] + radius, p['Map Coords'][1] - radius, p['Object'].getAttribute('Name'))
+                painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
+                painter.drawText(int(p['Map Coords'][0] + radius), int(p['Map Coords'][1] - radius), int(p['Object'].getAttribute('Name')))
             else:
                 painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
-                painter.drawEllipse(p['Map Coords'][0] - radius, p['Map Coords'][1] - radius, radius * 2, radius * 2)
+                painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
 
     def eventFilter(self, object, event):
         #print(self.eventNameDict[event.type()])
@@ -421,7 +421,7 @@ class PlaceMap(QWidget):
 
 ## Interactive Object Label for Relations and Titles
 class ObjectLabel(QLabel):
-    def __init__(self, window, objectID, objectType, gender=-1):
+    def __init__(self, window, objectID, objectType, gender=-1, context=None):
         super(ObjectLabel, self).__init__()
 
         self.window = window
@@ -429,7 +429,11 @@ class ObjectLabel(QLabel):
 
         if self.objectType == 'Person':
             self.obj = self.window.get_object(objectID)
-            self.name = self.obj.getAttribute('Name') + ' ' + self.obj.getAttribute('Nickname')
+            if context == 'Reign':
+                style = '\n'
+            else:
+                style = ' '
+            self.name = self.obj.getAttribute('Name') + style + self.obj.getAttribute('Nickname')
         elif self.objectType == 'Title':
             self.obj = self.window.get_object(objectID)
             self.name = self.obj.getFullRulerTitle(gender)
@@ -437,10 +441,9 @@ class ObjectLabel(QLabel):
         self.setText(self.name)
 
         self.setStyleSheet('QLabel {color : black; text-decoration: underline}')
-
-        self.label = QLabel(self.name)
-        self.label.adjustSize()
-        self.label.setAttribute(Qt.WA_TransparentForMouseEvents)
+        self.adjustSize()
+        self.setAlignment(Qt.AlignHCenter)
+        #self.setAttribute(Qt.WA_TransparentForMouseEvents)
         self.installEventFilter(self)
 
     # Override

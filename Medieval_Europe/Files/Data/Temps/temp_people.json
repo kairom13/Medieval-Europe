@@ -382,7 +382,8 @@
             "Spouses": {
                 "unknown_spouse": [
                     "8b4bef40"
-                ]
+                ],
+                "215e4722": []
             },
             "Father": null,
             "Mother": null
@@ -961,12 +962,13 @@
             "Spouses": {
                 "unknown_spouse": [],
                 "909df2d8": [
-                    "00a24500",
                     "fb627a71",
                     "ff4b4f66",
                     "c68e66bf",
-                    "dc2461d8"
-                ]
+                    "dc2461d8",
+                    "00a24500"
+                ],
+                "079f720c": []
             },
             "Father": "41465b77",
             "Mother": "2bd69de4"
@@ -3470,11 +3472,11 @@
             "Spouses": {
                 "unknown_spouse": [],
                 "215e4722": [
-                    "00a24500",
                     "fb627a71",
                     "ff4b4f66",
                     "c68e66bf",
-                    "dc2461d8"
+                    "dc2461d8",
+                    "00a24500"
                 ],
                 "b8173798": [
                     "dd7894ff"
@@ -12966,6 +12968,145 @@
                     "Successor": "32724bee"
                 },
                 "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "9821efb5": {
+        "Attributes": {
+            "Name": "Margaret II",
+            "Nickname": "",
+            "Birth Date": "1202",
+            "Death Date": "1280"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "78782829": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "1278"
+                },
+                "Connections": {
+                    "Title": "b2e391eb",
+                    "Predecessor": "5348c00c",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "2175c23e": {
+        "Attributes": {
+            "Name": "Baldwin I",
+            "Nickname": "the Constantinopolitan",
+            "Birth Date": "7/1171",
+            "Death Date": "7/20/1205"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "3e497632"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "ef576b72": {
+                "Attributes": {
+                    "Start Date": "4/13/1204",
+                    "End Date": "7/20/1205"
+                },
+                "Connections": {
+                    "Title": "53e45d73",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "f1fa7912": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "7/20/1205"
+                },
+                "Connections": {
+                    "Title": "b2e391eb",
+                    "Predecessor": null,
+                    "Successor": "5348c00c"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "3e497632": {
+        "Attributes": {
+            "Name": "Johanna",
+            "Nickname": "",
+            "Birth Date": "1200",
+            "Death Date": "12/5/1244"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "2175c23e",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "5348c00c": {
+                "Attributes": {
+                    "Start Date": "7/20/1205",
+                    "End Date": "12/5/1244"
+                },
+                "Connections": {
+                    "Title": "b2e391eb",
+                    "Predecessor": "f1fa7912",
+                    "Successor": "78782829"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "d8fa9a78": {
+                "Attributes": {
+                    "Start Date": "7/20/1205",
+                    "End Date": "12/5/1244"
+                },
+                "Connections": {
+                    "Title": "43f9c65d",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
                 "Merged Reigns": {
                     "Senior": null,
                     "Junior": []

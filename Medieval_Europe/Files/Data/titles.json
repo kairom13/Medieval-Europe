@@ -152,7 +152,9 @@
             "Successor": null
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "d8fa9a78"
+        ]
     },
     "485707ef": {
         "Attributes": {
@@ -596,7 +598,10 @@
             "7e06a0cd",
             "c626f2a6",
             "eb7552ee",
-            "3b963071"
+            "3b963071",
+            "78782829",
+            "f1fa7912",
+            "5348c00c"
         ]
     },
     "c372ca76": {
@@ -1553,8 +1558,8 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e",
             "2ccd9003",
+            "f28f031e",
             "bc774260"
         ]
     },
@@ -1572,11 +1577,11 @@
         },
         "Events": {},
         "Reign List": [
-            "79cb170d",
-            "448d24d5",
-            "9827291b",
+            "e025053d",
             "0d077347",
-            "e025053d"
+            "9827291b",
+            "448d24d5",
+            "79cb170d"
         ]
     },
     "df4d53de": {
@@ -1593,10 +1598,10 @@
         },
         "Events": {},
         "Reign List": [
-            "37ece9b0",
-            "c9ffcdb0",
             "a31435be",
-            "de6fe3ce"
+            "de6fe3ce",
+            "c9ffcdb0",
+            "37ece9b0"
         ]
     },
     "5742aa38": {
@@ -1613,12 +1618,29 @@
         },
         "Events": {},
         "Reign List": [
-            "b1894b52",
+            "c965f134",
             "88027fbc",
             "57226b3f",
+            "b1894b52",
             "32724bee",
-            "c965f134",
             "08677f77"
+        ]
+    },
+    "53e45d73": {
+        "Attributes": {
+            "Realm Name": "the Latins",
+            "Realm Title": "Empire",
+            "Male Ruler Title": "Emperor",
+            "Female Ruler Title": "Empress"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "ef576b72"
         ]
     }
 }

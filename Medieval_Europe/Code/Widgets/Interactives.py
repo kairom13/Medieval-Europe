@@ -648,7 +648,7 @@ class ReignWidget(QWidget):
 
                 preLabel = QHBoxLayout()
                 preLabel.addStretch(1)
-                preLabel.addWidget(ObjectLabel(self.window, predecessorObject.getConnectedReign('Ruler').getID(), 'Person'))
+                preLabel.addWidget(ObjectLabel(self.window, predecessorObject.getConnectedReign('Ruler').getID(), 'Person', 'Reign'))
                 layout.addLayout(preLabel, 1, 0) # add at row 1, column 0
 
             centerLayout = QHBoxLayout()
@@ -662,7 +662,7 @@ class ReignWidget(QWidget):
                 self.logger.log('Code', 'Successor: ' + successorObject.getConnectedReign('Ruler').getName())
 
                 sucLabel = QHBoxLayout()
-                sucLabel.addWidget(ObjectLabel(self.window, successorObject.getConnectedReign('Ruler').getID(), 'Person'))
+                sucLabel.addWidget(ObjectLabel(self.window, successorObject.getConnectedReign('Ruler').getID(), 'Person', 'Reign'))
                 sucLabel.addStretch(1)
                 layout.addLayout(sucLabel, 1, 2)  # add at row 1, column 2
 
