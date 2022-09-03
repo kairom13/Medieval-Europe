@@ -16,32 +16,42 @@
     "001_view_object_list": [
         "000_Viewing Person",
         "001_Add list of objects",
-        "002_Found 70 instances of \"p\" in object list",
-        "003_Found 22 instances of \"pe\" in object list",
-        "004_Found 2 instances of \"pet\" in object list",
-        "005_Clicked to view Frederick I, Lord of Pettendorf",
-        "006_Generating display_person_page"
+        "002_Clicked to view John II, Count of Auxerre",
+        "003_Generating display_person_page"
     ],
     "002_display_person_page": [
-        "000_Displaying Frederick I, Lord of Pettendorf",
+        "000_Displaying John II, Count of Auxerre",
         "001_Add Name Widget",
         "002_Add null spouse",
-        "003_Add Child With No Spouse: Frederick II",
-        "004_Add Spouse: Sigena of Leinungen",
-        "005_Viewing Reign as part of Frederick I",
-        "006_Viewing Reign as part of Frederick I",
-        "007_Generating display_place_page"
+        "003_Add Child With No Spouse: John III",
+        "004_Viewing Reign as part of John II",
+        "005_Predecessor: William VI the Great",
+        "006_Successor: John III",
+        "007_Viewing Reign as part of John II",
+        "008_Predecessor: Margaret of Burgundy, Countess of Tonnerre",
+        "009_Generating edit_person_page"
     ],
-    "003_display_place_page": [
-        "000_Displaying Place",
-        "001_Displaying Name: Waldeck (Upper Palatinate)",
-        "002_Generating edit_place_page"
-    ],
-    "004_edit_place_page": [
-        "000_Editing Place: Waldeck (Upper Palatinate) Place",
-        "001_Can edit Name: Waldeck (Upper Palatinate)",
-        "002_Can edit Latitude: 49.86",
-        "003_Can edit Longitude: 11.95",
-        "004_Removing Frederick I, Lord of Pettendorf as Reign with Waldeck (Upper Palatinate) Place"
+    "003_edit_person_page": [
+        "000_Editing Person: John II, Count of Auxerre",
+        "001_Can edit Name: John II",
+        "002_Can edit Nickname: ",
+        "003_Can edit Birth Date: ",
+        "004_Can edit Death Date: 1361",
+        "005_Can modify Father: William VI the Great",
+        "006_Can add Mother",
+        "007_Can modify child: John III",
+        "008_Can edit 2 Reigns",
+        "009_Include ability to merge",
+        "010_Can edit reign: John II, Count of Auxerre",
+        "011_This is the primary reign",
+        "012_Reign has predecessor in: William VI the Great",
+        "013_Can edit Start Date: 1304",
+        "014_Can edit End Date: 1361",
+        "015_Reign has successor in: John III",
+        "016_Can edit reign: John II, Count of Tonnerre",
+        "017_Reign has predecessor in: Margaret of Burgundy, Countess of Tonnerre",
+        "018_Can edit Start Date: ",
+        "019_Can edit End Date: 1361",
+        "020_Reign has no Successor"
     ]
 }

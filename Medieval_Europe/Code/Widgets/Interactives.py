@@ -439,6 +439,8 @@ class ReignWidget(QWidget):
 
                 if len(ruler.reignList) > 1:
                     mergeButton = QPushButton('Merge')
+                    mergeButton.setEnabled(False)
+                    mergeButton.setToolTip('Merging to be added in a later update')
 
                     potential_object_list = {}
 
@@ -447,7 +449,7 @@ class ReignWidget(QWidget):
                         if r != self.reign.getID() and not potential_reign.isJunior:
                             potential_object_list.update({r: potential_reign})
 
-                    mergeButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': potential_object_list, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Merge'}))
+                    #mergeButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': potential_object_list, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Merge'}))
 
                     title_layout.addWidget(mergeButton)
 

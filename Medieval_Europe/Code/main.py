@@ -294,6 +294,11 @@ class MainWindow(QMainWindow):
             # Edit new title's characteristics
             self.page_factory('edit_place_page', {'Place': place})
 
+        elif parameters['Object Type'] == 'Reign':
+            self.logger.log('Code', 'Creating new ' + parameters['Connection'] + ' for {' + parameters['Subject'].getID() + '}')
+
+            self.page_factory('choose_object_list', {'Object Type': 'Person', 'Search Text': '', 'Subject': parameters['Subject'], 'Connection': parameters['Connection']})
+
         else:
             self.logger.log('Error', str(parameters['Object Type']) + ' is not a valid object type')
 
@@ -479,6 +484,9 @@ class MainWindow(QMainWindow):
         elif connection == 'Merge':
             # Target is the senior reign
             # Subject is the reign being linked
+
+            ## Scenarios:
+            # 1) Neither reign has any predecessors or successors: make target the senior reign to the subject's junior
 
             person = subject.getConnectedReign('Ruler')
             person.mergeReigns(subject, target, self)
