@@ -4743,7 +4743,7 @@
                 ]
             },
             "Father": "09d1e10f",
-            "Mother": null
+            "Mother": "c4039030"
         },
         "Events": {},
         "Reign List": {
@@ -4761,6 +4761,54 @@
                 "Merged Reigns": {
                     "Junior": [],
                     "Senior": -1
+                }
+            },
+            "2ccd9003": {
+                "Attributes": {
+                    "Start Date": "8/4/1156",
+                    "End Date": "7/11/1183"
+                },
+                "Connections": {
+                    "Title": "e4a3886c",
+                    "Predecessor": "f28f031e",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "e025053d": {
+                "Attributes": {
+                    "Start Date": "9/14/1170",
+                    "End Date": "7/11/1183"
+                },
+                "Connections": {
+                    "Title": "49b31af1",
+                    "Predecessor": "0d077347",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "c965f134": {
+                "Attributes": {
+                    "Start Date": "8/4/1156",
+                    "End Date": "7/11/1183"
+                },
+                "Connections": {
+                    "Title": "5742aa38",
+                    "Predecessor": "88027fbc",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
                 }
             }
         }
@@ -12383,12 +12431,12 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
+                "unknown_spouse": [],
+                "c4039030": [
                     "c88e238b"
-                ],
-                "c4039030": []
+                ]
             },
-            "Father": null,
+            "Father": "31596466",
             "Mother": null
         },
         "Events": {
@@ -12404,15 +12452,31 @@
         "Reign List": {
             "f28f031e": {
                 "Attributes": {
-                    "Start Date": "",
+                    "Start Date": "after 1101",
                     "End Date": "8/4/1156"
                 },
                 "Connections": {
                     "Title": "e4a3886c",
-                    "Predecessor": null,
-                    "Successor": null
+                    "Predecessor": "bc774260",
+                    "Successor": "2ccd9003"
                 },
                 "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "88027fbc": {
+                "Attributes": {
+                    "Start Date": "after 1135",
+                    "End Date": "8/4/1156"
+                },
+                "Connections": {
+                    "Title": "5742aa38",
+                    "Predecessor": "b1894b52",
+                    "Successor": "c965f134"
+                },
+                "Is Primary": false,
                 "Merged Reigns": {
                     "Senior": null,
                     "Junior": []
@@ -12431,13 +12495,32 @@
         "Connections": {
             "Spouses": {
                 "unknown_spouse": [],
-                "09d1e10f": []
+                "09d1e10f": [
+                    "c88e238b"
+                ]
             },
             "Father": "a1ca71e5",
             "Mother": null
         },
         "Events": {},
-        "Reign List": {}
+        "Reign List": {
+            "0d077347": {
+                "Attributes": {
+                    "Start Date": "1112-1119",
+                    "End Date": "9/14/1170"
+                },
+                "Connections": {
+                    "Title": "49b31af1",
+                    "Predecessor": "9827291b",
+                    "Successor": "e025053d"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "a1ca71e5": {
         "Attributes": {
@@ -12458,7 +12541,40 @@
             "Mother": null
         },
         "Events": {},
-        "Reign List": {}
+        "Reign List": {
+            "9827291b": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "1112-1119"
+                },
+                "Connections": {
+                    "Title": "49b31af1",
+                    "Predecessor": "448d24d5",
+                    "Successor": "0d077347"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "a31435be": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "1112-1119"
+                },
+                "Connections": {
+                    "Title": "df4d53de",
+                    "Predecessor": "c9ffcdb0",
+                    "Successor": "de6fe3ce"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "571951bd": {
         "Attributes": {
@@ -12485,7 +12601,24 @@
                 "Content": "Married Gebhard of Leuchtenberg"
             }
         },
-        "Reign List": {}
+        "Reign List": {
+            "de6fe3ce": {
+                "Attributes": {
+                    "Start Date": "1112-1119",
+                    "End Date": "1160"
+                },
+                "Connections": {
+                    "Title": "df4d53de",
+                    "Predecessor": "a31435be",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "d2a4010c": {
         "Attributes": {
@@ -12505,7 +12638,40 @@
             "Mother": null
         },
         "Events": {},
-        "Reign List": {}
+        "Reign List": {
+            "448d24d5": {
+                "Attributes": {
+                    "Start Date": "1060",
+                    "End Date": ""
+                },
+                "Connections": {
+                    "Title": "49b31af1",
+                    "Predecessor": "79cb170d",
+                    "Successor": "9827291b"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "c9ffcdb0": {
+                "Attributes": {
+                    "Start Date": "1060",
+                    "End Date": ""
+                },
+                "Connections": {
+                    "Title": "df4d53de",
+                    "Predecessor": "37ece9b0",
+                    "Successor": "a31435be"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "3a25cbe2": {
         "Attributes": {
@@ -12535,7 +12701,7 @@
                 "Connections": {
                     "Title": "49b31af1",
                     "Predecessor": null,
-                    "Successor": null
+                    "Successor": "448d24d5"
                 },
                 "Is Primary": true,
                 "Merged Reigns": {
@@ -12551,7 +12717,7 @@
                 "Connections": {
                     "Title": "df4d53de",
                     "Predecessor": null,
-                    "Successor": null
+                    "Successor": "c9ffcdb0"
                 },
                 "Is Primary": false,
                 "Merged Reigns": {
@@ -12604,5 +12770,207 @@
             }
         },
         "Reign List": {}
+    },
+    "003cd7a4": {
+        "Attributes": {
+            "Name": "Udalrich I",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1130"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "31596466",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "31596466": {
+        "Attributes": {
+            "Name": "Ekkehard I",
+            "Nickname": "",
+            "Birth Date": "1052",
+            "Death Date": "after 1101"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "003cd7a4",
+                    "09d1e10f",
+                    "fa723d2c"
+                ]
+            },
+            "Father": "cb8bbe80",
+            "Mother": "8fe627a2"
+        },
+        "Events": {},
+        "Reign List": {
+            "bc774260": {
+                "Attributes": {
+                    "Start Date": "1073",
+                    "End Date": "after 1101"
+                },
+                "Connections": {
+                    "Title": "e4a3886c",
+                    "Predecessor": null,
+                    "Successor": "f28f031e"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "57226b3f": {
+                "Attributes": {
+                    "Start Date": "1073",
+                    "End Date": "after 1101"
+                },
+                "Connections": {
+                    "Title": "5742aa38",
+                    "Predecessor": "32724bee",
+                    "Successor": "b1894b52"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "fa723d2c": {
+        "Attributes": {
+            "Name": "Ekkehard II",
+            "Nickname": "of Scheyern",
+            "Birth Date": "",
+            "Death Date": "after 1135"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "31596466",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "b1894b52": {
+                "Attributes": {
+                    "Start Date": "after 1101",
+                    "End Date": "after 1135"
+                },
+                "Connections": {
+                    "Title": "5742aa38",
+                    "Predecessor": "57226b3f",
+                    "Successor": "88027fbc"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "cb8bbe80": {
+        "Attributes": {
+            "Name": "Otto I",
+            "Nickname": "of Scheyern",
+            "Birth Date": "1020",
+            "Death Date": "1073"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "8fe627a2": [
+                    "31596466"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "32724bee": {
+                "Attributes": {
+                    "Start Date": "3/27/1045",
+                    "End Date": "1073"
+                },
+                "Connections": {
+                    "Title": "5742aa38",
+                    "Predecessor": "08677f77",
+                    "Successor": "57226b3f"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "8fe627a2": {
+        "Attributes": {
+            "Name": "Haziga",
+            "Nickname": "of Diessen",
+            "Birth Date": "1040",
+            "Death Date": "8/1/1104"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "cb8bbe80": [
+                    "31596466"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "20850fbc": {
+        "Attributes": {
+            "Name": "Adalbero II",
+            "Nickname": "",
+            "Birth Date": "980/985",
+            "Death Date": "3/27/1045"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "08677f77": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "3/27/1045"
+                },
+                "Connections": {
+                    "Title": "5742aa38",
+                    "Predecessor": null,
+                    "Successor": "32724bee"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     }
 }

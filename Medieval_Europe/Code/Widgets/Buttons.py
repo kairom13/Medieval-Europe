@@ -204,6 +204,8 @@ class RemoveConnectionButton(QPushButton):
                 self.subject.removeReign(self.target)
                 self.target.removePlace(self.subject)
 
+                self.window.page_factory('edit_place_page', {'Place': self.subject})
+
             else:
                 print(str(self.connection) + ' is not a valid relation for removal')
 

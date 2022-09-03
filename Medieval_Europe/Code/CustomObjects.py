@@ -329,6 +329,10 @@ class Person(CustomObject):
         reignID = self.check_argument(reign, 'Reign')
 
         self.logger.log('Code', 'Removing reign {' + str(reignID) + '}')
+        placeList = self.reignList[reignID].placeList
+        for p, place in placeList.items():
+            place.removeReign(reignID)
+
         self.reignList.pop(reignID)
         
     ## Merges the junior reign with the senior reign 
@@ -493,6 +497,14 @@ class Person(CustomObject):
             self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
         else:
             self.placeList.update({placeID: placeObject})
+
+    def removePlace(self, placeObject):
+        placeID = placeObject.getID()
+
+        if placeID in self.placeList:
+            self.placeList.pop(placeID)
+        else:
+            self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
         
     ## Get Dictionary of values
     def getDict(self):
@@ -831,7 +843,17 @@ class Reign(CustomObject):
             self.getConnectedReign('Ruler').addPlace(placeObject)
             self.placeList.update({placeID: placeObject})
             self.connection('Add', placeID, 'Place')
-        
+
+    def removePlace(self, placeObject):
+        placeID = placeObject.getID()
+
+        if placeID in self.placeList:
+            self.getConnectedReign('Ruler').removePlace(placeObject)
+            self.placeList.pop(placeID)
+            self.connection('Remove', placeID)
+        else:
+            self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
+
     def isEmpty(self):
         if self.titleID != '':
             return False
@@ -908,6 +930,16 @@ class Place(CustomObject):
             else:
                 self.reignList.append(reignID)
                 self.connection('Add', reignID, 'Reign')
+
+    def removeReign(self, reign):
+        reignID = self.check_argument(reign, 'Reign')
+
+        if reignID is not None:
+            if reignID in self.reignList:
+                self.reignList.remove(reignID)
+                self.connection('Remove', reignID)
+            else:
+                self.logger.log('Warning', '{' + reignID + '} already in list for {' + self.getID() + '}')
 
     def hasReign(self, reign):
         reignID = self.check_argument(reign, 'Reign')

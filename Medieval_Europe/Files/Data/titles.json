@@ -1553,7 +1553,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "49b31af1": {
@@ -1570,7 +1572,11 @@
         },
         "Events": {},
         "Reign List": [
-            "79cb170d"
+            "79cb170d",
+            "448d24d5",
+            "9827291b",
+            "0d077347",
+            "e025053d"
         ]
     },
     "df4d53de": {
@@ -1587,7 +1593,32 @@
         },
         "Events": {},
         "Reign List": [
-            "37ece9b0"
+            "37ece9b0",
+            "c9ffcdb0",
+            "a31435be",
+            "de6fe3ce"
+        ]
+    },
+    "5742aa38": {
+        "Attributes": {
+            "Realm Name": "Ebersberg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "b1894b52",
+            "88027fbc",
+            "57226b3f",
+            "32724bee",
+            "c965f134",
+            "08677f77"
         ]
     }
 }

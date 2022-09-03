@@ -194,13 +194,13 @@ class PageGenerator:
             else:
                 cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject}))
 
-            ## Include button to add new objects
-            add_button = QPushButton('Add')
-            headerLayout.addWidget(add_button)
+                ## Include button to add new objects
+                add_button = QPushButton('Add')
+                headerLayout.addWidget(add_button)
 
-            add_params = button_params
-            add_params.update({'Object Type': object_type, 'Subject': subject, 'Connection': parameters['Connection']})
-            add_button.clicked.connect(lambda: self.window.prepareNewObject(add_params))
+                add_params = button_params
+                add_params.update({'Object Type': object_type, 'Subject': subject, 'Connection': parameters['Connection']})
+                add_button.clicked.connect(lambda: self.window.prepareNewObject(add_params))
 
         page.layout.addLayout(headerLayout)
 

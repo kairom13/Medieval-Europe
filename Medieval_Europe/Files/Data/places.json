@@ -1241,7 +1241,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "133524a3": {
@@ -1252,7 +1254,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "b438e516": {
@@ -1263,7 +1267,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "234e474b": {
@@ -1274,7 +1280,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "4961981e": {
@@ -1285,7 +1293,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "1876e310": {
@@ -1305,7 +1315,9 @@
         },
         "Events": {},
         "Reign List": [
-            "f28f031e"
+            "f28f031e",
+            "2ccd9003",
+            "bc774260"
         ]
     },
     "dc36f3e4": {
@@ -1321,7 +1333,11 @@
             }
         },
         "Reign List": [
-            "79cb170d"
+            "79cb170d",
+            "448d24d5",
+            "9827291b",
+            "0d077347",
+            "e025053d"
         ]
     },
     "f844fc1a": {
@@ -1337,7 +1353,11 @@
             }
         },
         "Reign List": [
-            "79cb170d"
+            "79cb170d",
+            "448d24d5",
+            "9827291b",
+            "0d077347",
+            "e025053d"
         ]
     },
     "338e6cfb": {
@@ -1346,9 +1366,92 @@
             "Latitude": "49.86",
             "Longitude": "11.95"
         },
+        "Events": {
+            "07e87b4f": {
+                "Date": "1283",
+                "Content": "Frederick II of Leuctenberg sold Waldeck to Duke Louis of Bavaria"
+            },
+            "e9525192": {
+                "Date": "1329",
+                "Content": "The agreement of Pavia transferred Waldeck to the Palatinate"
+            }
+        },
+        "Reign List": [
+            "37ece9b0",
+            "c9ffcdb0",
+            "a31435be",
+            "de6fe3ce"
+        ]
+    },
+    "9d13c117": {
+        "Attributes": {
+            "Name": "Weissenstein Castle",
+            "Latitude": "49.914",
+            "Longitude": "12.083"
+        },
+        "Events": {
+            "411220fd": {
+                "Date": "",
+                "Content": "Given to Burgraves of Nuremburg"
+            }
+        },
+        "Reign List": [
+            "37ece9b0",
+            "c9ffcdb0",
+            "a31435be",
+            "de6fe3ce"
+        ]
+    },
+    "4f968340": {
+        "Attributes": {
+            "Name": "Ried",
+            "Latitude": "48.21",
+            "Longitude": "13.49"
+        },
+        "Events": {
+            "6694d19d": {
+                "Date": "1248",
+                "Content": "Ruled by the Lords of Ried until then, when it went to the Bavarian dukes"
+            }
+        },
+        "Reign List": []
+    },
+    "a05ef1c0": {
+        "Attributes": {
+            "Name": "Ebersberg",
+            "Latitude": "48.08",
+            "Longitude": "11.97"
+        },
         "Events": {},
         "Reign List": [
-            "79cb170d"
+            "b1894b52",
+            "88027fbc",
+            "57226b3f",
+            "32724bee",
+            "c965f134",
+            "08677f77"
         ]
+    },
+    "7cb29b9e": {
+        "Attributes": {
+            "Name": "Persenbeug",
+            "Latitude": "48.19",
+            "Longitude": "15.075"
+        },
+        "Events": {
+            "7ab8bcb2": {
+                "Date": "",
+                "Content": "Originally owned by the Counts of Ebersberg"
+            },
+            "c4a3c348": {
+                "Date": "1045",
+                "Content": "After the death of the last count, taken as a imperial fief under Empress Agnes"
+            },
+            "18ddcdee": {
+                "Date": "",
+                "Content": "Given to Margrave Leopold III of Austria"
+            }
+        },
+        "Reign List": []
     }
 }
