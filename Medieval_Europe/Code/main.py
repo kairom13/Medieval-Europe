@@ -4,12 +4,9 @@ Created on Jul 22, 2020
 @author: kairom13
 """
 
-import json
-import pathlib
 import sys
-import os
 
-from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import QMainWindow, QWidget, QAction, QApplication
 
 from Medieval_Europe.Code.CustomObjects import *
 from Medieval_Europe.Code.DisplayData import DisplayData
@@ -18,7 +15,6 @@ from Medieval_Europe.Code.page_generator import PageGenerator
 from Medieval_Europe import get_parent_path
 
 # Main Window to display application
-
 class MainWindow(QMainWindow):
     def __init__(self, app, *args, **kwargs):
         ## Set up Window layout
@@ -311,12 +307,7 @@ class MainWindow(QMainWindow):
         self.logger.log('Code', 'Setting {' + target.getID() + '} as ' + str(connection) + ' for {' + subject.getID() + '}')
 
         if connection in ['Father', 'Mother']:
-            if connection == 'Father':
-                targetParent = subject.father
-                otherParent = subject.mother
-            else:
-                targetParent = subject.mother
-                otherParent = subject.father
+            targetParent, otherParent = subject.getParents(connection)
 
             ## Scenarios:
             # 1) Person has no parents: addParent and reciprocate addChild
@@ -387,13 +378,11 @@ class MainWindow(QMainWindow):
 
         elif connection == 'Child':
             if subject.gender == 0:  # Set subject as father of target
-                targetParent = target.father  # The target parent that will become the subject
-                otherParent = target.mother  # The other parent that should be the subject's spouse
+                targetParent, otherParent = target.getParents('Father')
                 reciprocalConnection = 'Father'
                 otherConnection = 'Mother'
             else:  # Set subject as mother of target
-                targetParent = target.mother
-                otherParent = target.father
+                targetParent, otherParent = target.getParents('Mother')
                 reciprocalConnection = 'Mother'
                 otherConnection = 'Father'
 

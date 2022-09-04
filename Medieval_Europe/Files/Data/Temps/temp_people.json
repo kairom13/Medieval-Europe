@@ -6481,10 +6481,12 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": []
+                "unknown_spouse": [
+                    "a5d4b414"
+                ]
             },
-            "Father": null,
-            "Mother": null
+            "Father": "a181619b",
+            "Mother": "54bac911"
         },
         "Events": {},
         "Reign List": {
@@ -6496,7 +6498,7 @@
                 "Connections": {
                     "Title": "2616636f",
                     "Predecessor": "49447dc3",
-                    "Successor": null
+                    "Successor": "e104c738"
                 },
                 "Is Primary": true,
                 "Merged Reigns": {
@@ -12037,14 +12039,19 @@
     "8520fae9": {
         "Attributes": {
             "Name": "Leopold III",
-            "Nickname": "",
+            "Nickname": "the Just",
             "Birth Date": "11/1/1351",
             "Death Date": "7/9/1386"
         },
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": []
+                "unknown_spouse": [
+                    "361d1718",
+                    "6b84c1c3",
+                    "a181619b",
+                    "ffe19395"
+                ]
             },
             "Father": "9e1575d3",
             "Mother": "f6a64c42"
@@ -13113,5 +13120,136 @@
                 }
             }
         }
+    },
+    "a5d4b414": {
+        "Attributes": {
+            "Name": "Maximilian I",
+            "Nickname": "",
+            "Birth Date": "3/22/1459",
+            "Death Date": "1/12/1519"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "305c4569",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "e104c738": {
+                "Attributes": {
+                    "Start Date": "8/19/1493",
+                    "End Date": "1/12/1519"
+                },
+                "Connections": {
+                    "Title": "2616636f",
+                    "Predecessor": "3056ac2f",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "a181619b": {
+        "Attributes": {
+            "Name": "Ernest",
+            "Nickname": "the Iron",
+            "Birth Date": "1377",
+            "Death Date": "6/10/1424"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "54bac911": [
+                    "305c4569"
+                ]
+            },
+            "Father": "8520fae9",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "54bac911": {
+        "Attributes": {
+            "Name": "Cymburgis",
+            "Nickname": "of Masovia",
+            "Birth Date": "1394 or 1397",
+            "Death Date": "9/28/1429"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "a181619b": [
+                    "305c4569"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "361d1718": {
+        "Attributes": {
+            "Name": "William",
+            "Nickname": "the Courteous",
+            "Birth Date": "1370",
+            "Death Date": "7/15/1406"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "8520fae9",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "6b84c1c3": {
+        "Attributes": {
+            "Name": "Leopold IV",
+            "Nickname": "the Fat",
+            "Birth Date": "1371",
+            "Death Date": "6/3/1411"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "8520fae9",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "ffe19395": {
+        "Attributes": {
+            "Name": "Frederick IV",
+            "Nickname": "of the Empty Pockets",
+            "Birth Date": "1382",
+            "Death Date": "6/24/1439"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "8520fae9",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
     }
 }

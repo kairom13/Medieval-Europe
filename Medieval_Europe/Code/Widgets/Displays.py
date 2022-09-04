@@ -524,22 +524,3 @@ class EventsWidget(QGroupBox):
             self.window.page_factory('edit_title_page', {'Title': self.subject})
         elif self.subject.getObjectType() == 'Place':
             self.window.page_factory('edit_place_page', {'Place': self.subject})
-
-    # def paintEvent(self, event):
-    #     left_width = 75
-    #
-    #     print('Painting Widget')
-    #
-    #     painter = QPainter(self)
-    #     painter.setRenderHints(painter.Antialiasing)
-    #
-    #     # Paint Style
-    #     painter.setPen(QPen(Qt.black, 1, Qt.SolidLine))
-    #
-    #     stPt = QPoint(left_width, 0)
-    #     endPt = QPoint(left_width, self.height())
-    #
-    #     painter.drawLine(QLine(stPt, endPt))
-
-
-

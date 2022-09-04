@@ -336,23 +336,19 @@ class PageGenerator:
 
             infoGroup.layout.addLayout(label.layout)
 
-        ## Get dictionary for parents
-        parentDict = person.getParentDict()
+        ## Add Father Widget
+        fatherLayout = QHBoxLayout()
+        fatherLayout.addWidget(ParentWidget(self.window, False, 'Father', person))
+        fatherLayout.addStretch(1)
 
-        for p in parentDict:
-            if parentDict[p] is not None:
-                parent = QLabel(p + ':\t')
-                parentLabel = ObjectLabel(self.window, parentDict[p], 'Person')
-            else:
-                parent = QLabel(p + ':')
-                parentLabel = QLabel('')
+        infoGroup.layout.addLayout(fatherLayout)
 
-            parent.layout = QHBoxLayout()
-            parent.layout.addWidget(parent)
-            parent.layout.addWidget(parentLabel)
-            parent.layout.addStretch(1)
+        ## Add Mother Widget
+        motherLayout = QHBoxLayout()
+        motherLayout.addWidget(ParentWidget(self.window, False, 'Mother', person))
+        motherLayout.addStretch(1)
 
-            infoGroup.layout.addLayout(parent.layout)
+        infoGroup.layout.addLayout(motherLayout)
 
         ## Labels for Spouses
         spouse_layout = QHBoxLayout()

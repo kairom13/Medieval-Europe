@@ -147,13 +147,17 @@ class RemoveConnectionButton(QPushButton):
 
     def eventFilter(self, object, event):
         if event.type() == QEvent.MouseButtonRelease:
+            # Remove the target as a spouse of the subject
+            # Remove the subject as a spouse of the target
             if self.connection == 'Spouse':
                 self.subject.removeSpouse(self.target)
                 self.target.removeSpouse(self.subject)
                 self.window.page_factory('edit_person_page', {'Person': self.subject})
 
+            # Remove the target as a parent of the subject
+            # Remove the subject as a child of the target
             elif self.connection in ('Mother', 'Father'):
-                self.subject.removeParent(self.connection)
+                self.subject.removeParent(self.target)
                 s = self.target.removeChild(self.subject)
 
                 if s != 'unknown_spouse':
@@ -163,23 +167,22 @@ class RemoveConnectionButton(QPushButton):
 
                 self.window.page_factory('edit_person_page', {'Person': self.subject})
 
+            # Remove the target as a child of the subject
+            # Remove the subject as a parent of the target
+            # If the child has another parent, move the child to that parent's unknown_spouse list
             elif self.connection == 'Child':
-                childObject = self.window.get_object(self.target.getID())
+                self.subject.removeChild(self.target)  # Remove the target as a child of the subject
 
-                if self.subject.gender == 0:
-                    childObject.removeParent('Father')
-                    if childObject.mother is not None:
-                        motherObject = self.window.get_object(childObject.mother)
-                        motherObject.removeChild(childObject)
-                        motherObject.addChild(childObject, None)
-                else:
-                    childObject.removeParent('Mother')
-                    if childObject.father is not None:
-                        fatherObject = self.window.get_object(childObject.father)
-                        fatherObject.removeChild(childObject)
-                        fatherObject.addChild(childObject, None)
+                parent_type = self.target.connections('Get', self.subject)  # Get the name of the relationship with the subject
+                otherParent_id = self.target.getParents(parent_type)[1]  # Get the id of the other parent
+                if otherParent_id is not None:
+                    otherParent = self.window.get_object(otherParent_id)  # Get the object of the other parent ID
 
-                self.subject.removeChild(self.target.getID())
+                    # Move the child to be in the unknown_spouse list
+                    otherParent.removeChild(self.target)
+                    otherParent.addChild(self.target, None)
+
+                self.target.removeParent(self.subject)  # Remove the parent from the target
 
                 self.window.page_factory('edit_person_page', {'Person': self.subject})
 

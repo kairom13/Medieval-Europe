@@ -5,8 +5,7 @@ Created on Aug 1, 2022
 """
 
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
+from PyQt5.QtCore import Qt
 
 from Medieval_Europe.Code.Widgets.Displays import ObjectLabel
 from Medieval_Europe.Code.Widgets.Buttons import RemoveConnectionButton, UnmergeButton
@@ -192,7 +191,7 @@ class ParentWidget(QWidget):
 
         self.child = child
         self.connection = connection
-        parentID = self.child.getParent(self.connection)
+        parentID = self.child.getParents(self.connection)[0]
 
         if parentID is None:
             self.parent = None
@@ -223,7 +222,7 @@ class ParentWidget(QWidget):
                 self.layout.addWidget(QLabel(str(self.connection) + ': '))
             else:
                 self.layout.addWidget(QLabel(str(self.connection) + ': '))
-                self.layout.addWidget(ObjectLabel(self.window, self.parent, 'Person', -1))
+                self.layout.addWidget(ObjectLabel(self.window, self.parent.getID(), 'Person', -1))
 
     def addConnection(self):
         self.window.write_data()
@@ -740,4 +739,3 @@ class EventWidget(QWidget):
             self.window.page_factory('edit_title_page', {'Title': self.subject})
         elif self.subject.getObjectType() == 'Place':
             self.window.page_factory('edit_place_page', {'Place': self.subject})
-

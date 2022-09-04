@@ -91,42 +91,47 @@ class CustomObject(ABC):
         elif arg.__class__.__name__ in ('Person', 'Title', 'Reign', 'Place'):
             return arg.getID()
         else:
-            self.logger.log('Error', str(arg) + ' is an invalid type for ' + str(connection) + '.')
+            self.logger.log('Error', str(arg) + ' is an invalid data type. Should be String ID or CustomObject.')
             return None
 
     ## Function to handle modification to the connection dict:
-    # Add
-    # Get
-    # Remove
-    def connection(self, change, subject, connection=None):
-        subjectID = self.check_argument(subject, connection)
+    # Add: subject with the given connection name
+    # Get: the connection name with the given subject
+    # Remove: the connection with the given subject
+    def connection(self, update, subject, name=None):
+        subjectID = self.check_argument(subject)
 
-        if subjectID is not None:
-            if change == 'Add':
+        if subjectID is None:
+            self.logger.log('Error', 'Cannot modify connection, no subject given')
+        else:
+            if update == 'Add':
                 if subjectID in self.connectionDict:
-                    self.logger.log('Warning', 'No need to add {' + str(subjectID) + '} as ' + str(connection) + ' of {' + self.getID() + '}. Already connected')
+                    self.logger.log('Warning', 'No need to add {' + str(subjectID) + '} as ' + str(name) + ' of {' + self.getID() + '}. Already connected')
+                elif name is None:
+                    self.logger.log('Warning', 'No connection name given')
                 else:
-                    self.connectionDict.update({subjectID: connection})
+                    self.connectionDict.update({subjectID: name})
 
-            elif change == 'Get':
+            elif update == 'Get':
                 if subjectID in self.connectionDict:
                     return self.connectionDict[subjectID]
                 else:
                     self.logger.log('Error', 'Cannot get connection. {' + str(subjectID) + '} is not a connection of ' + self.getName())
                     return None
 
-            elif change == 'Remove':
+            elif update == 'Remove':
                 if subjectID in self.connectionDict:
                     self.connectionDict.pop(subjectID)
                 else:
-                    self.logger.log('Error', 'Cannot remove connection. {' + str(subjectID) + '} is not a connection of ' + self.getName())
+                    self.logger.log('Warning', 'Cannot remove connection. {' + str(subjectID) + '} is not a connection of ' + self.getName())
+
+            else:
+                self.logger.log('Error', str(update) + ' is an invalid update value')
 
     ## Get Dictionary of values
     @abstractmethod
     def getDict(self):
         pass
-
-
 
 ######################################
 ###                                ###
@@ -158,11 +163,9 @@ class Person(CustomObject):
         self.primaryTitle = None
         
         self.spouses = {'unknown_spouse': []}  # Dictionary, each key is a spouse id, each value is the list of children id's for the spouse
+        self.parents = {'Father': None, 'Mother': None}
         
         if init_dict is None:
-            self.father = None  # String ID
-            self.mother = None  # String ID
-
             self.updateAttribute('Name', 'No Name')
             
         else:
@@ -173,15 +176,7 @@ class Person(CustomObject):
                 if c == 'Spouses':
                     self.addSpouses(init_dict['Connections'][c])
                 else:
-                    if init_dict['Connections'][c] is None:
-                        if c == 'Father':
-                            self.father = None
-                        elif c == 'Mother':
-                            self.mother = None
-                        else:
-                            self.logger.log('Error', str(c) + ' is not a valid connection for Person')
-                    else:
-                        self.addParent(init_dict['Connections'][c], c)
+                    self.addParent(init_dict['Connections'][c], c)
 
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
@@ -284,39 +279,42 @@ class Person(CustomObject):
         else:
             self.logger.log('Error', '{' + targetID + '} not a valid spouse to remove')
 
+    # Add parent as the relation to self
     def addParent(self, parent, relation):
-        parentID = self.check_argument(parent, relation)
+        parentID = self.check_argument(parent, 'Person')  # Get the parentID
 
-        if parentID is not None:
-            if relation == 'Father':
-                self.father = parentID
-                self.connection('Add', parentID, relation)
-            elif relation == 'Mother':
-                self.mother = parentID
-                self.connection('Add', parentID, relation)
-            else:
-                self.logger.log('Error', str(relation) + ' is not a valid parent type to add')
-    
-    ## Remove Relationship with Parent  
-    def removeParent(self, relation):
-        self.logger.log('Code', 'Removing ' + relation)
-        if relation == 'Father':
-            self.connection('Remove', self.father)
-            self.father = None
-        elif relation == 'Mother':
-            self.connection('Remove', self.mother)
-            self.mother = None
+        if relation in ('Father', 'Mother'):
+            self.parents.update({relation: parentID})
+            if parentID is not None:  # Only add parent relationship if the parent exists (should not have a None key)
+                self.connection('Add', parentID, name=relation)
         else:
             self.logger.log('Error', str(relation) + ' is not a valid parent type to add')
+    
+    ## Remove Relationship with Parent (can be either name or subject)
+    def removeParent(self, parent):
+        if parent in ('Father', 'Mother'):
+            parentID = self.getParents(parent)[0]  # Get the subjectID of the parent to remove
+            self.parents.update({parent: None})  # Update the parents dict to specify the parent name as None
+        else:
+            parentID = self.check_argument(parent, 'Person')  # Get the parentID
+            relation = self.connection('Get', parentID)  # Get the name of the relationship
+            if relation is not None:
+                self.parents.update({relation: None})  # Set the relationship as None
 
-    ## Get Relationship with Parent
-    def getParent(self, relation):
+        self.logger.log('Code', 'Removing ' + self.connection('Get', parentID) + ' from {' + self.getID() + '}')
+        self.connection('Remove', parentID)
+
+    ## Get the parent IDs as a tuple with an order based on what relation name was given
+    def getParents(self, relation=None):
         if relation == 'Father':
-            return self.father
+            return self.parents['Father'], self.parents['Mother']
         elif relation == 'Mother':
-            return self.mother
+            return self.parents['Mother'], self.parents['Father']
+        elif relation is None:
+            return self.parents['Father'], self.parents['Mother']
         else:
             self.logger.log('Error', str(relation) + ' is not a valid parent type to get')
+            return None
             
     def addReign(self, reign):
         if isinstance(reign, Reign):
@@ -511,8 +509,8 @@ class Person(CustomObject):
         returnDict = {self.getID(): {'Attributes': self.attributes,
                                      'Gender': self.gender,
                                      'Connections': {'Spouses': self.spouses,
-                                                     'Father': self.father,
-                                                     'Mother': self.mother},
+                                                     'Father': self.parents['Father'],
+                                                     'Mother': self.parents['Mother']},
                                      'Events': self.eventList,
                                      'Reign List': {}}}
         
@@ -527,10 +525,6 @@ class Person(CustomObject):
         return {'Gender': genderDict[self.gender],
                 'Birth Date': self.getAttribute('Birth Date'),
                 'Death Date': self.getAttribute('Death Date')}
-
-    def getParentDict(self):
-        return {'Father': self.father,
-                'Mother': self.mother}
 
 ######################################
 ###                                ###
@@ -677,6 +671,124 @@ class Title(CustomObject):
                                'Events': self.eventList,
                                'Reign List': list(self.reignDict.keys())}}
 
+######################################
+###                                ###
+###          Place Class           ###
+###                                ###
+######################################
+
+## Required common fields and methods:
+# id: unique 8 character string that defines a given person
+# getName(): method that returns the name of the reign
+#    is the associated person + the full ruler title of the associated title
+# updateFreeInfo(): method that updates certain fields that use text boxes
+#    applicable fields for Reign:
+#    - Start Date
+#    - End Date
+# getDict(): method that returns a dictionary that defines this reign, used when writing to output file
+
+class Place(CustomObject):
+    def __init__(self, logger, init_dict, place_id):
+        super().__init__(logger, 'Place', place_id, ['Name', 'Latitude', 'Longitude'])
+
+        if init_dict is None:
+            self.reignList = []
+
+        else:
+            for a in self.attributes:
+                self.updateAttribute(a, init_dict['Attributes'][a])
+
+            for e in init_dict['Events']:
+                self.updateEvent(e, init_dict['Events'][e])
+
+            self.reignList = init_dict['Reign List']
+            for r in self.reignList:
+                self.connection('Add', r, 'Reign')
+
+        self.setName()
+
+    def setName(self):
+        self.name = self.getAttribute('Name') + ' Place'
+
+    def addReign(self, reign):
+        reignID = self.check_argument(reign, 'Reign')
+
+        if reignID is not None:
+            if reignID in self.reignList:
+                self.logger.log('Warning', '{' + reignID + '} already in list for {' + self.getID() + '}')
+            else:
+                self.reignList.append(reignID)
+                self.connection('Add', reignID, 'Reign')
+
+    def removeReign(self, reign):
+        reignID = self.check_argument(reign, 'Reign')
+
+        if reignID is not None:
+            if reignID in self.reignList:
+                self.reignList.remove(reignID)
+                self.connection('Remove', reignID)
+            else:
+                self.logger.log('Warning', '{' + reignID + '} already in list for {' + self.getID() + '}')
+
+    def hasReign(self, reign):
+        reignID = self.check_argument(reign, 'Reign')
+
+        if reignID in self.reignList:
+            return True
+        else:
+            return False
+
+    def addCoords(self, lat=None, long=None):
+        if lat is not None:
+            self.updateAttribute('Latitude', lat)
+
+        if long is not None:
+            self.updateAttribute('Longitude', long)
+
+    def getCoords(self):
+        return {self.getAttribute('Latitude'), self.getAttribute('Longitude')}
+
+    def isEmpty(self):
+        if self.name != '':
+            return False
+        elif self.lat != '':
+            return False
+        elif self.long != '':
+            return False
+        else:
+            return True
+
+    def getDict(self):
+        return {self.getID(): {'Attributes': self.attributes,
+                               'Events': self.eventList,
+                               'Reign List': self.reignList}}
+
+######################################
+###                                ###
+###       Connection Class         ###
+###                                ###
+######################################
+
+class Connection:
+    def __init__(self, sideA, sideB):
+        self.sideA = sideA
+        self.sideB = sideB
+
+    def getSide(self, name):
+        if self.sideA['Connection'] == name:
+            return self.sideA['Object']
+        elif self.sideB['Connection'] == name:
+            return self.sideB['Object']
+        else:
+            print('ERROR: ' + str(name) + ' is not a valid name for this Connection')
+
+    def getOtherSide(self, name):
+        if self.sideA['Connection'] == name:
+            return self.sideB['Object']
+        elif self.sideB['Connection'] == name:
+            return self.sideA['Object']
+        else:
+            print('ERROR: ' + str(name) + ' is not a valid name for this Connection')
 
 ######################################
 ###                                ###
@@ -881,99 +993,6 @@ class Reign(CustomObject):
                                'Is Primary': self.isPrimary,
                                'Merged Reigns': self.mergedReigns}}
 
-
-######################################
-###                                ###
-###          Place Class           ###
-###                                ###
-######################################   
-
-## Required common fields and methods:
-# id: unique 8 character string that defines a given person
-# getName(): method that returns the name of the reign
-#    is the associated person + the full ruler title of the associated title
-# updateFreeInfo(): method that updates certain fields that use text boxes
-#    applicable fields for Reign:
-#    - Start Date
-#    - End Date
-# getDict(): method that returns a dictionary that defines this reign, used when writing to output file
-
-class Place(CustomObject):
-    def __init__(self, logger, init_dict, place_id):
-        super().__init__(logger, 'Place', place_id, ['Name', 'Latitude', 'Longitude'])
-
-        if init_dict is None:
-            self.reignList = []
-
-        else:
-            for a in self.attributes:
-                self.updateAttribute(a, init_dict['Attributes'][a])
-
-            for e in init_dict['Events']:
-                self.updateEvent(e, init_dict['Events'][e])
-
-            self.reignList = init_dict['Reign List']
-            for r in self.reignList:
-                self.connection('Add', r, 'Reign')
-
-        self.setName()
-
-    def setName(self):
-        self.name = self.getAttribute('Name') + ' Place'
-
-    def addReign(self, reign):
-        reignID = self.check_argument(reign, 'Reign')
-
-        if reignID is not None:
-            if reignID in self.reignList:
-                self.logger.log('Warning', '{' + reignID + '} already in list for {' + self.getID() + '}')
-            else:
-                self.reignList.append(reignID)
-                self.connection('Add', reignID, 'Reign')
-
-    def removeReign(self, reign):
-        reignID = self.check_argument(reign, 'Reign')
-
-        if reignID is not None:
-            if reignID in self.reignList:
-                self.reignList.remove(reignID)
-                self.connection('Remove', reignID)
-            else:
-                self.logger.log('Warning', '{' + reignID + '} already in list for {' + self.getID() + '}')
-
-    def hasReign(self, reign):
-        reignID = self.check_argument(reign, 'Reign')
-
-        if reignID in self.reignList:
-            return True
-        else:
-            return False
-
-    def addCoords(self, lat=None, long=None):
-        if lat is not None:
-            self.updateAttribute('Latitude', lat)
-
-        if long is not None:
-            self.updateAttribute('Longitude', long)
-
-    def getCoords(self):
-        return {self.getAttribute('Latitude'), self.getAttribute('Longitude')}
-
-    def isEmpty(self):
-        if self.name != '':
-            return False
-        elif self.lat != '':
-            return False
-        elif self.long != '':
-            return False
-        else:
-            return True
-
-    def getDict(self):
-        return {self.getID(): {'Attributes': self.attributes,
-                               'Events': self.eventList,
-                               'Reign List': self.reignList}}
-
         
 ######################################
 ###                                ###
@@ -1084,6 +1103,3 @@ class Logger:
         for k in self.logDict:
             with open(os.path.join(get_parent_path(), 'Logs/' + k.lower() + '_log.json'), 'w') as outfile:
                 json.dump(self.logDict[k]['Log'], outfile, indent=4)
-
-        
-        

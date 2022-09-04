@@ -1,5 +1,5 @@
 
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QLabel, QScrollArea
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QScrollArea
 import json
 
 class DisplayData(QWidget):
