@@ -21,6 +21,8 @@ class ObjectButton(QPushButton):
         self.objectType = parameters['Object Type']
         self.pageType = parameters['Page Type']
 
+        self.connection = None
+
         self.checkedPlace = True
 
         if 'Spouse' in parameters:

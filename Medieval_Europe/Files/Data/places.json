@@ -1213,7 +1213,9 @@
             "Longitude": "6.86"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "13b29381"
+        ]
     },
     "01a21103": {
         "Attributes": {
@@ -1221,8 +1223,15 @@
             "Latitude": "47.575",
             "Longitude": "6.76"
         },
-        "Events": {},
-        "Reign List": []
+        "Events": {
+            "139fb297": {
+                "Date": "1397",
+                "Content": "Passed to the Counts of Montbeliard"
+            }
+        },
+        "Reign List": [
+            "6fbbd682"
+        ]
     },
     "2af3ecce": {
         "Attributes": {
@@ -1231,7 +1240,10 @@
             "Longitude": "7.315"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "3d13b797",
+            "fa250466"
+        ]
     },
     "352b0472": {
         "Attributes": {
@@ -1452,6 +1464,15 @@
                 "Content": "Given to Margrave Leopold III of Austria"
             }
         },
+        "Reign List": []
+    },
+    "28dedd1a": {
+        "Attributes": {
+            "Name": "Lubeck",
+            "Latitude": "53.87",
+            "Longitude": "10.69"
+        },
+        "Events": {},
         "Reign List": []
     }
 }

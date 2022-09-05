@@ -1,42 +1,31 @@
-# An Overview of Ideas I Want to Implement
+# List of Ideas that I Want to Implement
+## Dynasties
+1. Should be its own object
+   1. Allows for enhancements to focus on just the dynasty
+2. Will have its own list, edit, and display pages
+3. Will have its own save file
+   1. Need to determine data structure (likely binary search tree)
+4. Would like to include an image of the coat of arms
+5. Would like to include a map (not sure of implementation)
+   1. Likely need a slider to show a certain date
+6. Would like to include a graph of members
+   1. Need to determine how to display (not sure how well networkx would do)
+   2. This would be the best way to go to navigate to individual rulers
+   3. Women can have links to husbands and their dynasties
+   4. Cadet branches can have links to those dynasties
 
-## Person Page Designs
-Each person, both displaying and editing, should have 4 sections to display:
-1. Personal Information
-2. Held Titles
-3. Biography
-4. Map
+## Dates as usable information
+1. Currently, just stored as strings, can be stored as information
+2. Need to handle different formats (i.e. just year, just month, etch)
+   1. Also need date ranges, bounds, options
+      1. (i.e. 1070-1080, after 1227, 1082 or 1085)
+3. Would be used for timeline sliders, downloadable data
 
-### Personal Information
-The immutable information that describes this person
-Includes:
-- Name and Nickname
-- Gender
-- Dynasty
-- Birth Date
-- Death Date
-- Relatives
-  - Father, Mother
-  - Spouse(s) (include marriage date)
-  - Children (include birth dates)
-
-### Held Titles
-The titles that his person held throughout their life
-List as a series of reigns
-For each reign that this person had:
-- The name of the title they held
-- The start and end date of their reign
-- The predecessor or successor, if applicable
-
-### Biography
-A list of events that the person did or was involved in.
-Can help explain values of other sections (i.e. reigns, spouses, death date, etc)
-Each event should be accompanied with a date
-Each event may include links to other objects (People, Places, Titles)
-
-### Map
-A map of the realms this person ruled (or was associated with)
-Includes timeline slider
-Realms based off of associated reigns
-- Get reigns that contain the given date
-- Display polygons of the realm for that date
+## Title Predecessors and Successors
+1. Would allow reigns to be linked between titles
+   1. Restrictions on link
+      1. Can only happen once
+      2. Based on the links on the title page
+      3. Can only be in the same direction
+         1. If the title has a successor, then a reign can only add a successor to a reign in the successor title
+         2. If the title has a predecessor, then a reign can only add a predecessor to a reign in the predecessor title

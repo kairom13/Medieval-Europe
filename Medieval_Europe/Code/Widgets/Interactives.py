@@ -7,7 +7,7 @@ Created on Aug 1, 2022
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt
 
-from Medieval_Europe.Code.Widgets.Displays import ObjectLabel
+from Medieval_Europe.Code.Widgets.Displays import ObjectLabel, ConnectedReignLabel
 from Medieval_Europe.Code.Widgets.Buttons import RemoveConnectionButton, UnmergeButton
 
 
@@ -105,15 +105,14 @@ class SearchBar(QWidget):
         self.window = window
         self.logger = self.window.logger
 
-        self.layout = QHBoxLayout()
-        self.setLayout(self.layout)
+        self.setLayout(QHBoxLayout())
 
-        self.layout.addWidget(QLabel('Search:'))
+        self.layout().addWidget(QLabel('Search:'))
 
         self.searchBar = QLineEdit(searchText)
         self.searchBar.setFixedWidth(250)
         self.searchBar.textChanged.connect(self.check_text)
-        self.layout.addWidget(self.searchBar)
+        self.layout().addWidget(self.searchBar)
 
     ## Check Text(search)
     # Modify list of characters based on search text
@@ -439,7 +438,7 @@ class ReignWidget(QWidget):
                 if len(ruler.reignList) > 1:
                     mergeButton = QPushButton('Merge')
                     mergeButton.setEnabled(False)
-                    mergeButton.setToolTip('Merging to be added in a later update')
+                    mergeButton.setToolTip('Merge functionality to be added in a later update')
 
                     potential_object_list = {}
 
@@ -581,6 +580,8 @@ class ReignWidget(QWidget):
                     juniorHBox.addWidget(QLabel(juniorObject.getConnectedReign('Title').getName()))
 
                     unmergeButton = UnmergeButton(self.window, juniorObject)
+                    unmergeButton.setEnabled(False)
+                    unmergeButton.setToolTip('Merge functionality to be added in a later update')
 
                     juniorHBox.addWidget(unmergeButton)
                     juniorHBox.addStretch(1)
@@ -645,25 +646,19 @@ class ReignWidget(QWidget):
                 predecessorObject = self.window.get_object(self.reign.getConnectedReign('Predecessor'))
                 self.logger.log('Code', 'Predecessor: ' + predecessorObject.getConnectedReign('Ruler').getName())
 
-                preLabel = QHBoxLayout()
-                preLabel.addStretch(1)
-                preLabel.addWidget(ObjectLabel(self.window, predecessorObject.getConnectedReign('Ruler').getID(), 'Person', 'Reign'))
-                layout.addLayout(preLabel, 1, 0) # add at row 1, column 0
+                layout.addLayout(ConnectedReignLabel(self.window, 'Predecessor', predecessorObject.getConnectedReign('Ruler')), 1, 0, 2, 1)  # add at row 1, column 1, spans 2 rows and 1 column
 
             centerLayout = QHBoxLayout()
             centerLayout.addWidget(QLabel('\u25C0'))  ## Left Arrow
             centerLayout.addWidget(QLabel(self.reign.getDateString()))
             centerLayout.addWidget(QLabel('\u25b6'))  ## Right Arrow
-            layout.addLayout(centerLayout, 1, 1)  # add at row 1, column 1
+            layout.addLayout(centerLayout, 1, 1)  # add at row 1, column 2
 
             if self.reign.hasConnectedReign('Successor'):  ## Only display the successor label if there is one
                 successorObject = self.window.get_object(self.reign.getConnectedReign('Successor'))
                 self.logger.log('Code', 'Successor: ' + successorObject.getConnectedReign('Ruler').getName())
 
-                sucLabel = QHBoxLayout()
-                sucLabel.addWidget(ObjectLabel(self.window, successorObject.getConnectedReign('Ruler').getID(), 'Person', 'Reign'))
-                sucLabel.addStretch(1)
-                layout.addLayout(sucLabel, 1, 2)  # add at row 1, column 2
+                layout.addLayout(ConnectedReignLabel(self.window, 'Successor', successorObject.getConnectedReign('Ruler')), 1, 2, 2, 1)  # add at row 0, column 2, spans 2 rows and 1 column
 
             if self.objectType == 'Person':
                 juniorVBox = QVBoxLayout()
@@ -671,14 +666,16 @@ class ReignWidget(QWidget):
 
                 juniorLabel = QLabel('Junior Reigns:')
                 juniorLabel.setAlignment(Qt.AlignCenter)
-                juniorVBox.addWidget(juniorLabel)
+                layout.addWidget(juniorLabel, 2, 1)
+
+                #juniorVBox.addWidget(juniorLabel)
 
                 for j in self.reign.mergedReigns['Junior']:
                     reignObject = self.window.get_object(j)
                     self.logger.log('Code', 'Add ' + str(reignObject.getConnectedReign('Title').getName()) + ' as junior reign')
-                    juniorVBox.addWidget(ObjectLabel(self.window, reignObject.getConnectedReign('Title').getID(), 'Title', ruler.gender), alignment=Qt.AlignHCenter)
+                    juniorVBox.addWidget(ObjectLabel(self.window, reignObject.getConnectedReign('Title').getID(), 'Title', ruler.gender))
 
-                layout.addLayout(juniorVBox, 2, 1)
+                layout.addLayout(juniorVBox, 3, 1)
 
         self.setLayout(layout)
 

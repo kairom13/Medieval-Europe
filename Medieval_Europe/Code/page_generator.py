@@ -87,6 +87,7 @@ class PageGenerator:
         group = QWidget()
         group.layout = QVBoxLayout()
         group.setLayout(group.layout)
+        group.layout.setSpacing(0)
 
         ## Create list of objects
         self.window.widgets = []

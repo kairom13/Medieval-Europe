@@ -24,46 +24,31 @@ class ObjectLabelWidget(QWidget):
 
         self.widgets = [self]
 
+        self.setLayout(QHBoxLayout())
+
         self.button = button
         self.placeCheckbox = None
 
-        if objectType == 'Person':
-            self.info = obj.getName() + ' (' + obj.getAttribute('Birth Date') + ' - ' + obj.getAttribute('Death Date') + ')'
+        self.info = obj.getDisplayInfo()
 
-        elif objectType == 'Title':
-            self.info = obj.getFullRealmTitle()
+        if self.button.connection in ('Predecessor', 'Successor'):
+            self.placeCheckbox = QCheckBox('Transfer Places?')
+            self.placeCheckbox.setChecked(True)
 
-        elif objectType == 'Place':
-            self.info = obj.getAttribute('Name') + ' (' + obj.getAttribute('Latitude') + ', ' + obj.getAttribute('Longitude') + ')'
-
-        elif objectType == 'Reign':
-            self.info = obj.getConnectedReign('Ruler').getAttribute('Name') + ' ' + obj.getDateString()
-
-            if self.button.connection in ('Predecessor', 'Successor'):
-                self.placeCheckbox = QCheckBox('Transfer Places?')
-                self.placeCheckbox.setChecked(True)
-
-                self.placeCheckbox.stateChanged.connect(self.checkedPlace)
-
-        else:
-            self.info = 'missing info'
+            self.placeCheckbox.stateChanged.connect(self.checkedPlace)
 
         infoLabel = QLabel(self.info)
         self.widgets.append(infoLabel)
-
-        infoLabel.layout = QHBoxLayout()
-        infoLabel.layout.addWidget(infoLabel)
+        self.layout().addWidget(infoLabel)
 
         if self.placeCheckbox is not None:
             self.widgets.append(self.placeCheckbox)
-            infoLabel.layout.addWidget(self.placeCheckbox)
+            self.layout().addWidget(self.placeCheckbox)
 
         self.widgets.append(self.button)
 
-        infoLabel.layout.addStretch(1)
-        infoLabel.layout.addWidget(self.button)
-
-        self.setLayout(infoLabel.layout)
+        self.layout().addStretch(1)
+        self.layout().addWidget(self.button)
 
     def show(self):
         for w in self.widgets:
@@ -201,10 +186,12 @@ class PlaceMap(QWidget):
             p.update({'Map Coords': (self.adjustCoords['X Origin'] + (xPos - self.adjustCoords['Left']) * self.adjustCoords['Ratio'],
                                      self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - yPos) * self.adjustCoords['Ratio'])})
 
+            #print(p['Object'].getName() + ': (' + str((p['Map Coords'][0] - radius)/self.width()) + ', ' + str((p['Map Coords'][1] - radius)/self.height()) + ')')
+
             if self.selectedPlace is not None and p['Object'].getID() == self.selectedPlace.getID():
                 painter.setPen(QPen(Qt.blue, 1, Qt.SolidLine))
                 painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
-                painter.drawText(int(p['Map Coords'][0] + radius), int(p['Map Coords'][1] - radius), int(p['Object'].getAttribute('Name')))
+                painter.drawText(int(p['Map Coords'][0] + radius), int(p['Map Coords'][1] - radius), p['Object'].getAttribute('Name'))
             else:
                 painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
                 painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
@@ -322,7 +309,7 @@ class PlaceMap(QWidget):
             if p[1] > map_edges['top']:
                 map_edges['top'] = p[1]
 
-        self.buffer = 50
+        self.buffer = .075
 
         if map_edges['top'] == map_edges['bottom']:
             self.zoom = 10
@@ -362,7 +349,7 @@ class PlaceMap(QWidget):
             if s.bbox[3] > map_edges['top']:
                 map_edges['top'] = s.bbox[3]
 
-        self.buffer = 10
+        self.buffer = .01
 
         # self.adjustCoords['Left'] = map_edges['left']
         # self.adjustCoords['Top'] = map_edges['top']
@@ -380,8 +367,8 @@ class PlaceMap(QWidget):
         self.adjustCoords['Left'] = map_edges['left']
         self.adjustCoords['Top'] = map_edges['top']
 
-        st_x = self.buffer
-        st_y = self.buffer
+        st_x = 0
+        st_y = 0
 
         # Aspect Ratios for the map and the display
         mapRatio = self.map_dim['height'] / self.map_dim['width']
@@ -392,11 +379,25 @@ class PlaceMap(QWidget):
 
         # Adjust start points based on which axis is better
         if mapRatio > dispRatio:
-            ratio = (self.disp_dim['height'] - 2*self.buffer) / self.map_dim['height']
-            st_x += (self.disp_dim['width'] - self.map_dim['width'] * ratio) / 2
+            pix_buffer = self.buffer * self.map_dim['height']
+            self.map_dim['width'] += (2*pix_buffer)
+            self.map_dim['height'] += (2*pix_buffer)
+
+            self.adjustCoords['Left'] -= pix_buffer
+            self.adjustCoords['Top'] += pix_buffer
+
+            ratio = self.disp_dim['height'] / self.map_dim['height']
+            st_x = (self.disp_dim['width'] - self.map_dim['width'] * ratio) / 2
         else:
-            ratio = (self.disp_dim['width'] - 2*self.buffer) / self.map_dim['width']
-            st_y += (self.disp_dim['height'] - self.map_dim['height'] * ratio) / 2
+            pix_buffer = self.buffer * self.map_dim['width']
+            self.map_dim['width'] += (2*pix_buffer)
+            self.map_dim['height'] += (2*pix_buffer)
+
+            self.adjustCoords['Left'] -= pix_buffer
+            self.adjustCoords['Top'] += pix_buffer
+
+            ratio = self.disp_dim['width'] / self.map_dim['width']
+            st_y = (self.disp_dim['height'] - self.map_dim['height'] * ratio) / 2
 
         # Global scalars to adjust shapefile to application dimensions
         self.adjustCoords.update({'X Origin': st_x,  # X position of the top left corner of the map in the display
@@ -442,7 +443,7 @@ class ObjectLabel(QLabel):
 
         self.setStyleSheet('QLabel {color : black; text-decoration: underline}')
         self.adjustSize()
-        self.setAlignment(Qt.AlignHCenter)
+        self.setAlignment(Qt.AlignCenter)
         #self.setAttribute(Qt.WA_TransparentForMouseEvents)
         self.installEventFilter(self)
 
@@ -524,3 +525,20 @@ class EventsWidget(QGroupBox):
             self.window.page_factory('edit_title_page', {'Title': self.subject})
         elif self.subject.getObjectType() == 'Place':
             self.window.page_factory('edit_place_page', {'Place': self.subject})
+
+class ConnectedReignLabel(QVBoxLayout):
+    def __init__(self, window, connection, subject):
+        super().__init__()
+
+        midLabel = QHBoxLayout()
+        if connection == 'Predecessor':
+            midLabel.addStretch(1)
+            midLabel.addWidget(ObjectLabel(window, subject.getID(), 'Person', context='Reign'))
+        elif connection == 'Successor':
+            midLabel.addWidget(ObjectLabel(window, subject.getID(), 'Person', context='Reign'))
+            midLabel.addStretch(1)
+        else:
+            window.logger.log('Error', str(connection) + ' is an invalid connection to create a label for')
+
+        self.addLayout(midLabel)
+        self.addStretch(1)

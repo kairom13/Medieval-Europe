@@ -23,7 +23,7 @@ class CustomObject(ABC):
             self.objectID = uuid.uuid4().hex[:8]
         else:
             self.objectID = objectID
-        self.name = 'no name'
+        self.name = 'No Name'
         self.objectType = objectType
 
         self.logger = logger
@@ -133,6 +133,11 @@ class CustomObject(ABC):
     def getDict(self):
         pass
 
+    ## Get Info to display in object list
+    @abstractmethod
+    def getDisplayInfo(self):
+        pass
+
 ######################################
 ###                                ###
 ###          Person Class          ###
@@ -165,10 +170,7 @@ class Person(CustomObject):
         self.spouses = {'unknown_spouse': []}  # Dictionary, each key is a spouse id, each value is the list of children id's for the spouse
         self.parents = {'Father': None, 'Mother': None}
         
-        if init_dict is None:
-            self.updateAttribute('Name', 'No Name')
-            
-        else:
+        if init_dict is not None:
             for a in self.attributes:
                 self.updateAttribute(a, init_dict['Attributes'][a])
 
@@ -200,9 +202,16 @@ class Person(CustomObject):
             
         self.name = self.getAttribute('Name') + nickname + primaryTitle
 
+    ## Return a string of info to display for this person
+    def getDisplayInfo(self):
+        name_split = self.getName().split(', ')
+        if len(name_split) == 2:
+            return name_split[0] + ' (' + self.getAttribute('Birth Date') + ' - ' + self.getAttribute('Death Date') + ')\n' + name_split[1]
+        else:
+            return name_split[0] + ' (' + self.getAttribute('Birth Date') + ' - ' + self.getAttribute('Death Date') + ')'
+
     ## Add Relationship with Child
     ## If there is no spouse, add child with unknown spouse
-    
     def addChild(self, child, spouse):
         childID = self.check_argument(child, 'Child')
 
@@ -281,14 +290,15 @@ class Person(CustomObject):
 
     # Add parent as the relation to self
     def addParent(self, parent, relation):
-        parentID = self.check_argument(parent, 'Person')  # Get the parentID
+        if parent is not None:
+            parentID = self.check_argument(parent, 'Person')  # Get the parentID
 
-        if relation in ('Father', 'Mother'):
-            self.parents.update({relation: parentID})
-            if parentID is not None:  # Only add parent relationship if the parent exists (should not have a None key)
-                self.connection('Add', parentID, name=relation)
-        else:
-            self.logger.log('Error', str(relation) + ' is not a valid parent type to add')
+            if relation in ('Father', 'Mother'):
+                self.parents.update({relation: parentID})
+                if parentID is not None:  # Only add parent relationship if the parent exists (should not have a None key)
+                    self.connection('Add', parentID, name=relation)
+            else:
+                self.logger.log('Error', str(relation) + ' is not a valid parent type to add')
     
     ## Remove Relationship with Parent (can be either name or subject)
     def removeParent(self, parent):
@@ -580,6 +590,10 @@ class Title(CustomObject):
     def setName(self):
         self.name = self.getFullRealmTitle()
 
+    ## Return a string of info to display for this person
+    def getDisplayInfo(self):
+        return self.getFullRealmTitle()
+
     def getFullRealmTitle(self):
         if self.isTitular:
             return 'Titular ' + self.getAttribute('Realm Title') + ' of ' + self.getAttribute('Realm Name')
@@ -587,10 +601,14 @@ class Title(CustomObject):
             return self.getAttribute('Realm Title') + ' of ' + self.getAttribute('Realm Name')
     
     def getFullRulerTitle(self, gender):
+        rulerTitle = ''
+        if self.isTitular:
+            rulerTitle = 'Titular '
+
         if gender == 0:
-            return self.getAttribute('Male Ruler Title') + ' of ' + self.getAttribute('Realm Name')
+            return rulerTitle + self.getAttribute('Male Ruler Title') + ' of ' + self.getAttribute('Realm Name')
         elif gender == 1:
-            return self.getAttribute('Female Ruler Title') + ' of ' + self.getAttribute('Realm Name')
+            return rulerTitle + self.getAttribute('Female Ruler Title') + ' of ' + self.getAttribute('Realm Name')
         else:
             self.logger.log('Error', str(gender) + ' is not a valid gender')
             return None
@@ -710,6 +728,10 @@ class Place(CustomObject):
     def setName(self):
         self.name = self.getAttribute('Name') + ' Place'
 
+    ## Return a string of info to display for this person
+    def getDisplayInfo(self):
+        return self.getAttribute('Name') + ' (' + self.getAttribute('Latitude') + ', ' + self.getAttribute('Longitude') + ')'
+
     def addReign(self, reign):
         reignID = self.check_argument(reign, 'Reign')
 
@@ -762,33 +784,6 @@ class Place(CustomObject):
         return {self.getID(): {'Attributes': self.attributes,
                                'Events': self.eventList,
                                'Reign List': self.reignList}}
-
-######################################
-###                                ###
-###       Connection Class         ###
-###                                ###
-######################################
-
-class Connection:
-    def __init__(self, sideA, sideB):
-        self.sideA = sideA
-        self.sideB = sideB
-
-    def getSide(self, name):
-        if self.sideA['Connection'] == name:
-            return self.sideA['Object']
-        elif self.sideB['Connection'] == name:
-            return self.sideB['Object']
-        else:
-            print('ERROR: ' + str(name) + ' is not a valid name for this Connection')
-
-    def getOtherSide(self, name):
-        if self.sideA['Connection'] == name:
-            return self.sideB['Object']
-        elif self.sideB['Connection'] == name:
-            return self.sideA['Object']
-        else:
-            print('ERROR: ' + str(name) + ' is not a valid name for this Connection')
 
 ######################################
 ###                                ###
@@ -861,6 +856,10 @@ class Reign(CustomObject):
 
     def setName(self):
         self.name = self.getConnectedReign('Ruler').getAttribute('Name') + ', ' + self.getConnectedReign('Title').getFullRulerTitle(self.getConnectedReign('Ruler').gender)
+
+    ## Return a string of info to display for this person
+    def getDisplayInfo(self):
+        return self.getConnectedReign('Ruler').getAttribute('Name') + ' ' + self.getDateString()
 
     def setConnectedReign(self, target, connection):
         targetID = self.check_argument(target, connection)

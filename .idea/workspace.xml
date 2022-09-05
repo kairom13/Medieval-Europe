@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1cc36cf-d2b0-4cc3-94a5-f47e3187f9cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/overview.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/CustomObjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/CustomObjects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/DisplayData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/DisplayData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Buttons.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Displays.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Displays.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Interactives.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Interactives.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/page_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/page_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_people.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_people.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_places.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_places.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_titles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_titles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/people.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/people.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/places.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/places.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/titles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/titles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Logs/code_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Logs/code_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Logs/error_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Logs/error_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideas.md" beforeDir="false" afterPath="$PROJECT_DIR$/ideas.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -382,8 +382,7 @@
             "Spouses": {
                 "unknown_spouse": [
                     "8b4bef40"
-                ],
-                "215e4722": []
+                ]
             },
             "Father": null,
             "Mother": null
@@ -967,8 +966,7 @@
                     "c68e66bf",
                     "dc2461d8",
                     "00a24500"
-                ],
-                "079f720c": []
+                ]
             },
             "Father": "41465b77",
             "Mother": "2bd69de4"
@@ -11653,7 +11651,7 @@
                 "Connections": {
                     "Title": "f07e4860",
                     "Predecessor": null,
-                    "Successor": null
+                    "Successor": "fa250466"
                 },
                 "Is Primary": true,
                 "Merged Reigns": {
@@ -11695,7 +11693,7 @@
                 },
                 "Connections": {
                     "Title": "f07e4860",
-                    "Predecessor": null,
+                    "Predecessor": "3d13b797",
                     "Successor": null
                 },
                 "Is Primary": true,
