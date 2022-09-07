@@ -53,6 +53,7 @@ class MainWindow(QMainWindow):
 
         # Menu Bar
         menuBar = self.menuBar()
+        self.logger.log('Code', 'Creating Menu Bar')
 
         files = menuBar.addMenu("Files")
         data = files.addMenu('Data')
@@ -86,6 +87,7 @@ class MainWindow(QMainWindow):
         self.page_factory('view_object_list', {'Object Type': 'Person', 'Search Text': '', 'Page Type': 'View'})
 
     def processTrigger(self, q):
+        self.logger.log('Code', 'Activated ' + q.text() + ' from the menu bar')
         self.dataDisplay = DisplayData(self, q.text())
 
         self.dataDisplay.show()
@@ -303,7 +305,7 @@ class MainWindow(QMainWindow):
     # connection:The connection being sought
     # target: The object that will be connected
     def add_connection(self, subject, connection, target, spouse=None):
-        print('Spouse ID: ' + str(spouse))
+        #print('Spouse ID: ' + str(spouse))
         self.logger.log('Code', 'Setting {' + target.getID() + '} as ' + str(connection) + ' for {' + subject.getID() + '}')
 
         if connection in ['Father', 'Mother']:
@@ -529,13 +531,21 @@ class MainWindow(QMainWindow):
                     subject.addReign(targetReign)
                     targetReign.addPlace(subject)
 
+        elif connection == 'Title Predecessor':
+            subject.predecessor = target.getID()
+            target.successor = subject.getID()
+
+        elif connection == 'Title Successor':
+            subject.successor = target.getID()
+            target.predecessor = subject.getID()
+
         else:
             print(str(connection) + ' is not a valid connection to attempt')
 
         self.write_data()
 
     def write_data(self):
-        self.logger.log('Code', 'Writing Files')
+        #self.logger.log('Code', 'Writing Files')
 
         ## Get data for each person and collect in a single list
         writePeopleList = {}
@@ -552,7 +562,7 @@ class MainWindow(QMainWindow):
 
             json.dump(write_people_json, outfile, indent=4)
 
-        self.logger.log('Code', 'People Written')
+        #self.logger.log('Code', 'People Written')
 
         ## Get data for each title and collect in a single list
         writeTitlesList = {}
@@ -569,7 +579,7 @@ class MainWindow(QMainWindow):
 
             json.dump(write_titles_json, outfile, indent=4)
 
-        self.logger.log('Code', 'Titles Written')
+        #self.logger.log('Code', 'Titles Written')
 
         ## Get data for each place and collect in a single list
         writePlacesList = {}
@@ -586,7 +596,7 @@ class MainWindow(QMainWindow):
 
             json.dump(write_places_json, outfile, indent=4)
 
-        self.logger.log('Code', 'Places Written')
+        #self.logger.log('Code', 'Places Written')
 
 
 def main():

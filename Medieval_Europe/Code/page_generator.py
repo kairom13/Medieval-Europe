@@ -65,7 +65,7 @@ class PageGenerator:
         ## Widget for searching for specific characters
         search = SearchBar(self.window, parameters['Search Text'])
 
-        self.logger.log('Code', 'Viewing ' + object_type)
+        self.logger.log('Code', 'Viewing ' + object_type + ' List')
         headerLayout.addWidget(choose_object_type)
         headerLayout.addStretch(1)
 
@@ -92,7 +92,7 @@ class PageGenerator:
         ## Create list of objects
         self.window.widgets = []
 
-        self.logger.log('Code', 'Add list of objects')
+        self.logger.log('Code', 'Adding list of ' + object_type + 's')
 
         for o in object_list:
             obj = object_list[o]
@@ -121,6 +121,7 @@ class PageGenerator:
 
         ############ Map Group #############
         if object_type == 'Place':
+            self.logger.log('Code', 'Adding map of places')
             # Add Map to right side lower 2/3ds
             mapGroup = QGroupBox('Place Map')
             page_layout.addWidget(mapGroup, 1, 1, 1, 2)  # row 1, column 1, spans 1 rows, spans 2 column
@@ -159,8 +160,6 @@ class PageGenerator:
         ## Widget for searching for specific characters
         search = SearchBar(self.window, parameters['Search Text'])
 
-        self.logger.log('Code', 'Choosing ' + object_type)
-
         cancel = QPushButton('Cancel')
         headerLayout.addWidget(cancel)
         headerLayout.addStretch(1)
@@ -175,7 +174,7 @@ class PageGenerator:
         headerLayout.addStretch(1)
 
         ## Add reminder label about who the user is choosing a relationship for
-        self.logger.log('Code', 'Create Reminder Label')
+        self.logger.log('Code', 'Choosing ' + parameters['Connection'] + ' for ' + subject.getName())
         reminder_label = QLabel('Choosing ' + parameters['Connection'] + ' for ' + subject.getName())
         reminder_layout = QVBoxLayout()
         reminder_layout.addWidget(reminder_label, alignment=Qt.AlignCenter)
@@ -192,9 +191,12 @@ class PageGenerator:
         else:
             if parameters['Connection'] in ('Predecessor', 'Successor'):
                 cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject.getConnectedReign('Ruler')}))
+            elif parameters['Connection'] in ('Title Predecessor', 'Title Successor'):
+                cancel.clicked.connect(lambda: self.window.page_factory('edit_title_page', {'Title': subject}))
             else:
                 cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject}))
 
+                self.logger.log('Code', 'Including Add new object button')
                 ## Include button to add new objects
                 add_button = QPushButton('Add')
                 headerLayout.addWidget(add_button)
@@ -319,7 +321,7 @@ class PageGenerator:
         header_layout.addStretch(1)
         header_layout.addWidget(edit)
 
-        self.logger.log('Code', 'Add Name Widget')
+        self.logger.log('Code', 'Add Name Widget', True)
 
         ############ Info Group #############
         infoGroup = QGroupBox('Personal Information')
@@ -331,6 +333,7 @@ class PageGenerator:
 
         for s in staticLabels:
             label = QLabel(s + ':\t' + staticLabels[s])
+            self.logger.log('Code', 'Add ' + s + ': ' + str(staticLabels[s]), True)
             label.layout = QHBoxLayout()
             label.layout.addWidget(label)
             label.layout.addStretch(1)
@@ -351,6 +354,12 @@ class PageGenerator:
 
         infoGroup.layout.addLayout(motherLayout)
 
+        for p in ('Father', 'Mother'):
+            if person.getParents(p)[0] is not None:
+                self.logger.log('Code', 'Add ' + p + ': {' + person.getParents(p)[0] + '}', True)
+            else:
+                self.logger.log('Code', 'Add ' + p + ': None', True)
+
         ## Labels for Spouses
         spouse_layout = QHBoxLayout()
 
@@ -366,10 +375,9 @@ class PageGenerator:
         for s in person.spouses:
             if s == 'unknown_spouse':
                 spouse = QLabel('')
-                self.logger.log('Code', 'Add null spouse')
             else:
                 spouse = ObjectLabel(self.window, s, 'Person')
-                self.logger.log('Code', 'Add Spouse: {' + s + '}')
+                self.logger.log('Code', 'Add Spouse: {' + s + '}', True)
 
             ## Have Spouse and children with that spouse as a vertical list
             spouse.layout = QVBoxLayout()
@@ -381,9 +389,9 @@ class PageGenerator:
                 spouse.layout.addWidget(child)
 
                 if s == 'unknown_spouse':
-                    self.logger.log('Code', 'Add Child With No Spouse: {' + c + '}')
+                    self.logger.log('Code', 'Add Child With No Spouse: {' + c + '}', True)
                 else:
-                    self.logger.log('Code', 'Add Child With {' + s + '}: {' + c + '}')
+                    self.logger.log('Code', 'Add Child With {' + s + '}: {' + c + '}', True)
 
             spouse.layout.addStretch(1)
             spouse_layout.addLayout(spouse.layout)
@@ -556,7 +564,7 @@ class PageGenerator:
 
                 spouseObject = self.window.get_object(s)
                 spouse = QLabel(spouseObject.getAttribute('Name'))
-                self.logger.log('Code', 'Can modify spouse: {' + s + '}')
+                self.logger.log('Code', 'Can modify spouse: {' + s + '}', True)
 
                 sp_layout = QHBoxLayout()
                 sp_layout.addStretch(1)
@@ -598,7 +606,7 @@ class PageGenerator:
             child_layout.addSpacing(10)
 
             child_lab = QLabel(self.window.get_object(c).getAttribute('Name'))
-            self.logger.log('Code', 'Can modify child: {' + c + '}')
+            self.logger.log('Code', 'Can modify child: {' + c + '}', True)
             child_layout.addWidget(child_lab)
 
             child_layout.addStretch(1)
@@ -627,14 +635,11 @@ class PageGenerator:
             self.logger.log('Code', 'Include ability to merge')
 
         for r, reignObject in person.reignList.items():
-            #self.window.reignList.update({r: reignObject})
-
             if not reignObject.isJunior:
                 titleScrollWidget.layout.addWidget(
                     ReignWidget({'Window': self.window, 'Object Type': 'Person', 'Reign': reignObject, 'Edit': True, 'Logger': self.logger}))
 
         ## For A New Reign
-        # Only displays add button
         addButton = QPushButton('Add')
         addButton.layout = QHBoxLayout()
         addButton.layout.addStretch(1)
@@ -645,7 +650,6 @@ class PageGenerator:
         addButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Title', 'Search Text': '', 'Subject': person, 'Connection': 'Title'}))
 
         titleScrollWidget.layout.addWidget(addButton, alignment=Qt.AlignHCenter)
-
         titleScrollWidget.layout.addStretch(1)
 
         ## Create scrolling mechanics
@@ -726,7 +730,7 @@ class PageGenerator:
 
         name = QLabel(titleObject.getFullRealmTitle())
         name.setAlignment(Qt.AlignCenter)
-        name.layout = QHBoxLayout()
+        header_layout = QHBoxLayout()
 
         ## Display Reigns
         reignGroup = QWidget()
@@ -742,27 +746,36 @@ class PageGenerator:
         edit.clicked.connect(lambda: self.window.page_factory('edit_title_page', {'Title': titleObject}))
 
         ## Display their name
-        name.layout.addWidget(back)
-        name.layout.addStretch(1)
+        header_layout.addWidget(back)
+        header_layout.addStretch(1)
+
+        name_layout = QVBoxLayout()
+        name_layout.addWidget(name)
+
+        timeline_layout = QHBoxLayout()
+        timeline_layout.addStretch(1)
+        timeline_layout.addSpacing(10)
 
         ## Connect to predecessor title
         if titleObject.predecessor is not None:
-            name.layout.addWidget(ObjectLabel(self.window, titleObject.getConnectedReign('Predecessor'), 'Title'))
-            name.layout.addWidget(QLabel('\u25C0'))
-            name.layout.addSpacing(10)
+            timeline_layout.addWidget(ObjectLabel(self.window, titleObject.predecessor, 'Title'))
 
-        name.layout.addWidget(name)
+        timeline_layout.addWidget(QLabel('\u25C0'))
+        timeline_layout.addWidget(QLabel('\u25b6'))
 
         ## Connect to successor title
         if titleObject.successor is not None:
-            name.layout.addWidget(ObjectLabel(self.window, titleObject.getConnectedReign('Successor'), 'Title'))
-            name.layout.addWidget(QLabel('\u25C0'))
-            name.layout.addSpacing(10)
+            timeline_layout.addWidget(ObjectLabel(self.window, titleObject.successor, 'Title'))
 
-        name.layout.addStretch(1)
-        name.layout.addWidget(edit)
+        timeline_layout.addStretch(1)
 
-        page.layout.addLayout(name.layout)
+        name_layout.addLayout(timeline_layout)
+        header_layout.addLayout(name_layout)
+
+        header_layout.addStretch(1)
+        header_layout.addWidget(edit)
+
+        page.layout.addLayout(header_layout)
 
         for r in titleObject.orderReignList:
             reignObject = self.window.get_object(r)
@@ -845,14 +858,24 @@ class PageGenerator:
         timelineLayout = QHBoxLayout()
         timelineLayout.addStretch(1)
 
+        valid_pre = {}
+
+        for t, potential_title in self.window.objectLists['Title'].items():
+            # Can only choose titles that aren't the current title and don't have a successor
+            if t != title.getID() and potential_title.successor is None:
+                valid_pre.update({t: potential_title})
+
         if title.predecessor is None:
             addButton = QPushButton('Add')
             timelineLayout.addWidget(addButton)
+
+            addButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Title', 'Object_List': valid_pre, 'Search Text': '', 'Subject': title, 'Connection': 'Title Predecessor'}))
         else:
             preVBox = QVBoxLayout()
 
             changeButton = QPushButton('Change')
             preVBox.addWidget(changeButton)
+            changeButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Title', 'Object_List': valid_pre, 'Search Text': '', 'Subject': title, 'Connection': 'Title Predecessor'}))
 
             removeButton = QPushButton('Remove')
             preVBox.addWidget(removeButton)
@@ -860,22 +883,32 @@ class PageGenerator:
             timelineLayout.addLayout(preVBox)
 
             # timelineLayout.addWidget(ObjectLabel(self.window, title.predecessor, 'Title', -1))
-            predecessorTitle = self.window.titleList[title.predecessor]
+            predecessorTitle = self.window.get_object(title.predecessor)
             timelineLayout.addWidget(QLabel(predecessorTitle.getFullRealmTitle()))
 
         timelineLayout.addSpacing(10)
         timelineLayout.addWidget(QLabel('<- Predecessor - Successor ->'))
         timelineLayout.addSpacing(10)
 
+        valid_suc = {}
+
+        for t, potential_title in self.window.objectLists['Title'].items():
+            # Can only choose titles that aren't the current title and don't have a predecessor
+            if t != title.getID() and potential_title.predecessor is None:
+                valid_suc.update({t: potential_title})
+
         if title.successor is None:
             addButton = QPushButton('Add')
-
             timelineLayout.addWidget(addButton)
+
+            addButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Title', 'Object_List': valid_suc, 'Search Text': '', 'Subject': title, 'Connection': 'Title Successor'}))
         else:
             sucVBox = QVBoxLayout()
 
             changeButton = QPushButton('Change')
             sucVBox.addWidget(changeButton)
+
+            changeButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Title', 'Object_List': valid_suc, 'Search Text': '', 'Subject': title, 'Connection': 'Title Successor'}))
 
             removeButton = QPushButton('Remove')
             sucVBox.addWidget(removeButton)
@@ -883,7 +916,7 @@ class PageGenerator:
             timelineLayout.addLayout(sucVBox)
 
             # timelineLayout.addWidget(ObjectLabel(self.window, title.predecessor, 'Title', -1))
-            successorTitle = self.window.titleList[title.successor]
+            successorTitle = self.window.get_object(title.successor)
             timelineLayout.addWidget(QLabel(successorTitle.getFullRealmTitle()))
 
         timelineLayout.addStretch(1)

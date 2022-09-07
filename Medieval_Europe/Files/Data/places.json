@@ -716,7 +716,9 @@
             "Longitude": "7.1"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "310fa51e"
+        ]
     },
     "b2a4566a": {
         "Attributes": {
@@ -1474,5 +1476,182 @@
         },
         "Events": {},
         "Reign List": []
+    },
+    "d5419356": {
+        "Attributes": {
+            "Name": "Utrecht",
+            "Latitude": "52.09",
+            "Longitude": "5.12"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "44016adb": {
+        "Attributes": {
+            "Name": "Hohenzollern",
+            "Latitude": "48.323",
+            "Longitude": "8.97"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "afb799df": {
+        "Attributes": {
+            "Name": "Speyer",
+            "Latitude": "49.32",
+            "Longitude": "8.44"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "84c34d53": {
+        "Attributes": {
+            "Name": "Worms",
+            "Latitude": "49.63",
+            "Longitude": "8.36"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "3c3f1710": {
+        "Attributes": {
+            "Name": "Trier",
+            "Latitude": "49.755",
+            "Longitude": "6.64"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d7442a2b": {
+        "Attributes": {
+            "Name": "Luxembourg",
+            "Latitude": "49.61",
+            "Longitude": "6.13"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "78624f6c": {
+        "Attributes": {
+            "Name": "Metz",
+            "Latitude": "49.12",
+            "Longitude": "6.175"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "e31f20c5": {
+        "Attributes": {
+            "Name": "Nancy",
+            "Latitude": "48.69",
+            "Longitude": "6.18"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2d31377f": {
+        "Attributes": {
+            "Name": "Toul",
+            "Latitude": "48.675",
+            "Longitude": "5.89"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "3e1a1f6b": {
+        "Attributes": {
+            "Name": "Verdun",
+            "Latitude": "49.16",
+            "Longitude": "5.38"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "3a8c25cc": {
+        "Attributes": {
+            "Name": "Wurzburg",
+            "Latitude": "49.795",
+            "Longitude": "9.93"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "98c7b906": {
+        "Attributes": {
+            "Name": "Bamberg",
+            "Latitude": "49.89",
+            "Longitude": "10.89"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "df9f2d3d": {
+        "Attributes": {
+            "Name": "Fulda",
+            "Latitude": "50.55",
+            "Longitude": "9.68"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "e746767d": {
+        "Attributes": {
+            "Name": "Paris",
+            "Latitude": "48.855",
+            "Longitude": "2.345"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b3656799": {
+        "Attributes": {
+            "Name": "Soissons",
+            "Latitude": "49.38",
+            "Longitude": "3.32"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "9ab991c5": {
+        "Attributes": {
+            "Name": "Reims",
+            "Latitude": "49.255",
+            "Longitude": "4.03"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "9e069f78": {
+        "Attributes": {
+            "Name": "Troyes",
+            "Latitude": "48.3",
+            "Longitude": "4.07"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "3e11c9b2": {
+        "Attributes": {
+            "Name": "Dijon",
+            "Latitude": "47.32",
+            "Longitude": "5.04"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "7d5e338d": {
+        "Attributes": {
+            "Name": "Macon",
+            "Latitude": "46.305",
+            "Longitude": "4.83"
+        },
+        "Events": {},
+        "Reign List": [
+            "30a416b3",
+            "2e1ae1f9",
+            "e760e26f",
+            "1d84c576",
+            "df3023a1"
+        ]
     }
 }

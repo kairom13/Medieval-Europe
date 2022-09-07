@@ -4,7 +4,7 @@ Created on Aug 1, 2022
 @author: kairom13
 """
 
-from Medieval_Europe.Code.CustomObjects import Reign, Person, Place
+from Medieval_Europe.Code.CustomObjects import Reign, Person, Place, Title
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
@@ -55,7 +55,7 @@ class ObjectButton(QPushButton):
                 spouse = None
                 if self.spouseChoice is not None:
                     spouse = self.spouseChoice.getSelectedSpouse()
-                    print('Choosing: ' + str(spouse))
+                    #print('Choosing: ' + str(spouse))
 
                 self.window.add_connection(self.subject, self.connection, self.target, spouse)
 
@@ -111,18 +111,27 @@ class ObjectButton(QPushButton):
 
                 person = None
                 place = None
+                title = None
 
                 if isinstance(self.subject, Reign):
                     person = self.subject.getConnectedReign('Ruler')
+                    print('Subject is reign, going back to person')
                 elif isinstance(self.subject, Person):
                     person = self.subject
+                    print('Subject is person, going back to person')
                 elif isinstance(self.subject, Place):
                     place = self.subject
+                    print('Subject is place, going back to place')
+                elif isinstance(self.subject, Title):
+                    title = self.subject
                 else:
-                    self.logger.log('Error', str(self.subject) + ' is not a valid object to get person or place from')
+                    self.logger.log('Error', str(self.subject) + ' is not a valid object type')
 
                 if person is not None:
                     self.window.page_factory('edit_person_page', {'Person': person})
+
+                if title is not None:
+                    self.window.page_factory('edit_title_page', {'Title': title})
 
                 if self.connection == 'Reign' and isinstance(self.target, Reign):
                     self.window.page_factory('edit_place_page', {'Place': place})

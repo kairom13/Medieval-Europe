@@ -66,7 +66,7 @@
         },
         "Titular": false,
         "Connections": {
-            "Predecessor": null,
+            "Predecessor": "45485743",
             "Successor": null
         },
         "Events": {},
@@ -127,7 +127,7 @@
         },
         "Titular": false,
         "Connections": {
-            "Predecessor": null,
+            "Predecessor": "485707ef",
             "Successor": null
         },
         "Events": {},
@@ -166,7 +166,7 @@
         "Titular": false,
         "Connections": {
             "Predecessor": null,
-            "Successor": null
+            "Successor": "35500a0c"
         },
         "Events": {},
         "Reign List": [
@@ -289,11 +289,13 @@
         },
         "Titular": false,
         "Connections": {
-            "Predecessor": null,
+            "Predecessor": "dc0a407c",
             "Successor": null
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "48bf954b"
+        ]
     },
     "6bd80567": {
         "Attributes": {
@@ -342,7 +344,7 @@
         },
         "Titular": false,
         "Connections": {
-            "Predecessor": null,
+            "Predecessor": "33402ccb",
             "Successor": null
         },
         "Events": {},
@@ -653,11 +655,19 @@
         "Titular": false,
         "Connections": {
             "Predecessor": null,
-            "Successor": null
+            "Successor": "630f5c9a"
         },
         "Events": {},
         "Reign List": [
-            "f495eefc"
+            "a6dd0851",
+            "f495eefc",
+            "15ae4fbe",
+            "3a8a79e3",
+            "f5e78a06",
+            "43bc3179",
+            "c125f43c",
+            "d644fe01",
+            "0e1656c7"
         ]
     },
     "de90e73e": {
@@ -941,7 +951,7 @@
         "Titular": false,
         "Connections": {
             "Predecessor": null,
-            "Successor": null
+            "Successor": "6e53bd75"
         },
         "Events": {},
         "Reign List": [
@@ -966,7 +976,12 @@
         "Events": {},
         "Reign List": [
             "2bb6a358",
-            "b19e6b3e"
+            "b19e6b3e",
+            "95202bdb",
+            "7b2f43f9",
+            "8fe3a668",
+            "b2dcf7b0",
+            "a0ae3b72"
         ]
     },
     "859d6e25": {
@@ -1643,5 +1658,104 @@
         "Reign List": [
             "ef576b72"
         ]
+    },
+    "aa90d125": {
+        "Attributes": {
+            "Realm Name": "Francia",
+            "Realm Title": "Empire",
+            "Male Ruler Title": "Emperor",
+            "Female Ruler Title": "Empress"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "9d1e918e",
+            "9c44e57f"
+        ]
+    },
+    "45485743": {
+        "Attributes": {
+            "Realm Name": "Luxembourg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": "1be1737a"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "04d1d652": {
+        "Attributes": {
+            "Realm Name": "Vermandois",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "f85a9a54"
+        ]
+    },
+    "340f9469": {
+        "Attributes": {
+            "Realm Name": "Meaux",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "380916cf"
+        ]
+    },
+    "a9994adc": {
+        "Attributes": {
+            "Realm Name": "Soissons",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "56b8f113"
+        ]
+    },
+    "0c42f9ac": {
+        "Attributes": {
+            "Realm Name": "Champagne",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
     }
 }

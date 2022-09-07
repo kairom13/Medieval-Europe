@@ -435,9 +435,13 @@ class ObjectLabel(QLabel):
             else:
                 style = ' '
             self.name = self.obj.getAttribute('Name') + style + self.obj.getAttribute('Nickname')
-        elif self.objectType == 'Title':
+        elif self.objectType == 'Person Title':
             self.obj = self.window.get_object(objectID)
             self.name = self.obj.getFullRulerTitle(gender)
+
+        elif self.objectType == 'Title':
+            self.obj = self.window.get_object(objectID)
+            self.name = self.obj.getFullRealmTitle()
 
         self.setText(self.name)
 
@@ -458,9 +462,10 @@ class ObjectLabel(QLabel):
             self.setStyleSheet('QLabel {color : black; text-decoration: underline}')
             return True
         elif event.type() == QEvent.MouseButtonRelease:
+            self.window.logger.log('Code', 'Clicked to display {' + self.obj.getID() + '}')
             if self.objectType == 'Person':
                 self.window.page_factory('display_person_page', {'Person': self.obj})
-            elif self.objectType == 'Title':
+            elif self.objectType in ('Title', 'Person Title'):
                 self.window.page_factory('display_title_page', {'Title': self.obj, 'Page Type': 'View'})
             return True
         return False

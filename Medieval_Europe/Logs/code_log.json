@@ -2,602 +2,662 @@
     "000_Init": [
         "000_Init",
         "001_Set Window Size. Height: 960, Width: 1706",
-        "002_Reading Files",
-        "003_Opened \"titles.json\"",
-        "004_Finished reading \"titles.json\"",
-        "005_Opened \"people.json\"",
-        "006_Finished reading \"people.json\"",
-        "007_Opened \"places.json\"",
-        "008_Finished reading \"places.json\"",
-        "009_Correcting Reign Order",
-        "010_Created Page Generator Object",
-        "011_Generating view_object_list"
+        "002_Creating Menu Bar",
+        "003_Reading Files",
+        "004_Opened \"titles.json\"",
+        "005_Finished reading \"titles.json\"",
+        "006_Opened \"people.json\"",
+        "007_Finished reading \"people.json\"",
+        "008_Opened \"places.json\"",
+        "009_Finished reading \"places.json\"",
+        "010_Correcting Reign Order",
+        "011_Created Page Generator Object",
+        "012_Generating view_object_list"
     ],
     "001_view_object_list": [
-        "000_Viewing Person",
-        "001_Add list of objects",
-        "002_Clicked to view Henry I, Duke of Bavaria",
+        "000_Viewing Person List",
+        "001_Adding list of Persons",
+        "002_Clicked to view Henry II Jasomirgott, Duke of Austria",
         "003_Generating display_person_page"
     ],
     "002_display_person_page": [
-        "000_Displaying Henry I, Duke of Bavaria",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Henry II the Quarrelsome, Duke of Bavaria",
-        "004_Viewing Reign as part of Henry I",
-        "005_Successor: Henry II the Quarrelsome, Duke of Bavaria",
-        "006_Generating display_person_page"
+        "000_Displaying Henry II Jasomirgott, Duke of Austria",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1107",
+            "004_Add Death Date: 1/13/1177",
+            "005_Add Father: Leopold III the Good",
+            "006_Add Mother: Agnes of Waiblingen",
+            "007_Add Child With No Spouse: Leopold V the Virtuous, Duke of Austria",
+            "008_Add Spouse: Gertrude of Supplinburg, Countess of Supplinburg"
+        ],
+        "009_Viewing reign as Duke of Austria",
+        [
+            "010_Has successor: Leopold V, Duke of Austria",
+            "011_Date of Reign: (9/17/1156 - 1/13/1177)"
+        ],
+        "012_Viewing reign as Margrave of Austria",
+        [
+            "013_Has predecessor: Leopold, Margrave of Austria",
+            "014_Date of Reign: (11/15/1141 - 9/17/1156)"
+        ],
+        "015_Viewing reign as Count Palatine of the Rhine",
+        [
+            "016_Date of Reign: (10/18/1140 - 11/15/1141)"
+        ],
+        "017_Viewing reign as Duke of Bavaria",
+        [
+            "018_Has predecessor: Leopold, Duke of Bavaria",
+            "019_Has successor: Henry, Duke of Bavaria",
+            "020_Date of Reign: (11/15/1141 - 9/8/1156)"
+        ],
+        "021_Clicked to display Duchy of Austria",
+        "022_Generating display_title_page"
     ],
-    "003_display_person_page": [
-        "000_Displaying Henry II the Quarrelsome, Duke of Bavaria",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Henry II the Exuberant, Emperor of Rome",
-        "004_Viewing Reign as part of Henry II",
-        "005_Predecessor: Henry I, Duke of Bavaria",
-        "006_Successor: Otto II the Red, Emperor of Rome",
-        "007_Generating display_person_page"
+    "003_display_title_page": [
+        "000_Displaying Title: Duchy of Austria",
+        "001_Viewing reign of Henry II Jasomirgott, Duke of Austria",
+        [
+            "002_Has successor: Leopold V, Duke of Austria",
+            "003_Date of Reign: (9/17/1156 - 1/13/1177)"
+        ],
+        "004_Viewing reign of Leopold V the Virtuous, Duke of Austria",
+        [
+            "005_Has predecessor: Henry II, Duke of Austria",
+            "006_Has successor: Frederick I, Duke of Austria",
+            "007_Date of Reign: (1/13/1177 - 12/31/1194)"
+        ],
+        "008_Viewing reign of Frederick I the Catholic, Duke of Austria",
+        [
+            "009_Has predecessor: Leopold V, Duke of Austria",
+            "010_Has successor: Leopold VI, Duke of Austria",
+            "011_Date of Reign: (12/31/1194 - 4/16/1198)"
+        ],
+        "012_Viewing reign of Leopold VI the Glorious, Duke of Austria",
+        [
+            "013_Has predecessor: Frederick I, Duke of Austria",
+            "014_Has successor: Frederick II, Duke of Austria",
+            "015_Date of Reign: (4/16/1198 - 7/28/1230)"
+        ],
+        "016_Viewing reign of Frederick II the Quarrelsome, Duke of Austria",
+        [
+            "017_Has predecessor: Leopold VI, Duke of Austria",
+            "018_Date of Reign: (7/28/1230 - 6/15/1246)"
+        ],
+        "019_Clicked to display Henry II Jasomirgott, Duke of Austria",
+        "020_Generating display_person_page"
     ],
     "004_display_person_page": [
-        "000_Displaying Otto II the Red, Emperor of Rome",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Otto III, Emperor of Rome",
-        "004_Viewing Reign as part of Otto II",
-        "005_Predecessor: Henry II the Quarrelsome, Duke of Bavaria",
-        "006_Successor: Henry II the Exuberant, Emperor of Rome",
-        "007_Viewing Reign as part of Otto II",
-        "008_Predecessor: Otto I the Great, Emperor of Rome",
-        "009_Successor: Otto III, Emperor of Rome",
+        "000_Displaying Henry II Jasomirgott, Duke of Austria",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1107",
+            "004_Add Death Date: 1/13/1177",
+            "005_Add Father: Leopold III the Good",
+            "006_Add Mother: Agnes of Waiblingen",
+            "007_Add Child With No Spouse: Leopold V the Virtuous, Duke of Austria",
+            "008_Add Spouse: Gertrude of Supplinburg, Countess of Supplinburg"
+        ],
+        "009_Viewing reign as Duke of Austria",
+        [
+            "010_Has successor: Leopold V, Duke of Austria",
+            "011_Date of Reign: (9/17/1156 - 1/13/1177)"
+        ],
+        "012_Viewing reign as Margrave of Austria",
+        [
+            "013_Has predecessor: Leopold, Margrave of Austria",
+            "014_Date of Reign: (11/15/1141 - 9/17/1156)"
+        ],
+        "015_Viewing reign as Count Palatine of the Rhine",
+        [
+            "016_Date of Reign: (10/18/1140 - 11/15/1141)"
+        ],
+        "017_Viewing reign as Duke of Bavaria",
+        [
+            "018_Has predecessor: Leopold, Duke of Bavaria",
+            "019_Has successor: Henry, Duke of Bavaria",
+            "020_Date of Reign: (11/15/1141 - 9/8/1156)"
+        ],
+        "021_Generating view_object_list"
+    ],
+    "005_view_object_list": [
+        "000_Viewing Person List",
+        "001_Adding list of Persons",
+        "002_Clicked to view Beatrice of Vermandois",
+        "003_Generating display_person_page"
+    ],
+    "006_display_person_page": [
+        "000_Displaying Beatrice of Vermandois",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 880",
+            "004_Add Death Date: after 3/26/931",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Robert I, King of West Francia",
+            "008_Add Child With Robert I, King of West Francia: Hugh the Great"
+        ],
+        "009_Clicked to display Robert I, King of West Francia",
         "010_Generating display_person_page"
     ],
-    "005_display_person_page": [
-        "000_Displaying Henry II the Exuberant, Emperor of Rome",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Viewing Reign as part of Henry II",
-        "004_Predecessor: Henry V, Duke of Bavaria",
-        "005_Successor: Henry V, Duke of Bavaria",
-        "006_Viewing Reign as part of Henry II",
-        "007_Predecessor: Otto II the Red, Emperor of Rome",
-        "008_Successor: Henry V, Duke of Bavaria",
-        "009_Viewing Reign as part of Henry II",
-        "010_Predecessor: Otto III, Emperor of Rome",
-        "011_Successor: Conrad II the Salic, Emperor of Rome",
-        "012_Generating view_object_list"
-    ],
-    "006_view_object_list": [
-        "000_Viewing Person",
-        "001_Add list of objects",
-        "002_Clicked to view Hugh IV, Duke of Burgundy",
-        "003_Generating display_person_page"
-    ],
     "007_display_person_page": [
-        "000_Displaying Hugh IV, Duke of Burgundy",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Robert II, Duke of Burgundy",
-        "004_Add Child With No Spouse: John of Burgundy",
-        "005_Add Child With No Spouse: Odo of Burgundy",
-        "006_Add Child With No Spouse: Margaret",
-        "007_Viewing Reign as part of Hugh IV",
-        "008_Successor: Robert II, Duke of Burgundy",
-        "009_Viewing Reign as part of Hugh IV",
-        "010_Predecessor: John the Old, Count of Chalon",
-        "011_Generating display_title_page"
+        "000_Displaying Robert I, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 8/15/866",
+            "004_Add Death Date: 6/15/923",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Adela",
+            "008_Add Child With No Spouse: Emma",
+            "009_Add Spouse: Beatrice of Vermandois",
+            "010_Add Child With Beatrice of Vermandois: Hugh the Great"
+        ],
+        "011_Viewing reign as King of West Francia",
+        [
+            "012_Has predecessor: Charles III, King of West Francia",
+            "013_Has successor: Rudolph, King of West Francia",
+            "014_Date of Reign: (6/29/922 - 6/15/923)"
+        ],
+        "015_Clicked to display Rudolph, King of West Francia",
+        "016_Generating display_person_page"
     ],
-    "008_display_title_page": [
-        "000_Displaying Title: Duchy of Burgundy",
-        "001_Viewing Reign as part of Duchy of Burgundy",
-        "002_Successor: Robert II, Duke of Burgundy",
-        "003_Viewing Reign as part of Duchy of Burgundy",
-        "004_Predecessor: Hugh IV, Duke of Burgundy",
-        "005_Successor: Hugh V, Duke of Burgundy",
-        "006_Viewing Reign as part of Duchy of Burgundy",
-        "007_Predecessor: Robert II, Duke of Burgundy",
-        "008_Successor: Odo IV, Duke of Burgundy",
-        "009_Viewing Reign as part of Duchy of Burgundy",
-        "010_Predecessor: Hugh V, Duke of Burgundy",
-        "011_Successor: Philip I of Rouvres, Duke of Burgundy",
-        "012_Viewing Reign as part of Duchy of Burgundy",
-        "013_Predecessor: Odo IV, Duke of Burgundy",
-        "014_Successor: John II the Good, King of France",
-        "015_Viewing Reign as part of Duchy of Burgundy",
-        "016_Predecessor: Philip I of Rouvres, Duke of Burgundy",
-        "017_Successor: Philip the Bold, Duke of Burgundy",
-        "018_Viewing Reign as part of Duchy of Burgundy",
-        "019_Predecessor: John II the Good, King of France",
-        "020_Successor: John I the Fearless, Duke of Burgundy",
-        "021_Viewing Reign as part of Duchy of Burgundy",
-        "022_Predecessor: Philip the Bold, Duke of Burgundy",
-        "023_Successor: Philip III the Good, Duke of Burgundy",
-        "024_Viewing Reign as part of Duchy of Burgundy",
-        "025_Predecessor: John I the Fearless, Duke of Burgundy",
-        "026_Successor: Charles I the Bold, Duke of Burgundy",
-        "027_Viewing Reign as part of Duchy of Burgundy",
-        "028_Predecessor: Philip III the Good, Duke of Burgundy",
-        "029_Viewing Reign as part of Duchy of Burgundy",
-        "030_Generating display_person_page"
+    "008_display_person_page": [
+        "000_Displaying Rudolph, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 890",
+            "004_Add Death Date: 1/14/936",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Emma"
+        ],
+        "008_Viewing reign as King of West Francia",
+        [
+            "009_Has predecessor: Robert I, King of West Francia",
+            "010_Has successor: Louis IV, King of West Francia",
+            "011_Date of Reign: (6/15/923 - 1/14/936)"
+        ],
+        "012_Clicked to display Louis IV d'Outremer, King of West Francia",
+        "013_Generating display_person_page"
     ],
     "009_display_person_page": [
-        "000_Displaying John I the Fearless, Duke of Burgundy",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Margaret of Bavaria",
-        "004_Add Child With Margaret of Bavaria: Philip III the Good, Duke of Burgundy",
-        "005_Viewing Reign as part of John I",
-        "006_Predecessor: Margaret III, Countess of Flanders",
-        "007_Successor: Philip III the Good, Duke of Burgundy",
-        "008_Add County of Artois as junior reign",
-        "009_Viewing Reign as part of John I",
-        "010_Predecessor: Margaret III, Countess of Flanders",
-        "011_Add County of Nevers as junior reign",
-        "012_Add County of Rethel as junior reign",
-        "013_Viewing Reign as part of John I",
-        "014_Successor: Philip III the Good, Duke of Burgundy",
-        "015_Viewing Reign as part of John I",
-        "016_Predecessor: Philip the Bold, Duke of Burgundy",
-        "017_Successor: Philip III the Good, Duke of Burgundy",
-        "018_Generating display_place_page"
+        "000_Displaying Louis IV d'Outremer, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 9/920",
+            "004_Add Death Date: 9/10/954",
+            "005_Add Father: Charles III the Simple, King of West Francia",
+            "006_Add Mother: None",
+            "007_Add Spouse: Gerberga of Saxony",
+            "008_Add Child With Gerberga of Saxony: Lothair of France, King of West Francia"
+        ],
+        "009_Viewing reign as King of West Francia",
+        [
+            "010_Has predecessor: Rudolph, King of West Francia",
+            "011_Has successor: Lothair, King of West Francia",
+            "012_Date of Reign: ( - 9/10/954)"
+        ],
+        "013_Clicked to display Lothair of France, King of West Francia",
+        "014_Generating display_person_page"
     ],
-    "010_display_place_page": [
-        "000_Displaying Place",
-        "001_Displaying Name: Ghent",
-        "002_Generating display_person_page"
+    "010_display_person_page": [
+        "000_Displaying Lothair of France, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 941",
+            "004_Add Death Date: 3/2/986",
+            "005_Add Father: Louis IV d'Outremer, King of West Francia",
+            "006_Add Mother: Gerberga of Saxony",
+            "007_Add Spouse: Emma"
+        ],
+        "008_Viewing reign as King of West Francia",
+        [
+            "009_Has predecessor: Louis IV, King of West Francia",
+            "010_Date of Reign: (9/10/954 - 3/2/986)"
+        ],
+        "011_Clicked to display Louis IV d'Outremer, King of West Francia",
+        "012_Generating display_person_page"
     ],
     "011_display_person_page": [
-        "000_Displaying Margaret III, Countess of Flanders",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Philip I of Rouvres, Duke of Burgundy",
-        "004_Add Spouse: Philip the Bold, Duke of Burgundy",
-        "005_Add Child With Philip the Bold, Duke of Burgundy: John I the Fearless, Duke of Burgundy",
-        "006_Viewing Reign as part of Margaret III",
-        "007_Predecessor: Louis II of Male, Count of Flanders",
-        "008_Successor: John I the Fearless, Duke of Burgundy",
-        "009_Add County of Artois as junior reign",
-        "010_Viewing Reign as part of Margaret III",
-        "011_Predecessor: Louis II of Male, Count of Flanders",
-        "012_Successor: John I the Fearless, Duke of Burgundy",
-        "013_Add County of Nevers as junior reign",
-        "014_Add County of Rethel as junior reign",
-        "015_Generating view_object_list"
+        "000_Displaying Louis IV d'Outremer, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 9/920",
+            "004_Add Death Date: 9/10/954",
+            "005_Add Father: Charles III the Simple, King of West Francia",
+            "006_Add Mother: None",
+            "007_Add Spouse: Gerberga of Saxony",
+            "008_Add Child With Gerberga of Saxony: Lothair of France, King of West Francia"
+        ],
+        "009_Viewing reign as King of West Francia",
+        [
+            "010_Has predecessor: Rudolph, King of West Francia",
+            "011_Has successor: Lothair, King of West Francia",
+            "012_Date of Reign: ( - 9/10/954)"
+        ],
+        "013_Clicked to display Lothair of France, King of West Francia",
+        "014_Generating display_person_page"
     ],
-    "012_view_object_list": [
-        "000_Viewing Person",
-        "001_Add list of objects",
-        "002_Place was chosen",
-        "003_Generating view_object_list"
+    "012_display_person_page": [
+        "000_Displaying Lothair of France, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 941",
+            "004_Add Death Date: 3/2/986",
+            "005_Add Father: Louis IV d'Outremer, King of West Francia",
+            "006_Add Mother: Gerberga of Saxony",
+            "007_Add Spouse: Emma"
+        ],
+        "008_Viewing reign as King of West Francia",
+        [
+            "009_Has predecessor: Louis IV, King of West Francia",
+            "010_Date of Reign: (9/10/954 - 3/2/986)"
+        ],
+        "011_Clicked to display Emma",
+        "012_Generating display_person_page"
     ],
-    "013_view_object_list": [
-        "000_Viewing Place",
-        "001_Add list of objects",
-        "002_Generating display_place_page"
+    "013_display_person_page": [
+        "000_Displaying Emma",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 948",
+            "004_Add Death Date: after 987",
+            "005_Add Father: Lothar II of Italy",
+            "006_Add Mother: Adelaide of Burgundy",
+            "007_Add Spouse: Lothair of France, King of West Francia"
+        ],
+        "008_Clicked to display Lothair of France, King of West Francia",
+        "009_Generating display_person_page"
     ],
-    "014_display_place_page": [
-        "000_Displaying Place",
-        "001_Displaying Name: Magdeburg",
-        "002_Generating view_object_list"
+    "014_display_person_page": [
+        "000_Displaying Lothair of France, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 941",
+            "004_Add Death Date: 3/2/986",
+            "005_Add Father: Louis IV d'Outremer, King of West Francia",
+            "006_Add Mother: Gerberga of Saxony",
+            "007_Add Spouse: Emma"
+        ],
+        "008_Viewing reign as King of West Francia",
+        [
+            "009_Has predecessor: Louis IV, King of West Francia",
+            "010_Date of Reign: (9/10/954 - 3/2/986)"
+        ],
+        "011_Clicked to display Louis IV d'Outremer, King of West Francia",
+        "012_Generating display_person_page"
     ],
-    "015_view_object_list": [
-        "000_Viewing Place",
-        "001_Add list of objects",
-        "002_Generating display_place_page"
+    "015_display_person_page": [
+        "000_Displaying Louis IV d'Outremer, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 9/920",
+            "004_Add Death Date: 9/10/954",
+            "005_Add Father: Charles III the Simple, King of West Francia",
+            "006_Add Mother: None",
+            "007_Add Spouse: Gerberga of Saxony",
+            "008_Add Child With Gerberga of Saxony: Lothair of France, King of West Francia"
+        ],
+        "009_Viewing reign as King of West Francia",
+        [
+            "010_Has predecessor: Rudolph, King of West Francia",
+            "011_Has successor: Lothair, King of West Francia",
+            "012_Date of Reign: ( - 9/10/954)"
+        ],
+        "013_Clicked to display Rudolph, King of West Francia",
+        "014_Generating display_person_page"
     ],
-    "016_display_place_page": [
-        "000_Displaying Place",
-        "001_Displaying Name: Schaumburg",
-        "002_Generating display_person_page"
+    "016_display_person_page": [
+        "000_Displaying Rudolph, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 890",
+            "004_Add Death Date: 1/14/936",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Emma"
+        ],
+        "008_Viewing reign as King of West Francia",
+        [
+            "009_Has predecessor: Robert I, King of West Francia",
+            "010_Has successor: Louis IV, King of West Francia",
+            "011_Date of Reign: (6/15/923 - 1/14/936)"
+        ],
+        "012_Clicked to display Emma",
+        "013_Generating display_person_page"
     ],
     "017_display_person_page": [
-        "000_Displaying Adolf VII, Count of Schaumburg",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Viewing Reign as part of Adolf VII",
-        "004_Predecessor: Adolf VI, Count of Schaumburg",
-        "005_Generating display_person_page"
+        "000_Displaying Emma",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: ",
+            "004_Add Death Date: 935",
+            "005_Add Father: Robert I, King of West Francia",
+            "006_Add Mother: None",
+            "007_Add Spouse: Rudolph, King of West Francia"
+        ],
+        "008_Clicked to display Rudolph, King of West Francia",
+        "009_Generating display_person_page"
     ],
     "018_display_person_page": [
-        "000_Displaying Adolf VI, Count of Schaumburg",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Adolf VII, Count of Schaumburg",
-        "004_Viewing Reign as part of Adolf VI",
-        "005_Predecessor: Gerhard I, Count of Schaumburg",
-        "006_Successor: Adolf VII, Count of Schaumburg",
-        "007_Generating display_person_page"
+        "000_Displaying Rudolph, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 890",
+            "004_Add Death Date: 1/14/936",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Emma"
+        ],
+        "008_Viewing reign as King of West Francia",
+        [
+            "009_Has predecessor: Robert I, King of West Francia",
+            "010_Has successor: Louis IV, King of West Francia",
+            "011_Date of Reign: (6/15/923 - 1/14/936)"
+        ],
+        "012_Clicked to display Robert I, King of West Francia",
+        "013_Generating display_person_page"
     ],
     "019_display_person_page": [
-        "000_Displaying Gerhard I, Count of Schaumburg",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Adolf VI, Count of Schaumburg",
-        "004_Viewing Reign as part of Gerhard I",
-        "005_Predecessor: Adolf IV, Count of Schaumburg",
-        "006_Successor: Adolf VI, Count of Schaumburg",
-        "007_Generating display_person_page"
+        "000_Displaying Robert I, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 8/15/866",
+            "004_Add Death Date: 6/15/923",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Adela",
+            "008_Add Child With No Spouse: Emma",
+            "009_Add Spouse: Beatrice of Vermandois",
+            "010_Add Child With Beatrice of Vermandois: Hugh the Great"
+        ],
+        "011_Viewing reign as King of West Francia",
+        [
+            "012_Has predecessor: Charles III, King of West Francia",
+            "013_Has successor: Rudolph, King of West Francia",
+            "014_Date of Reign: (6/29/922 - 6/15/923)"
+        ],
+        "015_Clicked to display Beatrice of Vermandois",
+        "016_Generating display_person_page"
     ],
     "020_display_person_page": [
-        "000_Displaying Adolf IV, Count of Schaumburg",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: John I",
-        "004_Add Child With No Spouse: Gerhard I, Count of Schaumburg",
-        "005_Viewing Reign as part of Adolf IV",
-        "006_Predecessor: Adolf III, Count of Schaumburg",
-        "007_Successor: Gerhard I, Count of Schaumburg",
-        "008_Generating display_person_page"
+        "000_Displaying Beatrice of Vermandois",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 880",
+            "004_Add Death Date: after 3/26/931",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Robert I, King of West Francia",
+            "008_Add Child With Robert I, King of West Francia: Hugh the Great"
+        ],
+        "009_Generating edit_person_page"
     ],
-    "021_display_person_page": [
-        "000_Displaying Adolf III, Count of Schaumburg",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Adolf IV, Count of Schaumburg",
-        "004_Viewing Reign as part of Adolf III",
-        "005_Predecessor: Adolf II, Count of Schaumburg",
-        "006_Successor: Adolf IV, Count of Schaumburg",
-        "007_Generating display_place_page"
+    "021_edit_person_page": [
+        "000_Editing Person: Beatrice of Vermandois",
+        [
+            "001_Can edit Name: Beatrice",
+            "002_Can edit Nickname: of Vermandois",
+            "003_Can edit Birth Date: 880",
+            "004_Can edit Death Date: after 3/26/931",
+            "005_Can add Father",
+            "006_Can add Mother",
+            "007_Can modify spouse: Robert I, King of West Francia",
+            "008_Can modify child: Hugh the Great"
+        ],
+        "009_Can edit 0 Reigns",
+        "010_Generating choose_object_list"
     ],
-    "022_display_place_page": [
-        "000_Displaying Place",
-        "001_Displaying Name: Schaumburg",
-        "002_Generating view_object_list"
+    "022_choose_object_list": [
+        "000_Choosing Father for Beatrice of Vermandois",
+        "001_Including Add new object button",
+        "002_Add list of objects",
+        "003_Creating new Person",
+        "004_Gender Choice: 0",
+        "005_New Person will be Father of Beatrice of Vermandois",
+        "006_Setting  as Father for Beatrice of Vermandois",
+        "007_Beatrice of Vermandois has no parents",
+        "008_Add Beatrice of Vermandois as new child with unknown spouse",
+        "009_Generating edit_person_page"
     ],
-    "023_view_object_list": [
-        "000_Viewing Place",
-        "001_Add list of objects",
-        "002_Generating display_place_page"
+    "023_edit_person_page": [
+        "000_Editing Person: ",
+        [
+            "001_Can edit Name: ",
+            "002_Can edit Nickname: ",
+            "003_Can edit Birth Date: ",
+            "004_Can edit Death Date: ",
+            "005_Can add Father",
+            "006_Can add Mother",
+            "007_Can modify child: Beatrice of Vermandois"
+        ],
+        "008_Can edit 0 Reigns",
+        "009_Generating choose_object_list"
     ],
-    "024_display_place_page": [
-        "000_Displaying Place",
-        "001_Displaying Name: Boyneburg",
-        "002_Generating display_person_page"
+    "024_choose_object_list": [
+        "000_Choosing Title for Herbert I",
+        "001_Including Add new object button",
+        "002_Add list of objects",
+        "003_Creating new Title",
+        "004_New Title for Herbert I",
+        "005_Setting  of  as Title for Herbert I",
+        "006_Generating edit_title_page"
     ],
-    "025_display_person_page": [
-        "000_Displaying Siegfried IV, Count of Boyneburg",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Viewing Reign as part of Siegfried IV",
-        "004_Generating display_title_page"
+    "025_edit_title_page": [
+        "000_Editing title:  of ",
+        [
+            "001_Can edit Realm Name: ",
+            "002_Can edit Realm Title: ",
+            "003_Can edit Male Ruler Title: ",
+            "004_Can edit Female Ruler Title: "
+        ],
+        "005_Generating edit_person_page"
     ],
-    "026_display_title_page": [
-        "000_Displaying Title: County of Boyneburg",
-        "001_Viewing Reign as part of County of Boyneburg",
-        "002_Generating view_object_list"
+    "026_edit_person_page": [
+        "000_Editing Person: Herbert I",
+        [
+            "001_Can edit Name: Herbert I",
+            "002_Can edit Nickname: ",
+            "003_Can edit Birth Date: 848/850",
+            "004_Can edit Death Date: 907",
+            "005_Can add Father",
+            "006_Can add Mother",
+            "007_Can modify child: Beatrice of Vermandois"
+        ],
+        "008_Can edit 1 Reigns",
+        "009_Editing reign as Count of Vermandois",
+        [
+            "010_This is the primary reign",
+            "011_Reign has no predecessor",
+            "012_Can edit Start Date: ",
+            "013_Can edit End Date: ",
+            "014_Reign has no Successor"
+        ],
+        "015_Generating choose_object_list"
     ],
-    "027_view_object_list": [
-        "000_Viewing Title",
-        "001_Add list of objects",
+    "027_choose_object_list": [
+        "000_Choosing Title for Herbert I, Count of Vermandois",
+        "001_Including Add new object button",
+        "002_Add list of objects",
+        "003_Creating new Title",
+        "004_New Title for Herbert I, Count of Vermandois",
+        "005_Setting  of  as Title for Herbert I, Count of Vermandois",
+        "006_Generating edit_title_page"
+    ],
+    "028_edit_title_page": [
+        "000_Editing title:  of ",
+        [
+            "001_Can edit Realm Name: ",
+            "002_Can edit Realm Title: ",
+            "003_Can edit Male Ruler Title: ",
+            "004_Can edit Female Ruler Title: "
+        ],
+        "005_Generating edit_person_page"
+    ],
+    "029_edit_person_page": [
+        "000_Editing Person: Herbert I, Count of Vermandois",
+        [
+            "001_Can edit Name: Herbert I",
+            "002_Can edit Nickname: ",
+            "003_Can edit Birth Date: 848/850",
+            "004_Can edit Death Date: 907",
+            "005_Can add Father",
+            "006_Can add Mother",
+            "007_Can modify child: Beatrice of Vermandois"
+        ],
+        "008_Can edit 2 Reigns",
+        "009_Include ability to merge",
+        "010_Editing reign as Count of Vermandois",
+        [
+            "011_This is the primary reign",
+            "012_Reign has no predecessor",
+            "013_Can edit Start Date: 892",
+            "014_Can edit End Date: 907",
+            "015_Reign has no Successor"
+        ],
+        "016_Editing reign as Count of Meaux",
+        [
+            "017_Reign has no predecessor",
+            "018_Can edit Start Date: ",
+            "019_Can edit End Date: ",
+            "020_Reign has no Successor"
+        ],
+        "021_Generating choose_object_list"
+    ],
+    "030_choose_object_list": [
+        "000_Choosing Title for Herbert I, Count of Vermandois",
+        "001_Including Add new object button",
+        "002_Add list of objects",
+        "003_Creating new Title",
+        "004_New Title for Herbert I, Count of Vermandois",
+        "005_Setting  of  as Title for Herbert I, Count of Vermandois",
+        "006_Generating edit_title_page"
+    ],
+    "031_edit_title_page": [
+        "000_Editing title:  of ",
+        [
+            "001_Can edit Realm Name: ",
+            "002_Can edit Realm Title: ",
+            "003_Can edit Male Ruler Title: ",
+            "004_Can edit Female Ruler Title: "
+        ],
+        "005_Generating edit_person_page"
+    ],
+    "032_edit_person_page": [
+        "000_Editing Person: Herbert I, Count of Vermandois",
+        [
+            "001_Can edit Name: Herbert I",
+            "002_Can edit Nickname: ",
+            "003_Can edit Birth Date: 848/850",
+            "004_Can edit Death Date: 907",
+            "005_Can add Father",
+            "006_Can add Mother",
+            "007_Can modify child: Beatrice of Vermandois"
+        ],
+        "008_Can edit 3 Reigns",
+        "009_Include ability to merge",
+        "010_Editing reign as Count of Vermandois",
+        [
+            "011_This is the primary reign",
+            "012_Reign has no predecessor",
+            "013_Can edit Start Date: 892",
+            "014_Can edit End Date: 907",
+            "015_Reign has no Successor"
+        ],
+        "016_Editing reign as Count of Meaux",
+        [
+            "017_Reign has no predecessor",
+            "018_Can edit Start Date: 896",
+            "019_Can edit End Date: 907",
+            "020_Reign has no Successor"
+        ],
+        "021_Editing reign as Count of Soissons",
+        [
+            "022_Reign has no predecessor",
+            "023_Can edit Start Date: ",
+            "024_Can edit End Date: ",
+            "025_Reign has no Successor"
+        ],
+        "026_Generating display_person_page"
+    ],
+    "033_display_person_page": [
+        "000_Displaying Herbert I, Count of Vermandois",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 848/850",
+            "004_Add Death Date: 907",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Beatrice of Vermandois"
+        ],
+        "008_Viewing reign as Count of Vermandois",
+        [
+            "009_Date of Reign: (892 - 907)"
+        ],
+        "010_Viewing reign as Count of Meaux",
+        [
+            "011_Date of Reign: (896 - 907)"
+        ],
+        "012_Viewing reign as Count of Soissons",
+        [
+            "013_Date of Reign: ( - 907)"
+        ],
+        "014_Generating view_object_list"
+    ],
+    "034_view_object_list": [
+        "000_Viewing Person List",
+        "001_Adding list of Persons",
+        "002_Title was chosen",
+        "003_Generating view_object_list"
+    ],
+    "035_view_object_list": [
+        "000_Viewing Title List",
+        "001_Adding list of Titles",
+        "002_Creating new Title",
+        "003_Generating edit_title_page"
+    ],
+    "036_edit_title_page": [
+        "000_Editing title:  of ",
+        [
+            "001_Can edit Realm Name: ",
+            "002_Can edit Realm Title: ",
+            "003_Can edit Male Ruler Title: ",
+            "004_Can edit Female Ruler Title: "
+        ],
+        "005_Generating display_title_page"
+    ],
+    "037_display_title_page": [
+        "000_Displaying Title: County of Champagne",
+        "001_Generating view_object_list"
+    ],
+    "038_view_object_list": [
+        "000_Viewing Title List",
+        "001_Adding list of Titles",
         "002_Place was chosen",
         "003_Generating view_object_list"
     ],
-    "028_view_object_list": [
-        "000_Viewing Place",
-        "001_Add list of objects",
-        "002_Person was chosen",
-        "003_Generating view_object_list"
-    ],
-    "029_view_object_list": [
-        "000_Viewing Person",
-        "001_Add list of objects",
-        "002_Clicked to view Charles the Great",
-        "003_Generating display_person_page"
-    ],
-    "030_display_person_page": [
-        "000_Displaying Charles the Great",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Louis the Pious",
-        "004_Add Spouse: Matilda of Ringelheim",
-        "005_Generating display_person_page"
-    ],
-    "031_display_person_page": [
-        "000_Displaying Matilda of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Henry the Fowler, King of East Francia",
-        "004_Add Child With Henry the Fowler, King of East Francia: Gerberga of Saxony",
-        "005_Add Child With Henry the Fowler, King of East Francia: Otto I the Great, Emperor of Rome",
-        "006_Add Child With Henry the Fowler, King of East Francia: Hedwig of Saxony",
-        "007_Add Child With Henry the Fowler, King of East Francia: Bruno the Great, Archbishop of Cologne",
-        "008_Add Child With Henry the Fowler, King of East Francia: Henry I, Duke of Bavaria",
-        "009_Add Spouse: Charles the Great",
-        "010_Generating edit_person_page"
-    ],
-    "032_edit_person_page": [
-        "000_Editing Person: Matilda of Ringelheim",
-        "001_Can edit Name: Matilda",
-        "002_Can edit Nickname: of Ringelheim",
-        "003_Can edit Birth Date: 892",
-        "004_Can edit Death Date: 3/14/968",
-        "005_Can modify Father: Dietrich of Ringelheim",
-        "006_Can modify Mother: Reinhild",
-        "007_Can modify spouse: Henry the Fowler, King of East Francia",
-        "008_Can modify spouse: Charles the Great",
-        "009_Can modify child: Gerberga of Saxony",
-        "010_Can modify child: Otto I the Great, Emperor of Rome",
-        "011_Can modify child: Hedwig of Saxony",
-        "012_Can modify child: Bruno the Great, Archbishop of Cologne",
-        "013_Can modify child: Henry I, Duke of Bavaria",
-        "014_Can edit 0 Reigns",
-        "015_Removing Charles the Great as spouse",
-        "016_Removing Matilda of Ringelheim as spouse",
-        "017_Generating edit_person_page"
-    ],
-    "033_edit_person_page": [
-        "000_Editing Person: Matilda of Ringelheim",
-        "001_Can edit Name: Matilda",
-        "002_Can edit Nickname: of Ringelheim",
-        "003_Can edit Birth Date: 892",
-        "004_Can edit Death Date: 3/14/968",
-        "005_Can modify Father: Dietrich of Ringelheim",
-        "006_Can modify Mother: Reinhild",
-        "007_Can modify spouse: Henry the Fowler, King of East Francia",
-        "008_Can modify child: Gerberga of Saxony",
-        "009_Can modify child: Otto I the Great, Emperor of Rome",
-        "010_Can modify child: Hedwig of Saxony",
-        "011_Can modify child: Bruno the Great, Archbishop of Cologne",
-        "012_Can modify child: Henry I, Duke of Bavaria",
-        "013_Can edit 0 Reigns",
-        "014_Writing Files",
-        "015_People Written",
-        "016_Titles Written",
-        "017_Places Written",
-        "018_Generating display_person_page"
-    ],
-    "034_display_person_page": [
-        "000_Displaying Matilda of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Henry the Fowler, King of East Francia",
-        "004_Add Child With Henry the Fowler, King of East Francia: Gerberga of Saxony",
-        "005_Add Child With Henry the Fowler, King of East Francia: Otto I the Great, Emperor of Rome",
-        "006_Add Child With Henry the Fowler, King of East Francia: Hedwig of Saxony",
-        "007_Add Child With Henry the Fowler, King of East Francia: Bruno the Great, Archbishop of Cologne",
-        "008_Add Child With Henry the Fowler, King of East Francia: Henry I, Duke of Bavaria",
-        "009_Generating view_object_list"
-    ],
-    "035_view_object_list": [
-        "000_Viewing Person",
-        "001_Add list of objects",
-        "002_Clicked to view Charles the Great",
-        "003_Generating display_person_page"
-    ],
-    "036_display_person_page": [
-        "000_Displaying Charles the Great",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Louis the Pious",
-        "004_Generating display_person_page"
-    ],
-    "037_display_person_page": [
-        "000_Displaying Louis the Pious",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Lothair I",
-        "004_Add Child With No Spouse: Louis",
-        "005_Add Spouse: Judith of Bavaria",
-        "006_Add Child With Judith of Bavaria: Charles the Bald, King of West Francia",
-        "007_Generating display_person_page"
-    ],
-    "038_display_person_page": [
-        "000_Displaying Charles the Bald, King of West Francia",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Louis the Stammerer, King of West Francia",
-        "004_Viewing Reign as part of Charles",
-        "005_Successor: Louis the Stammerer, King of West Francia",
-        "006_Generating display_person_page"
-    ],
-    "039_display_person_page": [
-        "000_Displaying Louis the Pious",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Lothair I",
-        "004_Add Child With No Spouse: Louis",
-        "005_Add Spouse: Judith of Bavaria",
-        "006_Add Child With Judith of Bavaria: Charles the Bald, King of West Francia",
-        "007_Generating display_person_page"
-    ],
-    "040_display_person_page": [
-        "000_Displaying Louis",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Generating display_person_page"
-    ],
-    "041_display_person_page": [
-        "000_Displaying Louis the Pious",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Lothair I",
-        "004_Add Child With No Spouse: Louis",
-        "005_Add Spouse: Judith of Bavaria",
-        "006_Add Child With Judith of Bavaria: Charles the Bald, King of West Francia",
-        "007_Generating display_person_page"
-    ],
-    "042_display_person_page": [
-        "000_Displaying Lothair I",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Generating display_person_page"
-    ],
-    "043_display_person_page": [
-        "000_Displaying Louis the Pious",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Lothair I",
-        "004_Add Child With No Spouse: Louis",
-        "005_Add Spouse: Judith of Bavaria",
-        "006_Add Child With Judith of Bavaria: Charles the Bald, King of West Francia",
-        "007_Generating display_person_page"
-    ],
-    "044_display_person_page": [
-        "000_Displaying Charles the Bald, King of West Francia",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Louis the Stammerer, King of West Francia",
-        "004_Viewing Reign as part of Charles",
-        "005_Successor: Louis the Stammerer, King of West Francia",
-        "006_Generating display_person_page"
-    ],
-    "045_display_person_page": [
-        "000_Displaying Louis the Stammerer, King of West Francia",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Charles III the Simple",
-        "004_Viewing Reign as part of Louis",
-        "005_Predecessor: Charles the Bald, King of West Francia",
-        "006_Generating display_person_page"
-    ],
-    "046_display_person_page": [
-        "000_Displaying Charles III the Simple",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Child With No Spouse: Louis IV d'Outremer",
-        "004_Add Spouse: Frederuna",
-        "005_Generating display_person_page"
-    ],
-    "047_display_person_page": [
-        "000_Displaying Louis IV d'Outremer",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Gerberga of Saxony",
-        "004_Generating display_person_page"
-    ],
-    "048_display_person_page": [
-        "000_Displaying Gerberga of Saxony",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Louis IV d'Outremer",
-        "004_Generating display_person_page"
-    ],
-    "049_display_person_page": [
-        "000_Displaying Matilda of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Henry the Fowler, King of East Francia",
-        "004_Add Child With Henry the Fowler, King of East Francia: Gerberga of Saxony",
-        "005_Add Child With Henry the Fowler, King of East Francia: Otto I the Great, Emperor of Rome",
-        "006_Add Child With Henry the Fowler, King of East Francia: Hedwig of Saxony",
-        "007_Add Child With Henry the Fowler, King of East Francia: Bruno the Great, Archbishop of Cologne",
-        "008_Add Child With Henry the Fowler, King of East Francia: Henry I, Duke of Bavaria",
-        "009_Generating display_person_page"
-    ],
-    "050_display_person_page": [
-        "000_Displaying Dietrich of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Gisela of Lotharingia",
-        "004_Add Child With Gisela of Lotharingia: Frederuna",
-        "005_Add Spouse: Reinhild",
-        "006_Add Child With Reinhild: Matilda of Ringelheim",
-        "007_Generating display_person_page"
-    ],
-    "051_display_person_page": [
-        "000_Displaying Gisela of Lotharingia",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Dietrich of Ringelheim",
-        "004_Add Child With Dietrich of Ringelheim: Frederuna",
-        "005_Generating display_person_page"
-    ],
-    "052_display_person_page": [
-        "000_Displaying Frederuna",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Charles III the Simple",
-        "004_Generating display_person_page"
-    ],
-    "053_display_person_page": [
-        "000_Displaying Dietrich of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Gisela of Lotharingia",
-        "004_Add Child With Gisela of Lotharingia: Frederuna",
-        "005_Add Spouse: Reinhild",
-        "006_Add Child With Reinhild: Matilda of Ringelheim",
-        "007_Generating display_person_page"
-    ],
-    "054_display_person_page": [
-        "000_Displaying Gisela of Lotharingia",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Dietrich of Ringelheim",
-        "004_Add Child With Dietrich of Ringelheim: Frederuna",
-        "005_Generating display_person_page"
-    ],
-    "055_display_person_page": [
-        "000_Displaying Dietrich of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Gisela of Lotharingia",
-        "004_Add Child With Gisela of Lotharingia: Frederuna",
-        "005_Add Spouse: Reinhild",
-        "006_Add Child With Reinhild: Matilda of Ringelheim",
-        "007_Generating display_person_page"
-    ],
-    "056_display_person_page": [
-        "000_Displaying Reinhild",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Dietrich of Ringelheim",
-        "004_Add Child With Dietrich of Ringelheim: Matilda of Ringelheim",
-        "005_Generating display_person_page"
-    ],
-    "057_display_person_page": [
-        "000_Displaying Matilda of Ringelheim",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Add Spouse: Henry the Fowler, King of East Francia",
-        "004_Add Child With Henry the Fowler, King of East Francia: Gerberga of Saxony",
-        "005_Add Child With Henry the Fowler, King of East Francia: Otto I the Great, Emperor of Rome",
-        "006_Add Child With Henry the Fowler, King of East Francia: Hedwig of Saxony",
-        "007_Add Child With Henry the Fowler, King of East Francia: Bruno the Great, Archbishop of Cologne",
-        "008_Add Child With Henry the Fowler, King of East Francia: Henry I, Duke of Bavaria",
-        "009_Generating display_person_page"
-    ],
-    "058_display_person_page": [
-        "000_Displaying Bruno the Great, Archbishop of Cologne",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Viewing Reign as part of Bruno",
-        "004_Viewing Reign as part of Bruno",
-        "005_Predecessor: Conrad the Red, Duke of Lorraine",
-        "006_Generating display_title_page"
-    ],
-    "059_display_title_page": [
-        "000_Displaying Title: Duchy of Lorraine",
-        "001_Viewing Reign as part of Duchy of Lorraine",
-        "002_Successor: Bruno the Great, Archbishop of Cologne",
-        "003_Viewing Reign as part of Duchy of Lorraine",
-        "004_Predecessor: Conrad the Red, Duke of Lorraine",
-        "005_Generating display_person_page"
-    ],
-    "060_display_person_page": [
-        "000_Displaying Bruno the Great, Archbishop of Cologne",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Viewing Reign as part of Bruno",
-        "004_Viewing Reign as part of Bruno",
-        "005_Predecessor: Conrad the Red, Duke of Lorraine",
-        "006_Generating display_title_page"
-    ],
-    "061_display_title_page": [
-        "000_Displaying Title: Archbishopric of Cologne",
-        "001_Viewing Reign as part of Archbishopric of Cologne",
-        "002_Generating display_person_page"
-    ],
-    "062_display_person_page": [
-        "000_Displaying Bruno the Great, Archbishop of Cologne",
-        "001_Add Name Widget",
-        "002_Add null spouse",
-        "003_Viewing Reign as part of Bruno",
-        "004_Viewing Reign as part of Bruno",
-        "005_Predecessor: Conrad the Red, Duke of Lorraine",
-        "006_Generating view_object_list"
-    ],
-    "063_view_object_list": [
-        "000_Viewing Person",
-        "001_Add list of objects"
+    "039_view_object_list": [
+        "000_Viewing Place List",
+        "001_Adding list of Places",
+        "002_Adding map of places"
     ]
 }

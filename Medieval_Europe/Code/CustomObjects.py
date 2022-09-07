@@ -554,6 +554,7 @@ class Person(CustomObject):
 #    - Female Ruler Title
 # getDict(): method that returns a dictionary that defines this title, used when writing to output file
 
+
 class Title(CustomObject):
     def __init__(self, logger, init_dict, titleID):
         attributes = ['Realm Name',  # The name of the realm the title refers to (e.g. Bavaria, Tirol, France, etc)
@@ -567,10 +568,16 @@ class Title(CustomObject):
         
         if init_dict is None:
             self.isTitular = False
+            ## For when the type of title changes (county to duchy, de jure to titular, etc.)
+            self.predecessor = None
+            self.successor = None
         else:
             for a in self.attributes:
                 self.updateAttribute(a, init_dict['Attributes'][a])
             self.isTitular = init_dict['Titular']
+
+            self.predecessor = init_dict['Connections']['Predecessor']
+            self.successor = init_dict['Connections']['Successor']
 
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
@@ -579,9 +586,7 @@ class Title(CustomObject):
         
         self.reignDict = {}  ## structure: {<reignID>: <reignObject>}
         
-        ## For when the type of title changes (county to duchy, de jure to titular, etc.)
-        self.predecessor = None
-        self.successor = None
+
         
         self.orderReignList = []
         
@@ -1045,38 +1050,66 @@ class Logger:
     #    key[1] is the specific method called, or object instance
     
     ## Use curly brace wrappers to identify object IDs
-    def log(self, kind, value):
+    def log(self, kind, value, array=None):
         value = self.enhanceStringLinks(value)
+
+        if array is None:
+            array = False
                 
         # Get the appropriate log dict
         if kind in self.logDict:
             codeLog = self.logDict['Code']['Log']
             sublog = self.logDict[kind]['Log']
-            pages = self.logDict['Code']['Pages']
+            pages = self.logDict['Code']['Pages']  # The number of logs for the particular page instance
         else:
             sublog = {}
             pages = {}
             print(str(kind) + ' is not a valid log type')
-            
+
+        # Check if the page key (i.e. 005_display_title_page) has already been added to the log dict
         if self.page_key in pages:
-            pages[self.page_key] += 1
+            pages[self.page_key] += 1  # Get the next index to store the log
             index = pages[self.page_key]
 
+            # Append the value to the log at page_key if it already exists in the log dict
             if self.page_key in sublog:
-                sublog[self.page_key].append(f'{index:03d}_' + value)
+                page_log = sublog[self.page_key]
+                lastIndex = len(page_log) - 1
+
+                if array:
+                    if isinstance(sublog[self.page_key][lastIndex], list):
+                        # The last entry is in an array
+                        sublog[self.page_key][lastIndex].append(f'{index:03d}_' + value)
+                    else:
+                        # The last entry is not in an array
+                        # Add the value as the first element of a new array
+                        sublog[self.page_key].append([f'{index:03d}_' + value])
+
+                else:
+                    sublog[self.page_key].append(f'{index:03d}_' + value)
             else:
-                sublog.update({self.page_key: [f'{index:03d}_' + value]})
+                # Create new list for the page_key in the log dict
+                # (mostly for errors and warnings to track where on the page they occurred
+                if array:
+                    sublog.update({self.page_key: [[f'{index:03d}_' + value]]})
+                else:
+                    sublog.update({self.page_key: [f'{index:03d}_' + value]})
         else:
+            # Create new dict entry in the log dict
             index = 0
+
             pages.update({self.page_key: index})
 
-            sublog.update({self.page_key: [f'{index:03d}_' + value]})
+            if array:
+                sublog.update({self.page_key: [[f'{index:03d}_' + value]]})
+            else:
+                sublog.update({self.page_key: [f'{index:03d}_' + value]})
 
         # Call writeLogs to write to external file  
         self.writeLogs()
         
     def enhanceStringLinks(self, value):
-        if '{' in value: # Only replace IDs if there are actually IDs to replace
+        if '{' in value:  # Only replace IDs if there are actually IDs to replace
             idSplit = value.split('{')  # Split the value along curly braces
             value = idSplit[0]
             for objectID in idSplit[1:]:  # Iterate through list starting from 2nd value (first is before curly brace is found)
