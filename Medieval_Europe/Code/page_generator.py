@@ -357,20 +357,27 @@ class PageGenerator:
 
             personList = getRelations(person, personList, 5, 0)
 
-            drawSpouses = False
+            drawSpouses = True
 
             for p_id, personObject in personList.items():
+                edge = False
                 parents = personObject.getParents()
                 if parents[0] is not None and parents[0] in personList:
                     G.add_edge(parents[0], p_id, color='r')
+                    edge = True
 
                 if parents[1] is not None and parents[1] in personList:
                     G.add_edge(parents[1], p_id, color='b')
+                    edge = True
 
                 if drawSpouses:
                     for s_id in personObject.spouses:
                         if s_id != 'unknown_spouse' and s_id in personList:
                             G.add_edge(p_id, s_id, color='g')
+                            edge = True
+
+                if not edge:
+                    G.add_node(p_id)
 
                 labels[p_id] = personObject.getAttribute('Name')
 
@@ -380,8 +387,23 @@ class PageGenerator:
             #pos = nx.spring_layout(G)
             pos = graphviz_layout(G, prog="neato")
 
-            nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=15, width=0.5, font_size=7)
-            nx.draw_networkx_labels(G, pos, labels, font_size=6, alpha=.7)
+            # for p_id in pos:
+            #     if p_id in labels:
+            #         print(str(p_id) + ': Pos: ' + str(pos[p_id]) + ', Label: ' + str(labels[p_id]))
+            #
+            #     else:
+            #         print('POSITION BUT NO LABEL: ' + str(p_id))
+            #
+            # for p_id in labels:
+            #     if p_id not in pos:
+            #         print('LABEL BUT NO POSITION: ' + str(p_id))
+            #         labels.pop(p_id)
+
+            nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=10, width=0.5,)
+            nx.draw_networkx_labels(G, pos, labels, font_size=8, alpha=1)
+
+            fig = plt.gcf()
+            fig.set_size_inches(10, 10)
 
             plt.show()
 

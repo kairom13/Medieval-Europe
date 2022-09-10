@@ -1,7 +1,7 @@
 {
     "000_Init": [
         "000_Init",
-        "001_Set Window Size. Height: 600, Width: 960",
+        "001_Set Window Size. Height: 960, Width: 1706",
         "002_Creating Menu Bar",
         "003_Reading Files",
         "004_Opened \"titles.json\"",
@@ -17,319 +17,1008 @@
     "001_view_object_list": [
         "000_Viewing Person List",
         "001_Adding list of Persons",
-        "002_Found 281 instances of \"l\" in object list",
-        "003_Found 50 instances of \"lo\" in object list",
-        "004_Found 17 instances of \"lou\" in object list",
-        "005_Found 17 instances of \"loui\" in object list",
-        "006_Found 17 instances of \"louis\" in object list",
-        "007_Found 17 instances of \"louis \" in object list",
-        "008_Found 11 instances of \"louis i\" in object list",
-        "009_Found 1 instances of \"louis ix\" in object list",
-        "010_Clicked to view Louis IX the Saint, King of France",
-        "011_Generating display_person_page"
+        "002_Clicked to view Henry I, Duke of Bavaria",
+        "003_Generating display_person_page"
     ],
     "002_display_person_page": [
-        "000_Displaying Louis IX the Saint, King of France",
+        "000_Displaying Henry I, Duke of Bavaria",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 4/25/1214",
-            "004_Add Death Date: 8/25/1270",
-            "005_Add Father: Louis VIII the Lion, King of France",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Philip III the Bold, King of France"
+            "003_Add Birth Date: 919",
+            "004_Add Death Date: 11/1/955",
+            "005_Add Father: Henry the Fowler, King of East Francia",
+            "006_Add Mother: Matilda of Ringelheim",
+            "007_Add Child With No Spouse: Henry II the Quarrelsome, Duke of Bavaria"
         ],
-        "008_Viewing reign as King of France",
+        "008_Viewing reign as Duke of Bavaria",
         [
-            "009_Has predecessor: Louis VIII, King of France",
-            "010_Has successor: Philip III, King of France",
-            "011_Date of Reign: (11/8/1226 - 8/25/1270)"
+            "009_Has successor: Henry II, Duke of Bavaria",
+            "010_Date of Reign: (948 - 11/1/955)"
         ],
-        "012_Viewing reign as Count of Macon",
+        "011_Viewing reign as Duke of Lorraine",
         [
-            "013_Date of Reign: (1239 - 8/25/1270)"
+            "012_Has predecessor: Gilbert, Duke of Lorraine",
+            "013_Date of Reign: (940 - 941)"
         ],
-        "014_Clicked to display Philip III the Bold, King of France",
-        "015_Generating display_person_page"
+        "014_Clicked to display relations",
+        "015_Clicked to display Henry II the Quarrelsome, Duke of Bavaria",
+        "016_Generating display_person_page"
     ],
     "003_display_person_page": [
-        "000_Displaying Philip III the Bold, King of France",
+        "000_Displaying Henry II the Quarrelsome, Duke of Bavaria",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 5/1/1245",
-            "004_Add Death Date: 10/5/1285",
-            "005_Add Father: None",
-            "006_Add Mother: Louis IX the Saint, King of France",
-            "007_Add Child With No Spouse: Charles of Valois",
-            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
+            "003_Add Birth Date: 951",
+            "004_Add Death Date: 8/28/995",
+            "005_Add Father: Henry I, Duke of Bavaria",
+            "006_Add Mother: None",
+            "007_Add Spouse: Gisela of Burgundy",
+            "008_Add Child With Gisela of Burgundy: Henry II the Exuberant, Emperor of Rome"
         ],
-        "009_Viewing reign as King of France",
+        "009_Viewing reign as Duke of Bavaria",
         [
-            "010_Has predecessor: Louis IX, King of France",
-            "011_Has successor: Philip IV, King of France",
-            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
+            "010_Has predecessor: Henry I, Duke of Bavaria",
+            "011_Has successor: Otto II, Duke of Bavaria",
+            "012_Date of Reign: (11/1/955 - 7/21/976)"
         ],
-        "013_Viewing reign as Count of Macon",
-        [
-            "014_Date of Reign: ( - )"
-        ],
-        "015_Clicked to display Louis IX the Saint, King of France",
-        "016_Generating display_person_page"
+        "013_Clicked to display Gisela of Burgundy",
+        "014_Generating display_person_page"
     ],
     "004_display_person_page": [
-        "000_Displaying Louis IX the Saint, King of France",
+        "000_Displaying Gisela of Burgundy",
         [
             "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 4/25/1214",
-            "004_Add Death Date: 8/25/1270",
-            "005_Add Father: Louis VIII the Lion, King of France",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Philip III the Bold, King of France"
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 955",
+            "004_Add Death Date: 7/21/1007",
+            "005_Add Father: Conrad I the Peaceful",
+            "006_Add Mother: Adelaide of Bellay",
+            "007_Add Spouse: Henry II the Quarrelsome, Duke of Bavaria",
+            "008_Add Child With Henry II the Quarrelsome, Duke of Bavaria: Henry II the Exuberant, Emperor of Rome"
         ],
-        "008_Viewing reign as King of France",
-        [
-            "009_Has predecessor: Louis VIII, King of France",
-            "010_Has successor: Philip III, King of France",
-            "011_Date of Reign: (11/8/1226 - 8/25/1270)"
-        ],
-        "012_Viewing reign as Count of Macon",
-        [
-            "013_Date of Reign: (1239 - 8/25/1270)"
-        ],
-        "014_Clicked to display Philip III the Bold, King of France",
-        "015_Generating display_person_page"
+        "009_Clicked to display Conrad I the Peaceful",
+        "010_Generating display_person_page"
     ],
     "005_display_person_page": [
-        "000_Displaying Philip III the Bold, King of France",
+        "000_Displaying Conrad I the Peaceful",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 5/1/1245",
-            "004_Add Death Date: 10/5/1285",
+            "003_Add Birth Date: 925",
+            "004_Add Death Date: 10/19/993",
             "005_Add Father: None",
-            "006_Add Mother: Louis IX the Saint, King of France",
-            "007_Add Child With No Spouse: Charles of Valois",
-            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
+            "006_Add Mother: None",
+            "007_Add Spouse: Adelaide of Bellay",
+            "008_Add Child With Adelaide of Bellay: Gisela of Burgundy",
+            "009_Add Spouse: Matilda of France",
+            "010_Add Child With Matilda of France: Bertha of Burgundy",
+            "011_Add Child With Matilda of France: Matilda",
+            "012_Add Child With Matilda of France: Rudolph III the Pious"
         ],
-        "009_Viewing reign as King of France",
-        [
-            "010_Has predecessor: Louis IX, King of France",
-            "011_Has successor: Philip IV, King of France",
-            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
-        ],
-        "013_Viewing reign as Count of Macon",
-        [
-            "014_Date of Reign: ( - )"
-        ],
-        "015_Generating edit_person_page"
+        "013_Clicked to display Rudolph III the Pious",
+        "014_Generating display_person_page"
     ],
-    "006_edit_person_page": [
-        "000_Editing Person: Philip III the Bold, King of France",
+    "006_display_person_page": [
+        "000_Displaying Rudolph III the Pious",
         [
-            "001_Can edit Name: Philip III",
-            "002_Can edit Nickname: the Bold",
-            "003_Can edit Birth Date: 5/1/1245",
-            "004_Can edit Death Date: 10/5/1285",
-            "005_Can add Father",
-            "006_Can modify Mother: Louis IX the Saint, King of France",
-            "007_Can modify child: Charles of Valois",
-            "008_Can modify child: Philip IV the Fair, King of France"
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 971",
+            "004_Add Death Date: 9/6/1032",
+            "005_Add Father: Conrad I the Peaceful",
+            "006_Add Mother: Matilda of France"
         ],
-        "009_Can edit 2 Reigns",
-        "010_Include ability to merge",
-        "011_Editing reign as King of France",
-        [
-            "012_This is the primary reign",
-            "013_Reign has predecessor: Louis IX the Saint, King of France",
-            "014_Can edit Start Date: 8/25/1270",
-            "015_Can edit End Date: 10/5/1285",
-            "016_Reign has successor: Philip IV the Fair, King of France"
-        ],
-        "017_Editing reign as Count of Macon",
-        [
-            "018_Reign has no predecessor",
-            "019_Can edit Start Date: ",
-            "020_Can edit End Date: ",
-            "021_Reign has no Successor"
-        ],
-        "022_Removing Mother from Philip III the Bold, King of France",
-        "023_Removed Philip III the Bold, King of France as a child with spouse unknown_spouse",
-        "024_Generating edit_person_page"
+        "007_Clicked to display Conrad I the Peaceful",
+        "008_Generating display_person_page"
     ],
-    "007_edit_person_page": [
-        "000_Editing Person: Philip III the Bold, King of France",
+    "007_display_person_page": [
+        "000_Displaying Conrad I the Peaceful",
         [
-            "001_Can edit Name: Philip III",
-            "002_Can edit Nickname: the Bold",
-            "003_Can edit Birth Date: 5/1/1245",
-            "004_Can edit Death Date: 10/5/1285",
-            "005_Can add Father",
-            "006_Can add Mother",
-            "007_Can modify child: Charles of Valois",
-            "008_Can modify child: Philip IV the Fair, King of France"
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 925",
+            "004_Add Death Date: 10/19/993",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Adelaide of Bellay",
+            "008_Add Child With Adelaide of Bellay: Gisela of Burgundy",
+            "009_Add Spouse: Matilda of France",
+            "010_Add Child With Matilda of France: Bertha of Burgundy",
+            "011_Add Child With Matilda of France: Matilda",
+            "012_Add Child With Matilda of France: Rudolph III the Pious"
         ],
-        "009_Can edit 2 Reigns",
-        "010_Include ability to merge",
-        "011_Editing reign as King of France",
-        [
-            "012_This is the primary reign",
-            "013_Reign has predecessor: Louis IX the Saint, King of France",
-            "014_Can edit Start Date: 8/25/1270",
-            "015_Can edit End Date: 10/5/1285",
-            "016_Reign has successor: Philip IV the Fair, King of France"
-        ],
-        "017_Editing reign as Count of Macon",
-        [
-            "018_Reign has no predecessor",
-            "019_Can edit Start Date: ",
-            "020_Can edit End Date: ",
-            "021_Reign has no Successor"
-        ],
-        "022_Generating choose_object_list"
+        "013_Clicked to display Matilda of France",
+        "014_Generating display_person_page"
     ],
-    "008_choose_object_list": [
-        "000_Choosing Father for Philip III the Bold, King of France",
-        "001_Including Add new object button",
-        "002_Add list of objects",
-        "003_Found 280 instances of \"l\" in object list",
-        "004_Found 50 instances of \"lo\" in object list",
-        "005_Found 17 instances of \"lou\" in object list",
-        "006_Found 17 instances of \"loui\" in object list",
-        "007_Found 17 instances of \"louis\" in object list",
-        "008_Found 17 instances of \"louis \" in object list",
-        "009_Found 11 instances of \"louis i\" in object list",
-        "010_Found 1 instances of \"louis ix\" in object list",
-        "011_Clicked to choose Louis IX the Saint, King of France as Father for Philip III the Bold, King of France",
-        "012_Setting Louis IX the Saint, King of France as Father for Philip III the Bold, King of France",
-        "013_Philip III the Bold, King of France has no parents",
-        "014_Add Philip III the Bold, King of France as new child with unknown spouse",
-        "015_Generating edit_person_page"
+    "008_display_person_page": [
+        "000_Displaying Matilda of France",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 943",
+            "004_Add Death Date: 11/26/981",
+            "005_Add Father: Louis IV d'Outremer, King of West Francia",
+            "006_Add Mother: Gerberga of Saxony",
+            "007_Add Spouse: Conrad I the Peaceful",
+            "008_Add Child With Conrad I the Peaceful: Bertha of Burgundy",
+            "009_Add Child With Conrad I the Peaceful: Matilda",
+            "010_Add Child With Conrad I the Peaceful: Rudolph III the Pious"
+        ],
+        "011_Clicked to display Gerberga of Saxony",
+        "012_Generating display_person_page"
     ],
-    "009_edit_person_page": [
-        "000_Editing Person: Philip III the Bold, King of France",
+    "009_display_person_page": [
+        "000_Displaying Gerberga of Saxony",
         [
-            "001_Can edit Name: Philip III",
-            "002_Can edit Nickname: the Bold",
-            "003_Can edit Birth Date: 5/1/1245",
-            "004_Can edit Death Date: 10/5/1285",
-            "005_Can modify Father: Louis IX the Saint, King of France",
-            "006_Can add Mother",
-            "007_Can modify child: Charles of Valois",
-            "008_Can modify child: Philip IV the Fair, King of France"
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 913",
+            "004_Add Death Date: 5/5/969",
+            "005_Add Father: Henry the Fowler, King of East Francia",
+            "006_Add Mother: Matilda of Ringelheim",
+            "007_Add Spouse: Louis IV d'Outremer, King of West Francia",
+            "008_Add Child With Louis IV d'Outremer, King of West Francia: Lothair of France, King of West Francia",
+            "009_Add Child With Louis IV d'Outremer, King of West Francia: Matilda of France",
+            "010_Add Spouse: Gilbert, Duke of Lorraine",
+            "011_Add Child With Gilbert, Duke of Lorraine: Gerberge of Lorraine",
+            "012_Add Child With Gilbert, Duke of Lorraine: Henry"
         ],
-        "009_Can edit 2 Reigns",
-        "010_Include ability to merge",
-        "011_Editing reign as King of France",
-        [
-            "012_This is the primary reign",
-            "013_Reign has predecessor: Louis IX the Saint, King of France",
-            "014_Can edit Start Date: 8/25/1270",
-            "015_Can edit End Date: 10/5/1285",
-            "016_Reign has successor: Philip IV the Fair, King of France"
-        ],
-        "017_Editing reign as Count of Macon",
-        [
-            "018_Reign has no predecessor",
-            "019_Can edit Start Date: ",
-            "020_Can edit End Date: ",
-            "021_Reign has no Successor"
-        ],
-        "022_Generating display_person_page"
+        "013_Clicked to display Lothair of France, King of West Francia",
+        "014_Generating display_person_page"
     ],
     "010_display_person_page": [
-        "000_Displaying Philip III the Bold, King of France",
+        "000_Displaying Lothair of France, King of West Francia",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 5/1/1245",
-            "004_Add Death Date: 10/5/1285",
-            "005_Add Father: Louis IX the Saint, King of France",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Charles of Valois",
-            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
+            "003_Add Birth Date: 941",
+            "004_Add Death Date: 3/2/986",
+            "005_Add Father: Louis IV d'Outremer, King of West Francia",
+            "006_Add Mother: Gerberga of Saxony",
+            "007_Add Spouse: Emma"
         ],
-        "009_Viewing reign as King of France",
+        "008_Viewing reign as King of West Francia",
         [
-            "010_Has predecessor: Louis IX, King of France",
-            "011_Has successor: Philip IV, King of France",
-            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
+            "009_Has predecessor: Louis IV, King of West Francia",
+            "010_Date of Reign: (9/10/954 - 3/2/986)"
         ],
-        "013_Viewing reign as Count of Macon",
-        [
-            "014_Date of Reign: ( - )"
-        ],
-        "015_Clicked to display Louis IX the Saint, King of France",
-        "016_Generating display_person_page"
+        "011_Clicked to display Emma",
+        "012_Generating display_person_page"
     ],
     "011_display_person_page": [
-        "000_Displaying Louis IX the Saint, King of France",
+        "000_Displaying Emma",
         [
             "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 4/25/1214",
-            "004_Add Death Date: 8/25/1270",
-            "005_Add Father: Louis VIII the Lion, King of France",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Philip III the Bold, King of France"
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 948",
+            "004_Add Death Date: after 987",
+            "005_Add Father: Lothar II of Italy",
+            "006_Add Mother: Adelaide of Burgundy",
+            "007_Add Spouse: Lothair of France, King of West Francia"
         ],
-        "008_Viewing reign as King of France",
-        [
-            "009_Has predecessor: Louis VIII, King of France",
-            "010_Has successor: Philip III, King of France",
-            "011_Date of Reign: (11/8/1226 - 8/25/1270)"
-        ],
-        "012_Viewing reign as Count of Macon",
-        [
-            "013_Date of Reign: (1239 - 8/25/1270)"
-        ],
-        "014_Clicked to display Philip III the Bold, King of France",
-        "015_Generating display_person_page"
+        "008_Clicked to display Adelaide of Burgundy",
+        "009_Generating display_person_page"
     ],
     "012_display_person_page": [
-        "000_Displaying Philip III the Bold, King of France",
+        "000_Displaying Adelaide of Burgundy",
         [
             "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 5/1/1245",
-            "004_Add Death Date: 10/5/1285",
-            "005_Add Father: Louis IX the Saint, King of France",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 931",
+            "004_Add Death Date: 12/16/999",
+            "005_Add Father: None",
             "006_Add Mother: None",
-            "007_Add Child With No Spouse: Charles of Valois",
-            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
+            "007_Add Spouse: Otto I the Great, Emperor of Rome",
+            "008_Add Child With Otto I the Great, Emperor of Rome: Otto II the Red, Emperor of Rome",
+            "009_Add Spouse: Lothar II of Italy",
+            "010_Add Child With Lothar II of Italy: Emma"
         ],
-        "009_Viewing reign as King of France",
-        [
-            "010_Has predecessor: Louis IX, King of France",
-            "011_Has successor: Philip IV, King of France",
-            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
-        ],
-        "013_Viewing reign as Count of Macon",
-        [
-            "014_Date of Reign: ( - )"
-        ],
-        "015_Clicked to display Philip IV the Fair, King of France",
-        "016_Generating display_person_page"
+        "011_Clicked to display Otto I the Great, Emperor of Rome",
+        "012_Generating display_person_page"
     ],
     "013_display_person_page": [
-        "000_Displaying Philip IV the Fair, King of France",
+        "000_Displaying Otto I the Great, Emperor of Rome",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 5/1268",
-            "004_Add Death Date: 11/29/1314",
-            "005_Add Father: Philip III the Bold, King of France",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Philip V the Tall, King of France",
-            "008_Add Child With No Spouse: Louis X the Headstrong, King of France",
-            "009_Add Child With No Spouse: Charles IV the Fair, King of France"
+            "003_Add Birth Date: 11/23/912",
+            "004_Add Death Date: 5/7/973",
+            "005_Add Father: Henry the Fowler, King of East Francia",
+            "006_Add Mother: Matilda of Ringelheim",
+            "007_Add Spouse: Eadgyth of England",
+            "008_Add Child With Eadgyth of England: Liudolf",
+            "009_Add Child With Eadgyth of England: Liutgard of Saxony",
+            "010_Add Spouse: Adelaide of Burgundy",
+            "011_Add Child With Adelaide of Burgundy: Otto II the Red, Emperor of Rome"
         ],
-        "010_Viewing reign as King of France",
+        "012_Viewing reign as Emperor of Rome",
         [
-            "011_Has predecessor: Philip III, King of France",
-            "012_Has successor: Louis X, King of France",
-            "013_Date of Reign: (10/5/1285 - 11/29/1314)"
+            "013_Has successor: Otto II, Emperor of Rome",
+            "014_Date of Reign: (2/2/962 - 5/7/973)"
+        ],
+        "015_Viewing reign as Duke of Saxony",
+        [
+            "016_Has predecessor: Henry, Duke of Saxony",
+            "017_Has successor: Bernard I, Duke of Saxony",
+            "018_Date of Reign: (7/2/936 - 5/7/973)"
+        ],
+        "019_Viewing reign as King of East Francia",
+        [
+            "020_Has predecessor: Henry, King of East Francia",
+            "021_Has successor: Otto II, King of East Francia",
+            "022_Date of Reign: (7/2/936 - 5/7/973)"
+        ],
+        "023_Clicked to display Henry the Fowler, King of East Francia",
+        "024_Generating display_person_page"
+    ],
+    "014_display_person_page": [
+        "000_Displaying Henry the Fowler, King of East Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 876",
+            "004_Add Death Date: 7/2/936",
+            "005_Add Father: Otto I the Illustrious, Duke of Saxony",
+            "006_Add Mother: None",
+            "007_Add Spouse: Matilda of Ringelheim",
+            "008_Add Child With Matilda of Ringelheim: Gerberga of Saxony",
+            "009_Add Child With Matilda of Ringelheim: Otto I the Great, Emperor of Rome",
+            "010_Add Child With Matilda of Ringelheim: Hedwig of Saxony",
+            "011_Add Child With Matilda of Ringelheim: Bruno the Great, Archbishop of Cologne",
+            "012_Add Child With Matilda of Ringelheim: Henry I, Duke of Bavaria",
+            "013_Add Spouse: Hatheburg of Merseburg",
+            "014_Add Child With Hatheburg of Merseburg: Thankmar"
+        ],
+        "015_Viewing reign as Duke of Saxony",
+        [
+            "016_Has predecessor: Otto I, Duke of Saxony",
+            "017_Has successor: Otto I, Duke of Saxony",
+            "018_Date of Reign: (11/30/912 - 7/2/936)"
+        ],
+        "019_Viewing reign as King of East Francia",
+        [
+            "020_Has predecessor: Conrad I, King of East Francia",
+            "021_Has successor: Otto I, King of East Francia",
+            "022_Date of Reign: (5/24/919 - 7/2/936)"
+        ],
+        "023_Clicked to display Otto I the Illustrious, Duke of Saxony",
+        "024_Generating display_person_page"
+    ],
+    "015_display_person_page": [
+        "000_Displaying Otto I the Illustrious, Duke of Saxony",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 830",
+            "004_Add Death Date: 11/30/912",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Henry the Fowler, King of East Francia"
+        ],
+        "008_Viewing reign as Duke of Saxony",
+        [
+            "009_Has successor: Henry, Duke of Saxony",
+            "010_Date of Reign: (880 - 11/30/912)"
+        ],
+        "011_Clicked to display Henry the Fowler, King of East Francia",
+        "012_Generating display_person_page"
+    ],
+    "016_display_person_page": [
+        "000_Displaying Henry the Fowler, King of East Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 876",
+            "004_Add Death Date: 7/2/936",
+            "005_Add Father: Otto I the Illustrious, Duke of Saxony",
+            "006_Add Mother: None",
+            "007_Add Spouse: Matilda of Ringelheim",
+            "008_Add Child With Matilda of Ringelheim: Gerberga of Saxony",
+            "009_Add Child With Matilda of Ringelheim: Otto I the Great, Emperor of Rome",
+            "010_Add Child With Matilda of Ringelheim: Hedwig of Saxony",
+            "011_Add Child With Matilda of Ringelheim: Bruno the Great, Archbishop of Cologne",
+            "012_Add Child With Matilda of Ringelheim: Henry I, Duke of Bavaria",
+            "013_Add Spouse: Hatheburg of Merseburg",
+            "014_Add Child With Hatheburg of Merseburg: Thankmar"
+        ],
+        "015_Viewing reign as Duke of Saxony",
+        [
+            "016_Has predecessor: Otto I, Duke of Saxony",
+            "017_Has successor: Otto I, Duke of Saxony",
+            "018_Date of Reign: (11/30/912 - 7/2/936)"
+        ],
+        "019_Viewing reign as King of East Francia",
+        [
+            "020_Has predecessor: Conrad I, King of East Francia",
+            "021_Has successor: Otto I, King of East Francia",
+            "022_Date of Reign: (5/24/919 - 7/2/936)"
+        ],
+        "023_Clicked to display Hedwig of Saxony",
+        "024_Generating display_person_page"
+    ],
+    "017_display_person_page": [
+        "000_Displaying Hedwig of Saxony",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 910",
+            "004_Add Death Date: 965",
+            "005_Add Father: Henry the Fowler, King of East Francia",
+            "006_Add Mother: Matilda of Ringelheim",
+            "007_Add Spouse: Hugh the Great",
+            "008_Add Child With Hugh the Great: Hugh Capet"
+        ],
+        "009_Clicked to display Hugh the Great",
+        "010_Generating display_person_page"
+    ],
+    "018_display_person_page": [
+        "000_Displaying Hugh the Great",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 898",
+            "004_Add Death Date: 6/16/956",
+            "005_Add Father: Robert I, King of West Francia",
+            "006_Add Mother: Beatrice of Vermandois",
+            "007_Add Spouse: Hedwig of Saxony",
+            "008_Add Child With Hedwig of Saxony: Hugh Capet",
+            "009_Add Spouse: Judith"
+        ],
+        "010_Clicked to display Robert I, King of West Francia",
+        "011_Generating display_person_page"
+    ],
+    "019_display_person_page": [
+        "000_Displaying Robert I, King of West Francia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 8/15/866",
+            "004_Add Death Date: 6/15/923",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Adela",
+            "008_Add Child With No Spouse: Emma",
+            "009_Add Spouse: Beatrice of Vermandois",
+            "010_Add Child With Beatrice of Vermandois: Hugh the Great"
+        ],
+        "011_Viewing reign as King of West Francia",
+        [
+            "012_Has predecessor: Charles III, King of West Francia",
+            "013_Has successor: Rudolph, King of West Francia",
+            "014_Date of Reign: (6/29/922 - 6/15/923)"
+        ],
+        "015_Clicked to display Adela",
+        "016_Generating display_person_page"
+    ],
+    "020_display_person_page": [
+        "000_Displaying Adela",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: ",
+            "004_Add Death Date: ",
+            "005_Add Father: Robert I, King of West Francia",
+            "006_Add Mother: None",
+            "007_Add Spouse: Herbert II, Count of Vermandois",
+            "008_Add Child With Herbert II, Count of Vermandois: Odo of Vermandois",
+            "009_Add Child With Herbert II, Count of Vermandois: Adalbert I",
+            "010_Add Child With Herbert II, Count of Vermandois: Adela of Vermandois",
+            "011_Add Child With Herbert II, Count of Vermandois: Herbert the Old",
+            "012_Add Child With Herbert II, Count of Vermandois: Robert of Vermandois, Count of Meaux",
+            "013_Add Child With Herbert II, Count of Vermandois: Liutgarde of Vermandois",
+            "014_Add Child With Herbert II, Count of Vermandois: Hugh of Vermandois",
+            "015_Add Child With Herbert II, Count of Vermandois: Guy I"
+        ],
+        "016_Clicked to display Adalbert I",
+        "017_Generating display_person_page"
+    ],
+    "021_display_person_page": [
+        "000_Displaying Adalbert I",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 915",
+            "004_Add Death Date: 987",
+            "005_Add Father: Herbert II, Count of Vermandois",
+            "006_Add Mother: Adela",
+            "007_Add Spouse: Gerberge of Lorraine"
+        ],
+        "008_Clicked to display Herbert II, Count of Vermandois",
+        "009_Generating display_person_page"
+    ],
+    "022_display_person_page": [
+        "000_Displaying Herbert II, Count of Vermandois",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: ",
+            "004_Add Death Date: 2/23/943",
+            "005_Add Father: Herbert I, Count of Vermandois",
+            "006_Add Mother: None",
+            "007_Add Spouse: Adela",
+            "008_Add Child With Adela: Odo of Vermandois",
+            "009_Add Child With Adela: Adalbert I",
+            "010_Add Child With Adela: Adela of Vermandois",
+            "011_Add Child With Adela: Herbert the Old",
+            "012_Add Child With Adela: Robert of Vermandois, Count of Meaux",
+            "013_Add Child With Adela: Liutgarde of Vermandois",
+            "014_Add Child With Adela: Hugh of Vermandois",
+            "015_Add Child With Adela: Guy I"
+        ],
+        "016_Viewing reign as Count of Vermandois",
+        [
+            "017_Has predecessor: Herbert I, Count of Vermandois",
+            "018_Date of Reign: (907 - 2/23/943)"
+        ],
+        "019_Viewing reign as Count of Meaux",
+        [
+            "020_Has predecessor: Herbert I, Count of Meaux",
+            "021_Has successor: Robert, Count of Meaux",
+            "022_Date of Reign: (907 - 2/23/943)"
+        ],
+        "023_Generating view_object_list"
+    ],
+    "023_view_object_list": [
+        "000_Viewing Person List",
+        "001_Adding list of Persons",
+        "002_Clicked to view Frederick I Barbarossa, Emperor of Rome",
+        "003_Generating display_person_page"
+    ],
+    "024_display_person_page": [
+        "000_Displaying Frederick I Barbarossa, Emperor of Rome",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1122",
+            "004_Add Death Date: 6/10/1190",
+            "005_Add Father: Frederick II the One-Eyed, Duke of Swabia",
+            "006_Add Mother: Judith of Bavaria",
+            "007_Add Spouse: Beatrice I",
+            "008_Add Child With Beatrice I: Henry VI, Emperor of Rome",
+            "009_Add Child With Beatrice I: Otto I"
+        ],
+        "010_Viewing reign as Duke of Swabia",
+        [
+            "011_Has predecessor: Frederick II, Duke of Swabia",
+            "012_Has successor: Frederick IV, Duke of Swabia",
+            "013_Date of Reign: (4/6/1147 - 3/4/1152)"
+        ],
+        "014_Viewing reign as Emperor of Rome",
+        [
+            "015_Has predecessor: Lothair III, Emperor of Rome",
+            "016_Has successor: Henry VI, Emperor of Rome",
+            "017_Date of Reign: (6/18/1155 - 6/10/1190)"
+        ],
+        "018_Clicked to display relations",
+        "019_Clicked to display Henry VI, Emperor of Rome",
+        "020_Generating display_person_page"
+    ],
+    "025_display_person_page": [
+        "000_Displaying Henry VI, Emperor of Rome",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 11/1165",
+            "004_Add Death Date: 9/28/1197",
+            "005_Add Father: Frederick I Barbarossa, Emperor of Rome",
+            "006_Add Mother: Beatrice I",
+            "007_Add Child With No Spouse: Frederick II, Emperor of Rome"
+        ],
+        "008_Viewing reign as Emperor of Rome",
+        [
+            "009_Has predecessor: Frederick I, Emperor of Rome",
+            "010_Has successor: Otto IV, Emperor of Rome",
+            "011_Date of Reign: (4/15/1191 - 9/28/1197)"
+        ],
+        "012_Clicked to display Frederick II, Emperor of Rome",
+        "013_Generating display_person_page"
+    ],
+    "026_display_person_page": [
+        "000_Displaying Frederick II, Emperor of Rome",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 12/26/1194",
+            "004_Add Death Date: 12/13/1250",
+            "005_Add Father: Henry VI, Emperor of Rome",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Conrad IV"
+        ],
+        "008_Viewing reign as Emperor of Rome",
+        [
+            "009_Has predecessor: Otto IV, Emperor of Rome",
+            "010_Has successor: Henry VII, Emperor of Rome",
+            "011_Date of Reign: (11/23/1220 - 12/13/1250)"
+        ],
+        "012_Clicked to display Conrad IV",
+        "013_Generating display_person_page"
+    ],
+    "027_display_person_page": [
+        "000_Displaying Conrad IV",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 4/25/1228",
+            "004_Add Death Date: 5/21/1254",
+            "005_Add Father: Frederick II, Emperor of Rome",
+            "006_Add Mother: None",
+            "007_Add Spouse: Elisabeth",
+            "008_Add Child With Elisabeth: Conradin"
+        ],
+        "009_Clicked to display Elisabeth",
+        "010_Generating display_person_page"
+    ],
+    "028_display_person_page": [
+        "000_Displaying Elisabeth",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 1227",
+            "004_Add Death Date: 10/9/1273",
+            "005_Add Father: Otto II the Illustrious, Duke of Bavaria",
+            "006_Add Mother: Agnes of the Palatinate",
+            "007_Add Spouse: Conrad IV",
+            "008_Add Child With Conrad IV: Conradin",
+            "009_Add Spouse: Meinhard",
+            "010_Add Child With Meinhard: Elisabeth of Tyrol"
+        ],
+        "011_Clicked to display Agnes of the Palatinate",
+        "012_Generating display_person_page"
+    ],
+    "029_display_person_page": [
+        "000_Displaying Agnes of the Palatinate",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 1201",
+            "004_Add Death Date: 1267",
+            "005_Add Father: Henry V the Elder, Count Palatine of the Rhine",
+            "006_Add Mother: Agnes of Hohenstaufen, Countess Palatine of the Rhine",
+            "007_Add Spouse: Otto II the Illustrious, Duke of Bavaria",
+            "008_Add Child With Otto II the Illustrious, Duke of Bavaria: Louis II the Strict, Count Palatine of the Rhine",
+            "009_Add Child With Otto II the Illustrious, Duke of Bavaria: Henry XIII",
+            "010_Add Child With Otto II the Illustrious, Duke of Bavaria: Elisabeth"
+        ],
+        "011_Clicked to display Agnes of Hohenstaufen, Countess Palatine of the Rhine",
+        "012_Generating display_person_page"
+    ],
+    "030_display_person_page": [
+        "000_Displaying Agnes of Hohenstaufen, Countess Palatine of the Rhine",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 1176",
+            "004_Add Death Date: 5/7/1204",
+            "005_Add Father: Conrad of Hohenstaufen, Count Palatine of the Rhine",
+            "006_Add Mother: None",
+            "007_Add Spouse: Henry V the Elder, Count Palatine of the Rhine",
+            "008_Add Child With Henry V the Elder, Count Palatine of the Rhine: Henry VI the Younger, Count Palatine of the Rhine",
+            "009_Add Child With Henry V the Elder, Count Palatine of the Rhine: Agnes of the Palatinate"
+        ],
+        "010_Viewing reign as Countess Palatine of the Rhine",
+        [
+            "011_Has predecessor: Conrad, Count Palatine of the Rhine",
+            "012_Has successor: Henry V, Count Palatine of the Rhine",
+            "013_Date of Reign: (11/8/1195 - 5/7/1204)"
+        ],
+        "014_Clicked to display Conrad of Hohenstaufen, Count Palatine of the Rhine",
+        "015_Generating display_person_page"
+    ],
+    "031_display_person_page": [
+        "000_Displaying Conrad of Hohenstaufen, Count Palatine of the Rhine",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1135",
+            "004_Add Death Date: 11/8/1195",
+            "005_Add Father: Frederick II the One-Eyed, Duke of Swabia",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Agnes of Hohenstaufen, Countess Palatine of the Rhine"
+        ],
+        "008_Viewing reign as Count Palatine of the Rhine",
+        [
+            "009_Has successor: Agnes, Countess Palatine of the Rhine",
+            "010_Date of Reign: (1156 - 11/8/1195)"
+        ],
+        "011_Clicked to display Frederick II the One-Eyed, Duke of Swabia",
+        "012_Generating display_person_page"
+    ],
+    "032_display_person_page": [
+        "000_Displaying Frederick II the One-Eyed, Duke of Swabia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1090",
+            "004_Add Death Date: 4/6/1147",
+            "005_Add Father: Frederick I, Duke of Swabia",
+            "006_Add Mother: Agnes of Waiblingen",
+            "007_Add Child With No Spouse: Conrad of Hohenstaufen, Count Palatine of the Rhine",
+            "008_Add Spouse: Judith of Bavaria",
+            "009_Add Child With Judith of Bavaria: Frederick I Barbarossa, Emperor of Rome"
+        ],
+        "010_Viewing reign as Duke of Swabia",
+        [
+            "011_Has predecessor: Frederick I, Duke of Swabia",
+            "012_Has successor: Frederick I, Duke of Swabia",
+            "013_Date of Reign: (1105 - 4/6/1147)"
+        ],
+        "014_Clicked to display Agnes of Waiblingen",
+        "015_Generating display_person_page"
+    ],
+    "033_display_person_page": [
+        "000_Displaying Agnes of Waiblingen",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 1072",
+            "004_Add Death Date: 9/24/1143",
+            "005_Add Father: Henry IV, Emperor of Rome",
+            "006_Add Mother: Bertha of Savoy",
+            "007_Add Spouse: Frederick I, Duke of Swabia",
+            "008_Add Child With Frederick I, Duke of Swabia: Conrad III",
+            "009_Add Child With Frederick I, Duke of Swabia: Kunigunde-Cuniza",
+            "010_Add Child With Frederick I, Duke of Swabia: Frederick II the One-Eyed, Duke of Swabia",
+            "011_Add Spouse: Leopold III the Good",
+            "012_Add Child With Leopold III the Good: Henry II Jasomirgott, Duke of Austria",
+            "013_Add Child With Leopold III the Good: Leopold the Generous"
+        ],
+        "014_Clicked to display Leopold III the Good",
+        "015_Generating display_person_page"
+    ],
+    "034_display_person_page": [
+        "000_Displaying Leopold III the Good",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1073",
+            "004_Add Death Date: 11/15/1136",
+            "005_Add Father: Leopold II the Fair, Margrave of Austria",
+            "006_Add Mother: Ida of Austria",
+            "007_Add Spouse: Agnes of Waiblingen",
+            "008_Add Child With Agnes of Waiblingen: Henry II Jasomirgott, Duke of Austria",
+            "009_Add Child With Agnes of Waiblingen: Leopold the Generous"
+        ],
+        "010_Viewing reign as Margrave of Austria",
+        [
+            "011_Has predecessor: Leopold II, Margrave of Austria",
+            "012_Has successor: Leopold, Margrave of Austria",
+            "013_Date of Reign: (10/12/1095 - 11/15/1136)"
+        ],
+        "014_Clicked to display Ida of Austria",
+        "015_Generating display_person_page"
+    ],
+    "035_display_person_page": [
+        "000_Displaying Ida of Austria",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 1055",
+            "004_Add Death Date: 9/1101",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Spouse: Leopold II the Fair, Margrave of Austria",
+            "008_Add Child With Leopold II the Fair, Margrave of Austria: Leopold III the Good",
+            "009_Add Child With Leopold II the Fair, Margrave of Austria: Elizabeth"
+        ],
+        "010_Clicked to display Leopold III the Good",
+        "011_Generating display_person_page"
+    ],
+    "036_display_person_page": [
+        "000_Displaying Leopold III the Good",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1073",
+            "004_Add Death Date: 11/15/1136",
+            "005_Add Father: Leopold II the Fair, Margrave of Austria",
+            "006_Add Mother: Ida of Austria",
+            "007_Add Spouse: Agnes of Waiblingen",
+            "008_Add Child With Agnes of Waiblingen: Henry II Jasomirgott, Duke of Austria",
+            "009_Add Child With Agnes of Waiblingen: Leopold the Generous"
+        ],
+        "010_Viewing reign as Margrave of Austria",
+        [
+            "011_Has predecessor: Leopold II, Margrave of Austria",
+            "012_Has successor: Leopold, Margrave of Austria",
+            "013_Date of Reign: (10/12/1095 - 11/15/1136)"
+        ],
+        "014_Clicked to display Henry II Jasomirgott, Duke of Austria",
+        "015_Generating display_person_page"
+    ],
+    "037_display_person_page": [
+        "000_Displaying Henry II Jasomirgott, Duke of Austria",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1107",
+            "004_Add Death Date: 1/13/1177",
+            "005_Add Father: Leopold III the Good",
+            "006_Add Mother: Agnes of Waiblingen",
+            "007_Add Child With No Spouse: Leopold V the Virtuous, Duke of Austria",
+            "008_Add Spouse: Gertrude of Supplinburg, Countess of Supplinburg"
+        ],
+        "009_Viewing reign as Duke of Austria",
+        [
+            "010_Has successor: Leopold V, Duke of Austria",
+            "011_Date of Reign: (9/17/1156 - 1/13/1177)"
+        ],
+        "012_Viewing reign as Margrave of Austria",
+        [
+            "013_Has predecessor: Leopold, Margrave of Austria",
+            "014_Date of Reign: (11/15/1141 - 9/17/1156)"
+        ],
+        "015_Viewing reign as Count Palatine of the Rhine",
+        [
+            "016_Date of Reign: (10/18/1140 - 11/15/1141)"
+        ],
+        "017_Viewing reign as Duke of Bavaria",
+        [
+            "018_Has predecessor: Leopold, Duke of Bavaria",
+            "019_Has successor: Henry, Duke of Bavaria",
+            "020_Date of Reign: (11/15/1141 - 9/8/1156)"
+        ],
+        "021_Clicked to display Gertrude of Supplinburg, Countess of Supplinburg",
+        "022_Generating display_person_page"
+    ],
+    "038_display_person_page": [
+        "000_Displaying Gertrude of Supplinburg, Countess of Supplinburg",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 4/18/1115",
+            "004_Add Death Date: 4/18/1143",
+            "005_Add Father: Lothair III of Supplinburg, Emperor of Rome",
+            "006_Add Mother: Richenza",
+            "007_Add Spouse: Henry II Jasomirgott, Duke of Austria",
+            "008_Add Spouse: Henry X the Proud, Duke of Bavaria",
+            "009_Add Child With Henry X the Proud, Duke of Bavaria: Henry the Lion, Duke of Saxony"
+        ],
+        "010_Viewing reign as Countess of Brunswick",
+        [
+            "011_Has predecessor: Richenza, Countess of Brunswick",
+            "012_Date of Reign: (6/10/1141 - 4/18/1143)"
+        ],
+        "013_Viewing reign as Countess of Northeim",
+        [
+            "014_Has predecessor: Richenza, Countess of Northeim",
+            "015_Date of Reign: (6/10/1141 - 4/18/1143)"
+        ],
+        "016_Viewing reign as Countess of Supplinburg",
+        [
+            "017_Has predecessor: Lothair III, Count of Supplinburg",
+            "018_Date of Reign: (12/4/1137 - 4/18/1143)"
+        ],
+        "019_Viewing reign as Countess of Katlenburg",
+        [
+            "020_Has predecessor: Richenza, Countess of Katlenburg",
+            "021_Date of Reign: (6/10/1141 - 4/18/1143)"
+        ],
+        "022_Clicked to display Henry the Lion, Duke of Saxony",
+        "023_Generating display_person_page"
+    ],
+    "039_display_person_page": [
+        "000_Displaying Henry the Lion, Duke of Saxony",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1129",
+            "004_Add Death Date: 8/6/1195",
+            "005_Add Father: Henry X the Proud, Duke of Bavaria",
+            "006_Add Mother: Gertrude of Supplinburg, Countess of Supplinburg",
+            "007_Add Spouse: Matilda of England",
+            "008_Add Child With Matilda of England: Henry V the Elder, Count Palatine of the Rhine",
+            "009_Add Child With Matilda of England: Otto IV, Emperor of Rome",
+            "010_Add Child With Matilda of England: William of Winchester"
+        ],
+        "011_Viewing reign as Duke of Saxony",
+        [
+            "012_Has predecessor: Albert, Duke of Saxony",
+            "013_Date of Reign: (5/1142 - 9/16/1180)"
+        ],
+        "014_Viewing reign as Duke of Bavaria",
+        [
+            "015_Has predecessor: Henry II, Duke of Bavaria",
+            "016_Has successor: Otto I, Duke of Bavaria",
+            "017_Date of Reign: (9/8/1156 - 9/16/1180)"
+        ],
+        "018_Clicked to display Matilda of England",
+        "019_Generating display_person_page"
+    ],
+    "040_display_person_page": [
+        "000_Displaying Matilda of England",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 6/1156",
+            "004_Add Death Date: 6/1189",
+            "005_Add Father: Henry II Plantagenet",
+            "006_Add Mother: None",
+            "007_Add Spouse: Henry the Lion, Duke of Saxony",
+            "008_Add Child With Henry the Lion, Duke of Saxony: Henry V the Elder, Count Palatine of the Rhine",
+            "009_Add Child With Henry the Lion, Duke of Saxony: Otto IV, Emperor of Rome",
+            "010_Add Child With Henry the Lion, Duke of Saxony: William of Winchester"
+        ],
+        "011_Clicked to display Henry V the Elder, Count Palatine of the Rhine",
+        "012_Generating display_person_page"
+    ],
+    "041_display_person_page": [
+        "000_Displaying Henry V the Elder, Count Palatine of the Rhine",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1173",
+            "004_Add Death Date: 4/28/1227",
+            "005_Add Father: Henry the Lion, Duke of Saxony",
+            "006_Add Mother: Matilda of England",
+            "007_Add Spouse: Agnes of Hohenstaufen, Countess Palatine of the Rhine",
+            "008_Add Child With Agnes of Hohenstaufen, Countess Palatine of the Rhine: Henry VI the Younger, Count Palatine of the Rhine",
+            "009_Add Child With Agnes of Hohenstaufen, Countess Palatine of the Rhine: Agnes of the Palatinate"
+        ],
+        "010_Viewing reign as Count Palatine of the Rhine",
+        [
+            "011_Has predecessor: Agnes, Countess Palatine of the Rhine",
+            "012_Has successor: Henry VI, Count Palatine of the Rhine",
+            "013_Date of Reign: (5/7/1204 - 12/13/1213)"
+        ],
+        "014_Clicked to display Agnes of Hohenstaufen, Countess Palatine of the Rhine",
+        "015_Generating display_person_page"
+    ],
+    "042_display_person_page": [
+        "000_Displaying Agnes of Hohenstaufen, Countess Palatine of the Rhine",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Woman",
+            "003_Add Birth Date: 1176",
+            "004_Add Death Date: 5/7/1204",
+            "005_Add Father: Conrad of Hohenstaufen, Count Palatine of the Rhine",
+            "006_Add Mother: None",
+            "007_Add Spouse: Henry V the Elder, Count Palatine of the Rhine",
+            "008_Add Child With Henry V the Elder, Count Palatine of the Rhine: Henry VI the Younger, Count Palatine of the Rhine",
+            "009_Add Child With Henry V the Elder, Count Palatine of the Rhine: Agnes of the Palatinate"
+        ],
+        "010_Viewing reign as Countess Palatine of the Rhine",
+        [
+            "011_Has predecessor: Conrad, Count Palatine of the Rhine",
+            "012_Has successor: Henry V, Count Palatine of the Rhine",
+            "013_Date of Reign: (11/8/1195 - 5/7/1204)"
+        ],
+        "014_Clicked to display Conrad of Hohenstaufen, Count Palatine of the Rhine",
+        "015_Generating display_person_page"
+    ],
+    "043_display_person_page": [
+        "000_Displaying Conrad of Hohenstaufen, Count Palatine of the Rhine",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1135",
+            "004_Add Death Date: 11/8/1195",
+            "005_Add Father: Frederick II the One-Eyed, Duke of Swabia",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Agnes of Hohenstaufen, Countess Palatine of the Rhine"
+        ],
+        "008_Viewing reign as Count Palatine of the Rhine",
+        [
+            "009_Has successor: Agnes, Countess Palatine of the Rhine",
+            "010_Date of Reign: (1156 - 11/8/1195)"
+        ],
+        "011_Clicked to display Frederick II the One-Eyed, Duke of Swabia",
+        "012_Generating display_person_page"
+    ],
+    "044_display_person_page": [
+        "000_Displaying Frederick II the One-Eyed, Duke of Swabia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1090",
+            "004_Add Death Date: 4/6/1147",
+            "005_Add Father: Frederick I, Duke of Swabia",
+            "006_Add Mother: Agnes of Waiblingen",
+            "007_Add Child With No Spouse: Conrad of Hohenstaufen, Count Palatine of the Rhine",
+            "008_Add Spouse: Judith of Bavaria",
+            "009_Add Child With Judith of Bavaria: Frederick I Barbarossa, Emperor of Rome"
+        ],
+        "010_Viewing reign as Duke of Swabia",
+        [
+            "011_Has predecessor: Frederick I, Duke of Swabia",
+            "012_Has successor: Frederick I, Duke of Swabia",
+            "013_Date of Reign: (1105 - 4/6/1147)"
+        ],
+        "014_Clicked to display Frederick I, Duke of Swabia",
+        "015_Generating display_person_page"
+    ],
+    "045_display_person_page": [
+        "000_Displaying Frederick I, Duke of Swabia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1050",
+            "004_Add Death Date: 1105",
+            "005_Add Father: Frederick of Buren",
+            "006_Add Mother: None",
+            "007_Add Spouse: Agnes of Waiblingen",
+            "008_Add Child With Agnes of Waiblingen: Conrad III",
+            "009_Add Child With Agnes of Waiblingen: Kunigunde-Cuniza",
+            "010_Add Child With Agnes of Waiblingen: Frederick II the One-Eyed, Duke of Swabia"
+        ],
+        "011_Viewing reign as Duke of Swabia",
+        [
+            "012_Has successor: Frederick II, Duke of Swabia",
+            "013_Date of Reign: (1079 - 1105)"
+        ],
+        "014_Clicked to display Frederick of Buren",
+        "015_Generating display_person_page"
+    ],
+    "046_display_person_page": [
+        "000_Displaying Frederick of Buren",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: ",
+            "004_Add Death Date: 1053",
+            "005_Add Father: None",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Frederick I, Duke of Swabia"
+        ],
+        "008_Clicked to display Frederick I, Duke of Swabia",
+        "009_Generating display_person_page"
+    ],
+    "047_display_person_page": [
+        "000_Displaying Frederick I, Duke of Swabia",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 1050",
+            "004_Add Death Date: 1105",
+            "005_Add Father: Frederick of Buren",
+            "006_Add Mother: None",
+            "007_Add Spouse: Agnes of Waiblingen",
+            "008_Add Child With Agnes of Waiblingen: Conrad III",
+            "009_Add Child With Agnes of Waiblingen: Kunigunde-Cuniza",
+            "010_Add Child With Agnes of Waiblingen: Frederick II the One-Eyed, Duke of Swabia"
+        ],
+        "011_Viewing reign as Duke of Swabia",
+        [
+            "012_Has successor: Frederick II, Duke of Swabia",
+            "013_Date of Reign: (1079 - 1105)"
+        ],
+        "014_Clicked to display Duchy of Swabia",
+        "015_Generating display_title_page"
+    ],
+    "048_display_title_page": [
+        "000_Displaying Title: Duchy of Swabia",
+        "001_Viewing reign of Otto I, Duke of Swabia",
+        [
+            "002_Has successor: Conrad I, Duke of Swabia",
+            "003_Date of Reign: ( - 10/31/982)"
+        ],
+        "004_Viewing reign of Conrad I, Duke of Swabia",
+        [
+            "005_Has predecessor: Otto I, Duke of Swabia",
+            "006_Date of Reign: (983 - 8/20/997)"
+        ],
+        "007_Viewing reign of Frederick I, Duke of Swabia",
+        [
+            "008_Has successor: Frederick II, Duke of Swabia",
+            "009_Date of Reign: (1079 - 1105)"
+        ],
+        "010_Viewing reign of Frederick II the One-Eyed, Duke of Swabia",
+        [
+            "011_Has predecessor: Frederick I, Duke of Swabia",
+            "012_Has successor: Frederick I, Duke of Swabia",
+            "013_Date of Reign: (1105 - 4/6/1147)"
+        ],
+        "014_Viewing reign of Frederick I Barbarossa, Emperor of Rome",
+        [
+            "015_Has predecessor: Frederick II, Duke of Swabia",
+            "016_Has successor: Frederick IV, Duke of Swabia",
+            "017_Date of Reign: (4/6/1147 - 3/4/1152)"
+        ],
+        "018_Viewing reign of Frederick IV, Duke of Swabia",
+        [
+            "019_Has predecessor: Frederick I, Duke of Swabia",
+            "020_Date of Reign: (1152 - 1167)"
         ]
     ]
 }
