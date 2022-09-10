@@ -3,11 +3,11 @@ Created on Aug 1, 2022
 
 @author: kairom13
 """
+import sys
 
 from Medieval_Europe.Code.CustomObjects import Reign, Person, Place, Title
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-
 
 class ObjectButton(QPushButton):
     def __init__(self, parameters):
@@ -184,7 +184,7 @@ class RemoveConnectionButton(QPushButton):
             elif self.connection == 'Child':
                 self.subject.removeChild(self.target)  # Remove the target as a child of the subject
 
-                parent_type = self.target.connections('Get', self.subject)  # Get the name of the relationship with the subject
+                parent_type = self.target.connection('Get', self.subject)  # Get the name of the relationship with the subject
                 otherParent_id = self.target.getParents(parent_type)[1]  # Get the id of the other parent
                 if otherParent_id is not None:
                     otherParent = self.window.get_object(otherParent_id)  # Get the object of the other parent ID
@@ -221,7 +221,8 @@ class RemoveConnectionButton(QPushButton):
                 self.window.page_factory('edit_place_page', {'Place': self.subject})
 
             else:
-                print(str(self.connection) + ' is not a valid relation for removal')
+                self.window.logger.log('Error', str(self.connection) + ' is not a valid connection to removal')
+                sys.exit(0)
 
             return True
         return False

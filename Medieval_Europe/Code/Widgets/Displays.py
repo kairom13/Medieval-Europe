@@ -448,7 +448,6 @@ class ObjectLabel(QLabel):
         self.setStyleSheet('QLabel {color : black; text-decoration: underline}')
         self.adjustSize()
         self.setAlignment(Qt.AlignCenter)
-        #self.setAttribute(Qt.WA_TransparentForMouseEvents)
         self.installEventFilter(self)
 
     # Override

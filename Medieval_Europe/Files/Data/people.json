@@ -33,6 +33,22 @@
                     "Junior": [],
                     "Senior": -1
                 }
+            },
+            "6dad1d0a": {
+                "Attributes": {
+                    "Start Date": "940",
+                    "End Date": "941"
+                },
+                "Connections": {
+                    "Title": "5cfe6321",
+                    "Predecessor": "01a4a571",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
             }
         }
     },
@@ -380,8 +396,10 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
-                    "8b4bef40"
+                "unknown_spouse": [],
+                "b149cc70": [
+                    "8b4bef40",
+                    "2ddf4c08"
                 ]
             },
             "Father": null,
@@ -551,7 +569,24 @@
             "Mother": null
         },
         "Events": {},
-        "Reign List": {}
+        "Reign List": {
+            "ef60ca40": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "10/31/982"
+                },
+                "Connections": {
+                    "Title": "e9e0bc4e",
+                    "Predecessor": null,
+                    "Successor": "b383e7b5"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "0d7588bb": {
         "Attributes": {
@@ -662,6 +697,10 @@
                 "unknown_spouse": [],
                 "09bd805b": [
                     "52f4eb3b"
+                ],
+                "c732d20a": [
+                    "12a9ec30",
+                    "6d89b4b4"
                 ]
             },
             "Father": null,
@@ -1269,8 +1308,12 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
-                    "9c423314"
+                "unknown_spouse": [],
+                "a6e67fd7": [
+                    "9c423314",
+                    "1540e076",
+                    "f87f5327",
+                    "48c70f5a"
                 ]
             },
             "Father": "0826dada",
@@ -1787,8 +1830,8 @@
                     "cf90ee35"
                 ]
             },
-            "Father": null,
-            "Mother": "07b8ce38"
+            "Father": "07b8ce38",
+            "Mother": null
         },
         "Events": {},
         "Reign List": {
@@ -2150,7 +2193,7 @@
         "Reign List": {
             "e093a789": {
                 "Attributes": {
-                    "Start Date": "976",
+                    "Start Date": "7/21/976",
                     "End Date": "12/7/983"
                 },
                 "Connections": {
@@ -2648,7 +2691,7 @@
                 "unknown_spouse": []
             },
             "Father": "eb6faaf1",
-            "Mother": null
+            "Mother": "5e8d2ba9"
         },
         "Events": {},
         "Reign List": {
@@ -2826,7 +2869,7 @@
                 ]
             },
             "Father": "96dde401",
-            "Mother": null
+            "Mother": "eb3c59cb"
         },
         "Events": {},
         "Reign List": {
@@ -3372,7 +3415,7 @@
                 ]
             },
             "Father": "079f720c",
-            "Mother": null
+            "Mother": "b149cc70"
         },
         "Events": {},
         "Reign List": {
@@ -3387,6 +3430,22 @@
                     "Successor": null
                 },
                 "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "2237eab6": {
+                "Attributes": {
+                    "Start Date": "4/17/818",
+                    "End Date": ""
+                },
+                "Connections": {
+                    "Title": "a7a7c8fb",
+                    "Predecessor": "bb296728",
+                    "Successor": null
+                },
+                "Is Primary": false,
                 "Merged Reigns": {
                     "Senior": null,
                     "Junior": []
@@ -3595,8 +3654,12 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
+                "unknown_spouse": [],
+                "eb3c59cb": [
                     "7a4f13e6"
+                ],
+                "df212304": [
+                    "90bcecf7"
                 ]
             },
             "Father": "8b4bef40",
@@ -3763,12 +3826,13 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
+                "unknown_spouse": [],
+                "ad0cfc9f": [
                     "c05189d7"
                 ]
             },
             "Father": "350c9dd3",
-            "Mother": null
+            "Mother": "a6e67fd7"
         },
         "Events": {},
         "Reign List": {
@@ -3802,7 +3866,8 @@
             "Spouses": {
                 "unknown_spouse": [],
                 "db070d9c": [
-                    "4aeba0e4"
+                    "4aeba0e4",
+                    "41170841"
                 ]
             },
             "Father": "8b4bef40",
@@ -4614,7 +4679,7 @@
                 ]
             },
             "Father": "9c423314",
-            "Mother": null
+            "Mother": "ad0cfc9f"
         },
         "Events": {},
         "Reign List": {
@@ -5836,7 +5901,8 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
+                "unknown_spouse": [],
+                "5e8d2ba9": [
                     "6a0c8e70"
                 ]
             },
@@ -5848,7 +5914,7 @@
             "2c7ff9cd": {
                 "Attributes": {
                     "Start Date": "11/1/955",
-                    "End Date": "976"
+                    "End Date": "7/21/976"
                 },
                 "Connections": {
                     "Title": "58ace651",
@@ -6296,7 +6362,12 @@
             "Spouses": {
                 "unknown_spouse": [],
                 "6398b94e": [
-                    "339e2d49"
+                    "339e2d49",
+                    "4c8e758b"
+                ],
+                "94398ba9": [
+                    "23383802",
+                    "da6e1921"
                 ]
             },
             "Father": "909df2d8",
@@ -7839,7 +7910,7 @@
             "Name": "Hedwig",
             "Nickname": "of Saxony",
             "Birth Date": "910",
-            "Death Date": "after 958"
+            "Death Date": "965"
         },
         "Gender": 1,
         "Connections": {
@@ -7868,7 +7939,8 @@
                 "unknown_spouse": [],
                 "c68e66bf": [
                     "ac075cfb"
-                ]
+                ],
+                "485809f1": []
             },
             "Father": "799f41fe",
             "Mother": "739375ff"
@@ -7926,7 +7998,8 @@
             "Spouses": {
                 "unknown_spouse": [],
                 "fb627a71": [
-                    "339e2d49"
+                    "339e2d49",
+                    "4c8e758b"
                 ]
             },
             "Father": "c56e3258",
@@ -8126,7 +8199,7 @@
             },
             "e71c3f25": {
                 "Attributes": {
-                    "Start Date": "954",
+                    "Start Date": "9/953",
                     "End Date": "10/11/965"
                 },
                 "Connections": {
@@ -9665,7 +9738,8 @@
         "Connections": {
             "Spouses": {
                 "unknown_spouse": [
-                    "8b5fd3fc"
+                    "8b5fd3fc",
+                    "3433173f"
                 ]
             },
             "Father": null,
@@ -13421,7 +13495,11 @@
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": []
+                "unknown_spouse": [],
+                "162bed38": [
+                    "4b1ae76c",
+                    "de312bad"
+                ]
             },
             "Father": "a809be49",
             "Mother": "db070d9c"
@@ -13441,7 +13519,8 @@
             "Spouses": {
                 "unknown_spouse": [],
                 "a809be49": [
-                    "4aeba0e4"
+                    "4aeba0e4",
+                    "41170841"
                 ]
             },
             "Father": null,
@@ -13665,7 +13744,7 @@
                     "89af2e38"
                 ]
             },
-            "Father": null,
+            "Father": "3f11ca66",
             "Mother": null
         },
         "Events": {
@@ -13683,7 +13762,7 @@
             },
             "822badac": {
                 "Date": "905",
-                "Content": "905 Count in Wetterau"
+                "Content": "Count in Wetterau"
             }
         },
         "Reign List": {}
@@ -13839,7 +13918,17 @@
         "Gender": 1,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": []
+                "unknown_spouse": [],
+                "3eeb06d6": [
+                    "adba8721",
+                    "f5d439de",
+                    "116bea22",
+                    "fa238be9",
+                    "0c21cf8f",
+                    "efd825ce",
+                    "b49ace42",
+                    "7cbb7e9d"
+                ]
             },
             "Father": "799f41fe",
             "Mother": null
@@ -13900,8 +13989,8 @@
                 "unknown_spouse": [],
                 "979afdce": []
             },
-            "Father": null,
-            "Mother": null
+            "Father": "9e51eeb4",
+            "Mother": "ffc94225"
         },
         "Events": {},
         "Reign List": {
@@ -13920,6 +14009,38 @@
                     "Senior": null,
                     "Junior": []
                 }
+            },
+            "47a996dd": {
+                "Attributes": {
+                    "Start Date": "921",
+                    "End Date": "6/15/923"
+                },
+                "Connections": {
+                    "Title": "de90e73e",
+                    "Predecessor": "ed1933b9",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "27f710d5": {
+                "Attributes": {
+                    "Start Date": "921",
+                    "End Date": "1/14/936"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
             }
         }
     },
@@ -13934,23 +14055,24 @@
         "Connections": {
             "Spouses": {
                 "unknown_spouse": [
-                    "739375ff"
+                    "739375ff",
+                    "3eeb06d6"
                 ]
             },
-            "Father": null,
+            "Father": "a580543d",
             "Mother": null
         },
         "Events": {},
         "Reign List": {
             "f85a9a54": {
                 "Attributes": {
-                    "Start Date": "892",
+                    "Start Date": "893",
                     "End Date": "907"
                 },
                 "Connections": {
                     "Title": "04d1d652",
-                    "Predecessor": null,
-                    "Successor": null
+                    "Predecessor": "04bea11f",
+                    "Successor": "cff59000"
                 },
                 "Is Primary": true,
                 "Merged Reigns": {
@@ -13966,7 +14088,7 @@
                 "Connections": {
                     "Title": "340f9469",
                     "Predecessor": null,
-                    "Successor": null
+                    "Successor": "364ef399"
                 },
                 "Is Primary": false,
                 "Merged Reigns": {
@@ -13985,6 +14107,2509 @@
                     "Successor": null
                 },
                 "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "ffc94225": {
+        "Attributes": {
+            "Name": "Adelaide",
+            "Nickname": "of Auxerre",
+            "Birth Date": "865-870",
+            "Death Date": "928-929"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "9e51eeb4": [
+                    "b45e3417"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "9e51eeb4": {
+        "Attributes": {
+            "Name": "Richard",
+            "Nickname": "the Justiclar",
+            "Birth Date": "858",
+            "Death Date": "921"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "ffc94225": [
+                    "b45e3417"
+                ]
+            },
+            "Father": "a67d0e5b",
+            "Mother": "d7edb86d"
+        },
+        "Events": {},
+        "Reign List": {
+            "ed1933b9": {
+                "Attributes": {
+                    "Start Date": "890",
+                    "End Date": "921"
+                },
+                "Connections": {
+                    "Title": "de90e73e",
+                    "Predecessor": null,
+                    "Successor": "47a996dd"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "eedf2a27": {
+                "Attributes": {
+                    "Start Date": "880",
+                    "End Date": "921"
+                },
+                "Connections": {
+                    "Title": "9af015cf",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "a67d0e5b": {
+        "Attributes": {
+            "Name": "Bivin",
+            "Nickname": "of Gorze",
+            "Birth Date": "810",
+            "Death Date": "863"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "d7edb86d": [
+                    "df212304",
+                    "9e51eeb4",
+                    "b049e0b6"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "df212304": {
+        "Attributes": {
+            "Name": "Richilde",
+            "Nickname": "of Provence",
+            "Birth Date": "845",
+            "Death Date": "6/2/910"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "96dde401": [
+                    "90bcecf7"
+                ]
+            },
+            "Father": "a67d0e5b",
+            "Mother": "d7edb86d"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "eb3c59cb": {
+        "Attributes": {
+            "Name": "Ermentrude",
+            "Nickname": "of Orleans",
+            "Birth Date": "9/27/823",
+            "Death Date": "10/6/869"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "96dde401": [
+                    "7a4f13e6"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "90bcecf7": {
+        "Attributes": {
+            "Name": "Rothilde",
+            "Nickname": "",
+            "Birth Date": "871",
+            "Death Date": "928/929"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "e411a9e0": [
+                    "556a72d8",
+                    "485809f1"
+                ]
+            },
+            "Father": "96dde401",
+            "Mother": "df212304"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "e411a9e0": {
+        "Attributes": {
+            "Name": "Roger",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "900"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "90bcecf7": [
+                    "556a72d8",
+                    "485809f1"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "bc239642": {
+                "Attributes": {
+                    "Start Date": "886",
+                    "End Date": "893"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": null,
+                    "Successor": "ee85d5b3"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "c6e5e0bd": {
+                "Attributes": {
+                    "Start Date": "895",
+                    "End Date": "900"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "ee85d5b3",
+                    "Successor": "8549776a"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "485809f1": {
+        "Attributes": {
+            "Name": "Judith",
+            "Nickname": "",
+            "Birth Date": "before 900",
+            "Death Date": "925"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "d34049b0": []
+            },
+            "Father": "e411a9e0",
+            "Mother": "90bcecf7"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "fd822d81": {
+        "Attributes": {
+            "Name": "Gauzlin II",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "ee85d5b3": {
+                "Attributes": {
+                    "Start Date": "893",
+                    "End Date": "895"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "bc239642",
+                    "Successor": "c6e5e0bd"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "556a72d8": {
+        "Attributes": {
+            "Name": "Hugh I",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "933"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "4d2d8a85"
+                ]
+            },
+            "Father": "e411a9e0",
+            "Mother": "90bcecf7"
+        },
+        "Events": {},
+        "Reign List": {
+            "8549776a": {
+                "Attributes": {
+                    "Start Date": "900",
+                    "End Date": "933"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "c6e5e0bd",
+                    "Successor": "4c11f7d2"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "4d2d8a85": {
+        "Attributes": {
+            "Name": "Hugh II",
+            "Nickname": "",
+            "Birth Date": "920",
+            "Death Date": "991"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "0b4c01a0"
+                ]
+            },
+            "Father": "556a72d8",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "4c11f7d2": {
+                "Attributes": {
+                    "Start Date": "933",
+                    "End Date": "991"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "8549776a",
+                    "Successor": "79366ff9"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "0b4c01a0": {
+        "Attributes": {
+            "Name": "Hugh III",
+            "Nickname": "",
+            "Birth Date": "960",
+            "Death Date": "1015"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "c2fa8d35"
+                ]
+            },
+            "Father": "4d2d8a85",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "79366ff9": {
+                "Attributes": {
+                    "Start Date": "991",
+                    "End Date": "1015"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "4c11f7d2",
+                    "Successor": "6471747f"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "c2fa8d35": {
+        "Attributes": {
+            "Name": "Herbert I",
+            "Nickname": "Wakedog",
+            "Birth Date": "",
+            "Death Date": "4/13/1035"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "26030213",
+                    "c732d20a"
+                ]
+            },
+            "Father": "0b4c01a0",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "6471747f": {
+                "Attributes": {
+                    "Start Date": "1015",
+                    "End Date": "4/13/1035"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "79366ff9",
+                    "Successor": "74fa4612"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "26030213": {
+        "Attributes": {
+            "Name": "Hugh IV",
+            "Nickname": "",
+            "Birth Date": "1018-1022",
+            "Death Date": "3/25/1051"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "6b4c70cb": [
+                    "cdce085c",
+                    "86a20e3a"
+                ]
+            },
+            "Father": "c2fa8d35",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "74fa4612": {
+                "Attributes": {
+                    "Start Date": "4/13/1035",
+                    "End Date": "3/25/1051"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "6471747f",
+                    "Successor": "06e4691a"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "cdce085c": {
+        "Attributes": {
+            "Name": "Herbert II",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "3/9/1062"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "26030213",
+            "Mother": "6b4c70cb"
+        },
+        "Events": {},
+        "Reign List": {
+            "06e4691a": {
+                "Attributes": {
+                    "Start Date": "3/25/1051",
+                    "End Date": "3/9/1062"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": "74fa4612",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "86a20e3a": {
+        "Attributes": {
+            "Name": "Marguerite",
+            "Nickname": "",
+            "Birth Date": "1045",
+            "Death Date": "1063"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "26030213",
+            "Mother": "6b4c70cb"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "c732d20a": {
+        "Attributes": {
+            "Name": "Gersenda",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "00377306": [],
+                "10ef21ce": [
+                    "12a9ec30",
+                    "6d89b4b4"
+                ]
+            },
+            "Father": "c2fa8d35",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "00377306": {
+        "Attributes": {
+            "Name": "Theobald III",
+            "Nickname": "",
+            "Birth Date": "1012",
+            "Death Date": "1089"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "c732d20a": []
+            },
+            "Father": "ce9ccee2",
+            "Mother": null
+        },
+        "Events": {
+            "87667e1f": {
+                "Date": "1037",
+                "Content": "Inherited amongst others the counties of Blois, Tours, Chartres. Ch\u00e2teaudun and Sancerre, and also in Champagne: Ch\u00e2teau-Thierry, Provins and St. Florentin"
+            },
+            "03a5186f": {
+                "Date": "1037",
+                "Content": "His brother Stephen inherited the counties of Meaux, Troyes and Vitry-le-Fran\u00e7ois"
+            }
+        },
+        "Reign List": {
+            "b1708064": {
+                "Attributes": {
+                    "Start Date": "11/15/1037",
+                    "End Date": "1089"
+                },
+                "Connections": {
+                    "Title": "9ca37b3c",
+                    "Predecessor": "2faef3ff",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "de6658a8": {
+                "Attributes": {
+                    "Start Date": "11/15/1037",
+                    "End Date": "1044"
+                },
+                "Connections": {
+                    "Title": "8bfa8aaf",
+                    "Predecessor": null,
+                    "Successor": "6675e6de"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "14844104": {
+                "Attributes": {
+                    "Start Date": "1066",
+                    "End Date": "1089"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": "064ea48c",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "b9ee6a0f": {
+                "Attributes": {
+                    "Start Date": "1066",
+                    "End Date": "1089"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": "05bbd7fd",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "12a9ec30": {
+        "Attributes": {
+            "Name": "Fulco I",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "12/15/1128"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "10ef21ce",
+            "Mother": "c732d20a"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "6d89b4b4": {
+        "Attributes": {
+            "Name": "Hugh V",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "10ef21ce",
+            "Mother": "c732d20a"
+        },
+        "Events": {},
+        "Reign List": {
+            "e5ac2062": {
+                "Attributes": {
+                    "Start Date": "1069",
+                    "End Date": "1092"
+                },
+                "Connections": {
+                    "Title": "f02906ee",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "ce9ccee2": {
+        "Attributes": {
+            "Name": "Odo II",
+            "Nickname": "",
+            "Birth Date": "983",
+            "Death Date": "11/15/1037"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "00377306",
+                    "d8e4bb83",
+                    "6b4c70cb"
+                ]
+            },
+            "Father": "f64d2303",
+            "Mother": "d75fd1c6"
+        },
+        "Events": {},
+        "Reign List": {
+            "2faef3ff": {
+                "Attributes": {
+                    "Start Date": "7/11/1004",
+                    "End Date": "11/15/1037"
+                },
+                "Connections": {
+                    "Title": "9ca37b3c",
+                    "Predecessor": "968f205e",
+                    "Successor": "b1708064"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "8a217b37": {
+                "Attributes": {
+                    "Start Date": "1022",
+                    "End Date": "11/15/1037"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": null,
+                    "Successor": "47818b47"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "09c2ec23": {
+                "Attributes": {
+                    "Start Date": "1022",
+                    "End Date": "11/15/1037"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": null,
+                    "Successor": "d879385e"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "d8e4bb83": {
+        "Attributes": {
+            "Name": "Stephen II",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1047"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "e56e1a57"
+                ]
+            },
+            "Father": "ce9ccee2",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "47818b47": {
+                "Attributes": {
+                    "Start Date": "11/15/1037",
+                    "End Date": "1047"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": "8a217b37",
+                    "Successor": "064ea48c"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "d879385e": {
+                "Attributes": {
+                    "Start Date": "11/15/1037",
+                    "End Date": "1047"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": "09c2ec23",
+                    "Successor": "05bbd7fd"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "e56e1a57": {
+        "Attributes": {
+            "Name": "Odo",
+            "Nickname": "",
+            "Birth Date": "1040",
+            "Death Date": "1115"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "d8e4bb83",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "064ea48c": {
+                "Attributes": {
+                    "Start Date": "1047",
+                    "End Date": "1066"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": "47818b47",
+                    "Successor": "14844104"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "05bbd7fd": {
+                "Attributes": {
+                    "Start Date": "1047",
+                    "End Date": "1066"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": "d879385e",
+                    "Successor": "b9ee6a0f"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "6b4c70cb": {
+        "Attributes": {
+            "Name": "Bertha",
+            "Nickname": "",
+            "Birth Date": "1005",
+            "Death Date": "1080"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "a0dbeef7": [],
+                "26030213": [
+                    "cdce085c",
+                    "86a20e3a"
+                ]
+            },
+            "Father": "ce9ccee2",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "a0dbeef7": {
+        "Attributes": {
+            "Name": "Alan",
+            "Nickname": "",
+            "Birth Date": "997",
+            "Death Date": "10/1/1040"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "6b4c70cb": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "54b95e73": {
+        "Attributes": {
+            "Name": "Geoffrey Martel",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "11/14/1060"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "a1d34209",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "cbb6bd5a": {
+                "Attributes": {
+                    "Start Date": "6/21/1040",
+                    "End Date": "11/14/1060"
+                },
+                "Connections": {
+                    "Title": "f5f3ef2c",
+                    "Predecessor": "f81ed29f",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "6675e6de": {
+                "Attributes": {
+                    "Start Date": "1044",
+                    "End Date": "11/14/1060"
+                },
+                "Connections": {
+                    "Title": "8bfa8aaf",
+                    "Predecessor": "de6658a8",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "a1d34209": {
+        "Attributes": {
+            "Name": "Fulk III",
+            "Nickname": "the Black",
+            "Birth Date": "987",
+            "Death Date": "6/21/1040"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "54b95e73"
+                ]
+            },
+            "Father": "4136b8e2",
+            "Mother": "8750bff1"
+        },
+        "Events": {},
+        "Reign List": {
+            "f81ed29f": {
+                "Attributes": {
+                    "Start Date": "7/21/987",
+                    "End Date": "6/21/1040"
+                },
+                "Connections": {
+                    "Title": "f5f3ef2c",
+                    "Predecessor": "2f91e309",
+                    "Successor": "cbb6bd5a"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "4136b8e2": {
+        "Attributes": {
+            "Name": "Geoffrey",
+            "Nickname": "Greymantle",
+            "Birth Date": "938/940",
+            "Death Date": "7/21/987"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "8750bff1": [
+                    "a1d34209"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "2f91e309": {
+                "Attributes": {
+                    "Start Date": "960",
+                    "End Date": "7/21/987"
+                },
+                "Connections": {
+                    "Title": "f5f3ef2c",
+                    "Predecessor": null,
+                    "Successor": "f81ed29f"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "8750bff1": {
+        "Attributes": {
+            "Name": "Adele",
+            "Nickname": "of Meaux",
+            "Birth Date": "935",
+            "Death Date": "982"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "4136b8e2": [
+                    "a1d34209"
+                ]
+            },
+            "Father": "0c21cf8f",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "0c21cf8f": {
+        "Attributes": {
+            "Name": "Robert",
+            "Nickname": "of Vermandois",
+            "Birth Date": "907",
+            "Death Date": "967"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "65829461",
+                    "8750bff1"
+                ]
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {
+            "f2813855": {
+                "Attributes": {
+                    "Start Date": "2/23/943",
+                    "End Date": "967"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": "364ef399",
+                    "Successor": "d23cfc75"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "d3b3c086": {
+                "Attributes": {
+                    "Start Date": "956",
+                    "End Date": "967"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": null,
+                    "Successor": "2cd74f2d"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "65829461": {
+        "Attributes": {
+            "Name": "Herbert III",
+            "Nickname": "the Younger",
+            "Birth Date": "950",
+            "Death Date": "995"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "0c21cf8f",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "d23cfc75": {
+                "Attributes": {
+                    "Start Date": "967",
+                    "End Date": "995"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": "f2813855",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "2cd74f2d": {
+                "Attributes": {
+                    "Start Date": "967",
+                    "End Date": "995"
+                },
+                "Connections": {
+                    "Title": "b5c1ab82",
+                    "Predecessor": "d3b3c086",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "7ff38743": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "995"
+                },
+                "Connections": {
+                    "Title": "b5ef1e97",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "3eeb06d6": {
+        "Attributes": {
+            "Name": "Herbert II",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "2/23/943"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "10530165": [
+                    "adba8721",
+                    "f5d439de",
+                    "116bea22",
+                    "fa238be9",
+                    "0c21cf8f",
+                    "efd825ce",
+                    "b49ace42",
+                    "7cbb7e9d"
+                ]
+            },
+            "Father": "d6e9139d",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "cff59000": {
+                "Attributes": {
+                    "Start Date": "907",
+                    "End Date": "2/23/943"
+                },
+                "Connections": {
+                    "Title": "04d1d652",
+                    "Predecessor": "f85a9a54",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "364ef399": {
+                "Attributes": {
+                    "Start Date": "907",
+                    "End Date": "2/23/943"
+                },
+                "Connections": {
+                    "Title": "340f9469",
+                    "Predecessor": "380916cf",
+                    "Successor": "f2813855"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "adba8721": {
+        "Attributes": {
+            "Name": "Odo",
+            "Nickname": "of Vermandois",
+            "Birth Date": "910",
+            "Death Date": "946"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "f5d439de": {
+        "Attributes": {
+            "Name": "Adalbert I",
+            "Nickname": "",
+            "Birth Date": "915",
+            "Death Date": "987"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "23383802": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "116bea22": {
+        "Attributes": {
+            "Name": "Adela",
+            "Nickname": "of Vermandois",
+            "Birth Date": "910",
+            "Death Date": "960"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "fa238be9": {
+        "Attributes": {
+            "Name": "Herbert",
+            "Nickname": "the Old",
+            "Birth Date": "910",
+            "Death Date": "980"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "efd825ce": {
+        "Attributes": {
+            "Name": "Liutgarde",
+            "Nickname": "of Vermandois",
+            "Birth Date": "915",
+            "Death Date": "978"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "b49ace42": {
+        "Attributes": {
+            "Name": "Hugh",
+            "Nickname": "of Vermandois",
+            "Birth Date": "920",
+            "Death Date": "962"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "7cbb7e9d": {
+        "Attributes": {
+            "Name": "Guy I",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "986"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "3eeb06d6",
+            "Mother": "10530165"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "94398ba9": {
+        "Attributes": {
+            "Name": "Gilbert",
+            "Nickname": "",
+            "Birth Date": "890",
+            "Death Date": "10/2/939"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "fb627a71": [
+                    "23383802",
+                    "da6e1921"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "01a4a571": {
+                "Attributes": {
+                    "Start Date": "928",
+                    "End Date": "10/2/939"
+                },
+                "Connections": {
+                    "Title": "5cfe6321",
+                    "Predecessor": null,
+                    "Successor": "6dad1d0a"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "23383802": {
+        "Attributes": {
+            "Name": "Gerberge",
+            "Nickname": "of Lorraine",
+            "Birth Date": "935",
+            "Death Date": "978"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "f5d439de": []
+            },
+            "Father": "94398ba9",
+            "Mother": "fb627a71"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "f64d2303": {
+        "Attributes": {
+            "Name": "Odo I",
+            "Nickname": "",
+            "Birth Date": "950",
+            "Death Date": "3/12/996"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "d75fd1c6": [
+                    "59febd2e",
+                    "ce9ccee2"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {
+            "766cd870": {
+                "Date": "6/991",
+                "Content": "Annexed Melun"
+            }
+        },
+        "Reign List": {
+            "53677141": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "3/12/996"
+                },
+                "Connections": {
+                    "Title": "9ca37b3c",
+                    "Predecessor": null,
+                    "Successor": "968f205e"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "d75fd1c6": {
+        "Attributes": {
+            "Name": "Bertha",
+            "Nickname": "of Burgundy",
+            "Birth Date": "964",
+            "Death Date": "1/16/1010"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "f64d2303": [
+                    "59febd2e",
+                    "ce9ccee2"
+                ]
+            },
+            "Father": "77186f49",
+            "Mother": "4c8e758b"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "59febd2e": {
+        "Attributes": {
+            "Name": "Theobald II",
+            "Nickname": "",
+            "Birth Date": "985",
+            "Death Date": "7/11/1004"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "f64d2303",
+            "Mother": "d75fd1c6"
+        },
+        "Events": {
+            "0a43bea5": {
+                "Date": "3/12/996",
+                "Content": "Count of Blois, Ch\u00e2teaudun, Chartres and Reims after the death of his father"
+            }
+        },
+        "Reign List": {
+            "968f205e": {
+                "Attributes": {
+                    "Start Date": "3/12/996",
+                    "End Date": "7/11/1004"
+                },
+                "Connections": {
+                    "Title": "9ca37b3c",
+                    "Predecessor": "53677141",
+                    "Successor": "2faef3ff"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "4c8e758b": {
+        "Attributes": {
+            "Name": "Matilda",
+            "Nickname": "of France",
+            "Birth Date": "943",
+            "Death Date": "11/26/981"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "77186f49": [
+                    "d75fd1c6",
+                    "1cfb5042",
+                    "92dc28ac"
+                ]
+            },
+            "Father": "6398b94e",
+            "Mother": "fb627a71"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "77186f49": {
+        "Attributes": {
+            "Name": "Conrad I",
+            "Nickname": "the Peaceful",
+            "Birth Date": "925",
+            "Death Date": "10/19/993"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "cb5719bb": [
+                    "5e8d2ba9"
+                ],
+                "4c8e758b": [
+                    "d75fd1c6",
+                    "1cfb5042",
+                    "92dc28ac"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "cb5719bb": {
+        "Attributes": {
+            "Name": "Adelaide",
+            "Nickname": "of Bellay",
+            "Birth Date": "",
+            "Death Date": "before 964"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "77186f49": [
+                    "5e8d2ba9"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "5e8d2ba9": {
+        "Attributes": {
+            "Name": "Gisela",
+            "Nickname": "of Burgundy",
+            "Birth Date": "955",
+            "Death Date": "7/21/1007"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "eb6faaf1": [
+                    "6a0c8e70"
+                ]
+            },
+            "Father": "77186f49",
+            "Mother": "cb5719bb"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "1cfb5042": {
+        "Attributes": {
+            "Name": "Matilda",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "77186f49",
+            "Mother": "4c8e758b"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "92dc28ac": {
+        "Attributes": {
+            "Name": "Rudolph III",
+            "Nickname": "the Pious",
+            "Birth Date": "971",
+            "Death Date": "9/6/1032"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "77186f49",
+            "Mother": "4c8e758b"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "d9422f33": {
+        "Attributes": {
+            "Name": "Conrad I",
+            "Nickname": "",
+            "Birth Date": "915/920",
+            "Death Date": "8/20/997"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "b383e7b5": {
+                "Attributes": {
+                    "Start Date": "983",
+                    "End Date": "8/20/997"
+                },
+                "Connections": {
+                    "Title": "e9e0bc4e",
+                    "Predecessor": "ef60ca40",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "da6e1921": {
+        "Attributes": {
+            "Name": "Henry",
+            "Nickname": "",
+            "Birth Date": "930",
+            "Death Date": "944"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "94398ba9",
+            "Mother": "fb627a71"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "a6e67fd7": {
+        "Attributes": {
+            "Name": "Oda",
+            "Nickname": "of Billung",
+            "Birth Date": "",
+            "Death Date": "3/15 after 973"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "350c9dd3": [
+                    "9c423314",
+                    "1540e076",
+                    "f87f5327",
+                    "48c70f5a"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "1540e076": {
+        "Attributes": {
+            "Name": "Liudger",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "2/26/1011"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "350c9dd3",
+            "Mother": "a6e67fd7"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "f87f5327": {
+        "Attributes": {
+            "Name": "Mathilde",
+            "Nickname": "",
+            "Birth Date": "1008",
+            "Death Date": ""
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "350c9dd3",
+            "Mother": "a6e67fd7"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "48c70f5a": {
+        "Attributes": {
+            "Name": "Schwanhilde",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1014"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "f853a60b": [
+                    "64adcd07"
+                ]
+            },
+            "Father": "350c9dd3",
+            "Mother": "a6e67fd7"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "3433173f": {
+        "Attributes": {
+            "Name": "Uta",
+            "Nickname": "of Ballenstedt",
+            "Birth Date": "1000",
+            "Death Date": "10/23 before 1046"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "64adcd07": []
+            },
+            "Father": "dc93443f",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "64adcd07": {
+        "Attributes": {
+            "Name": "Ekkehard II",
+            "Nickname": "",
+            "Birth Date": "985",
+            "Death Date": "1/24/1046"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "3433173f": []
+            },
+            "Father": "f853a60b",
+            "Mother": "48c70f5a"
+        },
+        "Events": {},
+        "Reign List": {
+            "c4a81d98": {
+                "Attributes": {
+                    "Start Date": "1038",
+                    "End Date": "1/24/1046"
+                },
+                "Connections": {
+                    "Title": "cbb0e5f0",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "f853a60b": {
+        "Attributes": {
+            "Name": "Ekkehard I",
+            "Nickname": "",
+            "Birth Date": "960",
+            "Death Date": "4/30/1002"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "48c70f5a": [
+                    "64adcd07"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "d79a3db9": {
+                "Attributes": {
+                    "Start Date": "985",
+                    "End Date": "4/30/1002"
+                },
+                "Connections": {
+                    "Title": "cbb0e5f0",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "ad0cfc9f": {
+        "Attributes": {
+            "Name": "Hildegard",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "10/3/1011"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "9c423314": [
+                    "c05189d7"
+                ]
+            },
+            "Father": "92d98c48",
+            "Mother": "0b6bf296"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "92d98c48": {
+        "Attributes": {
+            "Name": "Henry the Bald",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "5/11/976"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "67560726": [],
+                "0b6bf296": [
+                    "ad0cfc9f"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "67560726": {
+        "Attributes": {
+            "Name": "Judith",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "10/26/973"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "92d98c48": []
+            },
+            "Father": "eb10a326",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "0b6bf296": {
+        "Attributes": {
+            "Name": "Hildegard",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "92d98c48": [
+                    "ad0cfc9f"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "3f11ca66": {
+        "Attributes": {
+            "Name": "Udo",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "ec4cbd2e",
+                    "658d5f3e"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "658d5f3e": {
+        "Attributes": {
+            "Name": "Eberhard",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "902/903"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "eb10a326",
+                    "a06ba04f"
+                ]
+            },
+            "Father": "3f11ca66",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "eb10a326": {
+        "Attributes": {
+            "Name": "Gebhard",
+            "Nickname": "",
+            "Birth Date": "after 1/15/947",
+            "Death Date": ""
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "67560726"
+                ]
+            },
+            "Father": "658d5f3e",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "a06ba04f": {
+        "Attributes": {
+            "Name": "Conrad",
+            "Nickname": "Kurzbold",
+            "Birth Date": "885-890",
+            "Death Date": "6/30/948"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "658d5f3e",
+            "Mother": null
+        },
+        "Events": {
+            "fc402c9e": {
+                "Date": "",
+                "Content": "Count in the lower Niederlahngau, inherited by cousin Udo"
+            }
+        },
+        "Reign List": {}
+    },
+    "b049e0b6": {
+        "Attributes": {
+            "Name": "Boso",
+            "Nickname": "of Provence",
+            "Birth Date": "841",
+            "Death Date": "1/11/887"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "de312bad": []
+            },
+            "Father": "a67d0e5b",
+            "Mother": "d7edb86d"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "162bed38": {
+        "Attributes": {
+            "Name": "Engelberga",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "896-901"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "4aeba0e4": [
+                    "4b1ae76c",
+                    "de312bad"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "4b1ae76c": {
+        "Attributes": {
+            "Name": "Gisela",
+            "Nickname": "",
+            "Birth Date": "852/855",
+            "Death Date": "before 4/28/868"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "4aeba0e4",
+            "Mother": "162bed38"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "de312bad": {
+        "Attributes": {
+            "Name": "Ermengard",
+            "Nickname": "of Italy",
+            "Birth Date": "852/855",
+            "Death Date": "897"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "b049e0b6": []
+            },
+            "Father": "4aeba0e4",
+            "Mother": "162bed38"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "71562911": {
+        "Attributes": {
+            "Name": "Boso",
+            "Nickname": "the Elder",
+            "Birth Date": "800",
+            "Death Date": "855"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "5e0fbc16": [
+                    "caa8dd1c",
+                    "6e5a9f26",
+                    "d7edb86d"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "c894de2a": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": ""
+                },
+                "Connections": {
+                    "Title": "358ac99e",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "a931d0d1": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "855"
+                },
+                "Connections": {
+                    "Title": "d91f3e4d",
+                    "Predecessor": null,
+                    "Successor": "0d8bdc29"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "5e0fbc16": {
+        "Attributes": {
+            "Name": "Engeltrude",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "71562911": [
+                    "caa8dd1c",
+                    "6e5a9f26",
+                    "d7edb86d"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "caa8dd1c": {
+        "Attributes": {
+            "Name": "Boso",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "874"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "71562911",
+            "Mother": "5e0fbc16"
+        },
+        "Events": {},
+        "Reign List": {
+            "0d8bdc29": {
+                "Attributes": {
+                    "Start Date": "855",
+                    "End Date": "874"
+                },
+                "Connections": {
+                    "Title": "d91f3e4d",
+                    "Predecessor": "a931d0d1",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "6e5a9f26": {
+        "Attributes": {
+            "Name": "Teutberga",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "11/11/875"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "41170841": []
+            },
+            "Father": "71562911",
+            "Mother": "5e0fbc16"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "41170841": {
+        "Attributes": {
+            "Name": "Lothair II",
+            "Nickname": "",
+            "Birth Date": "835",
+            "Death Date": "8/8/869"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "6e5a9f26": []
+            },
+            "Father": "a809be49",
+            "Mother": "db070d9c"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "d7edb86d": {
+        "Attributes": {
+            "Name": "Richildis",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "883"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "a67d0e5b": [
+                    "df212304",
+                    "9e51eeb4",
+                    "b049e0b6"
+                ]
+            },
+            "Father": "71562911",
+            "Mother": "5e0fbc16"
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "b149cc70": {
+        "Attributes": {
+            "Name": "Hildegard",
+            "Nickname": "of the Vinzgau",
+            "Birth Date": "754",
+            "Death Date": "4/30/783"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "079f720c": [
+                    "8b4bef40",
+                    "2ddf4c08"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "2ddf4c08": {
+        "Attributes": {
+            "Name": "Pepin",
+            "Nickname": "of Italy",
+            "Birth Date": "4/777",
+            "Death Date": "7/8/810"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "d1340c2a"
+                ]
+            },
+            "Father": "079f720c",
+            "Mother": "b149cc70"
+        },
+        "Events": {},
+        "Reign List": {
+            "ad999eb0": {
+                "Attributes": {
+                    "Start Date": "4/15/781",
+                    "End Date": "7/8/810"
+                },
+                "Connections": {
+                    "Title": "a7a7c8fb",
+                    "Predecessor": null,
+                    "Successor": "bb296728"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "d1340c2a": {
+        "Attributes": {
+            "Name": "Bernard",
+            "Nickname": "",
+            "Birth Date": "797",
+            "Death Date": "4/17/818"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "a580543d"
+                ]
+            },
+            "Father": "2ddf4c08",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "bb296728": {
+                "Attributes": {
+                    "Start Date": "7/8/810",
+                    "End Date": "4/17/818"
+                },
+                "Connections": {
+                    "Title": "a7a7c8fb",
+                    "Predecessor": "ad999eb0",
+                    "Successor": "2237eab6"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "a580543d": {
+        "Attributes": {
+            "Name": "Pepin",
+            "Nickname": "",
+            "Birth Date": "817",
+            "Death Date": "after 850"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "70acd629",
+                    "fe8a4e33",
+                    "d6e9139d"
+                ]
+            },
+            "Father": "d1340c2a",
+            "Mother": null
+        },
+        "Events": {
+            "aa804bd3": {
+                "Date": "",
+                "Content": "Count of Vermandois, lord of Senlis, P\u00e9ronne and Saint Quentin"
+            }
+        },
+        "Reign List": {
+            "bda3324d": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "850"
+                },
+                "Connections": {
+                    "Title": "04d1d652",
+                    "Predecessor": null,
+                    "Successor": "04bea11f"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "70acd629": {
+        "Attributes": {
+            "Name": "Bernard II",
+            "Nickname": "",
+            "Birth Date": "845",
+            "Death Date": "before 893"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "a580543d",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "0d217394": {
+                "Attributes": {
+                    "Start Date": "877/878",
+                    "End Date": "before 893"
+                },
+                "Connections": {
+                    "Title": "ad28327d",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "fe8a4e33": {
+        "Attributes": {
+            "Name": "Pepin III",
+            "Nickname": "",
+            "Birth Date": "846",
+            "Death Date": "893"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "a580543d",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "04bea11f": {
+                "Attributes": {
+                    "Start Date": "850",
+                    "End Date": "893"
+                },
+                "Connections": {
+                    "Title": "04d1d652",
+                    "Predecessor": "bda3324d",
+                    "Successor": "f85a9a54"
+                },
+                "Is Primary": true,
                 "Merged Reigns": {
                     "Senior": null,
                     "Junior": []

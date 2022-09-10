@@ -227,55 +227,6 @@ class ParentWidget(QWidget):
         self.window.write_data()
         self.window.page_factory('choose_object_list', {'Object Type': 'Person', 'Search Text': '', 'Subject': self.child, 'Connection': self.connection})
 
-
-class ReignConnectionWidget(QWidget):
-    def __init__(self, window, editFlag, connection, reignObject):
-        super().__init__()
-        self.window = window
-
-        self.layout = QHBoxLayout()
-        self.setLayout(self.layout)
-
-        self.layout.setContentsMargins(0, 0, 0, 0)
-
-        self.reign = reignObject
-        self.connection = connection
-        connectedReignID = self.reign.getConnectedReign(self.connection)
-
-        if connectedReignID is None:
-            self.connectedReign = None
-        else:
-            self.connectedReign = self.window.get_object(connectedReignID)
-
-        if editFlag:
-            if self.connectedReign is None:
-                addButton = QPushButton('Add')
-                addButton.clicked.connect(self.addConnection)
-
-                self.layout.addWidget(addButton)
-                self.layout.addWidget(QLabel(str(self.connection) + ':'))
-            else:
-                changeButton = QPushButton('Change')
-                changeButton.clicked.connect(self.addConnection)
-                self.layout.addWidget(changeButton)
-
-                self.layout.addWidget(RemoveConnectionButton(self.window, self.reign, self.parent))
-
-                self.layout.addWidget(QLabel(str(self.connection) + ': ' + str(self.connectedReign.getAttribute('Name'))))
-        else:
-            if self.parent is None:
-                self.layout.addWidget(QLabel(str(self.connection) + ': '))
-            else:
-                self.layout.addWidget(QLabel(str(self.connection) + ': '))
-                self.layout.addWidget(ObjectLabel(self.window, self.connectedReign, 'Person', -1))
-
-    def addConnection(self):
-        self.window.write_data()
-        self.window.page_factory('display_title_page',
-                                 {'Title': self.reign.getConnectedReign('Title'), 'Page Type': 'Choose', 'Person': self.reign.getConnectedReign('Ruler'), 'Connection': self.connection,
-                                  'Reign': self.reign})
-
-
 ## Widget for info of a given reign.
 # Displays one reign
 # Header depends on object type
@@ -705,10 +656,10 @@ class EventWidget(QWidget):
             self.date = QLineEdit(eventDetails['Date'])
             self.date.setFixedWidth(100)
             self.date.setAlignment(Qt.AlignCenter)
-            self.date.textChanged.connect(lambda: self.updateText(self.date))
+            self.date.textChanged.connect(self.updateText)
 
             self.content = QLineEdit(eventDetails['Content'])
-            self.content.textChanged.connect(lambda: self.updateText(self.content))
+            self.content.textChanged.connect(self.updateText)
 
             removeEvent = QPushButton('X')
 
@@ -728,7 +679,7 @@ class EventWidget(QWidget):
             self.layout().addWidget(removeEvent, 0, 2)
             removeEvent.clicked.connect(self.removeEvent)
 
-    def updateText(self, obj):
+    def updateText(self):
         updatedDetails = {'Date': self.date.text(), 'Content': self.content.text()}
         self.subject.updateEvent(self.objectID, updatedDetails)
         self.window.write_data()

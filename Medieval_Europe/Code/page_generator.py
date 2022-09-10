@@ -131,8 +131,6 @@ class PageGenerator:
             placeMap = PlaceMap(self.window, object_list)
             mapLayout.addWidget(placeMap)
 
-            #placeMap.initialize()
-
         return page
 
     def choose_object_list(self, parameters):
@@ -331,12 +329,73 @@ class PageGenerator:
         ## Get dictionary for static labels
         staticLabels = person.getStaticLabels()
 
+        def display_relation_graph():
+            self.logger.log('Code', 'Clicked to display relations')
+
+            import networkx as nx
+            import matplotlib.pyplot as plt
+            from networkx.drawing.nx_pydot import graphviz_layout
+
+            G = nx.DiGraph()
+            labels = {}
+
+            personList = {}
+
+            def getRelations(sub_person, sub_personList, maxLevel, level):
+                if sub_person is None:
+                    return sub_personList
+                elif level > maxLevel:
+                    return sub_personList
+                else:
+                    sub_personList.update({sub_person.getID(): sub_person})
+                    for c_id in sub_person.connectionDict:
+                        if sub_person.connection('Get', c_id) in ('Father', 'Mother', 'Spouse', 'Child'):
+                            connect_object = self.window.get_object(c_id)
+                            sub_personList = getRelations(connect_object, sub_personList, maxLevel, level + 1)
+
+                    return sub_personList
+
+            personList = getRelations(person, personList, 5, 0)
+
+            drawSpouses = False
+
+            for p_id, personObject in personList.items():
+                parents = personObject.getParents()
+                if parents[0] is not None and parents[0] in personList:
+                    G.add_edge(parents[0], p_id, color='r')
+
+                if parents[1] is not None and parents[1] in personList:
+                    G.add_edge(parents[1], p_id, color='b')
+
+                if drawSpouses:
+                    for s_id in personObject.spouses:
+                        if s_id != 'unknown_spouse' and s_id in personList:
+                            G.add_edge(p_id, s_id, color='g')
+
+                labels[p_id] = personObject.getAttribute('Name')
+
+            colors = nx.get_edge_attributes(G, 'color').values()
+            #pos = nx.kamada_kawai_layout(G)
+            #pos = nx.random_layout(G)
+            #pos = nx.spring_layout(G)
+            pos = graphviz_layout(G, prog="neato")
+
+            nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=15, width=0.5, font_size=7)
+            nx.draw_networkx_labels(G, pos, labels, font_size=6, alpha=.7)
+
+            plt.show()
+
         for s in staticLabels:
             label = QLabel(s + ':\t' + staticLabels[s])
             self.logger.log('Code', 'Add ' + s + ': ' + str(staticLabels[s]), True)
             label.layout = QHBoxLayout()
             label.layout.addWidget(label)
             label.layout.addStretch(1)
+
+            if s == 'Gender':
+                displayGraph = QPushButton('Display Relations')
+                displayGraph.clicked.connect(display_relation_graph)
+                label.layout.addWidget(displayGraph)
 
             infoGroup.layout.addLayout(label.layout)
 

@@ -1653,5 +1653,266 @@
             "1d84c576",
             "df3023a1"
         ]
+    },
+    "c311583a": {
+        "Attributes": {
+            "Name": "Aschaffenburg",
+            "Latitude": "49.975",
+            "Longitude": "9.15"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a414331c": {
+        "Attributes": {
+            "Name": "Ansbach",
+            "Latitude": "49.3",
+            "Longitude": "10.57"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "92852d1d": {
+        "Attributes": {
+            "Name": "Ingolstadt",
+            "Latitude": "48.765",
+            "Longitude": "11.425"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "4fe21ddb": {
+        "Attributes": {
+            "Name": "Augsburg",
+            "Latitude": "48.37",
+            "Longitude": "10.9"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "af061fa5": {
+        "Attributes": {
+            "Name": "Freising",
+            "Latitude": "48.4",
+            "Longitude": "11.745"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "79b86ba9": {
+        "Attributes": {
+            "Name": "Isen",
+            "Latitude": "48.21",
+            "Longitude": "12.06"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "269051b0": {
+        "Attributes": {
+            "Name": "Munich",
+            "Latitude": "48.14",
+            "Longitude": "11.57"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1ee82a57": {
+        "Attributes": {
+            "Name": "Leuchtenberg",
+            "Latitude": "49.6",
+            "Longitude": "12.26"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2fab96a8": {
+        "Attributes": {
+            "Name": "Straubing",
+            "Latitude": "48.88",
+            "Longitude": "12.57"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c6efa458": {
+        "Attributes": {
+            "Name": "Regensburg",
+            "Latitude": "49.02",
+            "Longitude": "12.095"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a912ffd4": {
+        "Attributes": {
+            "Name": "Landshut",
+            "Latitude": "48.535",
+            "Longitude": "12.15"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c8acc494": {
+        "Attributes": {
+            "Name": "Passau",
+            "Latitude": "48.575",
+            "Longitude": "13.46"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "bc119061": {
+        "Attributes": {
+            "Name": "Blankenburg",
+            "Latitude": "51.79",
+            "Longitude": "10.96"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "00b68dc2": {
+        "Attributes": {
+            "Name": "Bayreuth",
+            "Latitude": "49.945",
+            "Longitude": "11.575"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "cfa974b8": {
+        "Attributes": {
+            "Name": "As",
+            "Latitude": "50.22",
+            "Longitude": "12.19"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b1938800": {
+        "Attributes": {
+            "Name": "Cheb/Eger",
+            "Latitude": "50.08",
+            "Longitude": "12.37"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "e61e488a": {
+        "Attributes": {
+            "Name": "Prague",
+            "Latitude": "50.09",
+            "Longitude": "14.42"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "28f13b79": {
+        "Attributes": {
+            "Name": "Cottbus",
+            "Latitude": "51.76",
+            "Longitude": "14.335"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "69352262": {
+        "Attributes": {
+            "Name": "Poznan",
+            "Latitude": "52.406",
+            "Longitude": "16.93"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d83223cf": {
+        "Attributes": {
+            "Name": "Gniezno",
+            "Latitude": "52.535",
+            "Longitude": "17.595"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "09a914eb": {
+        "Attributes": {
+            "Name": "Inowroclaw",
+            "Latitude": "52.795",
+            "Longitude": "18.26"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "51a20052": {
+        "Attributes": {
+            "Name": "Torun",
+            "Latitude": "53.01",
+            "Longitude": "18.61"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d8c9141d": {
+        "Attributes": {
+            "Name": "Gdansk",
+            "Latitude": "54.35",
+            "Longitude": "18.65"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "912479a9": {
+        "Attributes": {
+            "Name": "Bytow",
+            "Latitude": "54.17",
+            "Longitude": "17.49"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c091cd77": {
+        "Attributes": {
+            "Name": "Lebork",
+            "Latitude": "54.54",
+            "Longitude": "17.75"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "5f700b52": {
+        "Attributes": {
+            "Name": "Slupsk",
+            "Latitude": "54.465",
+            "Longitude": "17.03"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c32b1b7d": {
+        "Attributes": {
+            "Name": "Wschowa",
+            "Latitude": "51.805",
+            "Longitude": "16.315"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a4a1fc02": {
+        "Attributes": {
+            "Name": "Wroclaw",
+            "Latitude": "51.11",
+            "Longitude": "17.03"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "56e7d9c2": {
+        "Attributes": {
+            "Name": "Aachen",
+            "Latitude": "50.775",
+            "Longitude": "6.085"
+        },
+        "Events": {},
+        "Reign List": []
     }
 }

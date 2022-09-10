@@ -6,10 +6,10 @@ Created on Nov 10, 2021
 
 import json
 import os
+import sys
 import uuid
 from abc import ABC, abstractmethod
 from Medieval_Europe import get_parent_path
-
 
 ######################################
 ###                                ###
@@ -75,15 +75,15 @@ class CustomObject(ABC):
             self.attributes.update({attribute: info})
         else:
             self.logger.log('Error', str(attribute) + ' is not a valid attribute of a ' + str(self.__class__.__name__))
+            sys.exit(0)
 
     ## Get attribute value
     def getAttribute(self, attribute):
-        #print('Getting attribute ' + str(attribute))
         if attribute in self.attributes:
             return self.attributes[attribute]
         else:
             self.logger.log('Error', str(attribute) + ' is not a valid attribute of a ' + str(self.__class__.__name__))
-            return None
+            sys.exit(0)
 
     def check_argument(self, arg, connection=None):
         if isinstance(arg, str):
@@ -92,7 +92,7 @@ class CustomObject(ABC):
             return arg.getID()
         else:
             self.logger.log('Error', str(arg) + ' is an invalid data type. Should be String ID or CustomObject.')
-            return None
+            sys.exit(0)
 
     ## Function to handle modification to the connection dict:
     # Add: subject with the given connection name
@@ -103,6 +103,7 @@ class CustomObject(ABC):
 
         if subjectID is None:
             self.logger.log('Error', 'Cannot modify connection, no subject given')
+            sys.exit(0)
         else:
             if update == 'Add':
                 if subjectID in self.connectionDict:
@@ -117,7 +118,7 @@ class CustomObject(ABC):
                     return self.connectionDict[subjectID]
                 else:
                     self.logger.log('Error', 'Cannot get connection. {' + str(subjectID) + '} is not a connection of ' + self.getName())
-                    return None
+                    sys.exit(0)
 
             elif update == 'Remove':
                 if subjectID in self.connectionDict:
@@ -127,6 +128,7 @@ class CustomObject(ABC):
 
             else:
                 self.logger.log('Error', str(update) + ' is an invalid update value')
+                sys.exit(0)
 
     ## Get Dictionary of values
     @abstractmethod
@@ -217,7 +219,7 @@ class Person(CustomObject):
 
         if spouse is None:  ## Person had child with an unknown spouse
             if childID in self.spouses['unknown_spouse']:
-                self.logger.log('Error', '{' + childID + '} is already a child of {' + self.getID() + '} with unknown spouse')
+                self.logger.log('Warning', '{' + childID + '} is already a child of {' + self.getID() + '} with unknown spouse')
             else:
                 self.logger.log('Code', 'Add {' + childID + '} as new child with unknown spouse')
                 self.spouses['unknown_spouse'].append(childID)  # Add the child to the unknown spouse list
@@ -232,9 +234,11 @@ class Person(CustomObject):
 
                 self.logger.log('Code', 'Add {' + childID + '} as new child with spouse {' + spouseID + '}')
                 self.spouses[spouseID].append(childID)  # Add the child to the given spouse's list
+                self.connection('Add', childID, 'Child')
 
             else:
                 self.logger.log('Error', 'Cannot add child, {' + spouseID + '} is not a valid spouse')
+                sys.exit(0)
         
     ## Remove Relationship with Child 
     def removeChild(self, child):
@@ -286,7 +290,7 @@ class Person(CustomObject):
             self.connection('Remove', targetID)
 
         else:
-            self.logger.log('Error', '{' + targetID + '} not a valid spouse to remove')
+            self.logger.log('Warning', '{' + targetID + '} is not currently a spouse. Cannot be removed')
 
     # Add parent as the relation to self
     def addParent(self, parent, relation):
@@ -299,6 +303,7 @@ class Person(CustomObject):
                     self.connection('Add', parentID, name=relation)
             else:
                 self.logger.log('Error', str(relation) + ' is not a valid parent type to add')
+                sys.exit(0)
     
     ## Remove Relationship with Parent (can be either name or subject)
     def removeParent(self, parent):
@@ -324,7 +329,7 @@ class Person(CustomObject):
             return self.parents['Father'], self.parents['Mother']
         else:
             self.logger.log('Error', str(relation) + ' is not a valid parent type to get')
-            return None
+            sys.exit(0)
             
     def addReign(self, reign):
         if isinstance(reign, Reign):
@@ -332,6 +337,7 @@ class Person(CustomObject):
             self.connection('Add', reign.getID(), 'Reign')
         else:
             self.logger.log('Error', 'Cannot add ' + str(reign) + ' as Reign. Invalid type')
+            sys.exit(0)
         
     def removeReign(self, reign):
         reignID = self.check_argument(reign, 'Reign')
@@ -470,7 +476,7 @@ class Person(CustomObject):
                     # Merge the new junior reign with the existing senior successor
                     successorPerson.mergeReigns(juniorSuccessor, seniorSuccessor, window)
 
-    #
+    ## Actions related to the primary title for this person
     def primary_title(self, action, title=None):
         if action == 'Set':
             self.primaryTitle = title.getFullRulerTitle(self.gender)
@@ -585,12 +591,7 @@ class Title(CustomObject):
         self.setName()
         
         self.reignDict = {}  ## structure: {<reignID>: <reignObject>}
-        
-
-        
         self.orderReignList = []
-        
-        #self.logger.log('Code', 'Init: Created ' + self.getName() + ' title')
 
     def setName(self):
         self.name = self.getFullRealmTitle()
@@ -694,6 +695,7 @@ class Title(CustomObject):
                                'Events': self.eventList,
                                'Reign List': list(self.reignDict.keys())}}
 
+
 ######################################
 ###                                ###
 ###          Place Class           ###
@@ -775,20 +777,11 @@ class Place(CustomObject):
     def getCoords(self):
         return {self.getAttribute('Latitude'), self.getAttribute('Longitude')}
 
-    def isEmpty(self):
-        if self.name != '':
-            return False
-        elif self.lat != '':
-            return False
-        elif self.long != '':
-            return False
-        else:
-            return True
-
     def getDict(self):
         return {self.getID(): {'Attributes': self.attributes,
                                'Events': self.eventList,
                                'Reign List': self.reignList}}
+
 
 ######################################
 ###                                ###
@@ -910,18 +903,6 @@ class Reign(CustomObject):
         else:
             ruler.primary_title('Remove', self.getConnectedReign('Title'))
         
-    def setDate(self, date, side):
-        if side == 'Start Date':
-            self.stDate = date
-        else:
-            self.endDate = date
-    
-    def setTitle(self, title):
-        self.titleID = title.getID()
-        self.titleName = title.getFullRealmTitle()
-
-        self.updateAttribute('Name', self.rulerName + ', ' + self.titleName)
-        
     ## The order of this reign for the associated title
     def setOrder(self, order):
         self.order = order
@@ -969,22 +950,6 @@ class Reign(CustomObject):
             self.connection('Remove', placeID)
         else:
             self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
-
-    def isEmpty(self):
-        if self.titleID != '':
-            return False
-        elif self.titleName != '':
-            return False
-        elif self.predecessor != -1:
-            return False
-        elif self.successor != -1:
-            return False
-        elif self.stDate != '':
-            return False
-        elif self.endDate != '':
-            return False
-        else:
-            return True
         
     def getDateString(self):
         return '(' + str(self.getAttribute('Start Date')) + ' - ' + str(self.getAttribute('End Date')) + ')'

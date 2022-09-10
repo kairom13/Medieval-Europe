@@ -276,8 +276,10 @@
         },
         "Events": {},
         "Reign List": [
+            "6dad1d0a",
             "695a33e7",
-            "e71c3f25"
+            "e71c3f25",
+            "01a4a571"
         ]
     },
     "630f5c9a": {
@@ -694,7 +696,9 @@
             "3903aad9",
             "3d2fedc5",
             "4bd4f0a4",
-            "93199d07"
+            "93199d07",
+            "47a996dd",
+            "ed1933b9"
         ]
     },
     "dea06d0a": {
@@ -737,10 +741,12 @@
         },
         "Events": {},
         "Reign List": [
+            "ef60ca40",
             "1c726999",
             "1c61e795",
             "1f9a7a3b",
-            "efdcd438"
+            "efdcd438",
+            "b383e7b5"
         ]
     },
     "ee6de42c": {
@@ -1706,7 +1712,10 @@
         },
         "Events": {},
         "Reign List": [
-            "f85a9a54"
+            "f85a9a54",
+            "cff59000",
+            "bda3324d",
+            "04bea11f"
         ]
     },
     "340f9469": {
@@ -1723,7 +1732,14 @@
         },
         "Events": {},
         "Reign List": [
-            "380916cf"
+            "380916cf",
+            "b9ee6a0f",
+            "09c2ec23",
+            "d879385e",
+            "05bbd7fd",
+            "f2813855",
+            "d23cfc75",
+            "364ef399"
         ]
     },
     "a9994adc": {
@@ -1746,6 +1762,265 @@
     "0c42f9ac": {
         "Attributes": {
             "Realm Name": "Champagne",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "9af015cf": {
+        "Attributes": {
+            "Realm Name": "Autun",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "eedf2a27"
+        ]
+    },
+    "b5c1ab82": {
+        "Attributes": {
+            "Realm Name": "Troyes",
+            "Realm Title": "Count",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "27f710d5",
+            "14844104",
+            "8a217b37",
+            "47818b47",
+            "064ea48c",
+            "d3b3c086",
+            "2cd74f2d"
+        ]
+    },
+    "f02906ee": {
+        "Attributes": {
+            "Realm Name": "Maine",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "bc239642",
+            "c6e5e0bd",
+            "ee85d5b3",
+            "8549776a",
+            "4c11f7d2",
+            "79366ff9",
+            "6471747f",
+            "74fa4612",
+            "06e4691a",
+            "e5ac2062"
+        ]
+    },
+    "9ca37b3c": {
+        "Attributes": {
+            "Realm Name": "Blois",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "b1708064",
+            "2faef3ff",
+            "53677141",
+            "968f205e"
+        ]
+    },
+    "8bfa8aaf": {
+        "Attributes": {
+            "Realm Name": "Touraine",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "de6658a8",
+            "6675e6de"
+        ]
+    },
+    "f5f3ef2c": {
+        "Attributes": {
+            "Realm Name": "Anjou",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "cbb6bd5a",
+            "f81ed29f",
+            "2f91e309"
+        ]
+    },
+    "b5ef1e97": {
+        "Attributes": {
+            "Realm Name": "Omois",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "7ff38743"
+        ]
+    },
+    "56c4d06d": {
+        "Attributes": {
+            "Realm Name": "Chartres",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "cbb0e5f0": {
+        "Attributes": {
+            "Realm Name": "Meissen",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": "Margravine"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c4a81d98",
+            "d79a3db9"
+        ]
+    },
+    "d91f3e4d": {
+        "Attributes": {
+            "Realm Name": "Valois",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "a931d0d1",
+            "0d8bdc29"
+        ]
+    },
+    "358ac99e": {
+        "Attributes": {
+            "Realm Name": "Turin",
+            "Realm Title": "March",
+            "Male Ruler Title": "Margrave",
+            "Female Ruler Title": "Margravine"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c894de2a"
+        ]
+    },
+    "a7a7c8fb": {
+        "Attributes": {
+            "Realm Name": "Italy",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "2237eab6",
+            "ad999eb0",
+            "bb296728"
+        ]
+    },
+    "ad28327d": {
+        "Attributes": {
+            "Realm Name": "Laon",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "0d217394"
+        ]
+    },
+    "9bce2c6d": {
+        "Attributes": {
+            "Realm Name": "Senlis",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
             "Female Ruler Title": "Countess"

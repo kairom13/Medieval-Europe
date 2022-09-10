@@ -1,7 +1,7 @@
 {
     "000_Init": [
         "000_Init",
-        "001_Set Window Size. Height: 960, Width: 1706",
+        "001_Set Window Size. Height: 600, Width: 960",
         "002_Creating Menu Bar",
         "003_Reading Files",
         "004_Opened \"titles.json\"",
@@ -17,647 +17,319 @@
     "001_view_object_list": [
         "000_Viewing Person List",
         "001_Adding list of Persons",
-        "002_Clicked to view Henry II Jasomirgott, Duke of Austria",
-        "003_Generating display_person_page"
+        "002_Found 281 instances of \"l\" in object list",
+        "003_Found 50 instances of \"lo\" in object list",
+        "004_Found 17 instances of \"lou\" in object list",
+        "005_Found 17 instances of \"loui\" in object list",
+        "006_Found 17 instances of \"louis\" in object list",
+        "007_Found 17 instances of \"louis \" in object list",
+        "008_Found 11 instances of \"louis i\" in object list",
+        "009_Found 1 instances of \"louis ix\" in object list",
+        "010_Clicked to view Louis IX the Saint, King of France",
+        "011_Generating display_person_page"
     ],
     "002_display_person_page": [
-        "000_Displaying Henry II Jasomirgott, Duke of Austria",
+        "000_Displaying Louis IX the Saint, King of France",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 1107",
-            "004_Add Death Date: 1/13/1177",
-            "005_Add Father: Leopold III the Good",
-            "006_Add Mother: Agnes of Waiblingen",
-            "007_Add Child With No Spouse: Leopold V the Virtuous, Duke of Austria",
-            "008_Add Spouse: Gertrude of Supplinburg, Countess of Supplinburg"
+            "003_Add Birth Date: 4/25/1214",
+            "004_Add Death Date: 8/25/1270",
+            "005_Add Father: Louis VIII the Lion, King of France",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Philip III the Bold, King of France"
         ],
-        "009_Viewing reign as Duke of Austria",
+        "008_Viewing reign as King of France",
         [
-            "010_Has successor: Leopold V, Duke of Austria",
-            "011_Date of Reign: (9/17/1156 - 1/13/1177)"
+            "009_Has predecessor: Louis VIII, King of France",
+            "010_Has successor: Philip III, King of France",
+            "011_Date of Reign: (11/8/1226 - 8/25/1270)"
         ],
-        "012_Viewing reign as Margrave of Austria",
+        "012_Viewing reign as Count of Macon",
         [
-            "013_Has predecessor: Leopold, Margrave of Austria",
-            "014_Date of Reign: (11/15/1141 - 9/17/1156)"
+            "013_Date of Reign: (1239 - 8/25/1270)"
         ],
-        "015_Viewing reign as Count Palatine of the Rhine",
-        [
-            "016_Date of Reign: (10/18/1140 - 11/15/1141)"
-        ],
-        "017_Viewing reign as Duke of Bavaria",
-        [
-            "018_Has predecessor: Leopold, Duke of Bavaria",
-            "019_Has successor: Henry, Duke of Bavaria",
-            "020_Date of Reign: (11/15/1141 - 9/8/1156)"
-        ],
-        "021_Clicked to display Duchy of Austria",
-        "022_Generating display_title_page"
+        "014_Clicked to display Philip III the Bold, King of France",
+        "015_Generating display_person_page"
     ],
-    "003_display_title_page": [
-        "000_Displaying Title: Duchy of Austria",
-        "001_Viewing reign of Henry II Jasomirgott, Duke of Austria",
+    "003_display_person_page": [
+        "000_Displaying Philip III the Bold, King of France",
         [
-            "002_Has successor: Leopold V, Duke of Austria",
-            "003_Date of Reign: (9/17/1156 - 1/13/1177)"
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 5/1/1245",
+            "004_Add Death Date: 10/5/1285",
+            "005_Add Father: None",
+            "006_Add Mother: Louis IX the Saint, King of France",
+            "007_Add Child With No Spouse: Charles of Valois",
+            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
         ],
-        "004_Viewing reign of Leopold V the Virtuous, Duke of Austria",
+        "009_Viewing reign as King of France",
         [
-            "005_Has predecessor: Henry II, Duke of Austria",
-            "006_Has successor: Frederick I, Duke of Austria",
-            "007_Date of Reign: (1/13/1177 - 12/31/1194)"
+            "010_Has predecessor: Louis IX, King of France",
+            "011_Has successor: Philip IV, King of France",
+            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
         ],
-        "008_Viewing reign of Frederick I the Catholic, Duke of Austria",
+        "013_Viewing reign as Count of Macon",
         [
-            "009_Has predecessor: Leopold V, Duke of Austria",
-            "010_Has successor: Leopold VI, Duke of Austria",
-            "011_Date of Reign: (12/31/1194 - 4/16/1198)"
+            "014_Date of Reign: ( - )"
         ],
-        "012_Viewing reign of Leopold VI the Glorious, Duke of Austria",
-        [
-            "013_Has predecessor: Frederick I, Duke of Austria",
-            "014_Has successor: Frederick II, Duke of Austria",
-            "015_Date of Reign: (4/16/1198 - 7/28/1230)"
-        ],
-        "016_Viewing reign of Frederick II the Quarrelsome, Duke of Austria",
-        [
-            "017_Has predecessor: Leopold VI, Duke of Austria",
-            "018_Date of Reign: (7/28/1230 - 6/15/1246)"
-        ],
-        "019_Clicked to display Henry II Jasomirgott, Duke of Austria",
-        "020_Generating display_person_page"
+        "015_Clicked to display Louis IX the Saint, King of France",
+        "016_Generating display_person_page"
     ],
     "004_display_person_page": [
-        "000_Displaying Henry II Jasomirgott, Duke of Austria",
+        "000_Displaying Louis IX the Saint, King of France",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 1107",
-            "004_Add Death Date: 1/13/1177",
-            "005_Add Father: Leopold III the Good",
-            "006_Add Mother: Agnes of Waiblingen",
-            "007_Add Child With No Spouse: Leopold V the Virtuous, Duke of Austria",
-            "008_Add Spouse: Gertrude of Supplinburg, Countess of Supplinburg"
+            "003_Add Birth Date: 4/25/1214",
+            "004_Add Death Date: 8/25/1270",
+            "005_Add Father: Louis VIII the Lion, King of France",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Philip III the Bold, King of France"
         ],
-        "009_Viewing reign as Duke of Austria",
+        "008_Viewing reign as King of France",
         [
-            "010_Has successor: Leopold V, Duke of Austria",
-            "011_Date of Reign: (9/17/1156 - 1/13/1177)"
+            "009_Has predecessor: Louis VIII, King of France",
+            "010_Has successor: Philip III, King of France",
+            "011_Date of Reign: (11/8/1226 - 8/25/1270)"
         ],
-        "012_Viewing reign as Margrave of Austria",
+        "012_Viewing reign as Count of Macon",
         [
-            "013_Has predecessor: Leopold, Margrave of Austria",
-            "014_Date of Reign: (11/15/1141 - 9/17/1156)"
+            "013_Date of Reign: (1239 - 8/25/1270)"
         ],
-        "015_Viewing reign as Count Palatine of the Rhine",
-        [
-            "016_Date of Reign: (10/18/1140 - 11/15/1141)"
-        ],
-        "017_Viewing reign as Duke of Bavaria",
-        [
-            "018_Has predecessor: Leopold, Duke of Bavaria",
-            "019_Has successor: Henry, Duke of Bavaria",
-            "020_Date of Reign: (11/15/1141 - 9/8/1156)"
-        ],
-        "021_Generating view_object_list"
+        "014_Clicked to display Philip III the Bold, King of France",
+        "015_Generating display_person_page"
     ],
-    "005_view_object_list": [
-        "000_Viewing Person List",
-        "001_Adding list of Persons",
-        "002_Clicked to view Beatrice of Vermandois",
-        "003_Generating display_person_page"
-    ],
-    "006_display_person_page": [
-        "000_Displaying Beatrice of Vermandois",
+    "005_display_person_page": [
+        "000_Displaying Philip III the Bold, King of France",
         [
             "001_Add Name Widget",
-            "002_Add Gender: Woman",
-            "003_Add Birth Date: 880",
-            "004_Add Death Date: after 3/26/931",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 5/1/1245",
+            "004_Add Death Date: 10/5/1285",
             "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Spouse: Robert I, King of West Francia",
-            "008_Add Child With Robert I, King of West Francia: Hugh the Great"
+            "006_Add Mother: Louis IX the Saint, King of France",
+            "007_Add Child With No Spouse: Charles of Valois",
+            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
         ],
-        "009_Clicked to display Robert I, King of West Francia",
-        "010_Generating display_person_page"
+        "009_Viewing reign as King of France",
+        [
+            "010_Has predecessor: Louis IX, King of France",
+            "011_Has successor: Philip IV, King of France",
+            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
+        ],
+        "013_Viewing reign as Count of Macon",
+        [
+            "014_Date of Reign: ( - )"
+        ],
+        "015_Generating edit_person_page"
     ],
-    "007_display_person_page": [
-        "000_Displaying Robert I, King of West Francia",
+    "006_edit_person_page": [
+        "000_Editing Person: Philip III the Bold, King of France",
         [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 8/15/866",
-            "004_Add Death Date: 6/15/923",
-            "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Adela",
-            "008_Add Child With No Spouse: Emma",
-            "009_Add Spouse: Beatrice of Vermandois",
-            "010_Add Child With Beatrice of Vermandois: Hugh the Great"
+            "001_Can edit Name: Philip III",
+            "002_Can edit Nickname: the Bold",
+            "003_Can edit Birth Date: 5/1/1245",
+            "004_Can edit Death Date: 10/5/1285",
+            "005_Can add Father",
+            "006_Can modify Mother: Louis IX the Saint, King of France",
+            "007_Can modify child: Charles of Valois",
+            "008_Can modify child: Philip IV the Fair, King of France"
         ],
-        "011_Viewing reign as King of West Francia",
+        "009_Can edit 2 Reigns",
+        "010_Include ability to merge",
+        "011_Editing reign as King of France",
         [
-            "012_Has predecessor: Charles III, King of West Francia",
-            "013_Has successor: Rudolph, King of West Francia",
-            "014_Date of Reign: (6/29/922 - 6/15/923)"
+            "012_This is the primary reign",
+            "013_Reign has predecessor: Louis IX the Saint, King of France",
+            "014_Can edit Start Date: 8/25/1270",
+            "015_Can edit End Date: 10/5/1285",
+            "016_Reign has successor: Philip IV the Fair, King of France"
         ],
-        "015_Clicked to display Rudolph, King of West Francia",
-        "016_Generating display_person_page"
+        "017_Editing reign as Count of Macon",
+        [
+            "018_Reign has no predecessor",
+            "019_Can edit Start Date: ",
+            "020_Can edit End Date: ",
+            "021_Reign has no Successor"
+        ],
+        "022_Removing Mother from Philip III the Bold, King of France",
+        "023_Removed Philip III the Bold, King of France as a child with spouse unknown_spouse",
+        "024_Generating edit_person_page"
     ],
-    "008_display_person_page": [
-        "000_Displaying Rudolph, King of West Francia",
+    "007_edit_person_page": [
+        "000_Editing Person: Philip III the Bold, King of France",
         [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 890",
-            "004_Add Death Date: 1/14/936",
-            "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Spouse: Emma"
+            "001_Can edit Name: Philip III",
+            "002_Can edit Nickname: the Bold",
+            "003_Can edit Birth Date: 5/1/1245",
+            "004_Can edit Death Date: 10/5/1285",
+            "005_Can add Father",
+            "006_Can add Mother",
+            "007_Can modify child: Charles of Valois",
+            "008_Can modify child: Philip IV the Fair, King of France"
         ],
-        "008_Viewing reign as King of West Francia",
+        "009_Can edit 2 Reigns",
+        "010_Include ability to merge",
+        "011_Editing reign as King of France",
         [
-            "009_Has predecessor: Robert I, King of West Francia",
-            "010_Has successor: Louis IV, King of West Francia",
-            "011_Date of Reign: (6/15/923 - 1/14/936)"
+            "012_This is the primary reign",
+            "013_Reign has predecessor: Louis IX the Saint, King of France",
+            "014_Can edit Start Date: 8/25/1270",
+            "015_Can edit End Date: 10/5/1285",
+            "016_Reign has successor: Philip IV the Fair, King of France"
         ],
-        "012_Clicked to display Louis IV d'Outremer, King of West Francia",
-        "013_Generating display_person_page"
+        "017_Editing reign as Count of Macon",
+        [
+            "018_Reign has no predecessor",
+            "019_Can edit Start Date: ",
+            "020_Can edit End Date: ",
+            "021_Reign has no Successor"
+        ],
+        "022_Generating choose_object_list"
     ],
-    "009_display_person_page": [
-        "000_Displaying Louis IV d'Outremer, King of West Francia",
+    "008_choose_object_list": [
+        "000_Choosing Father for Philip III the Bold, King of France",
+        "001_Including Add new object button",
+        "002_Add list of objects",
+        "003_Found 280 instances of \"l\" in object list",
+        "004_Found 50 instances of \"lo\" in object list",
+        "005_Found 17 instances of \"lou\" in object list",
+        "006_Found 17 instances of \"loui\" in object list",
+        "007_Found 17 instances of \"louis\" in object list",
+        "008_Found 17 instances of \"louis \" in object list",
+        "009_Found 11 instances of \"louis i\" in object list",
+        "010_Found 1 instances of \"louis ix\" in object list",
+        "011_Clicked to choose Louis IX the Saint, King of France as Father for Philip III the Bold, King of France",
+        "012_Setting Louis IX the Saint, King of France as Father for Philip III the Bold, King of France",
+        "013_Philip III the Bold, King of France has no parents",
+        "014_Add Philip III the Bold, King of France as new child with unknown spouse",
+        "015_Generating edit_person_page"
+    ],
+    "009_edit_person_page": [
+        "000_Editing Person: Philip III the Bold, King of France",
         [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 9/920",
-            "004_Add Death Date: 9/10/954",
-            "005_Add Father: Charles III the Simple, King of West Francia",
-            "006_Add Mother: None",
-            "007_Add Spouse: Gerberga of Saxony",
-            "008_Add Child With Gerberga of Saxony: Lothair of France, King of West Francia"
+            "001_Can edit Name: Philip III",
+            "002_Can edit Nickname: the Bold",
+            "003_Can edit Birth Date: 5/1/1245",
+            "004_Can edit Death Date: 10/5/1285",
+            "005_Can modify Father: Louis IX the Saint, King of France",
+            "006_Can add Mother",
+            "007_Can modify child: Charles of Valois",
+            "008_Can modify child: Philip IV the Fair, King of France"
         ],
-        "009_Viewing reign as King of West Francia",
+        "009_Can edit 2 Reigns",
+        "010_Include ability to merge",
+        "011_Editing reign as King of France",
         [
-            "010_Has predecessor: Rudolph, King of West Francia",
-            "011_Has successor: Lothair, King of West Francia",
-            "012_Date of Reign: ( - 9/10/954)"
+            "012_This is the primary reign",
+            "013_Reign has predecessor: Louis IX the Saint, King of France",
+            "014_Can edit Start Date: 8/25/1270",
+            "015_Can edit End Date: 10/5/1285",
+            "016_Reign has successor: Philip IV the Fair, King of France"
         ],
-        "013_Clicked to display Lothair of France, King of West Francia",
-        "014_Generating display_person_page"
+        "017_Editing reign as Count of Macon",
+        [
+            "018_Reign has no predecessor",
+            "019_Can edit Start Date: ",
+            "020_Can edit End Date: ",
+            "021_Reign has no Successor"
+        ],
+        "022_Generating display_person_page"
     ],
     "010_display_person_page": [
-        "000_Displaying Lothair of France, King of West Francia",
+        "000_Displaying Philip III the Bold, King of France",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 941",
-            "004_Add Death Date: 3/2/986",
-            "005_Add Father: Louis IV d'Outremer, King of West Francia",
-            "006_Add Mother: Gerberga of Saxony",
-            "007_Add Spouse: Emma"
-        ],
-        "008_Viewing reign as King of West Francia",
-        [
-            "009_Has predecessor: Louis IV, King of West Francia",
-            "010_Date of Reign: (9/10/954 - 3/2/986)"
-        ],
-        "011_Clicked to display Louis IV d'Outremer, King of West Francia",
-        "012_Generating display_person_page"
-    ],
-    "011_display_person_page": [
-        "000_Displaying Louis IV d'Outremer, King of West Francia",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 9/920",
-            "004_Add Death Date: 9/10/954",
-            "005_Add Father: Charles III the Simple, King of West Francia",
+            "003_Add Birth Date: 5/1/1245",
+            "004_Add Death Date: 10/5/1285",
+            "005_Add Father: Louis IX the Saint, King of France",
             "006_Add Mother: None",
-            "007_Add Spouse: Gerberga of Saxony",
-            "008_Add Child With Gerberga of Saxony: Lothair of France, King of West Francia"
+            "007_Add Child With No Spouse: Charles of Valois",
+            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
         ],
-        "009_Viewing reign as King of West Francia",
+        "009_Viewing reign as King of France",
         [
-            "010_Has predecessor: Rudolph, King of West Francia",
-            "011_Has successor: Lothair, King of West Francia",
-            "012_Date of Reign: ( - 9/10/954)"
+            "010_Has predecessor: Louis IX, King of France",
+            "011_Has successor: Philip IV, King of France",
+            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
         ],
-        "013_Clicked to display Lothair of France, King of West Francia",
-        "014_Generating display_person_page"
-    ],
-    "012_display_person_page": [
-        "000_Displaying Lothair of France, King of West Francia",
+        "013_Viewing reign as Count of Macon",
         [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 941",
-            "004_Add Death Date: 3/2/986",
-            "005_Add Father: Louis IV d'Outremer, King of West Francia",
-            "006_Add Mother: Gerberga of Saxony",
-            "007_Add Spouse: Emma"
+            "014_Date of Reign: ( - )"
         ],
-        "008_Viewing reign as King of West Francia",
-        [
-            "009_Has predecessor: Louis IV, King of West Francia",
-            "010_Date of Reign: (9/10/954 - 3/2/986)"
-        ],
-        "011_Clicked to display Emma",
-        "012_Generating display_person_page"
-    ],
-    "013_display_person_page": [
-        "000_Displaying Emma",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Woman",
-            "003_Add Birth Date: 948",
-            "004_Add Death Date: after 987",
-            "005_Add Father: Lothar II of Italy",
-            "006_Add Mother: Adelaide of Burgundy",
-            "007_Add Spouse: Lothair of France, King of West Francia"
-        ],
-        "008_Clicked to display Lothair of France, King of West Francia",
-        "009_Generating display_person_page"
-    ],
-    "014_display_person_page": [
-        "000_Displaying Lothair of France, King of West Francia",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 941",
-            "004_Add Death Date: 3/2/986",
-            "005_Add Father: Louis IV d'Outremer, King of West Francia",
-            "006_Add Mother: Gerberga of Saxony",
-            "007_Add Spouse: Emma"
-        ],
-        "008_Viewing reign as King of West Francia",
-        [
-            "009_Has predecessor: Louis IV, King of West Francia",
-            "010_Date of Reign: (9/10/954 - 3/2/986)"
-        ],
-        "011_Clicked to display Louis IV d'Outremer, King of West Francia",
-        "012_Generating display_person_page"
-    ],
-    "015_display_person_page": [
-        "000_Displaying Louis IV d'Outremer, King of West Francia",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 9/920",
-            "004_Add Death Date: 9/10/954",
-            "005_Add Father: Charles III the Simple, King of West Francia",
-            "006_Add Mother: None",
-            "007_Add Spouse: Gerberga of Saxony",
-            "008_Add Child With Gerberga of Saxony: Lothair of France, King of West Francia"
-        ],
-        "009_Viewing reign as King of West Francia",
-        [
-            "010_Has predecessor: Rudolph, King of West Francia",
-            "011_Has successor: Lothair, King of West Francia",
-            "012_Date of Reign: ( - 9/10/954)"
-        ],
-        "013_Clicked to display Rudolph, King of West Francia",
-        "014_Generating display_person_page"
-    ],
-    "016_display_person_page": [
-        "000_Displaying Rudolph, King of West Francia",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 890",
-            "004_Add Death Date: 1/14/936",
-            "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Spouse: Emma"
-        ],
-        "008_Viewing reign as King of West Francia",
-        [
-            "009_Has predecessor: Robert I, King of West Francia",
-            "010_Has successor: Louis IV, King of West Francia",
-            "011_Date of Reign: (6/15/923 - 1/14/936)"
-        ],
-        "012_Clicked to display Emma",
-        "013_Generating display_person_page"
-    ],
-    "017_display_person_page": [
-        "000_Displaying Emma",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Woman",
-            "003_Add Birth Date: ",
-            "004_Add Death Date: 935",
-            "005_Add Father: Robert I, King of West Francia",
-            "006_Add Mother: None",
-            "007_Add Spouse: Rudolph, King of West Francia"
-        ],
-        "008_Clicked to display Rudolph, King of West Francia",
-        "009_Generating display_person_page"
-    ],
-    "018_display_person_page": [
-        "000_Displaying Rudolph, King of West Francia",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 890",
-            "004_Add Death Date: 1/14/936",
-            "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Spouse: Emma"
-        ],
-        "008_Viewing reign as King of West Francia",
-        [
-            "009_Has predecessor: Robert I, King of West Francia",
-            "010_Has successor: Louis IV, King of West Francia",
-            "011_Date of Reign: (6/15/923 - 1/14/936)"
-        ],
-        "012_Clicked to display Robert I, King of West Francia",
-        "013_Generating display_person_page"
-    ],
-    "019_display_person_page": [
-        "000_Displaying Robert I, King of West Francia",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Man",
-            "003_Add Birth Date: 8/15/866",
-            "004_Add Death Date: 6/15/923",
-            "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Child With No Spouse: Adela",
-            "008_Add Child With No Spouse: Emma",
-            "009_Add Spouse: Beatrice of Vermandois",
-            "010_Add Child With Beatrice of Vermandois: Hugh the Great"
-        ],
-        "011_Viewing reign as King of West Francia",
-        [
-            "012_Has predecessor: Charles III, King of West Francia",
-            "013_Has successor: Rudolph, King of West Francia",
-            "014_Date of Reign: (6/29/922 - 6/15/923)"
-        ],
-        "015_Clicked to display Beatrice of Vermandois",
+        "015_Clicked to display Louis IX the Saint, King of France",
         "016_Generating display_person_page"
     ],
-    "020_display_person_page": [
-        "000_Displaying Beatrice of Vermandois",
-        [
-            "001_Add Name Widget",
-            "002_Add Gender: Woman",
-            "003_Add Birth Date: 880",
-            "004_Add Death Date: after 3/26/931",
-            "005_Add Father: None",
-            "006_Add Mother: None",
-            "007_Add Spouse: Robert I, King of West Francia",
-            "008_Add Child With Robert I, King of West Francia: Hugh the Great"
-        ],
-        "009_Generating edit_person_page"
-    ],
-    "021_edit_person_page": [
-        "000_Editing Person: Beatrice of Vermandois",
-        [
-            "001_Can edit Name: Beatrice",
-            "002_Can edit Nickname: of Vermandois",
-            "003_Can edit Birth Date: 880",
-            "004_Can edit Death Date: after 3/26/931",
-            "005_Can add Father",
-            "006_Can add Mother",
-            "007_Can modify spouse: Robert I, King of West Francia",
-            "008_Can modify child: Hugh the Great"
-        ],
-        "009_Can edit 0 Reigns",
-        "010_Generating choose_object_list"
-    ],
-    "022_choose_object_list": [
-        "000_Choosing Father for Beatrice of Vermandois",
-        "001_Including Add new object button",
-        "002_Add list of objects",
-        "003_Creating new Person",
-        "004_Gender Choice: 0",
-        "005_New Person will be Father of Beatrice of Vermandois",
-        "006_Setting  as Father for Beatrice of Vermandois",
-        "007_Beatrice of Vermandois has no parents",
-        "008_Add Beatrice of Vermandois as new child with unknown spouse",
-        "009_Generating edit_person_page"
-    ],
-    "023_edit_person_page": [
-        "000_Editing Person: ",
-        [
-            "001_Can edit Name: ",
-            "002_Can edit Nickname: ",
-            "003_Can edit Birth Date: ",
-            "004_Can edit Death Date: ",
-            "005_Can add Father",
-            "006_Can add Mother",
-            "007_Can modify child: Beatrice of Vermandois"
-        ],
-        "008_Can edit 0 Reigns",
-        "009_Generating choose_object_list"
-    ],
-    "024_choose_object_list": [
-        "000_Choosing Title for Herbert I",
-        "001_Including Add new object button",
-        "002_Add list of objects",
-        "003_Creating new Title",
-        "004_New Title for Herbert I",
-        "005_Setting  of  as Title for Herbert I",
-        "006_Generating edit_title_page"
-    ],
-    "025_edit_title_page": [
-        "000_Editing title:  of ",
-        [
-            "001_Can edit Realm Name: ",
-            "002_Can edit Realm Title: ",
-            "003_Can edit Male Ruler Title: ",
-            "004_Can edit Female Ruler Title: "
-        ],
-        "005_Generating edit_person_page"
-    ],
-    "026_edit_person_page": [
-        "000_Editing Person: Herbert I",
-        [
-            "001_Can edit Name: Herbert I",
-            "002_Can edit Nickname: ",
-            "003_Can edit Birth Date: 848/850",
-            "004_Can edit Death Date: 907",
-            "005_Can add Father",
-            "006_Can add Mother",
-            "007_Can modify child: Beatrice of Vermandois"
-        ],
-        "008_Can edit 1 Reigns",
-        "009_Editing reign as Count of Vermandois",
-        [
-            "010_This is the primary reign",
-            "011_Reign has no predecessor",
-            "012_Can edit Start Date: ",
-            "013_Can edit End Date: ",
-            "014_Reign has no Successor"
-        ],
-        "015_Generating choose_object_list"
-    ],
-    "027_choose_object_list": [
-        "000_Choosing Title for Herbert I, Count of Vermandois",
-        "001_Including Add new object button",
-        "002_Add list of objects",
-        "003_Creating new Title",
-        "004_New Title for Herbert I, Count of Vermandois",
-        "005_Setting  of  as Title for Herbert I, Count of Vermandois",
-        "006_Generating edit_title_page"
-    ],
-    "028_edit_title_page": [
-        "000_Editing title:  of ",
-        [
-            "001_Can edit Realm Name: ",
-            "002_Can edit Realm Title: ",
-            "003_Can edit Male Ruler Title: ",
-            "004_Can edit Female Ruler Title: "
-        ],
-        "005_Generating edit_person_page"
-    ],
-    "029_edit_person_page": [
-        "000_Editing Person: Herbert I, Count of Vermandois",
-        [
-            "001_Can edit Name: Herbert I",
-            "002_Can edit Nickname: ",
-            "003_Can edit Birth Date: 848/850",
-            "004_Can edit Death Date: 907",
-            "005_Can add Father",
-            "006_Can add Mother",
-            "007_Can modify child: Beatrice of Vermandois"
-        ],
-        "008_Can edit 2 Reigns",
-        "009_Include ability to merge",
-        "010_Editing reign as Count of Vermandois",
-        [
-            "011_This is the primary reign",
-            "012_Reign has no predecessor",
-            "013_Can edit Start Date: 892",
-            "014_Can edit End Date: 907",
-            "015_Reign has no Successor"
-        ],
-        "016_Editing reign as Count of Meaux",
-        [
-            "017_Reign has no predecessor",
-            "018_Can edit Start Date: ",
-            "019_Can edit End Date: ",
-            "020_Reign has no Successor"
-        ],
-        "021_Generating choose_object_list"
-    ],
-    "030_choose_object_list": [
-        "000_Choosing Title for Herbert I, Count of Vermandois",
-        "001_Including Add new object button",
-        "002_Add list of objects",
-        "003_Creating new Title",
-        "004_New Title for Herbert I, Count of Vermandois",
-        "005_Setting  of  as Title for Herbert I, Count of Vermandois",
-        "006_Generating edit_title_page"
-    ],
-    "031_edit_title_page": [
-        "000_Editing title:  of ",
-        [
-            "001_Can edit Realm Name: ",
-            "002_Can edit Realm Title: ",
-            "003_Can edit Male Ruler Title: ",
-            "004_Can edit Female Ruler Title: "
-        ],
-        "005_Generating edit_person_page"
-    ],
-    "032_edit_person_page": [
-        "000_Editing Person: Herbert I, Count of Vermandois",
-        [
-            "001_Can edit Name: Herbert I",
-            "002_Can edit Nickname: ",
-            "003_Can edit Birth Date: 848/850",
-            "004_Can edit Death Date: 907",
-            "005_Can add Father",
-            "006_Can add Mother",
-            "007_Can modify child: Beatrice of Vermandois"
-        ],
-        "008_Can edit 3 Reigns",
-        "009_Include ability to merge",
-        "010_Editing reign as Count of Vermandois",
-        [
-            "011_This is the primary reign",
-            "012_Reign has no predecessor",
-            "013_Can edit Start Date: 892",
-            "014_Can edit End Date: 907",
-            "015_Reign has no Successor"
-        ],
-        "016_Editing reign as Count of Meaux",
-        [
-            "017_Reign has no predecessor",
-            "018_Can edit Start Date: 896",
-            "019_Can edit End Date: 907",
-            "020_Reign has no Successor"
-        ],
-        "021_Editing reign as Count of Soissons",
-        [
-            "022_Reign has no predecessor",
-            "023_Can edit Start Date: ",
-            "024_Can edit End Date: ",
-            "025_Reign has no Successor"
-        ],
-        "026_Generating display_person_page"
-    ],
-    "033_display_person_page": [
-        "000_Displaying Herbert I, Count of Vermandois",
+    "011_display_person_page": [
+        "000_Displaying Louis IX the Saint, King of France",
         [
             "001_Add Name Widget",
             "002_Add Gender: Man",
-            "003_Add Birth Date: 848/850",
-            "004_Add Death Date: 907",
-            "005_Add Father: None",
+            "003_Add Birth Date: 4/25/1214",
+            "004_Add Death Date: 8/25/1270",
+            "005_Add Father: Louis VIII the Lion, King of France",
             "006_Add Mother: None",
-            "007_Add Child With No Spouse: Beatrice of Vermandois"
+            "007_Add Child With No Spouse: Philip III the Bold, King of France"
         ],
-        "008_Viewing reign as Count of Vermandois",
+        "008_Viewing reign as King of France",
         [
-            "009_Date of Reign: (892 - 907)"
+            "009_Has predecessor: Louis VIII, King of France",
+            "010_Has successor: Philip III, King of France",
+            "011_Date of Reign: (11/8/1226 - 8/25/1270)"
         ],
-        "010_Viewing reign as Count of Meaux",
+        "012_Viewing reign as Count of Macon",
         [
-            "011_Date of Reign: (896 - 907)"
+            "013_Date of Reign: (1239 - 8/25/1270)"
         ],
-        "012_Viewing reign as Count of Soissons",
+        "014_Clicked to display Philip III the Bold, King of France",
+        "015_Generating display_person_page"
+    ],
+    "012_display_person_page": [
+        "000_Displaying Philip III the Bold, King of France",
         [
-            "013_Date of Reign: ( - 907)"
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 5/1/1245",
+            "004_Add Death Date: 10/5/1285",
+            "005_Add Father: Louis IX the Saint, King of France",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Charles of Valois",
+            "008_Add Child With No Spouse: Philip IV the Fair, King of France"
         ],
-        "014_Generating view_object_list"
-    ],
-    "034_view_object_list": [
-        "000_Viewing Person List",
-        "001_Adding list of Persons",
-        "002_Title was chosen",
-        "003_Generating view_object_list"
-    ],
-    "035_view_object_list": [
-        "000_Viewing Title List",
-        "001_Adding list of Titles",
-        "002_Creating new Title",
-        "003_Generating edit_title_page"
-    ],
-    "036_edit_title_page": [
-        "000_Editing title:  of ",
+        "009_Viewing reign as King of France",
         [
-            "001_Can edit Realm Name: ",
-            "002_Can edit Realm Title: ",
-            "003_Can edit Male Ruler Title: ",
-            "004_Can edit Female Ruler Title: "
+            "010_Has predecessor: Louis IX, King of France",
+            "011_Has successor: Philip IV, King of France",
+            "012_Date of Reign: (8/25/1270 - 10/5/1285)"
         ],
-        "005_Generating display_title_page"
+        "013_Viewing reign as Count of Macon",
+        [
+            "014_Date of Reign: ( - )"
+        ],
+        "015_Clicked to display Philip IV the Fair, King of France",
+        "016_Generating display_person_page"
     ],
-    "037_display_title_page": [
-        "000_Displaying Title: County of Champagne",
-        "001_Generating view_object_list"
-    ],
-    "038_view_object_list": [
-        "000_Viewing Title List",
-        "001_Adding list of Titles",
-        "002_Place was chosen",
-        "003_Generating view_object_list"
-    ],
-    "039_view_object_list": [
-        "000_Viewing Place List",
-        "001_Adding list of Places",
-        "002_Adding map of places"
+    "013_display_person_page": [
+        "000_Displaying Philip IV the Fair, King of France",
+        [
+            "001_Add Name Widget",
+            "002_Add Gender: Man",
+            "003_Add Birth Date: 5/1268",
+            "004_Add Death Date: 11/29/1314",
+            "005_Add Father: Philip III the Bold, King of France",
+            "006_Add Mother: None",
+            "007_Add Child With No Spouse: Philip V the Tall, King of France",
+            "008_Add Child With No Spouse: Louis X the Headstrong, King of France",
+            "009_Add Child With No Spouse: Charles IV the Fair, King of France"
+        ],
+        "010_Viewing reign as King of France",
+        [
+            "011_Has predecessor: Philip III, King of France",
+            "012_Has successor: Louis X, King of France",
+            "013_Date of Reign: (10/5/1285 - 11/29/1314)"
+        ]
     ]
 }

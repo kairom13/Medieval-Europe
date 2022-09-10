@@ -61,7 +61,7 @@ class MainWindow(QMainWindow):
         data.addAction('Titles')
         data.addAction('Places')
 
-        files.addAction('Shapefile')
+        #files.addAction('Shapefile')
 
         logs = menuBar.addMenu("Logs")
         logs.addAction("Code")
@@ -545,8 +545,6 @@ class MainWindow(QMainWindow):
         self.write_data()
 
     def write_data(self):
-        #self.logger.log('Code', 'Writing Files')
-
         ## Get data for each person and collect in a single list
         writePeopleList = {}
 
@@ -561,8 +559,6 @@ class MainWindow(QMainWindow):
             write_people_json = json.loads(stream.read())
 
             json.dump(write_people_json, outfile, indent=4)
-
-        #self.logger.log('Code', 'People Written')
 
         ## Get data for each title and collect in a single list
         writeTitlesList = {}
@@ -579,8 +575,6 @@ class MainWindow(QMainWindow):
 
             json.dump(write_titles_json, outfile, indent=4)
 
-        #self.logger.log('Code', 'Titles Written')
-
         ## Get data for each place and collect in a single list
         writePlacesList = {}
 
@@ -595,8 +589,6 @@ class MainWindow(QMainWindow):
             write_places_json = json.loads(stream.read())
 
             json.dump(write_places_json, outfile, indent=4)
-
-        #self.logger.log('Code', 'Places Written')
 
 
 def main():
