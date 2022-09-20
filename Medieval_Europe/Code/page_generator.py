@@ -7,6 +7,7 @@ Created on Dec 23, 2021
 from Medieval_Europe.Code.Widgets.Buttons import *
 from Medieval_Europe.Code.Widgets.Displays import *
 from Medieval_Europe.Code.Widgets.Interactives import *
+from Medieval_Europe.Code.Reigns import *
 
 
 class PageGenerator:
@@ -59,13 +60,15 @@ class PageGenerator:
 
         object_type = parameters['Object Type']
         object_list = self.window.objectLists[object_type]
+        self.logger.log('Code', 'Viewing list of ' + object_type)
 
         choose_object_type = ObjectType({'Window': self.window, 'Object Type': object_type, 'Object List': object_list})
+        self.logger.log('Detailed', 'Created Combo Box to switch between object types')
 
         ## Widget for searching for specific characters
         search = SearchBar(self.window, parameters['Search Text'])
+        self.logger.log('Detailed', 'Created Search Bar')
 
-        self.logger.log('Code', 'Viewing ' + object_type + ' List')
         headerLayout.addWidget(choose_object_type)
         headerLayout.addStretch(1)
 
@@ -76,6 +79,7 @@ class PageGenerator:
         add_button = QPushButton('Add')
         add_button.clicked.connect(lambda: self.window.prepareNewObject({'Object Type': object_type}))
         headerLayout.addWidget(add_button)
+        self.logger.log('Detailed', 'Created Add button for new objects of type ' + object_type)
 
         page_layout.addLayout(headerLayout, 0, 1, 1, 1)  # row 0, column 1, spans 1 row, spans 1 column
 
@@ -112,10 +116,12 @@ class PageGenerator:
         scroll.setWidgetResizable(True)
 
         list_layout.addWidget(scroll)
+        self.logger.log('Detailed', 'Added scroll area')
 
         ## Add widgets to tab
         if object_type == 'Place':
             page_layout.addLayout(list_layout, 1, 0, 1, 1)  # row 1, column 0, spans 1 row, spans 1 column
+            self.logger.log('Detailed', 'List of places moved to left side to make room for place map')
         else:
             page_layout.addLayout(list_layout, 1, 1, 1, 1)  # row 1, column 1, spans 1 row, spans 1 column
 
@@ -130,6 +136,7 @@ class PageGenerator:
 
             placeMap = PlaceMap(self.window, object_list)
             mapLayout.addWidget(placeMap)
+            self.logger.log('Detailed', 'Successfully created place map and added to view object list')
 
         return page
 
@@ -152,20 +159,25 @@ class PageGenerator:
 
         if 'Object List' in parameters:
             object_list = parameters['Object List']
+            self.logger.log('Detailed', 'Custom list of ' + object_type + ' used for choosing')
         else:
+            self.logger.log('Detailed', 'Standard list of ' + object_type + ' used for choosing')
             object_list = self.window.objectLists[object_type]
 
         ## Widget for searching for specific characters
         search = SearchBar(self.window, parameters['Search Text'])
+        self.logger.log('Detailed', 'Created Search Bar')
 
         cancel = QPushButton('Cancel')
         headerLayout.addWidget(cancel)
         headerLayout.addStretch(1)
+        self.logger.log('Detailed', 'Added cancel button')
 
         button_params = {}
         if parameters['Connection'] == 'Child':
             spouse_choice = SpouseChoice({'Window': self.window, 'Subject': subject})
             headerLayout.addWidget(spouse_choice)
+            self.logger.log('Detailed', 'Added spouse choice combo box')
 
             button_params.update({'Spouse': spouse_choice})
 
@@ -185,13 +197,17 @@ class PageGenerator:
         #print(isinstance(parameters['Subject'], Person) or isinstance(parameters['Subject'], Title))
 
         if parameters['Connection'] in ('Reign', 'Place'):
+            self.logger.log('Detailed', 'When cancelling, go back to edit the place of {' + subject.getID() + '}')
             cancel.clicked.connect(lambda: self.window.page_factory('edit_place_page', {'Place': subject}))
         else:
             if parameters['Connection'] in ('Predecessor', 'Successor'):
-                cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject.getConnectedReign('Ruler')}))
+                self.logger.log('Detailed', 'When cancelling, go back to edit the person of {' + subject.getConnectedReign('Person').getID() + '}')
+                cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject.getConnectedReign('Person')}))
             elif parameters['Connection'] in ('Title Predecessor', 'Title Successor'):
+                self.logger.log('Detailed', 'When cancelling, go back to edit the title of {' + subject.getID() + '}')
                 cancel.clicked.connect(lambda: self.window.page_factory('edit_title_page', {'Title': subject}))
             else:
+                self.logger.log('Detailed', 'When cancelling, go back to edit the person of {' + subject.getID() + '}')
                 cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject}))
 
                 self.logger.log('Code', 'Including Add new object button')
@@ -307,10 +323,12 @@ class PageGenerator:
         ## Go back to list of characters
         back = QPushButton('List of People')
         back.clicked.connect(lambda: self.window.page_factory('view_object_list', {'Object Type': 'Person', 'Search Text': ''}))
+        self.logger.log('Detailed', 'Including button to go back to list of people')
 
         ## Edit the character's details
         edit = QPushButton('Edit')
         edit.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': person}))
+        self.logger.log('Detailed', 'Including button to edit {' + person.getID() + '}')
 
         ## Display their name
         header_layout.addWidget(back)
@@ -343,10 +361,13 @@ class PageGenerator:
 
             def getRelations(sub_person, sub_personList, maxLevel, level):
                 if sub_person is None:
+                    self.logger.log('Detailed', 'Subject Person is None', True)
                     return sub_personList
                 elif level > maxLevel:
+                    self.logger.log('Detailed', 'Level ' + str(level) + ' is greater than the max level: ' + str(maxLevel), True)
                     return sub_personList
-                else:
+                elif sub_person.getID() not in sub_personList:
+                    self.logger.log('Detailed', 'Adding {' + sub_person.getID() + '} to dictionary of relatives', True)
                     sub_personList.update({sub_person.getID(): sub_person})
                     for c_id in sub_person.connectionDict:
                         if sub_person.connection('Get', c_id) in ('Father', 'Mother', 'Spouse', 'Child'):
@@ -354,29 +375,39 @@ class PageGenerator:
                             sub_personList = getRelations(connect_object, sub_personList, maxLevel, level + 1)
 
                     return sub_personList
+                else:
+                    self.logger.log('Detailed', '{' + sub_person.getID() + '} is already in the dictionary of relatives.', True)
+                    return sub_personList
 
             personList = getRelations(person, personList, 5, 0)
 
+            #displayRelations = DisplayRelationGraph(self.window, personList)
+
             drawSpouses = True
 
+            self.logger.log('Detailed', 'Creating connections for relations graph')
             for p_id, personObject in personList.items():
                 edge = False
                 parents = personObject.getParents()
                 if parents[0] is not None and parents[0] in personList:
+                    self.logger.log('Detailed', 'Drawing {' + parents[0] + '} as the father of {' + p_id + '}', True)
                     G.add_edge(parents[0], p_id, color='r')
                     edge = True
 
                 if parents[1] is not None and parents[1] in personList:
+                    self.logger.log('Detailed', 'Drawing {' + parents[1] + '} as the mother of {' + p_id + '}', True)
                     G.add_edge(parents[1], p_id, color='b')
                     edge = True
 
                 if drawSpouses:
                     for s_id in personObject.spouses:
                         if s_id != 'unknown_spouse' and s_id in personList:
+                            self.logger.log('Detailed', 'Drawing {' + s_id + '} as the spouse of {' + p_id + '}', True)
                             G.add_edge(p_id, s_id, color='g')
                             edge = True
 
                 if not edge:
+                    self.logger.log('Detailed', 'No drawable connection for {' + p_id + '}', True)
                     G.add_node(p_id)
 
                 labels[p_id] = personObject.getAttribute('Name')
@@ -399,8 +430,9 @@ class PageGenerator:
             #         print('LABEL BUT NO POSITION: ' + str(p_id))
             #         labels.pop(p_id)
 
-            nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=10, width=0.5,)
+            nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=10, width=0.5)
             nx.draw_networkx_labels(G, pos, labels, font_size=8, alpha=1)
+            self.logger.log('Detailed', 'Drew relations graph')
 
             fig = plt.gcf()
             fig.set_size_inches(10, 10)
@@ -457,7 +489,7 @@ class PageGenerator:
             if s == 'unknown_spouse':
                 spouse = QLabel('')
             else:
-                spouse = ObjectLabel(self.window, s, 'Person')
+                spouse = ObjectLabel(self.window, self.window.get_object(s), 'Linker Object')
                 self.logger.log('Code', 'Add Spouse: {' + s + '}', True)
 
             ## Have Spouse and children with that spouse as a vertical list
@@ -466,7 +498,7 @@ class PageGenerator:
 
             ## Iterate through list of children for the given spouse
             for c in person.spouses[s]:
-                child = ObjectLabel(self.window, c, 'Person')
+                child = ObjectLabel(self.window, self.window.get_object(c), 'Linker Object')
                 spouse.layout.addWidget(child)
 
                 if s == 'unknown_spouse':
@@ -521,12 +553,15 @@ class PageGenerator:
             for p, place in reign.placeList.items():
                 if p not in placeList:
                     placeList.update({p: place})
+                    self.logger.log('Detailed', 'Added {' + p + '} as a place for {' + person.getID() + '}')
 
         placeMap = PlaceMap(self.window, placeList)
         mapLayout.addWidget(placeMap)
+        self.logger.log('Detailed', 'Successfully created and added the map of places')
 
         ############ Events Group #############
         page.layout.addWidget(EventsWidget(self.window, False, person), 1, 1, 1, 1)
+        self.logger.log('Detailed', 'Successfully created and added the events widget in display mode')
 
         return page
 
@@ -562,9 +597,11 @@ class PageGenerator:
 
         ## Edit the name of the person
         nameLayout.addWidget(AttributeWidget(self.window, True, 'Name', person))
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Name')
 
         ## Edit the nickname of the person
         nameLayout.addWidget(AttributeWidget(self.window, True, 'Nickname', person))
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Nickname')
 
         header_layout.addStretch(1)
         header_layout.addLayout(nameLayout)
@@ -573,6 +610,7 @@ class PageGenerator:
         ## Button to press when finished
         done_button = QPushButton('Done')
         done_button.clicked.connect(display_person)
+        self.logger.log('Detailed', 'Added button to complete editing')
 
         done_button.layout = QVBoxLayout()
         done_button.layout.addWidget(done_button)
@@ -588,7 +626,9 @@ class PageGenerator:
 
         ## Edit Birth and Death dates
         infoGroup.layout.addWidget(AttributeWidget(self.window, True, 'Birth Date', person))
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Birth Date')
         infoGroup.layout.addWidget(AttributeWidget(self.window, True, 'Death Date', person))
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Death Date')
 
         ## Button to switch gender (remakes current page with update)
         switchButton = SwitchGenderButton(self.window, self.logger, person)
@@ -606,10 +646,12 @@ class PageGenerator:
         genderLabel.layout.addStretch(1)
 
         infoGroup.layout.addLayout(genderLabel.layout)
+        self.logger.log('Detailed', 'Added label for the subject\'s gender')
 
         ## Add Father Widget
         fatherLayout = QHBoxLayout()
         fatherLayout.addWidget(ParentWidget(self.window, True, 'Father', person))
+        self.logger.log('Detailed', 'Successfully created and added the parent widget for Father')
         fatherLayout.addStretch(1)
 
         infoGroup.layout.addLayout(fatherLayout)
@@ -617,6 +659,7 @@ class PageGenerator:
         ## Add Mother Widget
         motherLayout = QHBoxLayout()
         motherLayout.addWidget(ParentWidget(self.window, True, 'Mother', person))
+        self.logger.log('Detailed', 'Successfully created and added the parent widget for Mother')
         motherLayout.addStretch(1)
 
         infoGroup.layout.addLayout(motherLayout)
@@ -628,6 +671,7 @@ class PageGenerator:
         spouse_button = QPushButton('Add')
         spouse_button.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Person', 'Search Text': '', 'Subject': person, 'Connection': 'Spouse'}))
         spouse_layout.addWidget(spouse_button)
+        self.logger.log('Detailed', 'Created button to add new spouse')
 
         spouse_lab = QLabel('Spouse(s):')
         spouse_layout.addSpacing(10)
@@ -657,6 +701,8 @@ class PageGenerator:
                 spouse.layout.addLayout(sp_layout)
 
                 remove = RemoveConnectionButton(self.window, person, self.window.get_object(s))
+                self.logger.log('Detailed', 'Successfully created and added button to remove spousal connection between '
+                                            '{' + person.getID() + '} and {' + s + '}')
 
                 spouse.layout.addWidget(remove)
 
@@ -674,6 +720,7 @@ class PageGenerator:
         child.layout.addWidget(child_button)
         child.layout.addSpacing(10)
         child.layout.addWidget(child)
+        self.logger.log('Detailed', 'Created button to add new child')
 
         child.layout.addStretch(1)
 
@@ -683,6 +730,8 @@ class PageGenerator:
         for c in childrenList:
             child_layout = QHBoxLayout()
             remove_child = RemoveConnectionButton(self.window, person, self.window.get_object(c))
+            self.logger.log('Detailed', 'Successfully created and added button to remove child connection between '
+                                        '{' + person.getID() + '} and {' + c + '}')
             child_layout.addWidget(remove_child)
             child_layout.addSpacing(10)
 
@@ -719,6 +768,7 @@ class PageGenerator:
             if not reignObject.isJunior:
                 titleScrollWidget.layout.addWidget(
                     ReignWidget({'Window': self.window, 'Object Type': 'Person', 'Reign': reignObject, 'Edit': True, 'Logger': self.logger}))
+        self.logger.log('Detailed', 'Successfully created and added widget to display reigns')
 
         ## For A New Reign
         addButton = QPushButton('Add')
@@ -732,6 +782,7 @@ class PageGenerator:
 
         titleScrollWidget.layout.addWidget(addButton, alignment=Qt.AlignHCenter)
         titleScrollWidget.layout.addStretch(1)
+        self.logger.log('Detailed', 'Added button to add a new reign')
 
         ## Create scrolling mechanics
         titleScroll = QScrollArea()
@@ -745,6 +796,7 @@ class PageGenerator:
 
         ############ Events Group #############
         page.layout.addWidget(EventsWidget(self.window, True, person), 1, 1)
+        self.logger.log('Detailed', 'Successfully created and added the events widget in edit mode')
 
         # ################ Place Group ################
         # reignGroup = QGroupBox('Places')
@@ -839,14 +891,14 @@ class PageGenerator:
 
         ## Connect to predecessor title
         if titleObject.predecessor is not None:
-            timeline_layout.addWidget(ObjectLabel(self.window, titleObject.predecessor, 'Title'))
+            timeline_layout.addWidget(ObjectLabel(self.window, self.window.get_object(titleObject.predecessor), 'Linker Object'))
 
         timeline_layout.addWidget(QLabel('\u25C0'))
         timeline_layout.addWidget(QLabel('\u25b6'))
 
         ## Connect to successor title
         if titleObject.successor is not None:
-            timeline_layout.addWidget(ObjectLabel(self.window, titleObject.successor, 'Title'))
+            timeline_layout.addWidget(ObjectLabel(self.window, self.window.get_object(titleObject.successor), 'Linker Object'))
 
         timeline_layout.addStretch(1)
 
@@ -1067,11 +1119,9 @@ class PageGenerator:
             reignLabel = QHBoxLayout()
             reignLabel.addStretch(1)
 
-            ruler = reignObject.getConnectedReign('Ruler')
+            ruler = reignObject.getConnectedReign('Person')
 
-            rulerName = ruler.getAttribute('Name') + ' ' + ruler.getAttribute('Nickname')
-
-            reignLabel.addWidget(ObjectLabel(self.window, ruler.getID(), 'Person'))
+            reignLabel.addWidget(ObjectLabel(self.window, reignObject, 'Page Title'))
             reignLabel.addWidget(QLabel(reignObject.getDateString()))
 
             reignLabel.addStretch(1)
@@ -1172,7 +1222,7 @@ class PageGenerator:
             reignLabel = QHBoxLayout()
             reignLabel.addStretch(1)
 
-            ruler = reignObject.getConnectedReign('Ruler')
+            ruler = reignObject.getConnectedReign('Person')
 
             rulerName = ruler.getAttribute('Name') + ' ' + ruler.getAttribute('Nickname')
 

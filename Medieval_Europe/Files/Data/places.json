@@ -115,7 +115,8 @@
             "2e712a06",
             "edf358c7",
             "b08d90ba",
-            "d5c93449"
+            "d5c93449",
+            "1364b117"
         ]
     },
     "57175a44": {
@@ -130,7 +131,8 @@
             "6b2036fc",
             "7c21863c",
             "eb7552ee",
-            "7e06a0cd"
+            "7e06a0cd",
+            "b6f452af"
         ]
     },
     "f8b7ec2e": {
@@ -145,7 +147,8 @@
             "6b2036fc",
             "7c21863c",
             "eb7552ee",
-            "7e06a0cd"
+            "7e06a0cd",
+            "b6f452af"
         ]
     },
     "e813455b": {
@@ -160,7 +163,8 @@
             "6b2036fc",
             "7c21863c",
             "eb7552ee",
-            "7e06a0cd"
+            "7e06a0cd",
+            "b6f452af"
         ]
     },
     "21f4f1e7": {
@@ -697,7 +701,8 @@
             "7c21863c",
             "eb7552ee",
             "7e06a0cd",
-            "c626f2a6"
+            "c626f2a6",
+            "b6f452af"
         ]
     },
     "4967cb81": {
@@ -1914,5 +1919,123 @@
         },
         "Events": {},
         "Reign List": []
+    },
+    "912eaa40": {
+        "Attributes": {
+            "Name": "Saint Omer",
+            "Latitude": "50.75",
+            "Longitude": "2.255"
+        },
+        "Events": {
+            "b7e46ea6": {
+                "Date": "2/25/1212",
+                "Content": "Treaty of Pont-\u00e0-Vendin transfers ownership to King Philip II of France"
+            }
+        },
+        "Reign List": []
+    },
+    "6111dcab": {
+        "Attributes": {
+            "Name": "Aire-sur-la-Lys",
+            "Latitude": "50.64",
+            "Longitude": "2.4"
+        },
+        "Events": {
+            "c78719c6": {
+                "Date": "2/25/1212",
+                "Content": "Treaty of Pont-\u00e0-Vendin transfers ownership to King Philip II of France"
+            }
+        },
+        "Reign List": []
+    },
+    "2ee777ef": {
+        "Attributes": {
+            "Name": "Bethune",
+            "Latitude": "50.53",
+            "Longitude": "2.64"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d4b4b20f": {
+        "Attributes": {
+            "Name": "Dampierre",
+            "Latitude": "48.55",
+            "Longitude": "4.37"
+        },
+        "Events": {},
+        "Reign List": [
+            "848cf0dc",
+            "4319a36a",
+            "313d4da2",
+            "43376825"
+        ]
+    },
+    "e647774d": {
+        "Attributes": {
+            "Name": "Courtrai",
+            "Latitude": "50.83",
+            "Longitude": "3.265"
+        },
+        "Events": {},
+        "Reign List": [
+            "f1fa7912",
+            "5348c00c",
+            "78782829",
+            "b6f452af",
+            "c626f2a6",
+            "6b2036fc",
+            "7c21863c",
+            "eb7552ee",
+            "7e06a0cd"
+        ]
+    },
+    "ea4b0f0d": {
+        "Attributes": {
+            "Name": "Bourbon",
+            "Latitude": "46.585",
+            "Longitude": "3.06"
+        },
+        "Events": {},
+        "Reign List": [
+            "dbf3e8cb",
+            "9fc4c422",
+            "a1e95026",
+            "41eda251",
+            "6214b8b0",
+            "e12f25e2"
+        ]
+    },
+    "f62f2a1c": {
+        "Attributes": {
+            "Name": "Montlu\u00e7on",
+            "Latitude": "46.34",
+            "Longitude": "2.6"
+        },
+        "Events": {},
+        "Reign List": [
+            "dbf3e8cb",
+            "9fc4c422",
+            "a1e95026",
+            "41eda251",
+            "6214b8b0",
+            "e12f25e2"
+        ]
+    },
+    "ea0443b9": {
+        "Attributes": {
+            "Name": "Germigny-l'Exempt",
+            "Latitude": "46.92",
+            "Longitude": "2.9"
+        },
+        "Events": {},
+        "Reign List": [
+            "dbf3e8cb",
+            "9fc4c422",
+            "a1e95026",
+            "41eda251",
+            "6214b8b0",
+            "e12f25e2"
+        ]
     }
 }

@@ -39,7 +39,12 @@
             "d5c93449",
             "c62ada3e",
             "2e712a06",
-            "b08d90ba"
+            "b08d90ba",
+            "5eba9084",
+            "8a5bacda",
+            "997862c3",
+            "715ea14d",
+            "1364b117"
         ]
     },
     "192ed49e": {
@@ -98,7 +103,7 @@
         },
         "Titular": false,
         "Connections": {
-            "Predecessor": null,
+            "Predecessor": "7cee1085",
             "Successor": null
         },
         "Events": {},
@@ -115,7 +120,8 @@
             "a167b38e",
             "eb0339d5",
             "37c8efd8",
-            "038b2e85"
+            "038b2e85",
+            "4f2ccd8a"
         ]
     },
     "35500a0c": {
@@ -153,7 +159,8 @@
         },
         "Events": {},
         "Reign List": [
-            "d8fa9a78"
+            "d8fa9a78",
+            "c45a8332"
         ]
     },
     "485707ef": {
@@ -485,7 +492,11 @@
         "Events": {},
         "Reign List": [
             "6214b8b0",
-            "a1e95026"
+            "41eda251",
+            "a1e95026",
+            "e12f25e2",
+            "9fc4c422",
+            "dbf3e8cb"
         ]
     },
     "84e4630c": {
@@ -525,7 +536,7 @@
             "Realm Name": "Namur",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "Margravine"
         },
         "Titular": false,
         "Connections": {
@@ -533,7 +544,11 @@
             "Successor": null
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "4d9b42c0",
+            "4c168894",
+            "74e6be24"
+        ]
     },
     "9cbecf40": {
         "Attributes": {
@@ -605,7 +620,9 @@
             "3b963071",
             "78782829",
             "f1fa7912",
-            "5348c00c"
+            "5348c00c",
+            "b6f452af",
+            "6a4eecbb"
         ]
     },
     "c372ca76": {
@@ -629,7 +646,9 @@
             "43070645",
             "e8f9b51b",
             "3efc8dad",
-            "55235065"
+            "55235065",
+            "ae5f3bfc",
+            "596ce4fa"
         ]
     },
     "cd2b5a9e": {
@@ -722,6 +741,7 @@
             "37478608",
             "0d493f06",
             "93742053",
+            "35af7297",
             "95adfe00",
             "5cdc4b4b",
             "9ddc2409"
@@ -746,7 +766,9 @@
             "1c61e795",
             "1f9a7a3b",
             "efdcd438",
-            "b383e7b5"
+            "b383e7b5",
+            "d0c4002e",
+            "d4478e25"
         ]
     },
     "ee6de42c": {
@@ -800,7 +822,9 @@
         },
         "Events": {},
         "Reign List": [
-            "58d6e996"
+            "58d6e996",
+            "029e167d",
+            "36a9a42a"
         ]
     },
     "fb5a6b3f": {
@@ -977,17 +1001,24 @@
         "Titular": false,
         "Connections": {
             "Predecessor": null,
-            "Successor": null
+            "Successor": "2b1fa0a6"
         },
         "Events": {},
         "Reign List": [
             "2bb6a358",
             "b19e6b3e",
             "95202bdb",
+            "c2cc7bc6",
+            "b85f4cf4",
             "7b2f43f9",
             "8fe3a668",
             "b2dcf7b0",
-            "a0ae3b72"
+            "a0ae3b72",
+            "8283d69a",
+            "b77e8933",
+            "4a1d27c9",
+            "8411fef9",
+            "107740d0"
         ]
     },
     "859d6e25": {
@@ -1662,7 +1693,9 @@
         },
         "Events": {},
         "Reign List": [
-            "ef576b72"
+            "ef576b72",
+            "d14ef98d",
+            "c7d50db5"
         ]
     },
     "aa90d125": {
@@ -2032,5 +2065,78 @@
         },
         "Events": {},
         "Reign List": []
+    },
+    "7a753e31": {
+        "Attributes": {
+            "Realm Name": "Bethune",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "ddec439c",
+            "5b4b542c"
+        ]
+    },
+    "2c43f97f": {
+        "Attributes": {
+            "Realm Name": "Avesnes",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "29ca9607"
+        ]
+    },
+    "bf2babc2": {
+        "Attributes": {
+            "Realm Name": "Dampierre",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "313d4da2",
+            "848cf0dc",
+            "4319a36a",
+            "43376825"
+        ]
+    },
+    "f651c434": {
+        "Attributes": {
+            "Realm Name": "Bohemia",
+            "Realm Title": "Kingdom",
+            "Male Ruler Title": "King",
+            "Female Ruler Title": "Queen"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "bfa4b504",
+            "6ed32967"
+        ]
     }
 }

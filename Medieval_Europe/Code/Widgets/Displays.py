@@ -4,6 +4,7 @@ Created on Aug 1, 2022
 @author: kairom13
 """
 import math
+import sys
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -29,7 +30,7 @@ class ObjectLabelWidget(QWidget):
         self.button = button
         self.placeCheckbox = None
 
-        self.info = obj.getDisplayInfo()
+        self.info = obj.getName('Full Info')
 
         if self.button.connection in ('Predecessor', 'Successor'):
             self.placeCheckbox = QCheckBox('Transfer Places?')
@@ -422,28 +423,11 @@ class PlaceMap(QWidget):
 
 ## Interactive Object Label for Relations and Titles
 class ObjectLabel(QLabel):
-    def __init__(self, window, objectID, objectType, gender=-1, context=None):
-        super(ObjectLabel, self).__init__()
+    def __init__(self, window, subject, context=None):
+        super(ObjectLabel, self).__init__(subject.getName(context))
 
         self.window = window
-        self.objectType = objectType
-
-        if self.objectType == 'Person':
-            self.obj = self.window.get_object(objectID)
-            if context == 'Reign':
-                style = '\n'
-            else:
-                style = ' '
-            self.name = self.obj.getAttribute('Name') + style + self.obj.getAttribute('Nickname')
-        elif self.objectType == 'Person Title':
-            self.obj = self.window.get_object(objectID)
-            self.name = self.obj.getFullRulerTitle(gender)
-
-        elif self.objectType == 'Title':
-            self.obj = self.window.get_object(objectID)
-            self.name = self.obj.getFullRealmTitle()
-
-        self.setText(self.name)
+        self.subject = subject
 
         self.setStyleSheet('QLabel {color : black; text-decoration: underline}')
         self.adjustSize()
@@ -461,11 +445,16 @@ class ObjectLabel(QLabel):
             self.setStyleSheet('QLabel {color : black; text-decoration: underline}')
             return True
         elif event.type() == QEvent.MouseButtonRelease:
-            self.window.logger.log('Code', 'Clicked to display {' + self.obj.getID() + '}')
-            if self.objectType == 'Person':
-                self.window.page_factory('display_person_page', {'Person': self.obj})
-            elif self.objectType in ('Title', 'Person Title'):
-                self.window.page_factory('display_title_page', {'Title': self.obj, 'Page Type': 'View'})
+            objectType = str(self.subject.__class__.__name__)
+            self.window.logger.log('Code', 'Clicked to display {' + self.subject.getID() + '}')
+            if objectType == 'Person':
+                self.window.page_factory('display_person_page', {'Person': self.subject})
+            elif objectType in ('Title', 'Person Title'):
+                self.window.page_factory('display_title_page', {'Title': self.subject})
+            elif objectType == 'Reign':
+                self.window.page_factory('display_person_page', {'Person': self.subject.getConnectedReign('Person')})
+            else:
+                self.window.logger.log('Error', str(objectType) + ' is not a valid object type for ObjectLabel')
             return True
         return False
 
@@ -529,20 +518,3 @@ class EventsWidget(QGroupBox):
             self.window.page_factory('edit_title_page', {'Title': self.subject})
         elif self.subject.getObjectType() == 'Place':
             self.window.page_factory('edit_place_page', {'Place': self.subject})
-
-class ConnectedReignLabel(QVBoxLayout):
-    def __init__(self, window, connection, subject):
-        super().__init__()
-
-        midLabel = QHBoxLayout()
-        if connection == 'Predecessor':
-            midLabel.addStretch(1)
-            midLabel.addWidget(ObjectLabel(window, subject.getID(), 'Person', context='Reign'))
-        elif connection == 'Successor':
-            midLabel.addWidget(ObjectLabel(window, subject.getID(), 'Person', context='Reign'))
-            midLabel.addStretch(1)
-        else:
-            window.logger.log('Error', str(connection) + ' is an invalid connection to create a label for')
-
-        self.addLayout(midLabel)
-        self.addStretch(1)

@@ -9,6 +9,9 @@ import os
 import sys
 import uuid
 from abc import ABC, abstractmethod
+
+from PyQt5.QtWidgets import QWidget, QMessageBox, QDialog, QDialogButtonBox, QVBoxLayout, QLabel
+
 from Medieval_Europe import get_parent_path
 
 ######################################
@@ -23,7 +26,9 @@ class CustomObject(ABC):
             self.objectID = uuid.uuid4().hex[:8]
         else:
             self.objectID = objectID
-        self.name = 'No Name'
+        self.name = {'Full Info': 'No Name',
+                     'Page Title': 'No Name',
+                     'Linker Object': 'No Name'}
         self.objectType = objectType
 
         self.logger = logger
@@ -42,8 +47,13 @@ class CustomObject(ABC):
         pass
 
     ## Get the name of the object
-    def getName(self):
-        return self.name
+    def getName(self, name_type=None):
+        if name_type is None:
+            return self.name['Page Title']
+        elif name_type in self.name:
+            return self.name[name_type]
+        else:
+            self.logger.log('Error', 'Invalid name type ' + str(name_type))
 
     ## Get new ID if this one is a duplicate (Should be redundant)
     def getNewID(self):
@@ -54,8 +64,11 @@ class CustomObject(ABC):
     def getID(self):
         return self.objectID
 
-    def removeEvent(self, id):
-        self.eventList.pop(id)
+    def removeEvent(self, event_id):
+        if event_id in self.eventList:
+            self.eventList.pop(event_id)
+        else:
+            self.logger.log('Warning', 'Cannot remove event ' + str(event_id) + '. Not in event list')
 
     def updateEvent(self, id, eventDetails):
         self.eventList.update({id: eventDetails})
@@ -75,7 +88,6 @@ class CustomObject(ABC):
             self.attributes.update({attribute: info})
         else:
             self.logger.log('Error', str(attribute) + ' is not a valid attribute of a ' + str(self.__class__.__name__))
-            sys.exit(0)
 
     ## Get attribute value
     def getAttribute(self, attribute):
@@ -83,7 +95,6 @@ class CustomObject(ABC):
             return self.attributes[attribute]
         else:
             self.logger.log('Error', str(attribute) + ' is not a valid attribute of a ' + str(self.__class__.__name__))
-            sys.exit(0)
 
     def check_argument(self, arg, connection=None):
         if isinstance(arg, str):
@@ -92,7 +103,6 @@ class CustomObject(ABC):
             return arg.getID()
         else:
             self.logger.log('Error', str(arg) + ' is an invalid data type. Should be String ID or CustomObject.')
-            sys.exit(0)
 
     ## Function to handle modification to the connection dict:
     # Add: subject with the given connection name
@@ -103,7 +113,6 @@ class CustomObject(ABC):
 
         if subjectID is None:
             self.logger.log('Error', 'Cannot modify connection, no subject given')
-            sys.exit(0)
         else:
             if update == 'Add':
                 if subjectID in self.connectionDict:
@@ -118,7 +127,7 @@ class CustomObject(ABC):
                     return self.connectionDict[subjectID]
                 else:
                     self.logger.log('Error', 'Cannot get connection. {' + str(subjectID) + '} is not a connection of ' + self.getName())
-                    sys.exit(0)
+
 
             elif update == 'Remove':
                 if subjectID in self.connectionDict:
@@ -128,16 +137,11 @@ class CustomObject(ABC):
 
             else:
                 self.logger.log('Error', str(update) + ' is an invalid update value')
-                sys.exit(0)
+
 
     ## Get Dictionary of values
     @abstractmethod
     def getDict(self):
-        pass
-
-    ## Get Info to display in object list
-    @abstractmethod
-    def getDisplayInfo(self):
         pass
 
 ######################################
@@ -185,32 +189,34 @@ class Person(CustomObject):
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
 
-        self.setName()
-        
         self.reignList = {}  # {reign.id: reignObject}
         self.placeList = {}  # {place.id: placeObject
+
+        self.setName()
 
     ## Set this person's name as the full name
     def setName(self):
         if self.getAttribute('Nickname') == '':
             nickname = ''
+            self.name.update({'Linker Object': self.getAttribute('Name')})
         else:
             nickname = ' ' + self.getAttribute('Nickname')
+            self.name.update({'Linker Object': self.getAttribute('Name') + ' ' + self.getAttribute('Nickname')})
+
+        pageTitle = self.getAttribute('Name') + nickname
+        fullInfo = self.getAttribute('Name') + nickname + ' ' + self.getDateString()
             
         if self.primary_title('Has'):
-            primaryTitle = ', ' + self.primary_title('Get')
-        else:
-            primaryTitle = ''
-            
-        self.name = self.getAttribute('Name') + nickname + primaryTitle
+            pageTitle += ', ' + self.primary_title('Get')
+            fullInfo += '\n' + self.primary_title('Get')
 
-    ## Return a string of info to display for this person
-    def getDisplayInfo(self):
-        name_split = self.getName().split(', ')
-        if len(name_split) == 2:
-            return name_split[0] + ' (' + self.getAttribute('Birth Date') + ' - ' + self.getAttribute('Death Date') + ')\n' + name_split[1]
-        else:
-            return name_split[0] + ' (' + self.getAttribute('Birth Date') + ' - ' + self.getAttribute('Death Date') + ')'
+        self.name.update({'Page Title': pageTitle})
+        self.name.update({'Full Info': fullInfo})
+
+        for r in self.reignList:
+            reign = self.reignList[r]
+            reign.setName()
+
 
     ## Add Relationship with Child
     ## If there is no spouse, add child with unknown spouse
@@ -238,7 +244,7 @@ class Person(CustomObject):
 
             else:
                 self.logger.log('Error', 'Cannot add child, {' + spouseID + '} is not a valid spouse')
-                sys.exit(0)
+
         
     ## Remove Relationship with Child 
     def removeChild(self, child):
@@ -303,7 +309,7 @@ class Person(CustomObject):
                     self.connection('Add', parentID, name=relation)
             else:
                 self.logger.log('Error', str(relation) + ' is not a valid parent type to add')
-                sys.exit(0)
+
     
     ## Remove Relationship with Parent (can be either name or subject)
     def removeParent(self, parent):
@@ -329,7 +335,6 @@ class Person(CustomObject):
             return self.parents['Father'], self.parents['Mother']
         else:
             self.logger.log('Error', str(relation) + ' is not a valid parent type to get')
-            sys.exit(0)
             
     def addReign(self, reign):
         if isinstance(reign, Reign):
@@ -337,7 +342,6 @@ class Person(CustomObject):
             self.connection('Add', reign.getID(), 'Reign')
         else:
             self.logger.log('Error', 'Cannot add ' + str(reign) + ' as Reign. Invalid type')
-            sys.exit(0)
         
     def removeReign(self, reign):
         reignID = self.check_argument(reign, 'Reign')
@@ -401,7 +405,7 @@ class Person(CustomObject):
                             juniorReignObject.setPredecessor(predecessorReign.getID())
                         else:
                             print(str(predecessorPerson.getAttribute('Name')) + ', ' + juniorTitle.getFullRulerTitle(predecessorPerson.gender) +
-                                  ' already has a successor in ' + str(juniorReignObject.getConnectedReign('Ruler').getName()))
+                                  ' already has a successor in ' + str(juniorReignObject.getConnectedReign('Person').getName()))
                             predecessorReign.setSuccessor(juniorReignObject.getID())
                             juniorReignObject.setPredecessor(predecessorReign.getID())
                 
@@ -457,7 +461,7 @@ class Person(CustomObject):
                             juniorReignObject.setSuccessor(successorReign.getID())
                         else:
                             print(str(successorPerson.getAttribute('Name')) + ', ' + juniorTitle.getFullRulerTitle(successorPerson.gender) +
-                                  ' already has a successor in ' + str(juniorReignObject.getConnectedReign('Ruler').getName()))
+                                  ' already has a successor in ' + str(juniorReignObject.getConnectedReign('Person').getName()))
                             successorReign.setPredecessor(juniorReignObject.getID())
                             juniorReignObject.setSuccessor(successorReign.getID())
                 
@@ -486,8 +490,11 @@ class Person(CustomObject):
             return self.primaryTitle
 
         elif action == 'Remove':
-            self.primaryTitle = None
-            self.setName()
+            if title.getFullRulerTitle(self.gender) == self.primaryTitle:
+                self.primaryTitle = None
+                self.setName()
+            else:
+                self.logger.log('Warning', 'Cannot remove ' + title.getFullRulerTitle(self.gender) + '. Is not the primary title: ' + self.primaryTitle)
 
         elif action == 'Has':
             if self.primaryTitle is None:
@@ -519,6 +526,9 @@ class Person(CustomObject):
             self.placeList.pop(placeID)
         else:
             self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
+
+    def getDateString(self):
+        return '(' + self.getAttribute('Birth Date') + ' - ' + self.getAttribute('Death Date') + ')'
         
     ## Get Dictionary of values
     def getDict(self):
@@ -594,7 +604,8 @@ class Title(CustomObject):
         self.orderReignList = []
 
     def setName(self):
-        self.name = self.getFullRealmTitle()
+        for t in self.name:
+            self.name.update({t: self.getFullRealmTitle()})
 
     ## Return a string of info to display for this person
     def getDisplayInfo(self):
@@ -733,7 +744,9 @@ class Place(CustomObject):
         self.setName()
 
     def setName(self):
-        self.name = self.getAttribute('Name') + ' Place'
+        self.name.update({'Full Info': self.getAttribute('Name') + ' (' + self.getAttribute('Latitude') + ', ' + self.getAttribute('Longitude') + ')'})
+        self.name.update({'Page Title': self.getAttribute('Name') + ' (' + self.getAttribute('Latitude') + ', ' + self.getAttribute('Longitude') + ')'})
+        self.name.update({'Linker Object': self.getAttribute('Name')})
 
     ## Return a string of info to display for this person
     def getDisplayInfo(self):
@@ -818,7 +831,7 @@ class Reign(CustomObject):
         self.order = -1  # The order of this reign in the title
 
         if init_dict is None:
-            self.connections = {'Ruler': ruler,
+            self.connections = {'Person': ruler,
                                 'Title': title,
                                 'Predecessor': None,
                                 'Successor': None}
@@ -830,7 +843,7 @@ class Reign(CustomObject):
             for a in self.attributes:
                 self.updateAttribute(a, init_dict['Attributes'][a])
 
-            self.connections = {'Ruler': ruler,
+            self.connections = {'Person': ruler,
                                 'Title': title,
                                 'Predecessor': init_dict['Connections']['Predecessor'],
                                 'Successor': init_dict['Connections']['Successor']}
@@ -846,18 +859,23 @@ class Reign(CustomObject):
 
             self.isPrimary = init_dict['Is Primary']
             if self.isPrimary:
-                self.connections['Ruler'].primary_title('Set', self.getConnectedReign('Title'))
+                self.connections['Person'].primary_title('Set', self.getConnectedReign('Title'))
 
         self.setName()
 
         self.placeList = {}  # List of places associated with this reign
 
     def setName(self):
-        self.name = self.getConnectedReign('Ruler').getAttribute('Name') + ', ' + self.getConnectedReign('Title').getFullRulerTitle(self.getConnectedReign('Ruler').gender)
+        ruler = self.getConnectedReign('Person')
+        title = self.getConnectedReign('Title')
+        self.name.update({'Page Title': ruler.getAttribute('Name') + ', ' + title.getFullRulerTitle(ruler.gender)})
 
-    ## Return a string of info to display for this person
-    def getDisplayInfo(self):
-        return self.getConnectedReign('Ruler').getAttribute('Name') + ' ' + self.getDateString()
+        if ruler.getAttribute('Nickname') == '':
+            self.name.update({'Linker Object': ruler.getAttribute('Name')})
+            self.name.update({'Full Info': ruler.getAttribute('Name') + self.getDateString() + '\n' + title.getFullRulerTitle(ruler.gender)})
+        else:
+            self.name.update({'Linker Object': ruler.getAttribute('Name') + '\n' + ruler.getAttribute('Nickname')})
+            self.name.update({'Full Info': ruler.getAttribute('Name') + ' ' + ruler.getAttribute('Nickname') + self.getDateString() + '\n' + title.getFullRulerTitle(ruler.gender)})
 
     def setConnectedReign(self, target, connection):
         targetID = self.check_argument(target, connection)
@@ -866,23 +884,26 @@ class Reign(CustomObject):
             self.connections.update({connection: targetID})
             self.connection('Add', targetID, connection)
         else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection to add for a reign')
+            self.logger.log('Error', str(connection) + ' is not a valid connection to add for a reign {' + self.getID() + '}')
+
 
     def getConnectedReign(self, connection):
         if connection in self.connections:
             return self.connections[connection]
         else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign')
-            return None
+            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign {' + self.getID() + '}')
+
 
     def removeConnectedReign(self, connection):
         if connection not in ('Predecessor', 'Successor'):
-            self.logger.log('Error', str(connection) + ' is not a valid connection to remove from a reign')
+            self.logger.log('Error', str(connection) + ' is not a valid connection to remove from a reign {' + self.getID() + '}')
+
         elif connection in self.connections:
-            self.connections.update({connection: None})
             self.connection('Remove', self.getConnectedReign(connection))
+            self.connections.update({connection: None})
         else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign')
+            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign {' + self.getID() + '}')
+
 
     def hasConnectedReign(self, connection):
         if connection in self.connections:
@@ -891,12 +912,12 @@ class Reign(CustomObject):
             else:
                 return False
         else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign')
-            return False
+            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign {' + self.getID() + '}')
+
 
     def setPrimary(self, checked):
         self.isPrimary = checked
-        ruler = self.getConnectedReign('Ruler')
+        ruler = self.getConnectedReign('Person')
 
         if checked:
             ruler.primary_title('Set', self.getConnectedReign('Title'))
@@ -937,7 +958,7 @@ class Reign(CustomObject):
         if placeID in self.placeList:
             self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
         else:
-            self.getConnectedReign('Ruler').addPlace(placeObject)
+            self.getConnectedReign('Person').addPlace(placeObject)
             self.placeList.update({placeID: placeObject})
             self.connection('Add', placeID, 'Place')
 
@@ -945,7 +966,7 @@ class Reign(CustomObject):
         placeID = placeObject.getID()
 
         if placeID in self.placeList:
-            self.getConnectedReign('Ruler').removePlace(placeObject)
+            self.getConnectedReign('Person').removePlace(placeObject)
             self.placeList.pop(placeID)
             self.connection('Remove', placeID)
         else:
@@ -978,7 +999,8 @@ class Logger:
 
         self.logDict = {'Code': {'Pages': {}, 'Log': {}},
                         'Error': {'Pages': {}, 'Log': {}},
-                        'Warning': {'Pages': {}, 'Log': {}}}
+                        'Warning': {'Pages': {}, 'Log': {}},
+                        'Detailed': {'Pages': {}, 'Log': {}}}
 
         self.page_key = '000_Init'
 
@@ -1020,16 +1042,19 @@ class Logger:
 
         if array is None:
             array = False
+
+        sublog = {}
+        pages = {}
                 
         # Get the appropriate log dict
         if kind in self.logDict:
-            codeLog = self.logDict['Code']['Log']
             sublog = self.logDict[kind]['Log']
             pages = self.logDict['Code']['Pages']  # The number of logs for the particular page instance
+
+            if kind != 'Detailed':
+                self.log('Detailed', kind + ': ' + value, array)
         else:
-            sublog = {}
-            pages = {}
-            print(str(kind) + ' is not a valid log type')
+            self.log('Error', str(kind) + ' is not a valid type of log. Must be ' + str(list(self.logDict.keys())))
 
         # Check if the page key (i.e. 005_display_title_page) has already been added to the log dict
         if self.page_key in pages:
@@ -1072,6 +1097,9 @@ class Logger:
 
         # Call writeLogs to write to external file  
         self.writeLogs()
+
+        if kind == 'Error':
+            self.handleError(value)
         
     def enhanceStringLinks(self, value):
         if '{' in value:  # Only replace IDs if there are actually IDs to replace
@@ -1091,7 +1119,7 @@ class Logger:
                 if obj is not None:
                     value += obj.getName() + after  # Replace object ID with associated object name
                 else:
-                    print('Could not enhance ' + str(objectID) + '. ID not found in object lists')
+                    self.log('Warning', 'Could not enhance ' + str(objectID) + '. ID not found in object lists')
                     value += str(objectID) + after
                 
         return value
@@ -1100,3 +1128,34 @@ class Logger:
         for k in self.logDict:
             with open(os.path.join(get_parent_path(), 'Logs/' + k.lower() + '_log.json'), 'w') as outfile:
                 json.dump(self.logDict[k]['Log'], outfile, indent=4)
+
+    def handleError(self, message):
+        dlg = DisplayErrorDialog(message)
+        dlg.exec()
+
+        sys.exit()
+
+
+## Dialog box to for displaying an error
+class DisplayErrorDialog(QDialog):
+    def __init__(self, message):
+        super().__init__()
+
+        self.setWindowTitle('An Error Occurred')
+
+        QBtn = QDialogButtonBox.Ok
+
+        self.buttonBox = QDialogButtonBox(QBtn)
+        self.buttonBox.accepted.connect(self.accept)
+
+        self.layout = QVBoxLayout()
+        topLabel = QLabel('The application encountered an error:')
+        messageLabel = QLabel(message)
+        bottomLabel = QLabel('The application will now close')
+
+        self.layout.addWidget(topLabel)
+        self.layout.addWidget(messageLabel)
+        self.layout.addWidget(bottomLabel)
+        self.layout.addWidget(self.buttonBox)
+        self.setLayout(self.layout)
+

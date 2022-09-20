@@ -1,5 +1,8 @@
 
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QScrollArea
+from PyQt5.QtCore import *
+from PyQt5.QtGui import QPainter, QPen
+
 import json
 import networkx as nx
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
@@ -54,15 +57,12 @@ class DisplayData(QWidget):
 
         self.layout().addWidget(scroll)
 
-class DisplayRelationGraph(FigureCanvasQTAgg):
-    def __init__(self, window, personList, parent=None, width=5, height=4, dpi=100):
-        fig = Figure(figsize=(width, height), dpi=dpi)
-        self.axes = fig.add_subplot(111)
-        super(DisplayRelationGraph).__init__(fig)
+
+class DisplayRelationGraph(QWidget):
+    def __init__(self, window, personList):
+        super().__init__()
 
         self.window = window
-
-        logger = self.window.logger
 
         app = self.window.app
         screen = app.primaryScreen()
@@ -78,6 +78,7 @@ class DisplayRelationGraph(FigureCanvasQTAgg):
         self.setGeometry(int((rect.width() - width)/2), 100, width, height)
 
         self.setLayout(QVBoxLayout())
+        self.installEventFilter(self)
 
         G = nx.DiGraph()
         labels = {}
@@ -106,7 +107,30 @@ class DisplayRelationGraph(FigureCanvasQTAgg):
             labels[p] = person.getAttribute('Name')
 
         colors = nx.get_edge_attributes(G, 'color').values()
-        pos = nx.kamada_kawai_layout(G)
+        self.pos = nx.kamada_kawai_layout(G)
 
-        nx.draw_kamada_kawai(G, with_labels=False, edge_color=colors, node_size=15, width=0.5, font_size=7, ax=self.axes)
-        nx.draw_networkx_labels(G, pos, labels, font_size=6, alpha=.7, ax=self.axes)
+        #nx.draw_kamada_kawai(G, with_labels=False, edge_color=colors, node_size=15, width=0.5, font_size=7, ax=self.axes)
+        #nx.draw_networkx_labels(G, pos, labels, font_size=6, alpha=.7, ax=self.axes)
+
+        #nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=10, width=0.5)
+        #nx.draw_networkx_labels(G, pos, labels, font_size=8, alpha=1)
+
+        self.window.logger.log('Code', 'Finish Display Relation Graph Init')
+
+        self.update()
+
+    def paintEvent(self, event):
+        self.window.logger.log('Code', 'Start Painting')
+        painter = QPainter(self)
+        painter.setRenderHints(painter.Antialiasing)
+
+        # Paint Style
+        painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
+
+        for p_id in self.pos:
+            x_pos = int(self.pos[p_id][0]*100) + 100
+            y_pos = int(self.pos[p_id][1]*100) + 100
+
+            painter.drawEllipse(x_pos, y_pos, 15, 15)
+
+        self.window.logger.log('Code', 'Painting Graph')

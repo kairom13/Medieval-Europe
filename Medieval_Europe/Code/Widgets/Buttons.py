@@ -114,7 +114,7 @@ class ObjectButton(QPushButton):
                 title = None
 
                 if isinstance(self.subject, Reign):
-                    person = self.subject.getConnectedReign('Ruler')
+                    person = self.subject.getConnectedReign('Person')
                     print('Subject is reign, going back to person')
                 elif isinstance(self.subject, Person):
                     person = self.subject
@@ -158,6 +158,8 @@ class RemoveConnectionButton(QPushButton):
 
     def eventFilter(self, object, event):
         if event.type() == QEvent.MouseButtonRelease:
+            self.window.logger.log('Code', 'Removing {' + self.target.getID() + '} as ' + str(self.connection) + ' with {' + self.subject.getID() + '}')
+
             # Remove the target as a spouse of the subject
             # Remove the subject as a spouse of the target
             if self.connection == 'Spouse':
@@ -209,12 +211,10 @@ class RemoveConnectionButton(QPushButton):
                 self.target.removeConnectedReign(opp_connection)  # Remove the subject reign as the opposite connection to the target reign
 
                 # Get the person of the subject reign to return to
-                person = self.subject.getConnectedReign('Ruler')
+                person = self.subject.getConnectedReign('Person')
                 self.window.page_factory('edit_person_page', {'Person': person})
 
             elif self.connection == 'Reign':
-                self.window.logger.log('Code', 'Removing ' + str(self.target.getName()) + ' as ' + str(self.connection) + ' with ' + str(self.subject.getName()))
-
                 self.subject.removeReign(self.target)
                 self.target.removePlace(self.subject)
 
@@ -222,7 +222,6 @@ class RemoveConnectionButton(QPushButton):
 
             else:
                 self.window.logger.log('Error', str(self.connection) + ' is not a valid connection to removal')
-                sys.exit(0)
 
             return True
         return False
@@ -235,7 +234,7 @@ class UnmergeButton(QPushButton):
         self.window = window
         self.juniorReign = juniorReign
         self.seniorReign = juniorReign.mergedReigns['Senior']
-        self.person = juniorReign.getConnectedReign('Ruler')
+        self.person = juniorReign.getConnectedReign('Person')
 
         self.installEventFilter(self)
 

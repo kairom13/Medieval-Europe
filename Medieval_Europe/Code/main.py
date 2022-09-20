@@ -202,23 +202,8 @@ class MainWindow(QMainWindow):
                     return o_list[subjectID]
 
             self.logger.log('Error', 'Cannot get object for ' + str(subjectID) + '. Not a valid object ID')
-            return None
         else:
             self.logger.log('Error', 'Cannot get object for ' + str(subjectID) + '. Invalid type')
-            return None
-
-    # Get the name of object (i.e. map from id to name)
-    def get_object_name(self, subjectID):
-        if isinstance(subjectID, str):
-            for o_key, o_list in self.objectLists.items():
-                if subjectID in o_list:
-                    return o_list[subjectID].getName()
-
-            self.logger.log('Error', 'Cannot get object name for ' + str(subjectID) + '. Not a valid object ID')
-            return None
-        else:
-            self.logger.log('Error', 'Cannot get object name for ' + str(subjectID) + '. Invalid type')
-            return None
 
     ## Page Factory(Tab Index, Parameters)
     # Generic function for removing current content and adding new content based on the page at tab_index
@@ -454,7 +439,7 @@ class MainWindow(QMainWindow):
                 juniorObject = self.get_object(j)
 
                 # Create new reign with this reign's ruler
-                newJunior = Reign(self.logger, subject.getConnectedReign('Ruler'), subject.getConnectedReign('Title'), None)
+                newJunior = Reign(self.logger, subject.getConnectedReign('Person'), subject.getConnectedReign('Title'), None)
 
                 # Connect these junior reigns to the target's junior reigns
                 newJunior.setConnectedReign(juniorObject.getID(), targetConnection)  # Set the predecessor junior as the predecessor of this reign
@@ -479,7 +464,7 @@ class MainWindow(QMainWindow):
             ## Scenarios:
             # 1) Neither reign has any predecessors or successors: make target the senior reign to the subject's junior
 
-            person = subject.getConnectedReign('Ruler')
+            person = subject.getConnectedReign('Person')
             person.mergeReigns(subject, target, self)
 
         # Get reign from title in target for place in subject
