@@ -58,7 +58,7 @@ colors = nx.get_edge_attributes(G, 'color').values()
 #pos = nx.kamada_kawai_layout(G)
 pos = graphviz_layout(G, prog="neato")
 
-nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=15, width=0.5, font_size=7)
+nx.draw(G, pos=pos, with_labels=False, edge_color=colors, node_size=15, width=0.5, font_size=7, alpha=.7)
 nx.draw_networkx_labels(G, pos, labels, font_size=6, alpha=.7)
 
 plt.show()

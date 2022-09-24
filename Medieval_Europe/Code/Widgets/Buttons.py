@@ -75,7 +75,7 @@ class ObjectButton(QPushButton):
                     # Transfer all the places in the subject's junior reigns to the equivalent in the target reign
                     for prev_j in self.subject.mergedReigns['Junior']:
                         sub_j = self.window.get_object(prev_j)  # Get the object of the junior reign
-                        tar_j = self.window.get_object(sub_j.getConnectedReign(self.connection))  # Get the target object
+                        tar_j = self.window.get_object(sub_j.getConnection(self.connection))  # Get the target object
                         for p, place in sub_j.placeList.items():
                             if p not in tar_j.placeList:
                                 tar_j.addPlace(place)
@@ -99,7 +99,7 @@ class ObjectButton(QPushButton):
                     # Transfer all the places in the target's junior reigns to the equivalent in the subject reign
                     for prev_j in self.target.mergedReigns['Junior']:
                         sub_j = self.window.get_object(prev_j)  # Get the object of the junior reign
-                        tar_j = self.window.get_object(sub_j.getConnectedReign(new_con))  # Get the target object
+                        tar_j = self.window.get_object(sub_j.getConnection(new_con))  # Get the target object
                         for p, place in sub_j.placeList.items():
                             if p not in tar_j.placeList:
                                 tar_j.addPlace(place)
@@ -114,7 +114,7 @@ class ObjectButton(QPushButton):
                 title = None
 
                 if isinstance(self.subject, Reign):
-                    person = self.subject.getConnectedReign('Person')
+                    person = self.subject.getConnection('Person')
                     print('Subject is reign, going back to person')
                 elif isinstance(self.subject, Person):
                     person = self.subject
@@ -171,12 +171,12 @@ class RemoveConnectionButton(QPushButton):
             # Remove the subject as a child of the target
             elif self.connection in ('Mother', 'Father'):
                 self.subject.removeParent(self.target)
-                s = self.target.removeChild(self.subject)
+                s = self.target.removeChild(self.subject)  # Get the spouse that the child was with
 
                 if s != 'unknown_spouse':
                     spouse = self.window.get_object(s)
-                    spouse.removeChild(self.target)
-                    spouse.addChild(self.target, None)
+                    spouse.removeChild(self.subject)
+                    spouse.addChild(self.subject, None)
 
                 self.window.page_factory('edit_person_page', {'Person': self.subject})
 
@@ -207,11 +207,11 @@ class RemoveConnectionButton(QPushButton):
 
                 # Self.subject is the reign
                 # Self.target is the connected reign to be removed
-                self.subject.removeConnectedReign(self.connection)  # Remove the target reign as connection to the subject reign
-                self.target.removeConnectedReign(opp_connection)  # Remove the subject reign as the opposite connection to the target reign
+                self.subject.removeConnection(self.connection)  # Remove the target reign as connection to the subject reign
+                self.target.removeConnection(opp_connection)  # Remove the subject reign as the opposite connection to the target reign
 
                 # Get the person of the subject reign to return to
-                person = self.subject.getConnectedReign('Person')
+                person = self.subject.getConnection('Person')
                 self.window.page_factory('edit_person_page', {'Person': person})
 
             elif self.connection == 'Reign':
@@ -234,7 +234,7 @@ class UnmergeButton(QPushButton):
         self.window = window
         self.juniorReign = juniorReign
         self.seniorReign = juniorReign.mergedReigns['Senior']
-        self.person = juniorReign.getConnectedReign('Person')
+        self.person = juniorReign.getConnection('Person')
 
         self.installEventFilter(self)
 

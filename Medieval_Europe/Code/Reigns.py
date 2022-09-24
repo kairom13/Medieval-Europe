@@ -29,8 +29,8 @@ class ReignWidget(QWidget):
         self.reign = parameters['Reign']  ## The reign object being displayed
         self.edit = parameters['Edit']  ## Whether the reign is being edited
 
-        self.title = self.reign.getConnectedReign('Title')  # The title associated with this reign
-        self.ruler = self.reign.getConnectedReign('Person')  # The ruler associated with this reign
+        self.title = self.reign.getConnection('Title')  # The title associated with this reign
+        self.ruler = self.reign.getConnection('Person')  # The ruler associated with this reign
 
         self.objectType = parameters['Object Type']
 
@@ -83,16 +83,16 @@ class ReignWidget(QWidget):
             addPreButton = QPushButton('')
             preButtonVBox.addWidget(addPreButton)
 
-            if self.reign.hasConnectedReign('Predecessor'):  ## Use change and remove buttons when predecessor exists
-                predecessorObject = self.window.get_object(self.reign.getConnectedReign('Predecessor'))
-                self.logger.log('Code', 'Reign has predecessor: ' + predecessorObject.getConnectedReign('Person').getName(), True)
+            if self.reign.hasConnection('Predecessor'):  ## Use change and remove buttons when predecessor exists
+                predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
+                self.logger.log('Code', 'Reign has predecessor: ' + predecessorObject.getConnection('Person').getName(), True)
 
                 addPreButton.setText('Change')
 
                 preButtonVBox.addWidget(RemoveConnectionButton(self.window, self.reign, predecessorObject))
                 preLabelLayout.addLayout(preButtonVBox)
 
-                predecessorLabel = QLabel(predecessorObject.getConnectedReign('Person').getAttribute('Name'))
+                predecessorLabel = QLabel(predecessorObject.getConnection('Person').getAttribute('Name'))
                 preLabelLayout.addWidget(predecessorLabel)
 
             else:  ## Use Add button when no existing predecessor
@@ -104,20 +104,21 @@ class ReignWidget(QWidget):
 
             for r in self.title.reignDict:
                 potential_reign = self.window.get_object(r)
-                if r != self.reign.getID() and not potential_reign.hasConnectedReign('Successor'):
+                if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
                     valid_pre.update({r: potential_reign})
 
             # Get potential predecessor reigns from this title's successor
-            if self.title.predecessor is not None:
-                pre_title = self.window.get_object(self.title.predecessor)
+            if self.title.getConnection('Predecessor') is not None:
+                pre_title = self.window.get_object(self.title.getConnection('Predecessor'))
 
                 for r in pre_title.reignDict:
                     potential_reign = self.window.get_object(r)
-                    if r != self.reign.getID() and not potential_reign.hasConnectedReign('Successor'):
+                    if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
                         valid_pre.update({r: potential_reign})
 
             addPreButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': valid_pre, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Predecessor'}))
-            layout.addLayout(preLabelLayout, 1, 0)
+            #layout.addLayout(preLabelLayout, 1, 0)
+            layout.addLayout(EditConnectedReignWidget(self.window, 'Predecessor', self.reign), 1, 0)
 
             centerLayout = QHBoxLayout()
 
@@ -140,11 +141,11 @@ class ReignWidget(QWidget):
             addSucButton = QPushButton('')
             sucButtonVBox.addWidget(addSucButton)
 
-            if self.reign.hasConnectedReign('Successor'):  ## Use change and remove buttons when successor exists
-                successorObject = self.window.get_object(self.reign.getConnectedReign('Successor'))
-                self.logger.log('Code', 'Reign has successor: ' + successorObject.getConnectedReign('Person').getName(), True)
+            if self.reign.hasConnection('Successor'):  ## Use change and remove buttons when successor exists
+                successorObject = self.window.get_object(self.reign.getConnection('Successor'))
+                self.logger.log('Code', 'Reign has successor: ' + successorObject.getConnection('Person').getName(), True)
 
-                #successorLabel = QLabel(successorObject.getConnectedReign('Person').getAttribute('Name'))
+                #successorLabel = QLabel(successorObject.getConnection('Person').getAttribute('Name'))
                 successorLabel = QLabel(successorObject.getName('Linker Object'))
                 sucLabelLayout.addWidget(successorLabel)
 
@@ -162,16 +163,16 @@ class ReignWidget(QWidget):
 
             for r in self.title.reignDict:
                 potential_reign = self.window.get_object(r)
-                if r != self.reign.getID() and not potential_reign.hasConnectedReign('Predecessor'):
+                if r != self.reign.getID() and not potential_reign.hasConnection('Predecessor'):
                     valid_suc.update({r: potential_reign})
 
             # Get potential predecessor reigns from this title's successor
-            if self.title.successor is not None:
-                suc_title = self.window.get_object(self.title.successor)
+            if self.title.getConnection('Successor') is not None:
+                suc_title = self.window.get_object(self.title.getConnection('Successor'))
 
                 for r in suc_title.reignDict:
                     potential_reign = self.window.get_object(r)
-                    if r != self.reign.getID() and not potential_reign.hasConnectedReign('Predecessor'):
+                    if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
                         valid_suc.update({r: potential_reign})
 
             addSucButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': valid_suc, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Successor'}))
@@ -187,11 +188,11 @@ class ReignWidget(QWidget):
             for j in self.reign.mergedReigns['Junior']:
                 juniorObject = self.window.get_object(j)
 
-                self.logger.log('Code', 'Add ' + str(juniorObject.getConnectedReign('Title').getName('Page Title')) + ' as junior reign', True)
+                self.logger.log('Code', 'Add ' + str(juniorObject.getConnection('Title').getName('Page Title')) + ' as junior reign', True)
 
                 juniorHBox = QHBoxLayout()
                 juniorHBox.addStretch(1)
-                juniorHBox.addWidget(QLabel(juniorObject.getConnectedReign('Title').getName('Page Title')))
+                juniorHBox.addWidget(QLabel(juniorObject.getConnection('Title').getName('Page Title')))
 
                 unmergeButton = UnmergeButton(self.window, juniorObject)
                 unmergeButton.setEnabled(False)
@@ -226,12 +227,13 @@ class ReignWidget(QWidget):
                     seniorReign = self.window.get_object(self.reign.mergedReigns['Senior'])
                     self.logger.log('Code', 'Is junior to {' + seniorReign.getID() + '}', True)
                     juniorLayout.addWidget(QLabel('(Junior to '))
-                    juniorLayout.addWidget(ObjectLabel(self.window, seniorReign.getConnectedReign('Title'), 'Page Title'))
+                    juniorLayout.addWidget(ObjectLabel(self.window, seniorReign.getConnection('Title'), 'Page Title'))
                     juniorLayout.addWidget(QLabel(')'))
             else:
+                targetObjectType = 'None'
                 self.logger.log('Error', str(self.objectType) + ' is an invalid object type to display a reign for')
 
-            subject = self.reign.getConnectedReign(targetObjectType)
+            subject = self.reign.getConnection(targetObjectType)
             self.logger.log('Code', 'Viewing reign of {' + subject.getID() + '}')
             label = ObjectLabel(self.window, subject, 'Page Title')
 
@@ -243,10 +245,10 @@ class ReignWidget(QWidget):
 
             layout.addLayout(labelLayout, 0, 0, 1, 3)  # add at row 0, column 0, and stretch over 1 rows, and 3 columns
 
-            if self.reign.hasConnectedReign('Predecessor'):  ## Only display the predecessor label if there is one
-                predecessorObject = self.window.get_object(self.reign.getConnectedReign('Predecessor'))
+            if self.reign.hasConnection('Predecessor'):  ## Only display the predecessor label if there is one
+                predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
                 self.logger.log('Code', 'Has predecessor: {' + predecessorObject.getID() + '}', True)
-                #self.logger.log('Code', 'Predecessor: ' + predecessorObject.getConnectedReign('Person').getName())
+                #self.logger.log('Code', 'Predecessor: ' + predecessorObject.getConnection('Person').getName())
 
                 layout.addLayout(DisplayConnectedReignWidget(self.window, 'Predecessor', predecessorObject), 1, 0, 2, 1)  # add at row 1, column 0, spans 2 rows and 1 column
 
@@ -256,8 +258,8 @@ class ReignWidget(QWidget):
             centerLayout.addWidget(QLabel('\u25b6'))  ## Right Arrow
             layout.addLayout(centerLayout, 1, 1)  # add at row 1, column 2
 
-            if self.reign.hasConnectedReign('Successor'):  ## Only display the successor label if there is one
-                successorObject = self.window.get_object(self.reign.getConnectedReign('Successor'))
+            if self.reign.hasConnection('Successor'):  ## Only display the successor label if there is one
+                successorObject = self.window.get_object(self.reign.getConnection('Successor'))
                 self.logger.log('Code', 'Has successor: {' + successorObject.getID() + '}', True)
 
                 layout.addLayout(DisplayConnectedReignWidget(self.window, 'Successor', successorObject), 1, 2, 2, 1)  # add at row 0, column 2, spans 2 rows and 1 column
@@ -274,7 +276,7 @@ class ReignWidget(QWidget):
 
                 for j in self.reign.mergedReigns['Junior']:
                     reignObject = self.window.get_object(j)
-                    title = reignObject.getConnectedReign('Title')
+                    title = reignObject.getConnection('Title')
                     self.logger.log('Code', 'Add {' + title.getID() + '} as junior reign', True)
                     juniorVBox.addWidget(ObjectLabel(self.window, title, 'Page Title'))
 
@@ -348,29 +350,37 @@ class EditConnectedReignWidget(QHBoxLayout):
 
         self.reign = reign
 
-        title = self.reign.getConnectedReign('Title')
+        title = self.reign.getConnection('Title')
+        self.connectionID = self.reign.getConnection(connection)
+
+        modifyVBox = QVBoxLayout()
+        labelHBox = QHBoxLayout()
 
         if connection == 'Predecessor':
             opp_connect = 'Successor'
+
+            self.addStretch(1)
+            self.addLayout(modifyVBox)
+            self.addLayout(labelHBox)
+
         elif connection == 'Successor':
             opp_connect = 'Predecessor'
+
+            self.addLayout(labelHBox)
+            self.addLayout(modifyVBox)
+            self.addStretch(1)
+
         else:
+            opp_connect = 'None'
             self.window.logger.log('Error', str(connection) + ' is not a valid connection for a reign.')
 
-        self.connectedReign = self.reign.getConnectedReign(connection)
-
-        ## No Connected Reign
-        if self.connectedReign is None:
-            chooseConnectionButton = QPushButton('Add')
-
-        else:
-            chooseConnectionButton = QPushButton('Change')
+        chooseConnectionButton = QPushButton()
 
         potential_connections = {}
 
         for r in title.reignDict:
             potential_reign = self.window.get_object(r)
-            if r != self.reign.getID() and not potential_reign.hasConnectedReign(opp_connect):
+            if r != self.reign.getID() and not potential_reign.hasConnection(opp_connect):
                 potential_connections.update({r: potential_reign})
 
         # Get potential predecessor reigns from this title's successor
@@ -379,11 +389,21 @@ class EditConnectedReignWidget(QHBoxLayout):
 
             for r in suc_title.reignDict:
                 potential_reign = self.window.get_object(r)
-                if r != self.reign.getID() and not potential_reign.hasConnectedReign(opp_connect):
+                if r != self.reign.getID() and not potential_reign.hasConnection(opp_connect):
                     potential_connections.update({r: potential_reign})
 
         choose_params = {'Object Type': 'Reign', 'Object List': potential_connections, 'Search Text': '', 'Subject': self.reign, 'Connection': connection}
         chooseConnectionButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', choose_params))
+
+        modifyVBox.addWidget(chooseConnectionButton)
+
+        ## No Connected Reign
+        if self.connectionID is None:
+            chooseConnectionButton.setText('Add')
+        else:
+            chooseConnectionButton.setText('Change')
+            modifyVBox.addWidget(RemoveConnectionButton(self.window, self.reign, self.window.get_object(self.connectionID)))
+            labelHBox.addWidget(QLabel(self.window.get_object(self.connectionID).getName('Linker Object')))
 
 
 # Layout for editing the title for a reign
@@ -399,8 +419,8 @@ class EditTitleWidget(QHBoxLayout):
         self.logger = self.window.logger
 
         self.reign = reign
-        self.title = self.reign.getConnectedReign('Title')
-        self.ruler = self.reign.getConnectedReign('Person')
+        self.title = self.reign.getConnection('Title')
+        self.ruler = self.reign.getConnection('Person')
 
         self.addStretch(1)
         self.addWidget(QLabel(self.title.getFullRulerTitle(self.ruler.gender)))
@@ -463,22 +483,22 @@ class EditTitleWidget(QHBoxLayout):
 
             globalReignList.pop(juniorReign.getID())
 
-            if juniorReign.hasConnectedReign('Predecessor'):
-                predecessorObject = self.window.get_object(juniorReign.getConnectedReign('Predecessor'))
-                predecessorObject.removeConnectedReign('Successor')
+            if juniorReign.hasConnection('Predecessor'):
+                predecessorObject = self.window.get_object(juniorReign.getConnection('Predecessor'))
+                predecessorObject.removeConnection('Successor')
 
-            if juniorReign.hasConnectedReign('Successor'):
-                successorObject = self.window.get_object(juniorReign.getConnectedReign('Successor'))
-                successorObject.removeConnectedReign('Predecessor')
+            if juniorReign.hasConnection('Successor'):
+                successorObject = self.window.get_object(juniorReign.getConnection('Successor'))
+                successorObject.removeConnection('Predecessor')
 
         # self.lineEditDict.pop(self.reign.id)
 
-        if self.reign.hasConnectedReign('Predecessor'):
-            predecessorObject = self.window.get_object(self.reign.getConnectedReign('Predecessor'))
-            predecessorObject.removeConnectedReign('Successor')
+        if self.reign.hasConnection('Predecessor'):
+            predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
+            predecessorObject.removeConnection('Successor')
 
-        if self.reign.hasConnectedReign('Successor'):
-            successorObject = self.window.get_object(self.reign.getConnectedReign('Successor'))
-            successorObject.removeConnectedReign('Predecessor')
+        if self.reign.hasConnection('Successor'):
+            successorObject = self.window.get_object(self.reign.getConnection('Successor'))
+            successorObject.removeConnection('Predecessor')
 
         self.window.page_factory('edit_person_page', {'Person': self.ruler})

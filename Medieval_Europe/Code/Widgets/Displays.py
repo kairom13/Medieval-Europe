@@ -74,10 +74,16 @@ class PlaceMap(QWidget):
 
         transformer = Transformer.from_crs(4326, 3035, always_xy=True)
 
-        self.placeList = []
-        for p, place in placeList.items():
-            self.placeList.append({'Coordinates': (transformer.transform(float(place.getAttribute('Longitude')), float(place.getAttribute('Latitude')))),
-                                   'Object': place})
+        self.placeList = {}
+        if placeList:
+            self.localPlaces = True
+        else:
+            self.localPlaces = False
+
+        for p, place in self.window.objectLists['Place'].items():
+            self.placeList.update({p: {'Coordinates': (transformer.transform(float(place.getAttribute('Longitude')), float(place.getAttribute('Latitude')))),
+                                       'Object': place,
+                                       'Local': p in placeList}})
 
         self.adjustCoords = {}  # Global values to adjust shapefile to desired dimensions
         self.polygons = []  # Array of shapefile polygons
@@ -134,8 +140,7 @@ class PlaceMap(QWidget):
         # Adjust shapefile to fit in application
         self.get_shapefile_dimensions()
 
-        if self.placeList:
-            self.get_focus_area()
+        self.get_focus_area()
 
         # print(str(self.width()) + ', ' + str(self.height()))
 
@@ -180,7 +185,7 @@ class PlaceMap(QWidget):
 
             painter.drawPolygon(QPolygon(poly_points))
 
-        for p in self.placeList:
+        for p_id, p in self.placeList.items():
             xPos = p['Coordinates'][0]
             yPos = p['Coordinates'][1]
 
@@ -188,14 +193,31 @@ class PlaceMap(QWidget):
                                      self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - yPos) * self.adjustCoords['Ratio'])})
 
             #print(p['Object'].getName() + ': (' + str((p['Map Coords'][0] - radius)/self.width()) + ', ' + str((p['Map Coords'][1] - radius)/self.height()) + ')')
-
-            if self.selectedPlace is not None and p['Object'].getID() == self.selectedPlace.getID():
-                painter.setPen(QPen(Qt.blue, 1, Qt.SolidLine))
-                painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
-                painter.drawText(int(p['Map Coords'][0] + radius), int(p['Map Coords'][1] - radius), p['Object'].getAttribute('Name'))
+            if p['Local']:
+                painter.setBrush(QBrush(QColor(245, 223, 77), Qt.SolidPattern))
             else:
+                painter.setBrush(QBrush(QColor(147, 149, 151), Qt.SolidPattern))
+
+            if self.selectedPlace is None or p_id != self.selectedPlace.getID():
                 painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
                 painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
+
+        if self.selectedPlace is not None:
+            p = self.placeList[self.selectedPlace.getID()]
+            xPos = p['Coordinates'][0]
+            yPos = p['Coordinates'][1]
+
+            p.update({'Map Coords': (self.adjustCoords['X Origin'] + (xPos - self.adjustCoords['Left']) * self.adjustCoords['Ratio'],
+                                     self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - yPos) * self.adjustCoords['Ratio'])})
+
+            if p['Local']:
+                painter.setBrush(QBrush(QColor(245, 223, 77), Qt.SolidPattern))
+            else:
+                painter.setBrush(QBrush(QColor(147, 149, 151), Qt.SolidPattern))
+
+            painter.setPen(QPen(Qt.blue, 1.75, Qt.SolidLine))
+            painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
+            painter.drawText(int(p['Map Coords'][0] + radius), int(p['Map Coords'][1] - radius), p['Object'].getAttribute('Name'))
 
     def eventFilter(self, object, event):
         #print(self.eventNameDict[event.type()])
@@ -259,7 +281,7 @@ class PlaceMap(QWidget):
                 return True
             elif event.type() == QEvent.MouseMove:
                 self.selectedPlace = None
-                for p in self.placeList:
+                for p_id, p in self.placeList.items():
                     map_coords = p['Map Coords']
 
                     if self.withinDistance(map_coords, (event.pos().x(), event.pos().y()), 10):
@@ -294,30 +316,33 @@ class PlaceMap(QWidget):
         # Get bounding box of whole shapefile by iterating through shapes and finding maximas
         map_edges = {}
 
-        map_edges.update({'left': self.placeList[0]['Coordinates'][0]})
-        map_edges.update({'bottom': self.placeList[0]['Coordinates'][1]})
-        map_edges.update({'right': self.placeList[0]['Coordinates'][0]})
-        map_edges.update({'top': self.placeList[0]['Coordinates'][1]})
-
-        for p in self.placeList:
-            p = p['Coordinates']
-            if p[0] < map_edges['left']:
-                map_edges['left'] = p[0]
-            if p[1] < map_edges['bottom']:
-                map_edges['bottom'] = p[1]
-            if p[0] > map_edges['right']:
-                map_edges['right'] = p[0]
-            if p[1] > map_edges['top']:
-                map_edges['top'] = p[1]
+        localPoint = None
+        for p_id, p in self.placeList.items():
+            if p['Local'] or not self.localPlaces:
+                localPoint = p['Coordinates']
+                if 'left' in map_edges:
+                    if localPoint[0] < map_edges['left']:
+                        map_edges['left'] = localPoint[0]
+                    if localPoint[1] < map_edges['bottom']:
+                        map_edges['bottom'] = localPoint[1]
+                    if localPoint[0] > map_edges['right']:
+                        map_edges['right'] = localPoint[0]
+                    if localPoint[1] > map_edges['top']:
+                        map_edges['top'] = localPoint[1]
+                else:
+                    map_edges.update({'left': localPoint[0]})
+                    map_edges.update({'bottom': localPoint[1]})
+                    map_edges.update({'right': localPoint[0]})
+                    map_edges.update({'top': localPoint[1]})
 
         self.buffer = .075
 
-        if map_edges['top'] == map_edges['bottom']:
+        if map_edges['top'] == map_edges['bottom'] and localPoint is not None:
             self.zoom = 10
-            map_edges['left'] = p[0] - (2 ** (self.zoom - 1))
-            map_edges['bottom'] = p[1] - (2 ** (self.zoom - 1))
-            map_edges['right'] = p[0] + (2 ** (self.zoom - 1))
-            map_edges['top'] = p[1] + (2 ** (self.zoom - 1))
+            map_edges['left'] = localPoint[0] - (2 ** (self.zoom - 1))
+            map_edges['bottom'] = localPoint[1] - (2 ** (self.zoom - 1))
+            map_edges['right'] = localPoint[0] + (2 ** (self.zoom - 1))
+            map_edges['top'] = localPoint[1] + (2 ** (self.zoom - 1))
 
         else:
             zoom_factor = self.map_dim['height'] / (map_edges['top'] - map_edges['bottom'])
@@ -452,7 +477,7 @@ class ObjectLabel(QLabel):
             elif objectType in ('Title', 'Person Title'):
                 self.window.page_factory('display_title_page', {'Title': self.subject})
             elif objectType == 'Reign':
-                self.window.page_factory('display_person_page', {'Person': self.subject.getConnectedReign('Person')})
+                self.window.page_factory('display_person_page', {'Person': self.subject.getConnection('Person')})
             else:
                 self.window.logger.log('Error', str(objectType) + ' is not a valid object type for ObjectLabel')
             return True

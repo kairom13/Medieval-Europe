@@ -107,6 +107,7 @@ class MainWindow(QMainWindow):
             if init_list is not None:
                 for key in init_list:
                     titleDict = init_list[key]
+                    self.logger.log('Detailed', 'Adding title: ' + key)
                     self.add_object(Title(self.logger, titleDict, key))
 
                 self.logger.log('Code', 'Finished reading "titles.json"')
@@ -120,6 +121,7 @@ class MainWindow(QMainWindow):
             if init_list is not None:
                 for key in init_list:
                     personDict = init_list[key]
+                    self.logger.log('Detailed', 'Adding person: ' + key)
                     self.add_object(Person(self.logger, personDict['Gender'], personDict, key))
 
                     for r in personDict['Reign List']:
@@ -127,6 +129,7 @@ class MainWindow(QMainWindow):
 
                         title = self.get_object(reignDict['Connections']['Title'])
                         ruler = self.get_object(key)
+                        self.logger.log('Detailed', 'Adding reign: ' + r)
                         self.add_object(Reign(self.logger, ruler, title, reignDict, r))
 
                 self.logger.log('Code', 'Finished reading "people.json"')
@@ -140,6 +143,7 @@ class MainWindow(QMainWindow):
             if init_list is not None:
                 for key in init_list:
                     placeDict = init_list[key]
+                    self.logger.log('Detailed', 'Adding place: ' + key)
                     self.add_object(Place(self.logger, placeDict, key))
 
                     for r in placeDict['Reign List']:
@@ -161,20 +165,20 @@ class MainWindow(QMainWindow):
 
         for r, reignObject in self.objectLists['Reign'].items():
             if reignObject.order == -1:
-                titleObject = reignObject.getConnectedReign('Title')
+                titleObject = reignObject.getConnection('Title')
                 reignObject.setOrder(titleObject.availableOrder)  # Default order number
 
                 ## Set all predecessor reigns
                 currentReign = reignObject
-                while currentReign.hasConnectedReign('Predecessor'):
-                    predecessorObject = self.get_object(currentReign.getConnectedReign('Predecessor'))
+                while currentReign.hasConnection('Predecessor'):
+                    predecessorObject = self.get_object(currentReign.getConnection('Predecessor'))
                     predecessorObject.setOrder(currentReign.order - 1)  # Set the predecessor reign as one less than the current reign's order
                     currentReign = predecessorObject  # Set the current reign as the predecessor and repeat
 
                 ## Set all successor reigns
                 currentReign = reignObject
-                while currentReign.hasConnectedReign('Successor'):
-                    successorObject = self.get_object(currentReign.getConnectedReign('Successor'))
+                while currentReign.hasConnection('Successor'):
+                    successorObject = self.get_object(currentReign.getConnection('Successor'))
                     successorObject.setOrder(currentReign.order + 1)  # Set the successor reign as one greater than the current reign's order
                     currentReign = successorObject  # Set the current reign as the successor and repeat
 
@@ -431,25 +435,30 @@ class MainWindow(QMainWindow):
 
             # Target is the reign to be connected
             # Subject is the reign looking for a connection
-            subject.setConnectedReign(target.getID(), targetConnection)
-            target.setConnectedReign(subject.getID(), oppConnection)
+
+            formerConnection = subject.getConnection(targetConnection)  # Get the already connecting reign, if applicable
+            if formerConnection is not None:
+                self.get_object(subject.getConnection(targetConnection)).removeConnection(oppConnection)  # Remove the connection with the subject
+
+            subject.setConnection(target.getID(), targetConnection)
+            target.setConnection(subject.getID(), oppConnection)
 
             # If the target reign has junior reigns, create new junior reigns for this reign
             for j in target.mergedReigns['Junior']:
                 juniorObject = self.get_object(j)
 
                 # Create new reign with this reign's ruler
-                newJunior = Reign(self.logger, subject.getConnectedReign('Person'), subject.getConnectedReign('Title'), None)
+                newJunior = Reign(self.logger, subject.getConnection('Person'), subject.getConnection('Title'), None)
 
                 # Connect these junior reigns to the target's junior reigns
-                newJunior.setConnectedReign(juniorObject.getID(), targetConnection)  # Set the predecessor junior as the predecessor of this reign
-                juniorObject.setConnectedReign(newJunior.getID(), oppConnection)  ## Set this reign as the successor of the predecessor junior reign
+                newJunior.setConnection(juniorObject.getID(), targetConnection)  # Set the predecessor junior as the predecessor of this reign
+                juniorObject.setConnection(newJunior.getID(), oppConnection)  ## Set this reign as the successor of the predecessor junior reign
 
                 # Ensure the start and end dates of the junior reign are the same as the senior (subject) reign
                 newJunior.updateAttribute('Start Date', subject.getAttribute('Start Date'))
                 newJunior.updateAttribute('End Date', subject.getAttribute('End Date'))
 
-                juniorObject.getConnectedReign('Title').addReign(newJunior)
+                juniorObject.getConnection('Title').addReign(newJunior)
 
                 subject.mergeReign(newJunior, 'Junior')
                 newJunior.mergeReign(subject, 'Senior')
@@ -464,7 +473,7 @@ class MainWindow(QMainWindow):
             ## Scenarios:
             # 1) Neither reign has any predecessors or successors: make target the senior reign to the subject's junior
 
-            person = subject.getConnectedReign('Person')
+            person = subject.getConnection('Person')
             person.mergeReigns(subject, target, self)
 
         # Get reign from title in target for place in subject
@@ -489,8 +498,8 @@ class MainWindow(QMainWindow):
                 targetReign = target
 
                 # Propagate connection to reign throughout it's successors
-                while targetReign.hasConnectedReign('Successor'):
-                    targetReign = self.get_object(targetReign.getConnectedReign('Successor'))
+                while targetReign.hasConnection('Successor'):
+                    targetReign = self.get_object(targetReign.getConnection('Successor'))
 
                     # Stop propagation once a successor is already in the list
                     if subject.hasReign(targetReign):
@@ -506,8 +515,8 @@ class MainWindow(QMainWindow):
             targetReign = target
 
             # Propagate connection to reign throughout it's successors
-            while targetReign.hasConnectedReign('Successor'):
-                targetReign = self.get_object(targetReign.getConnectedReign('Successor'))
+            while targetReign.hasConnection('Successor'):
+                targetReign = self.get_object(targetReign.getConnection('Successor'))
 
                 # Stop propagation once a successor is already in the list
                 if subject.hasReign(targetReign):

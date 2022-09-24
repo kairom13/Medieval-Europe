@@ -1534,7 +1534,13 @@
             "Longitude": "6.13"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "6561cbbd",
+            "7a899de9",
+            "fe44abc6",
+            "aa410d7e",
+            "4a0b0676"
+        ]
     },
     "78624f6c": {
         "Attributes": {
@@ -2036,6 +2042,187 @@
             "41eda251",
             "6214b8b0",
             "e12f25e2"
+        ]
+    },
+    "efed7cee": {
+        "Attributes": {
+            "Name": "La Roche",
+            "Latitude": "50.18",
+            "Longitude": "5.58"
+        },
+        "Events": {},
+        "Reign List": [
+            "b2eceb4b",
+            "f541425d",
+            "7aa9cf54",
+            "1d5907d4"
+        ]
+    },
+    "d5830c28": {
+        "Attributes": {
+            "Name": "Beaurevoir",
+            "Latitude": "50",
+            "Longitude": "3.31"
+        },
+        "Events": {},
+        "Reign List": [
+            "9f45590a",
+            "229e1a64"
+        ]
+    },
+    "36382c2a": {
+        "Attributes": {
+            "Name": "Ligny",
+            "Latitude": "48.69",
+            "Longitude": "5.32"
+        },
+        "Events": {},
+        "Reign List": [
+            "ec28046a",
+            "3b78cd34",
+            "65b5d9fa",
+            "04882c14"
+        ]
+    },
+    "32a3931d": {
+        "Attributes": {
+            "Name": "Roussy",
+            "Latitude": "49.46",
+            "Longitude": "6.18"
+        },
+        "Events": {},
+        "Reign List": [
+            "fcdb33a8",
+            "ba6a6afe"
+        ]
+    },
+    "a460ab26": {
+        "Attributes": {
+            "Name": "Monschau",
+            "Latitude": "50.555",
+            "Longitude": "6.24"
+        },
+        "Events": {
+            "a3e8cfbd": {
+                "Date": "1433",
+                "Content": "The castle was used as a seat of the dukes of J\u00fclich"
+            },
+            "291cc0b2": {
+                "Date": "1543",
+                "Content": "Emperor Charles V besieged it as part of the Guelders Wars, captured it and plundered the town"
+            },
+            "942c8999": {
+                "Date": "1609",
+                "Content": "Became part of Palatinate-Neuburg."
+            },
+            "a44cf638": {
+                "Date": "1795",
+                "Content": "Captured by the French"
+            }
+        },
+        "Reign List": [
+            "14c970ae"
+        ]
+    },
+    "de89de2b": {
+        "Attributes": {
+            "Name": "Arlon",
+            "Latitude": "49.68",
+            "Longitude": "5.81"
+        },
+        "Events": {},
+        "Reign List": [
+            "122f657a",
+            "23583d0c",
+            "c86a8c14",
+            "4c66dfd5"
+        ]
+    },
+    "8de21f64": {
+        "Attributes": {
+            "Name": "Altena",
+            "Latitude": "51.3",
+            "Longitude": "7.67"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "e2a23c97": {
+        "Attributes": {
+            "Name": "Liege",
+            "Latitude": "50.64",
+            "Longitude": "5.57"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "897bbc23": {
+        "Attributes": {
+            "Name": "Namur",
+            "Latitude": "50.465",
+            "Longitude": "4.865"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2040f5ff": {
+        "Attributes": {
+            "Name": "Calais",
+            "Latitude": "50.96",
+            "Longitude": "1.85"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "aa36a533": {
+        "Attributes": {
+            "Name": "Zweibr\u00fccken",
+            "Latitude": "49.25",
+            "Longitude": "7.36"
+        },
+        "Events": {},
+        "Reign List": [
+            "b4a371a1"
+        ]
+    },
+    "63720e48": {
+        "Attributes": {
+            "Name": "Konstanz",
+            "Latitude": "47.66",
+            "Longitude": "9.17"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b041a183": {
+        "Attributes": {
+            "Name": "Ravensburg",
+            "Latitude": "47.78",
+            "Longitude": "9.61"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "6c203c94": {
+        "Attributes": {
+            "Name": "Weingarten",
+            "Latitude": "47.81",
+            "Longitude": "9.64"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d1d40c2f": {
+        "Attributes": {
+            "Name": "Durbuy",
+            "Latitude": "50.35",
+            "Longitude": "5.455"
+        },
+        "Events": {},
+        "Reign List": [
+            "ac5b88f6",
+            "4bc6ae72",
+            "8a1335ec"
         ]
     }
 }

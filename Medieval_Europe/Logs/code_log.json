@@ -1,1 +1,69 @@
-{}
+{
+    "000_Init": [
+        "001_Init",
+        "003_Set Window Size. Height: 960, Width: 1706",
+        "005_Creating Menu Bar",
+        "007_Reading Files",
+        "009_Opened \"titles.json\"",
+        "969_Finished reading \"titles.json\"",
+        "971_Opened \"people.json\"",
+        "10350_Finished reading \"people.json\"",
+        "10352_Opened \"places.json\"",
+        "11558_Finished reading \"places.json\"",
+        "11560_Correcting Reign Order",
+        "11562_Created Page Generator Object",
+        "11564_Generating view_object_list"
+    ],
+    "001_view_object_list": [
+        "001_Viewing list of Person",
+        "006_Adding list of Persons",
+        "009_Place was chosen",
+        "011_Generating view_object_list"
+    ],
+    "002_view_object_list": [
+        "001_Viewing list of Place",
+        "006_Adding list of Places",
+        "010_Adding map of places",
+        "013_Generating display_place_page"
+    ],
+    "003_display_place_page": [
+        "001_Displaying Place",
+        [
+            "003_Displaying Name: Ghent"
+        ],
+        "005_Clicked to display Margaret III, Countess of Flanders",
+        "007_Generating display_person_page"
+    ],
+    "004_display_person_page": [
+        "001_Displaying Margaret III, Countess of Flanders",
+        [
+            "005_Add Name Widget",
+            "007_Add Gender: Woman",
+            "009_Add Birth Date: 4/13/1350",
+            "011_Add Death Date: 3/18/1405",
+            "013_Add Father: Louis II of Male, Count of Flanders",
+            "015_Add Mother: Margaret of Brabant",
+            "017_Add Spouse: Philip I of Rouvres, Duke of Burgundy",
+            "019_Add Spouse: Philip the Bold, Duke of Burgundy",
+            "021_Add Child With Philip the Bold, Duke of Burgundy: John I the Fearless, Duke of Burgundy",
+            "023_Add Child With Philip the Bold, Duke of Burgundy: Margaret of Burgundy",
+            "025_Add Child With Philip the Bold, Duke of Burgundy: Catherine of Burgundy",
+            "027_Add Child With Philip the Bold, Duke of Burgundy: Anthony, Duke of Brabant"
+        ],
+        "029_Viewing reign of County of Burgundy",
+        [
+            "031_Has predecessor: Louis II, Count of Burgundy",
+            "033_Has successor: John I, Count of Burgundy",
+            "035_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "037_Add County of Artois as junior reign"
+        ],
+        "039_Viewing reign of County of Flanders",
+        [
+            "041_Has predecessor: Louis II, Count of Flanders",
+            "043_Has successor: John I, Count of Flanders",
+            "045_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "047_Add County of Nevers as junior reign",
+            "049_Add County of Rethel as junior reign"
+        ]
+    ]
+}

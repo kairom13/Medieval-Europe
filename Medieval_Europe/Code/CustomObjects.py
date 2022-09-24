@@ -21,11 +21,12 @@ from Medieval_Europe import get_parent_path
 ######################################
 
 class CustomObject(ABC):
-    def __init__(self, logger, objectType, objectID, attribute_list):
+    def __init__(self, logger, objectType, objectID, attribute_list, simple_connections):
         if objectID is None:
             self.objectID = uuid.uuid4().hex[:8]
         else:
             self.objectID = objectID
+
         self.name = {'Full Info': 'No Name',
                      'Page Title': 'No Name',
                      'Linker Object': 'No Name'}
@@ -35,10 +36,14 @@ class CustomObject(ABC):
 
         self.attributes = {}
         self.connectionDict = {}
+        self.connections = {}
         self.eventList = {}
 
         for a in attribute_list:
             self.attributes.update({a: ''})
+
+        for c in simple_connections:
+            self.connections.update({c: None})
 
     #### Common Methods:
     ## Set the name of the object (unique to the object)
@@ -70,11 +75,14 @@ class CustomObject(ABC):
         else:
             self.logger.log('Warning', 'Cannot remove event ' + str(event_id) + '. Not in event list')
 
-    def updateEvent(self, id, eventDetails):
-        self.eventList.update({id: eventDetails})
+    def updateEvent(self, event_id, eventDetails):
+        self.eventList.update({event_id: eventDetails})
 
-    def getEvent(self, id):
-        return self.eventList[id]
+    def getEvent(self, event_id):
+        if event_id in self.eventList:
+            return self.eventList[event_id]
+        else:
+            self.logger.log('Error', 'Cannot get event ' + str(event_id) + '. Not in event list for {' + self.getID() + '}')
 
     def getEventList(self):
         return self.eventList
@@ -128,7 +136,6 @@ class CustomObject(ABC):
                 else:
                     self.logger.log('Error', 'Cannot get connection. {' + str(subjectID) + '} is not a connection of ' + self.getName())
 
-
             elif update == 'Remove':
                 if subjectID in self.connectionDict:
                     self.connectionDict.pop(subjectID)
@@ -138,6 +145,40 @@ class CustomObject(ABC):
             else:
                 self.logger.log('Error', str(update) + ' is an invalid update value')
 
+    ## Set of methods to set, get, remove, and check existence of specific connection types
+    def setConnection(self, target, connectionType):
+        targetID = self.check_argument(target)
+
+        if connectionType in self.connections:
+            self.connections.update({connectionType: targetID})
+            self.connection('Add', targetID, connectionType)
+        else:
+            self.logger.log('Error', str(connectionType) + ' is not a valid connection to add for ' + self.__class__.__name__ + ' {' + self.getID() + '}')
+
+    def getConnection(self, connectionType):
+        if connectionType in self.connections:
+            return self.connections[connectionType]
+        else:
+            self.logger.log('Error', str(connectionType) + ' is not a valid connection for ' + self.__class__.__name__ + ' {' + self.getID() + '}')
+
+    def removeConnection(self, connectionType):
+        if connectionType not in self.connections:
+            self.logger.log('Error', str(connectionType) + ' is not a valid connection to remove from ' + self.__class__.__name__ + ' {' + self.getID() + '}')
+
+        elif connectionType in self.connections:
+            self.connection('Remove', self.connections[connectionType])
+            self.connections.update({connectionType: None})
+        else:
+            self.logger.log('Error', str(connectionType) + ' is not a valid connection for ' + self.__class__.__name__ + ' {' + self.getID() + '}')
+
+    def hasConnection(self, connectionType):
+        if connectionType in self.connections:
+            if self.connections[connectionType] is not None:
+                return True
+            else:
+                return False
+        else:
+            self.logger.log('Error', str(connectionType) + ' is not a valid connection for a ' + self.__class__.__name__ + ' {' + self.getID() + '}')
 
     ## Get Dictionary of values
     @abstractmethod
@@ -165,10 +206,13 @@ class CustomObject(ABC):
 
 class Person(CustomObject):
     def __init__(self, logger, gender, init_dict, personID):
-        super().__init__(logger, 'Person', personID, ['Name', 'Nickname', 'Birth Date', 'Death Date'])
-
-        self.classKey = 'Person Class'
-        self.classInstance = self.objectID
+        attributes = ['Name',
+                      'Nickname',
+                      'Birth Date',
+                      'Death Date']
+        simpleConnections = ['Mother', 'Father']  # The types of connections this object can have that are unique
+        super().__init__(logger, 'Person', personID, attributes, simpleConnections)
+        self.logger = logger
 
         self.gender = gender
         self.primaryTitle = None
@@ -178,14 +222,17 @@ class Person(CustomObject):
         
         if init_dict is not None:
             for a in self.attributes:
+                self.logger.log('Detailed', 'Initial setting of ' + str(a), True)
                 self.updateAttribute(a, init_dict['Attributes'][a])
 
             for c in init_dict['Connections']:
+                self.logger.log('Detailed', 'Initial setting of ' + str(c), True)
                 if c == 'Spouses':
                     self.addSpouses(init_dict['Connections'][c])
                 else:
                     self.addParent(init_dict['Connections'][c], c)
 
+            self.logger.log('Detailed', 'Initial setting of ' + str(len(init_dict['Events'])) + ' events', True)
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
 
@@ -193,6 +240,7 @@ class Person(CustomObject):
         self.placeList = {}  # {place.id: placeObject
 
         self.setName()
+        self.logger.log('Detailed', 'Initial setting of names: ' + str(list(self.name.items())), True)
 
     ## Set this person's name as the full name
     def setName(self):
@@ -405,7 +453,7 @@ class Person(CustomObject):
                             juniorReignObject.setPredecessor(predecessorReign.getID())
                         else:
                             print(str(predecessorPerson.getAttribute('Name')) + ', ' + juniorTitle.getFullRulerTitle(predecessorPerson.gender) +
-                                  ' already has a successor in ' + str(juniorReignObject.getConnectedReign('Person').getName()))
+                                  ' already has a successor in ' + str(juniorReignObject.getConnection('Person').getName()))
                             predecessorReign.setSuccessor(juniorReignObject.getID())
                             juniorReignObject.setPredecessor(predecessorReign.getID())
                 
@@ -448,7 +496,7 @@ class Person(CustomObject):
             
             for j in allJuniorReigns:
                 juniorReignObject = window.get_object(j)
-                juniorTitle = juniorReign.getConnectedReign('Title')
+                juniorTitle = juniorReign.getConnection('Title')
                 
                 self.logger.log('Code', 'Adding Successor to ' + str(juniorReignObject.titleName))
                 
@@ -461,7 +509,7 @@ class Person(CustomObject):
                             juniorReignObject.setSuccessor(successorReign.getID())
                         else:
                             print(str(successorPerson.getAttribute('Name')) + ', ' + juniorTitle.getFullRulerTitle(successorPerson.gender) +
-                                  ' already has a successor in ' + str(juniorReignObject.getConnectedReign('Person').getName()))
+                                  ' already has a successor in ' + str(juniorReignObject.getConnection('Person').getName()))
                             successorReign.setPredecessor(juniorReignObject.getID())
                             juniorReignObject.setSuccessor(successorReign.getID())
                 
@@ -577,28 +625,33 @@ class Title(CustomObject):
                       'Realm Title',  # The type of title (e.g. Duchy, County, Kingdom, etc)
                       'Male Ruler Title',  # How the male ruler is referred to, vis-à-vis their title (e.g. Duke, Count, King, etc)
                       'Female Ruler Title']  # How the female ruler is referred to, vis-à-vis their title (e.g. Duchess, Countess, Queen, etc)
+        simpleConnections = ['Predecessor', 'Successor']  # The types of connections this object can have that are unique
 
-        super().__init__(logger, 'Title', titleID, attributes)
+        super().__init__(logger, 'Title', titleID, attributes, simpleConnections)
 
         self.availableOrder = 1000
         
         if init_dict is None:
+            self.logger.log('Detailed', 'Initial Dictionary is empty', True)
             self.isTitular = False
-            ## For when the type of title changes (county to duchy, de jure to titular, etc.)
-            self.predecessor = None
-            self.successor = None
         else:
             for a in self.attributes:
+                self.logger.log('Detailed', 'Initial setting of attribute: ' + str(a), True)
                 self.updateAttribute(a, init_dict['Attributes'][a])
             self.isTitular = init_dict['Titular']
+            self.logger.log('Detailed', 'Initial setting of isTitular: ' + str(self.isTitular), True)
 
-            self.predecessor = init_dict['Connections']['Predecessor']
-            self.successor = init_dict['Connections']['Successor']
+            for c in init_dict['Connections']:
+                if init_dict['Connections'][c] is not None:
+                    self.logger.log('Detailed', 'Initial setting of connection: ' + str(c), True)
+                    self.setConnection(init_dict['Connections'][c], c)
 
+            self.logger.log('Detailed', 'Initial setting of ' + str(len(init_dict['Events'])) + ' events', True)
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
 
         self.setName()
+        self.logger.log('Detailed', 'Initial setting of names: ' + str(list(self.name.items())), True)
         
         self.reignDict = {}  ## structure: {<reignID>: <reignObject>}
         self.orderReignList = []
@@ -629,6 +682,7 @@ class Title(CustomObject):
         else:
             self.logger.log('Error', str(gender) + ' is not a valid gender')
             return None
+
         
     def orderReigns(self):
         self.orderReignList = list(self.reignDict.keys())
@@ -701,8 +755,7 @@ class Title(CustomObject):
     def getDict(self):
         return {self.getID(): {'Attributes': self.attributes,
                                'Titular': self.isTitular,
-                               'Connections': {'Predecessor': self.predecessor,
-                                               'Successor': self.successor},
+                               'Connections': self.connections,
                                'Events': self.eventList,
                                'Reign List': list(self.reignDict.keys())}}
 
@@ -725,23 +778,28 @@ class Title(CustomObject):
 
 class Place(CustomObject):
     def __init__(self, logger, init_dict, place_id):
-        super().__init__(logger, 'Place', place_id, ['Name', 'Latitude', 'Longitude'])
+        super().__init__(logger, 'Place', place_id, ['Name', 'Latitude', 'Longitude'], [])
 
         if init_dict is None:
+            self.logger.log('Detailed', 'Initial Dictionary is empty', True)
             self.reignList = []
 
         else:
             for a in self.attributes:
+                self.logger.log('Detailed', 'Intial setting of ' + str(a), True)
                 self.updateAttribute(a, init_dict['Attributes'][a])
 
+            self.logger.log('Detailed', 'Initial setting of ' + str(len(init_dict['Events'])), True)
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
 
             self.reignList = init_dict['Reign List']
+            self.logger.log('Detailed', 'Initial setting of ' + str(len(init_dict['Reign List'])), True)
             for r in self.reignList:
                 self.connection('Add', r, 'Reign')
 
         self.setName()
+        self.logger.log('Detailed', 'Initial setting of names: ' + str(list(self.name.items())), True)
 
     def setName(self):
         self.name.update({'Full Info': self.getAttribute('Name') + ' (' + self.getAttribute('Latitude') + ', ' + self.getAttribute('Longitude') + ')'})
@@ -816,26 +874,26 @@ class Reign(CustomObject):
     def __init__(self, logger, ruler, title, init_dict, reignID):
         attributes = ['Start Date',  # The start date of this reign
                       'End Date']  # The end date of this reign
+        simpleConnections = ['Predecessor', 'Successor']  # The types of connections this object can have that are unique
 
-        super().__init__(logger, 'Reign', reignID, attributes)
+        super().__init__(logger, 'Reign', reignID, attributes, simpleConnections)
 
-        self.connection('Add', ruler, 'Ruler')
-        self.connection('Add', title, 'Title')
-
+        self.logger.log('Detailed', 'Setting initial connection to person: {' + ruler.getID() + '}', True)
+        self.connection('Add', ruler, 'Person')
         ruler.addReign(self)
+
+        self.logger.log('Detailed', 'Setting initial connection to title: {' + title.getID() + '}', True)
+        self.connection('Add', title, 'Title')
         title.addReign(self)
 
         self.isJunior = False  # Is this reign a junior to another reign
         self.isPrimary = False  # Is this reign the primary for the person
 
         self.order = -1  # The order of this reign in the title
+        self.connections.update({'Person': ruler, 'Title': title})
 
         if init_dict is None:
-            self.connections = {'Person': ruler,
-                                'Title': title,
-                                'Predecessor': None,
-                                'Successor': None}
-
+            self.logger.log('Detailed', 'Initial Dictionary is empty', True)
             self.mergedReigns = {'Senior': None,
                                  'Junior': []}
 
@@ -843,31 +901,31 @@ class Reign(CustomObject):
             for a in self.attributes:
                 self.updateAttribute(a, init_dict['Attributes'][a])
 
-            self.connections = {'Person': ruler,
-                                'Title': title,
-                                'Predecessor': init_dict['Connections']['Predecessor'],
-                                'Successor': init_dict['Connections']['Successor']}
+            for c in ('Predecessor', 'Successor'):
+                if init_dict['Connections'][c] is not None:
+                    self.logger.log('Detailed', 'Intial setting of ' + str(c))
+                    self.setConnection(init_dict['Connections'][c], c)
 
-            for connectedReign in ('Predecessor', 'Successor'):
-                if self.connections[connectedReign] is not None:
-                    self.connection('Add', self.connections[connectedReign], connectedReign)
-
+            self.logger.log('Detailed', 'Initial setting of merged reigns')
             self.mergedReigns = init_dict['Merged Reigns']
 
             if self.mergedReigns['Senior'] != -1 and self.mergedReigns['Senior'] is not None:
+                self.logger.log('Detailed', 'Reign is a junior reign', True)
                 self.isJunior = True
 
             self.isPrimary = init_dict['Is Primary']
             if self.isPrimary:
-                self.connections['Person'].primary_title('Set', self.getConnectedReign('Title'))
+                self.logger.log('Detailed', 'Reign is the primary title', True)
+                self.connections['Person'].primary_title('Set', self.getConnection('Title'))
 
         self.setName()
+        self.logger.log('Detailed', 'Initial setting of names: ' + str(list(self.name.items())), True)
 
         self.placeList = {}  # List of places associated with this reign
 
     def setName(self):
-        ruler = self.getConnectedReign('Person')
-        title = self.getConnectedReign('Title')
+        ruler = self.getConnection('Person')
+        title = self.getConnection('Title')
         self.name.update({'Page Title': ruler.getAttribute('Name') + ', ' + title.getFullRulerTitle(ruler.gender)})
 
         if ruler.getAttribute('Nickname') == '':
@@ -877,52 +935,14 @@ class Reign(CustomObject):
             self.name.update({'Linker Object': ruler.getAttribute('Name') + '\n' + ruler.getAttribute('Nickname')})
             self.name.update({'Full Info': ruler.getAttribute('Name') + ' ' + ruler.getAttribute('Nickname') + self.getDateString() + '\n' + title.getFullRulerTitle(ruler.gender)})
 
-    def setConnectedReign(self, target, connection):
-        targetID = self.check_argument(target, connection)
-
-        if connection in self.connections:
-            self.connections.update({connection: targetID})
-            self.connection('Add', targetID, connection)
-        else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection to add for a reign {' + self.getID() + '}')
-
-
-    def getConnectedReign(self, connection):
-        if connection in self.connections:
-            return self.connections[connection]
-        else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign {' + self.getID() + '}')
-
-
-    def removeConnectedReign(self, connection):
-        if connection not in ('Predecessor', 'Successor'):
-            self.logger.log('Error', str(connection) + ' is not a valid connection to remove from a reign {' + self.getID() + '}')
-
-        elif connection in self.connections:
-            self.connection('Remove', self.getConnectedReign(connection))
-            self.connections.update({connection: None})
-        else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign {' + self.getID() + '}')
-
-
-    def hasConnectedReign(self, connection):
-        if connection in self.connections:
-            if self.connections[connection] is not None:
-                return True
-            else:
-                return False
-        else:
-            self.logger.log('Error', str(connection) + ' is not a valid connection for a reign {' + self.getID() + '}')
-
-
     def setPrimary(self, checked):
         self.isPrimary = checked
-        ruler = self.getConnectedReign('Person')
+        ruler = self.getConnection('Person')
 
         if checked:
-            ruler.primary_title('Set', self.getConnectedReign('Title'))
+            ruler.primary_title('Set', self.getConnection('Title'))
         else:
-            ruler.primary_title('Remove', self.getConnectedReign('Title'))
+            ruler.primary_title('Remove', self.getConnection('Title'))
         
     ## The order of this reign for the associated title
     def setOrder(self, order):
@@ -958,7 +978,7 @@ class Reign(CustomObject):
         if placeID in self.placeList:
             self.logger.log('Warning', str(placeObject.getAttribute('Name')) + ' is already associated with ' + str(self.getAttribute('Name')))
         else:
-            self.getConnectedReign('Person').addPlace(placeObject)
+            self.getConnection('Person').addPlace(placeObject)
             self.placeList.update({placeID: placeObject})
             self.connection('Add', placeID, 'Place')
 
@@ -966,7 +986,7 @@ class Reign(CustomObject):
         placeID = placeObject.getID()
 
         if placeID in self.placeList:
-            self.getConnectedReign('Person').removePlace(placeObject)
+            self.getConnection('Person').removePlace(placeObject)
             self.placeList.pop(placeID)
             self.connection('Remove', placeID)
         else:
@@ -977,9 +997,9 @@ class Reign(CustomObject):
         
     def getDict(self):    
         return {self.getID(): {'Attributes': self.attributes,
-                               'Connections': {'Title': self.getConnectedReign('Title').getID(),
-                                               'Predecessor': self.getConnectedReign('Predecessor'),
-                                               'Successor': self.getConnectedReign('Successor')},
+                               'Connections': {'Title': self.getConnection('Title').getID(),
+                                               'Predecessor': self.getConnection('Predecessor'),
+                                               'Successor': self.getConnection('Successor')},
                                'Is Primary': self.isPrimary,
                                'Merged Reigns': self.mergedReigns}}
 
@@ -1095,8 +1115,9 @@ class Logger:
             else:
                 sublog.update({self.page_key: [f'{index:03d}_' + value]})
 
-        # Call writeLogs to write to external file  
-        self.writeLogs()
+        # Call writeLogs to write to external file
+        if kind != 'Detailed':
+            self.writeLogs()
 
         if kind == 'Error':
             self.handleError(value)

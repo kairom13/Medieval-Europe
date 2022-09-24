@@ -40,10 +40,10 @@
             "c62ada3e",
             "2e712a06",
             "b08d90ba",
-            "5eba9084",
-            "8a5bacda",
-            "997862c3",
             "715ea14d",
+            "8a5bacda",
+            "5eba9084",
+            "997862c3",
             "1364b117"
         ]
     },
@@ -76,7 +76,9 @@
         },
         "Events": {},
         "Reign List": [
-            "c7868bef"
+            "c7868bef",
+            "dc0f6dc9",
+            "f4f3854a"
         ]
     },
     "268745ec": {
@@ -160,7 +162,8 @@
         "Events": {},
         "Reign List": [
             "d8fa9a78",
-            "c45a8332"
+            "c45a8332",
+            "52778b9b"
         ]
     },
     "485707ef": {
@@ -212,7 +215,7 @@
         "Titular": false,
         "Connections": {
             "Predecessor": null,
-            "Successor": null
+            "Successor": "51f069b4"
         },
         "Events": {},
         "Reign List": [
@@ -263,7 +266,6 @@
             "f455f19a",
             "2c7ff9cd",
             "04af5e05",
-            "5d51b47a",
             "87bc18b6",
             "27f1d41d",
             "6660e9e3"
@@ -286,7 +288,9 @@
             "6dad1d0a",
             "695a33e7",
             "e71c3f25",
-            "01a4a571"
+            "01a4a571",
+            "557d06e5",
+            "700d6222"
         ]
     },
     "630f5c9a": {
@@ -303,7 +307,9 @@
         },
         "Events": {},
         "Reign List": [
-            "48bf954b"
+            "48bf954b",
+            "e6f809ec",
+            "e2ebcdbf"
         ]
     },
     "6bd80567": {
@@ -342,7 +348,9 @@
             "Successor": null
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "37f7c17c"
+        ]
     },
     "6e53bd75": {
         "Attributes": {
@@ -513,7 +521,8 @@
         },
         "Events": {},
         "Reign List": [
-            "f5164ff2"
+            "f5164ff2",
+            "d04cb93a"
         ]
     },
     "91577082": {
@@ -546,8 +555,10 @@
         "Events": {},
         "Reign List": [
             "4d9b42c0",
+            "74e6be24",
             "4c168894",
-            "74e6be24"
+            "6f47a724",
+            "56285707"
         ]
     },
     "9cbecf40": {
@@ -596,7 +607,9 @@
             "Successor": null
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "a2cff083"
+        ]
     },
     "b2e391eb": {
         "Attributes": {
@@ -813,7 +826,7 @@
             "Realm Name": "Brabant",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "Duchess"
         },
         "Titular": false,
         "Connections": {
@@ -823,8 +836,14 @@
         "Events": {},
         "Reign List": [
             "58d6e996",
+            "bb639ff2",
             "029e167d",
-            "36a9a42a"
+            "36a9a42a",
+            "2604c29e",
+            "dd9587ce",
+            "a139e6de",
+            "e5087696",
+            "b5ec27f2"
         ]
     },
     "fb5a6b3f": {
@@ -1689,13 +1708,15 @@
         "Titular": false,
         "Connections": {
             "Predecessor": null,
-            "Successor": null
+            "Successor": "e5dae2c5"
         },
         "Events": {},
         "Reign List": [
             "ef576b72",
             "d14ef98d",
-            "c7d50db5"
+            "c7d50db5",
+            "9ea9c7f9",
+            "1ed27902"
         ]
     },
     "aa90d125": {
@@ -1729,7 +1750,15 @@
             "Successor": "1be1737a"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "fe44abc6",
+            "dec38229",
+            "4a0b0676",
+            "7a899de9",
+            "6561cbbd",
+            "aa410d7e",
+            "d37b3684"
+        ]
     },
     "04d1d652": {
         "Attributes": {
@@ -2135,8 +2164,215 @@
         },
         "Events": {},
         "Reign List": [
+            "6ed32967",
             "bfa4b504",
-            "6ed32967"
+            "5d80a9ac"
+        ]
+    },
+    "f7b5a336": {
+        "Attributes": {
+            "Realm Name": "Ligny",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "ec28046a",
+            "3b78cd34",
+            "65b5d9fa",
+            "04882c14",
+            "d556348b",
+            "191126f5"
+        ]
+    },
+    "c7293a1d": {
+        "Attributes": {
+            "Realm Name": "La Roche",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "1d5907d4",
+            "b2eceb4b",
+            "f541425d",
+            "7aa9cf54",
+            "07665e7a"
+        ]
+    },
+    "3d42a8b4": {
+        "Attributes": {
+            "Realm Name": "Beaurevoir",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "229e1a64",
+            "9f45590a"
+        ]
+    },
+    "4fbc9f13": {
+        "Attributes": {
+            "Realm Name": "Roussy",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "ba6a6afe",
+            "fcdb33a8"
+        ]
+    },
+    "345ccf8f": {
+        "Attributes": {
+            "Realm Name": "Zweibr\u00fccken",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "b4a371a1"
+        ]
+    },
+    "a6692ba9": {
+        "Attributes": {
+            "Realm Name": "Durbuy",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "8a1335ec",
+            "ac5b88f6",
+            "4bc6ae72"
+        ]
+    },
+    "5fce9129": {
+        "Attributes": {
+            "Realm Name": "Arlon",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c86a8c14",
+            "23583d0c",
+            "122f657a",
+            "4c66dfd5"
+        ]
+    },
+    "7dea227f": {
+        "Attributes": {
+            "Realm Name": "Monschau",
+            "Realm Title": "Lordship",
+            "Male Ruler Title": "Lord",
+            "Female Ruler Title": "Lady"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "14c970ae"
+        ]
+    },
+    "e5dae2c5": {
+        "Attributes": {
+            "Realm Name": "Latins",
+            "Realm Title": "Empire",
+            "Male Ruler Title": "Emperor",
+            "Female Ruler Title": "Empress"
+        },
+        "Titular": true,
+        "Connections": {
+            "Predecessor": "53e45d73",
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "6c0d347c",
+            "9292b6c8",
+            "05014495"
+        ]
+    },
+    "afe2450f": {
+        "Attributes": {
+            "Realm Name": "Saint Pol",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "d990c26a",
+            "8ce61614"
+        ]
+    },
+    "51f069b4": {
+        "Attributes": {
+            "Realm Name": "the Palatinate",
+            "Realm Title": "Electorate",
+            "Male Ruler Title": "Elector",
+            "Female Ruler Title": "Electress"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": "4b13d8a1",
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "46e0bf07"
         ]
     }
 }

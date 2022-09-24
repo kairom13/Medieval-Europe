@@ -134,7 +134,7 @@ class PageGenerator:
 
             mapLayout = QVBoxLayout(mapGroup)
 
-            placeMap = PlaceMap(self.window, object_list)
+            placeMap = PlaceMap(self.window, {})
             mapLayout.addWidget(placeMap)
             self.logger.log('Detailed', 'Successfully created place map and added to view object list')
 
@@ -201,8 +201,8 @@ class PageGenerator:
             cancel.clicked.connect(lambda: self.window.page_factory('edit_place_page', {'Place': subject}))
         else:
             if parameters['Connection'] in ('Predecessor', 'Successor'):
-                self.logger.log('Detailed', 'When cancelling, go back to edit the person of {' + subject.getConnectedReign('Person').getID() + '}')
-                cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject.getConnectedReign('Person')}))
+                self.logger.log('Detailed', 'When cancelling, go back to edit the person of {' + subject.getConnection('Person').getID() + '}')
+                cancel.clicked.connect(lambda: self.window.page_factory('edit_person_page', {'Person': subject.getConnection('Person')}))
             elif parameters['Connection'] in ('Title Predecessor', 'Title Successor'):
                 self.logger.log('Detailed', 'When cancelling, go back to edit the title of {' + subject.getID() + '}')
                 cancel.clicked.connect(lambda: self.window.page_factory('edit_title_page', {'Title': subject}))
@@ -597,11 +597,11 @@ class PageGenerator:
 
         ## Edit the name of the person
         nameLayout.addWidget(AttributeWidget(self.window, True, 'Name', person))
-        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Name')
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Name', True)
 
         ## Edit the nickname of the person
         nameLayout.addWidget(AttributeWidget(self.window, True, 'Nickname', person))
-        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Nickname')
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Nickname', True)
 
         header_layout.addStretch(1)
         header_layout.addLayout(nameLayout)
@@ -626,9 +626,9 @@ class PageGenerator:
 
         ## Edit Birth and Death dates
         infoGroup.layout.addWidget(AttributeWidget(self.window, True, 'Birth Date', person))
-        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Birth Date')
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Birth Date', True)
         infoGroup.layout.addWidget(AttributeWidget(self.window, True, 'Death Date', person))
-        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Death Date')
+        self.logger.log('Detailed', 'Successfully created and added the attribute widget for Death Date', True)
 
         ## Button to switch gender (remakes current page with update)
         switchButton = SwitchGenderButton(self.window, self.logger, person)
@@ -651,7 +651,7 @@ class PageGenerator:
         ## Add Father Widget
         fatherLayout = QHBoxLayout()
         fatherLayout.addWidget(ParentWidget(self.window, True, 'Father', person))
-        self.logger.log('Detailed', 'Successfully created and added the parent widget for Father')
+        self.logger.log('Detailed', 'Successfully created and added the parent widget for Father', True)
         fatherLayout.addStretch(1)
 
         infoGroup.layout.addLayout(fatherLayout)
@@ -659,7 +659,7 @@ class PageGenerator:
         ## Add Mother Widget
         motherLayout = QHBoxLayout()
         motherLayout.addWidget(ParentWidget(self.window, True, 'Mother', person))
-        self.logger.log('Detailed', 'Successfully created and added the parent widget for Mother')
+        self.logger.log('Detailed', 'Successfully created and added the parent widget for Mother', True)
         motherLayout.addStretch(1)
 
         infoGroup.layout.addLayout(motherLayout)
@@ -702,7 +702,7 @@ class PageGenerator:
 
                 remove = RemoveConnectionButton(self.window, person, self.window.get_object(s))
                 self.logger.log('Detailed', 'Successfully created and added button to remove spousal connection between '
-                                            '{' + person.getID() + '} and {' + s + '}')
+                                            '{' + person.getID() + '} and {' + s + '}', True)
 
                 spouse.layout.addWidget(remove)
 
@@ -731,7 +731,7 @@ class PageGenerator:
             child_layout = QHBoxLayout()
             remove_child = RemoveConnectionButton(self.window, person, self.window.get_object(c))
             self.logger.log('Detailed', 'Successfully created and added button to remove child connection between '
-                                        '{' + person.getID() + '} and {' + c + '}')
+                                        '{' + person.getID() + '} and {' + c + '}', True)
             child_layout.addWidget(remove_child)
             child_layout.addSpacing(10)
 
@@ -768,7 +768,7 @@ class PageGenerator:
             if not reignObject.isJunior:
                 titleScrollWidget.layout.addWidget(
                     ReignWidget({'Window': self.window, 'Object Type': 'Person', 'Reign': reignObject, 'Edit': True, 'Logger': self.logger}))
-        self.logger.log('Detailed', 'Successfully created and added widget to display reigns')
+        self.logger.log('Detailed', 'Successfully created and added widget to display reigns', True)
 
         ## For A New Reign
         addButton = QPushButton('Add')
@@ -796,7 +796,7 @@ class PageGenerator:
 
         ############ Events Group #############
         page.layout.addWidget(EventsWidget(self.window, True, person), 1, 1)
-        self.logger.log('Detailed', 'Successfully created and added the events widget in edit mode')
+        self.logger.log('Detailed', 'Successfully created and added the events widget in edit mode', True)
 
         # ################ Place Group ################
         # reignGroup = QGroupBox('Places')
@@ -890,15 +890,15 @@ class PageGenerator:
         timeline_layout.addSpacing(10)
 
         ## Connect to predecessor title
-        if titleObject.predecessor is not None:
-            timeline_layout.addWidget(ObjectLabel(self.window, self.window.get_object(titleObject.predecessor), 'Linker Object'))
+        if titleObject.getConnection('Predecessor') is not None:
+            timeline_layout.addWidget(ObjectLabel(self.window, self.window.get_object(titleObject.getConnection('Predecessor')), 'Linker Object'))
 
         timeline_layout.addWidget(QLabel('\u25C0'))
         timeline_layout.addWidget(QLabel('\u25b6'))
 
         ## Connect to successor title
-        if titleObject.successor is not None:
-            timeline_layout.addWidget(ObjectLabel(self.window, self.window.get_object(titleObject.successor), 'Linker Object'))
+        if titleObject.getConnection('Successor') is not None:
+            timeline_layout.addWidget(ObjectLabel(self.window, self.window.get_object(titleObject.getConnection('Successor')), 'Linker Object'))
 
         timeline_layout.addStretch(1)
 
@@ -1119,7 +1119,7 @@ class PageGenerator:
             reignLabel = QHBoxLayout()
             reignLabel.addStretch(1)
 
-            ruler = reignObject.getConnectedReign('Person')
+            ruler = reignObject.getConnection('Person')
 
             reignLabel.addWidget(ObjectLabel(self.window, reignObject, 'Page Title'))
             reignLabel.addWidget(QLabel(reignObject.getDateString()))
@@ -1222,7 +1222,7 @@ class PageGenerator:
             reignLabel = QHBoxLayout()
             reignLabel.addStretch(1)
 
-            ruler = reignObject.getConnectedReign('Person')
+            ruler = reignObject.getConnection('Person')
 
             rulerName = ruler.getAttribute('Name') + ' ' + ruler.getAttribute('Nickname')
 
