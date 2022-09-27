@@ -81,9 +81,12 @@ class PlaceMap(QWidget):
             self.localPlaces = False
 
         for p, place in self.window.objectLists['Place'].items():
-            self.placeList.update({p: {'Coordinates': (transformer.transform(float(place.getAttribute('Longitude')), float(place.getAttribute('Latitude')))),
-                                       'Object': place,
-                                       'Local': p in placeList}})
+            try:
+                self.placeList.update({p: {'Coordinates': (transformer.transform(float(place.getAttribute('Longitude')), float(place.getAttribute('Latitude')))),
+                                           'Object': place,
+                                           'Local': p in placeList}})
+            except ValueError:
+                self.window.logger.log('Warning', 'Could not add {' + p + '} to Place Map, coordinates are not numbers.')
 
         self.adjustCoords = {}  # Global values to adjust shapefile to desired dimensions
         self.polygons = []  # Array of shapefile polygons
@@ -268,27 +271,33 @@ class PlaceMap(QWidget):
                 return True
             elif event.type() == QEvent.MouseButtonPress:
                 if event.button() == Qt.LeftButton:
+                    self.dragMapFlag = True
+                    self.cursorPos = event.pos()
                     if self.selectedPlace is not None:
-                        self.window.page_factory('display_place_page', {'Place': self.selectedPlace})
-                    else:
-                        self.dragMapFlag = True
-                        self.cursorPos = event.pos()
+                        self.setCursor(QCursor(Qt.ClosedHandCursor))
 
                 return True
             elif event.type() == QEvent.MouseButtonRelease:
+                self.setCursor(QCursor(Qt.ArrowCursor))
                 self.dragMapFlag = False
+                if event.button() == Qt.LeftButton:
+                    if self.selectedPlace is not None:
+                        self.window.page_factory('display_place_page', {'Place': self.selectedPlace})
 
                 return True
             elif event.type() == QEvent.MouseMove:
                 self.selectedPlace = None
+                self.setCursor(QCursor(Qt.ArrowCursor))
                 for p_id, p in self.placeList.items():
                     map_coords = p['Map Coords']
 
                     if self.withinDistance(map_coords, (event.pos().x(), event.pos().y()), 10):
                         self.selectedPlace = p['Object']
+                        self.setCursor(QCursor(Qt.PointingHandCursor))
                         break
 
                 if self.dragMapFlag:
+                    self.setCursor(QCursor(Qt.ClosedHandCursor))
                     # print('Shift: (' + str(event.pos().x() - self.cursorPos.x()) + ','
                     #       + str(event.pos().y() - self.cursorPos.y()) + ')')
                     shift = {'x': event.pos().x() - self.cursorPos.x(), 'y': event.pos().y() - self.cursorPos.y()}

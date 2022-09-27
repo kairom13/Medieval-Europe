@@ -311,8 +311,28 @@ class PageGenerator:
         page.layout.setColumnStretch(0, 1)  # column 0 is stretched to 1
         page.layout.setColumnStretch(1, 2)  # column 1 is stretched to 2
 
+        page.layout.setRowStretch(1, 1)  # row 2 is stretched to 1
+        page.layout.setRowStretch(2, 2)  # row 2 is stretched to 2
+
         ## Get the person to display
         person = parameters['Person']
+
+        infoGroup = QGroupBox('Personal Information')
+        infoGroup.layout = QVBoxLayout(infoGroup)
+
+        titleGroup = QGroupBox('Held Titles')
+        titleGroup.layout = QVBoxLayout(titleGroup)
+
+        mapGroup = QGroupBox('Place Map')
+        mapLayout = QVBoxLayout(mapGroup)
+
+        page.layout.addWidget(infoGroup, 1, 0)  # row 1, column 0, spans 1 row, spans 1 column
+        page.layout.addWidget(titleGroup, 1, 1)  # row 2, column 0, spans 2 rows, spans 1 column
+        page.layout.addWidget(mapGroup, 2, 1)  # row 2, column 1, spans 2 rows, spans 1 column
+
+        ############ Events Group #############
+        page.layout.addWidget(EventsWidget(self.window, False, person), 2, 0)
+        self.logger.log('Detailed', 'Successfully created and added the events widget in display mode')
 
         ## Label for the person's name
         self.logger.log('Code', 'Displaying {' + person.getID() + '}')
@@ -340,10 +360,6 @@ class PageGenerator:
         self.logger.log('Code', 'Add Name Widget', True)
 
         ############ Info Group #############
-        infoGroup = QGroupBox('Personal Information')
-        infoGroup.layout = QVBoxLayout()
-        infoGroup.setLayout(infoGroup.layout)
-
         ## Get dictionary for static labels
         staticLabels = person.getStaticLabels()
 
@@ -513,14 +529,7 @@ class PageGenerator:
 
         infoGroup.layout.addLayout(spouse_layout)
 
-        page.layout.addWidget(infoGroup, 1, 0, 1, 1)  # row 1, column 0, spans 1 row, spans 1 column
-        page.layout.setRowStretch(1, 1)  # row 2 is stretched to 1
-
         ############ Title Group #############
-        titleGroup = QGroupBox('Held Titles')
-        titleGroup.layout = QVBoxLayout()
-        titleGroup.setLayout(titleGroup.layout)
-
         titleScroll = QWidget()
         titleScroll.layout = QVBoxLayout()
         titleScroll.setLayout(titleScroll.layout)
@@ -538,16 +547,8 @@ class PageGenerator:
         scroll.setWidgetResizable(True)
 
         titleGroup.layout.addWidget(scroll)
-        page.layout.addWidget(titleGroup, 2, 0, 1, 1)  # row 2, column 0, spans 2 rows, spans 1 column
-        page.layout.setRowStretch(2, 2)  # row 2 is stretched to 2
 
         ############ Map Group #############
-        # Add Map to right side lower 2/3ds
-        mapGroup = QGroupBox('Place Map')
-        page.layout.addWidget(mapGroup, 2, 1, 1, 1)  # row 2, column 1, spans 2 rows, spans 1 column
-
-        mapLayout = QVBoxLayout(mapGroup)
-
         placeList = {}
         for r, reign in person.reignList.items():
             for p, place in reign.placeList.items():
@@ -558,10 +559,6 @@ class PageGenerator:
         placeMap = PlaceMap(self.window, placeList)
         mapLayout.addWidget(placeMap)
         self.logger.log('Detailed', 'Successfully created and added the map of places')
-
-        ############ Events Group #############
-        page.layout.addWidget(EventsWidget(self.window, False, person), 1, 1, 1, 1)
-        self.logger.log('Detailed', 'Successfully created and added the events widget in display mode')
 
         return page
 
@@ -995,10 +992,10 @@ class PageGenerator:
 
         for t, potential_title in self.window.objectLists['Title'].items():
             # Can only choose titles that aren't the current title and don't have a successor
-            if t != title.getID() and potential_title.successor is None:
+            if t != title.getID() and potential_title.getConnection('Successor') is None:
                 valid_pre.update({t: potential_title})
 
-        if title.predecessor is None:
+        if title.getConnection('Predecessor') is None:
             addButton = QPushButton('Add')
             timelineLayout.addWidget(addButton)
 
@@ -1016,7 +1013,7 @@ class PageGenerator:
             timelineLayout.addLayout(preVBox)
 
             # timelineLayout.addWidget(ObjectLabel(self.window, title.predecessor, 'Title', -1))
-            predecessorTitle = self.window.get_object(title.predecessor)
+            predecessorTitle = self.window.get_object(title.getConnection('Predecessor'))
             timelineLayout.addWidget(QLabel(predecessorTitle.getFullRealmTitle()))
 
         timelineLayout.addSpacing(10)
@@ -1027,10 +1024,10 @@ class PageGenerator:
 
         for t, potential_title in self.window.objectLists['Title'].items():
             # Can only choose titles that aren't the current title and don't have a predecessor
-            if t != title.getID() and potential_title.predecessor is None:
+            if t != title.getID() and potential_title.getConnection('Predecessor') is None:
                 valid_suc.update({t: potential_title})
 
-        if title.successor is None:
+        if title.getConnection('Successor') is None:
             addButton = QPushButton('Add')
             timelineLayout.addWidget(addButton)
 
@@ -1049,7 +1046,7 @@ class PageGenerator:
             timelineLayout.addLayout(sucVBox)
 
             # timelineLayout.addWidget(ObjectLabel(self.window, title.predecessor, 'Title', -1))
-            successorTitle = self.window.get_object(title.successor)
+            successorTitle = self.window.get_object(title.getConnection('Successor'))
             timelineLayout.addWidget(QLabel(successorTitle.getFullRealmTitle()))
 
         timelineLayout.addStretch(1)

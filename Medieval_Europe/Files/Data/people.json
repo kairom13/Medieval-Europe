@@ -11035,76 +11035,108 @@
                 "eb3b52c0": []
             },
             "Father": "02128a98",
-            "Mother": null
+            "Mother": "3cc4c465"
         },
         "Events": {},
         "Reign List": {}
     },
     "02128a98": {
         "Attributes": {
-            "Name": "Theodoric I",
+            "Name": "Thierry I",
             "Nickname": "of Mousson",
-            "Birth Date": "1045",
-            "Death Date": "2/21105"
+            "Birth Date": "c. 1045",
+            "Death Date": "1/2/1103"
         },
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": [
-                    "d84ae8ab",
-                    "c95119ea"
-                ],
-                "3cc4c465": []
+                "unknown_spouse": [],
+                "3cc4c465": [
+                    "c95119ea",
+                    "d84ae8ab"
+                ]
             },
             "Father": "88babd76",
             "Mother": null
         },
         "Events": {
             "82818b2c": {
-                "Date": "",
-                "Content": "Count of Mousson, Altkirch, and Pfirt"
+                "Date": "1076",
+                "Content": "Inherited County of Montbeliard, Altkirch, and Pfirt from father"
             },
             "b261b3ac": {
                 "Date": "1093",
-                "Content": "Inherited County of Bar from mother"
+                "Content": "Inherited County of Bar and Lordship of Mousson from mother"
             },
             "5ba483d8": {
                 "Date": "1096",
                 "Content": "Given County of Verdun by Bishop Richer"
-            },
-            "bbdefe1f": {
-                "Date": "",
-                "Content": "Gained the County of Mompelgard through his wife"
             }
         },
-        "Reign List": {}
+        "Reign List": {
+            "2ea2d12f": {
+                "Attributes": {
+                    "Start Date": "1076",
+                    "End Date": "1/2/1105"
+                },
+                "Connections": {
+                    "Title": "620a2fe4",
+                    "Predecessor": "96eda381",
+                    "Successor": "61e2d810"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "c4820eec": {
+                "Attributes": {
+                    "Start Date": "1093",
+                    "End Date": "1/2/1105"
+                },
+                "Connections": {
+                    "Title": "b3930238",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "c95119ea": {
         "Attributes": {
-            "Name": "Dietrich II",
+            "Name": "Thierry II",
             "Nickname": "",
-            "Birth Date": "",
-            "Death Date": "1163"
+            "Birth Date": "1076-78",
+            "Death Date": "1/1163"
         },
         "Gender": 0,
         "Connections": {
             "Spouses": {
-                "unknown_spouse": []
+                "unknown_spouse": [
+                    "01d45a71",
+                    "a0248a18"
+                ]
             },
             "Father": "02128a98",
-            "Mother": null
+            "Mother": "3cc4c465"
         },
         "Events": {},
         "Reign List": {
             "61e2d810": {
                 "Attributes": {
-                    "Start Date": "1105",
-                    "End Date": "1163"
+                    "Start Date": "1/2/1103",
+                    "End Date": "1/1163"
                 },
                 "Connections": {
                     "Title": "620a2fe4",
-                    "Predecessor": "e02367f0",
-                    "Successor": null
+                    "Predecessor": "2ea2d12f",
+                    "Successor": "1dc1b82d"
                 },
                 "Is Primary": true,
                 "Merged Reigns": {
@@ -11125,30 +11157,16 @@
         "Connections": {
             "Spouses": {
                 "unknown_spouse": [],
-                "02128a98": []
+                "02128a98": [
+                    "c95119ea",
+                    "d84ae8ab"
+                ]
             },
             "Father": "c034f3d6",
             "Mother": null
         },
         "Events": {},
-        "Reign List": {
-            "e02367f0": {
-                "Attributes": {
-                    "Start Date": "",
-                    "End Date": "1105"
-                },
-                "Connections": {
-                    "Title": "620a2fe4",
-                    "Predecessor": null,
-                    "Successor": "61e2d810"
-                },
-                "Is Primary": true,
-                "Merged Reigns": {
-                    "Senior": null,
-                    "Junior": []
-                }
-            }
-        }
+        "Reign List": {}
     },
     "c034f3d6": {
         "Attributes": {
@@ -12015,7 +12033,7 @@
                     "f8c80d48"
                 ]
             },
-            "Father": null,
+            "Father": "e1ead3e6",
             "Mother": null
         },
         "Events": {},
@@ -12027,7 +12045,7 @@
                 },
                 "Connections": {
                     "Title": "620a2fe4",
-                    "Predecessor": null,
+                    "Predecessor": "8076e3bc",
                     "Successor": "2d63c951"
                 },
                 "Is Primary": true,
@@ -12737,7 +12755,7 @@
         "Attributes": {
             "Name": "Louis",
             "Nickname": "",
-            "Birth Date": "1020",
+            "Birth Date": "c. 1015",
             "Death Date": "1073/76"
         },
         "Gender": 0,
@@ -12751,7 +12769,56 @@
             "Mother": null
         },
         "Events": {},
-        "Reign List": {}
+        "Reign List": {
+            "96eda381": {
+                "Attributes": {
+                    "Start Date": "1042",
+                    "End Date": "1073/76"
+                },
+                "Connections": {
+                    "Title": "620a2fe4",
+                    "Predecessor": null,
+                    "Successor": "2ea2d12f"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "c97a7a9a": {
+                "Attributes": {
+                    "Start Date": "1042",
+                    "End Date": "1073/76"
+                },
+                "Connections": {
+                    "Title": "f07e4860",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "909ea272": {
+                "Attributes": {
+                    "Start Date": "1042",
+                    "End Date": "1073/76"
+                },
+                "Connections": {
+                    "Title": "31c7e3e1",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     },
     "b8b690bf": {
         "Attributes": {
@@ -20465,5 +20532,466 @@
         },
         "Events": {},
         "Reign List": {}
+    },
+    "01d45a71": {
+        "Attributes": {
+            "Name": "Thierry III",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1155-60"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "c95119ea",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "a0248a18": {
+        "Attributes": {
+            "Name": "Sophie",
+            "Nickname": "",
+            "Birth Date": "before 1114",
+            "Death Date": "1148"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "98c09fb8": [
+                    "e0a5849f"
+                ]
+            },
+            "Father": "c95119ea",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "98c09fb8": {
+        "Attributes": {
+            "Name": "Richard II",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1162"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "a0248a18": [
+                    "e0a5849f"
+                ]
+            },
+            "Father": "8bff038f",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "73a95ab0": {
+                "Attributes": {
+                    "Start Date": "1110",
+                    "End Date": "1162"
+                },
+                "Connections": {
+                    "Title": "d7e0c764",
+                    "Predecessor": "b18d8f4b",
+                    "Successor": "60d9291c"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "e0a5849f": {
+        "Attributes": {
+            "Name": "Amadeus",
+            "Nickname": "",
+            "Birth Date": "1130",
+            "Death Date": "1195"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "4014d549"
+                ]
+            },
+            "Father": "98c09fb8",
+            "Mother": "a0248a18"
+        },
+        "Events": {},
+        "Reign List": {
+            "1dc1b82d": {
+                "Attributes": {
+                    "Start Date": "1/1163",
+                    "End Date": "1195"
+                },
+                "Connections": {
+                    "Title": "620a2fe4",
+                    "Predecessor": "61e2d810",
+                    "Successor": "5eecd84e"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "60d9291c": {
+                "Attributes": {
+                    "Start Date": "1162",
+                    "End Date": "1195"
+                },
+                "Connections": {
+                    "Title": "d7e0c764",
+                    "Predecessor": "73a95ab0",
+                    "Successor": "5d0b5880"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "4014d549": {
+        "Attributes": {
+            "Name": "Richard III",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1227"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "8f466e1c"
+                ]
+            },
+            "Father": "e0a5849f",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "5eecd84e": {
+                "Attributes": {
+                    "Start Date": "1195",
+                    "End Date": "1227"
+                },
+                "Connections": {
+                    "Title": "620a2fe4",
+                    "Predecessor": "1dc1b82d",
+                    "Successor": "22a01bdb"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "5d0b5880": {
+                "Attributes": {
+                    "Start Date": "1195",
+                    "End Date": "1227"
+                },
+                "Connections": {
+                    "Title": "d7e0c764",
+                    "Predecessor": "60d9291c",
+                    "Successor": null
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "be8b553e": {
+        "Attributes": {
+            "Name": "Richard",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1279"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "8f466e1c",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "75fd77d5": {
+        "Attributes": {
+            "Name": "Sibyl",
+            "Nickname": "of Montfaucon",
+            "Birth Date": "",
+            "Death Date": ""
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "18848653": [
+                    "e1ead3e6"
+                ]
+            },
+            "Father": "8f466e1c",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {}
+    },
+    "18848653": {
+        "Attributes": {
+            "Name": "Rudolph III",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "1263"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [],
+                "75fd77d5": [
+                    "e1ead3e6"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "5561f6ea": {
+                "Attributes": {
+                    "Start Date": "1259",
+                    "End Date": "1263"
+                },
+                "Connections": {
+                    "Title": "871a686a",
+                    "Predecessor": null,
+                    "Successor": "4ad98bbb"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "e1ead3e6": {
+        "Attributes": {
+            "Name": "Amadeus",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "2/3/1288"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "0f7e51cd",
+                    "acb5b788"
+                ]
+            },
+            "Father": "18848653",
+            "Mother": "75fd77d5"
+        },
+        "Events": {},
+        "Reign List": {
+            "4ad98bbb": {
+                "Attributes": {
+                    "Start Date": "1263",
+                    "End Date": "2/3/1288"
+                },
+                "Connections": {
+                    "Title": "871a686a",
+                    "Predecessor": "5561f6ea",
+                    "Successor": "405e44a7"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            },
+            "8076e3bc": {
+                "Attributes": {
+                    "Start Date": "1283",
+                    "End Date": "2/3/1288"
+                },
+                "Connections": {
+                    "Title": "620a2fe4",
+                    "Predecessor": "22a01bdb",
+                    "Successor": "5fa57304"
+                },
+                "Is Primary": false,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "8f466e1c": {
+        "Attributes": {
+            "Name": "Thierry III",
+            "Nickname": "",
+            "Birth Date": "1205",
+            "Death Date": "1283"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "be8b553e",
+                    "75fd77d5"
+                ]
+            },
+            "Father": "4014d549",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "22a01bdb": {
+                "Attributes": {
+                    "Start Date": "1227",
+                    "End Date": "1283"
+                },
+                "Connections": {
+                    "Title": "620a2fe4",
+                    "Predecessor": "5eecd84e",
+                    "Successor": "8076e3bc"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "0f7e51cd": {
+        "Attributes": {
+            "Name": "Rudolph IV",
+            "Nickname": "",
+            "Birth Date": "9/25/1274",
+            "Death Date": "3/1343"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "e1ead3e6",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "405e44a7": {
+                "Attributes": {
+                    "Start Date": "2/3/1288",
+                    "End Date": "3/1343"
+                },
+                "Connections": {
+                    "Title": "871a686a",
+                    "Predecessor": "4ad98bbb",
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "8a9390cd": {
+        "Attributes": {
+            "Name": "Richard I",
+            "Nickname": "",
+            "Birth Date": "c. 1030",
+            "Death Date": "c. 1060/85"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "8bff038f"
+                ]
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "0713ed48": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "c. 1060/85"
+                },
+                "Connections": {
+                    "Title": "d7e0c764",
+                    "Predecessor": null,
+                    "Successor": "b18d8f4b"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "8bff038f": {
+        "Attributes": {
+            "Name": "Amadeus I",
+            "Nickname": "",
+            "Birth Date": "c. 1065",
+            "Death Date": "after 1110"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": [
+                    "98c09fb8"
+                ]
+            },
+            "Father": "8a9390cd",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "b18d8f4b": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "after 1110"
+                },
+                "Connections": {
+                    "Title": "d7e0c764",
+                    "Predecessor": "0713ed48",
+                    "Successor": "73a95ab0"
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
     }
 }

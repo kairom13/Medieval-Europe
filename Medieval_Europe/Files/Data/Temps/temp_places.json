@@ -1195,7 +1195,11 @@
         "Events": {},
         "Reign List": [
             "80b38723",
-            "b188c837"
+            "b188c837",
+            "73a95ab0",
+            "60d9291c",
+            "b18d8f4b",
+            "5d0b5880"
         ]
     },
     "ad9e059a": {
@@ -1210,7 +1214,14 @@
             "2d63c951",
             "70d0ffa0",
             "7d77cb9d",
-            "54973870"
+            "54973870",
+            "96eda381",
+            "2ea2d12f",
+            "61e2d810",
+            "1dc1b82d",
+            "5eecd84e",
+            "22a01bdb",
+            "8076e3bc"
         ]
     },
     "4ca2a761": {
@@ -1249,7 +1260,8 @@
         "Events": {},
         "Reign List": [
             "3d13b797",
-            "fa250466"
+            "fa250466",
+            "c97a7a9a"
         ]
     },
     "352b0472": {
@@ -1652,7 +1664,7 @@
     },
     "7d5e338d": {
         "Attributes": {
-            "Name": "Macon",
+            "Name": "M\u00e2con",
             "Latitude": "46.305",
             "Longitude": "4.83"
         },
@@ -2163,7 +2175,13 @@
             "Longitude": "4.865"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "4d9b42c0",
+            "4c168894",
+            "74e6be24",
+            "6f47a724",
+            "56285707"
+        ]
     },
     "2040f5ff": {
         "Attributes": {
@@ -2224,5 +2242,433 @@
             "4bc6ae72",
             "8a1335ec"
         ]
+    },
+    "81f17a7e": {
+        "Attributes": {
+            "Name": "Rattenberg",
+            "Latitude": "47.44",
+            "Longitude": "11.89"
+        },
+        "Events": {
+            "7c1202e9": {
+                "Date": "7/30/1505",
+                "Content": "Ceded to Tyrol following the Landshut War of Succession"
+            }
+        },
+        "Reign List": []
+    },
+    "c2200c39": {
+        "Attributes": {
+            "Name": "Moulins",
+            "Latitude": "46.565",
+            "Longitude": "3.33"
+        },
+        "Events": {},
+        "Reign List": [
+            "9fc4c422",
+            "a1e95026",
+            "41eda251",
+            "6214b8b0",
+            "e12f25e2"
+        ]
+    },
+    "940e74e1": {
+        "Attributes": {
+            "Name": "Orval",
+            "Latitude": "46.725",
+            "Longitude": "2.48"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "7d216c48": {
+        "Attributes": {
+            "Name": "Evaux",
+            "Latitude": "46.175",
+            "Longitude": "2.485"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "180677e0": {
+        "Attributes": {
+            "Name": "Cluny",
+            "Latitude": "46.435",
+            "Longitude": "4.66"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "217cbc2a": {
+        "Attributes": {
+            "Name": "Chalon",
+            "Latitude": "46.78",
+            "Longitude": "4.855"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "abacc5f7": {
+        "Attributes": {
+            "Name": "Autun",
+            "Latitude": "46.95",
+            "Longitude": "4.3"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1419bb93": {
+        "Attributes": {
+            "Name": "Geneva",
+            "Latitude": "46.2",
+            "Longitude": "6.145"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "03bc853b": {
+        "Attributes": {
+            "Name": "Lausanne",
+            "Latitude": "46.52",
+            "Longitude": "6.635"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "bc85bbe8": {
+        "Attributes": {
+            "Name": "Bern",
+            "Latitude": "46.948",
+            "Longitude": "7.45"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "18d6f0f6": {
+        "Attributes": {
+            "Name": "Schwyz",
+            "Latitude": "47.02",
+            "Longitude": "8.65"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "95f9aa54": {
+        "Attributes": {
+            "Name": "Disentis",
+            "Latitude": "46.705",
+            "Longitude": "8.855"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "0ec35e70": {
+        "Attributes": {
+            "Name": "Chur",
+            "Latitude": "46.85",
+            "Longitude": "9.53"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "6a7103eb": {
+        "Attributes": {
+            "Name": "Kufstein",
+            "Latitude": "47.58",
+            "Longitude": "12.17"
+        },
+        "Events": {
+            "eed21ea2": {
+                "Date": "7/30/1505",
+                "Content": "Ceded to Tyrol following the Landshut War of Succession"
+            }
+        },
+        "Reign List": []
+    },
+    "ba0c60e7": {
+        "Attributes": {
+            "Name": "Kitzbuhel",
+            "Latitude": "47.45",
+            "Longitude": "12.39"
+        },
+        "Events": {
+            "beaa98e0": {
+                "Date": "7/30/1505",
+                "Content": "Ceded to Tyrol following the Landshut War of Succession"
+            }
+        },
+        "Reign List": []
+    },
+    "fdbecdcb": {
+        "Attributes": {
+            "Name": "Berchtesgaden",
+            "Latitude": "47.63",
+            "Longitude": "13"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c8c2fc68": {
+        "Attributes": {
+            "Name": "Vienna",
+            "Latitude": "48.21",
+            "Longitude": "16.37"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "773276e8": {
+        "Attributes": {
+            "Name": "Graz",
+            "Latitude": "47.07",
+            "Longitude": "15.44"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "8300cf67": {
+        "Attributes": {
+            "Name": "St. Gallen",
+            "Latitude": "47.425",
+            "Longitude": "9.375"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "98b8f2dd": {
+        "Attributes": {
+            "Name": "Brugg",
+            "Latitude": "47.485",
+            "Longitude": "8.205"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "813ebf70": {
+        "Attributes": {
+            "Name": "Ulm",
+            "Latitude": "48.4",
+            "Longitude": "9.99"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1a206d23": {
+        "Attributes": {
+            "Name": "Bozen",
+            "Latitude": "46.5",
+            "Longitude": "11.355"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "bca99392": {
+        "Attributes": {
+            "Name": "Meran",
+            "Latitude": "46.67",
+            "Longitude": "11.16"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "0134c6a0": {
+        "Attributes": {
+            "Name": "Brixen",
+            "Latitude": "46.715",
+            "Longitude": "11.655"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1e9cddb1": {
+        "Attributes": {
+            "Name": "Pavia",
+            "Latitude": "45.185",
+            "Longitude": "9.155"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "6c8c1e03": {
+        "Attributes": {
+            "Name": "Prum",
+            "Latitude": "50.21",
+            "Longitude": "6.425"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "ee512162": {
+        "Attributes": {
+            "Name": "Julich",
+            "Latitude": "50.92",
+            "Longitude": "6.36"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "e039ed6a": {
+        "Attributes": {
+            "Name": "Paderborn",
+            "Latitude": "51.72",
+            "Longitude": "8.755"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d2da8b1d": {
+        "Attributes": {
+            "Name": "Cassel",
+            "Latitude": "51.315",
+            "Longitude": "9.5"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d5a88ba5": {
+        "Attributes": {
+            "Name": "Waschenbeuren",
+            "Latitude": "48.76",
+            "Longitude": "9.685"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "e2951251": {
+        "Attributes": {
+            "Name": "Vichy",
+            "Latitude": "46.125",
+            "Longitude": "3.42"
+        },
+        "Events": {
+            "1462222a": {
+                "Date": "9/2/1344",
+                "Content": "John II, King of France, gave Vichy to Peter I, Duke of Bourbon"
+            }
+        },
+        "Reign List": []
+    },
+    "d1efa64b": {
+        "Attributes": {
+            "Name": "Gannat",
+            "Latitude": "46.1",
+            "Longitude": "3.2"
+        },
+        "Events": {},
+        "Reign List": [
+            "9fc4c422",
+            "a1e95026",
+            "41eda251",
+            "6214b8b0",
+            "e12f25e2"
+        ]
+    },
+    "b6d8b7bf": {
+        "Attributes": {
+            "Name": "Jaligny",
+            "Latitude": "46.38",
+            "Longitude": "3.59"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2741673b": {
+        "Attributes": {
+            "Name": "Altkirch",
+            "Latitude": "47.62",
+            "Longitude": "7.24"
+        },
+        "Events": {},
+        "Reign List": [
+            "909ea272"
+        ]
+    },
+    "b542f798": {
+        "Attributes": {
+            "Name": "Porrentruy",
+            "Latitude": "47.415",
+            "Longitude": "7.075"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "51bbb971": {
+        "Attributes": {
+            "Name": "Neuch\u00e2tel",
+            "Latitude": "46.99",
+            "Longitude": "6.93"
+        },
+        "Events": {},
+        "Reign List": [
+            "5561f6ea",
+            "4ad98bbb",
+            "405e44a7"
+        ]
+    },
+    "1c8b6138": {
+        "Attributes": {
+            "Name": "Landeron",
+            "Latitude": "47.06",
+            "Longitude": "7.07"
+        },
+        "Events": {},
+        "Reign List": [
+            "5561f6ea",
+            "4ad98bbb",
+            "405e44a7"
+        ]
+    },
+    "9e4c365b": {
+        "Attributes": {
+            "Name": "Thielle",
+            "Latitude": "47.025",
+            "Longitude": "7.02"
+        },
+        "Events": {},
+        "Reign List": [
+            "5561f6ea",
+            "4ad98bbb",
+            "405e44a7"
+        ]
+    },
+    "1b88835b": {
+        "Attributes": {
+            "Name": "Blamont",
+            "Latitude": "47.385",
+            "Longitude": "6.85"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b94ee3fc": {
+        "Attributes": {
+            "Name": "Neuch\u00e2tel-Urti\u00e8re",
+            "Latitude": "47.375",
+            "Longitude": "6.73"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "5c74ab67": {
+        "Attributes": {
+            "Name": "Montagny-pr\u00e8s-Yverdon",
+            "Latitude": "46.79",
+            "Longitude": "6.615"
+        },
+        "Events": {},
+        "Reign List": [
+            "73a95ab0",
+            "60d9291c",
+            "5d0b5880"
+        ]
+    },
+    "b7aac9af": {
+        "Attributes": {
+            "Name": "Orbe",
+            "Latitude": "46.725",
+            "Longitude": "6.53"
+        },
+        "Events": {},
+        "Reign List": []
     }
 }

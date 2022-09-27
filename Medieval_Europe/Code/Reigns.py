@@ -75,48 +75,48 @@ class ReignWidget(QWidget):
             layout.addLayout(EditTitleWidget(self.window, self.reign), 0, 0, 1, 3)  # add at row 0, column 0, and stretch over 1 rows, and 3 columns
 
             ## Make Reign "widget"
-            preLabelLayout = QHBoxLayout()
-            preLabelLayout.addStretch(1)
-
-            preButtonVBox = QVBoxLayout()
-
-            addPreButton = QPushButton('')
-            preButtonVBox.addWidget(addPreButton)
-
-            if self.reign.hasConnection('Predecessor'):  ## Use change and remove buttons when predecessor exists
-                predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
-                self.logger.log('Code', 'Reign has predecessor: ' + predecessorObject.getConnection('Person').getName(), True)
-
-                addPreButton.setText('Change')
-
-                preButtonVBox.addWidget(RemoveConnectionButton(self.window, self.reign, predecessorObject))
-                preLabelLayout.addLayout(preButtonVBox)
-
-                predecessorLabel = QLabel(predecessorObject.getConnection('Person').getAttribute('Name'))
-                preLabelLayout.addWidget(predecessorLabel)
-
-            else:  ## Use Add button when no existing predecessor
-                self.logger.log('Code', 'Reign has no predecessor', True)
-                addPreButton.setText('Add')
-                preLabelLayout.addLayout(preButtonVBox)
-
-            valid_pre = {}
-
-            for r in self.title.reignDict:
-                potential_reign = self.window.get_object(r)
-                if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
-                    valid_pre.update({r: potential_reign})
-
-            # Get potential predecessor reigns from this title's successor
-            if self.title.getConnection('Predecessor') is not None:
-                pre_title = self.window.get_object(self.title.getConnection('Predecessor'))
-
-                for r in pre_title.reignDict:
-                    potential_reign = self.window.get_object(r)
-                    if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
-                        valid_pre.update({r: potential_reign})
-
-            addPreButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': valid_pre, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Predecessor'}))
+            # preLabelLayout = QHBoxLayout()
+            # preLabelLayout.addStretch(1)
+            #
+            # preButtonVBox = QVBoxLayout()
+            #
+            # addPreButton = QPushButton('')
+            # preButtonVBox.addWidget(addPreButton)
+            #
+            # if self.reign.hasConnection('Predecessor'):  ## Use change and remove buttons when predecessor exists
+            #     predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
+            #     self.logger.log('Code', 'Reign has predecessor: ' + predecessorObject.getConnection('Person').getName(), True)
+            #
+            #     addPreButton.setText('Change')
+            #
+            #     preButtonVBox.addWidget(RemoveConnectionButton(self.window, self.reign, predecessorObject))
+            #     preLabelLayout.addLayout(preButtonVBox)
+            #
+            #     predecessorLabel = QLabel(predecessorObject.getConnection('Person').getAttribute('Name'))
+            #     preLabelLayout.addWidget(predecessorLabel)
+            #
+            # else:  ## Use Add button when no existing predecessor
+            #     self.logger.log('Code', 'Reign has no predecessor', True)
+            #     addPreButton.setText('Add')
+            #     preLabelLayout.addLayout(preButtonVBox)
+            #
+            # valid_pre = {}
+            #
+            # for r in self.title.reignDict:
+            #     potential_reign = self.window.get_object(r)
+            #     if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
+            #         valid_pre.update({r: potential_reign})
+            #
+            # # Get potential predecessor reigns from this title's successor
+            # if self.title.getConnection('Predecessor') is not None:
+            #     pre_title = self.window.get_object(self.title.getConnection('Predecessor'))
+            #
+            #     for r in pre_title.reignDict:
+            #         potential_reign = self.window.get_object(r)
+            #         if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
+            #             valid_pre.update({r: potential_reign})
+            #
+            # addPreButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': valid_pre, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Predecessor'}))
             #layout.addLayout(preLabelLayout, 1, 0)
             layout.addLayout(EditConnectedReignWidget(self.window, 'Predecessor', self.reign), 1, 0)
 

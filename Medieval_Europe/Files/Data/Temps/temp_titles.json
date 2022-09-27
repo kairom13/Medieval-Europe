@@ -1331,7 +1331,7 @@
     },
     "507c3c8f": {
         "Attributes": {
-            "Realm Name": "Macon",
+            "Realm Name": "M\u00e2con",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
             "Female Ruler Title": "Countess"
@@ -1463,13 +1463,18 @@
         },
         "Events": {},
         "Reign List": [
+            "2ea2d12f",
             "61e2d810",
-            "e02367f0",
             "54973870",
             "7d77cb9d",
             "70d0ffa0",
             "2d63c951",
-            "5fa57304"
+            "5fa57304",
+            "96eda381",
+            "1dc1b82d",
+            "5eecd84e",
+            "8076e3bc",
+            "22a01bdb"
         ]
     },
     "599cf8bb": {
@@ -1508,7 +1513,12 @@
         "Events": {},
         "Reign List": [
             "b188c837",
-            "80b38723"
+            "80b38723",
+            "73a95ab0",
+            "60d9291c",
+            "0713ed48",
+            "b18d8f4b",
+            "5d0b5880"
         ]
     },
     "3e379b7d": {
@@ -1560,7 +1570,8 @@
         "Events": {},
         "Reign List": [
             "3d13b797",
-            "fa250466"
+            "fa250466",
+            "c97a7a9a"
         ]
     },
     "68ea1cb5": {
@@ -2374,5 +2385,73 @@
         "Reign List": [
             "46e0bf07"
         ]
+    },
+    "31c7e3e1": {
+        "Attributes": {
+            "Realm Name": "Altkirch",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "909ea272"
+        ]
+    },
+    "b3930238": {
+        "Attributes": {
+            "Realm Name": "Bar",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "c4820eec"
+        ]
+    },
+    "871a686a": {
+        "Attributes": {
+            "Realm Name": "Neuch\u00e2tel",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "5561f6ea",
+            "4ad98bbb",
+            "405e44a7"
+        ]
+    },
+    "25cba195": {
+        "Attributes": {
+            "Realm Name": "Empty",
+            "Realm Title": "",
+            "Male Ruler Title": "",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": []
     }
 }

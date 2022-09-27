@@ -9,6 +9,7 @@ import os
 import sys
 import uuid
 from abc import ABC, abstractmethod
+import smtplib
 
 from PyQt5.QtWidgets import QWidget, QMessageBox, QDialog, QDialogButtonBox, QVBoxLayout, QLabel
 
@@ -1179,4 +1180,25 @@ class DisplayErrorDialog(QDialog):
         self.layout.addWidget(bottomLabel)
         self.layout.addWidget(self.buttonBox)
         self.setLayout(self.layout)
+
+        # import smtplib, ssl
+        #
+        # port = 465  # For SSL
+        # password = input("Type your password and press enter: ")
+        #
+        # # Create a secure SSL context
+        # context = ssl.create_default_context()
+        #
+        # sender_email = "medapp.errors@gmail.com"
+        # receiver_email = "medapp.errors@gmail.com"
+        # message = """\
+        # Subject: Test Email
+        #
+        # This message is sent from Python."""
+        #
+        # with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+        #     server.login("medapp.errors@gmail.com", password)
+        #     server.sendmail(sender_email, receiver_email, message)
+
+
 
