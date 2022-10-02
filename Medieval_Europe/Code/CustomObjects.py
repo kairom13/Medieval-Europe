@@ -239,6 +239,7 @@ class Person(CustomObject):
 
         self.reignList = {}  # {reign.id: reignObject}
         self.placeList = {}  # {place.id: placeObject
+        self.seniorReigns = {}  # List of reigns for the person that are not junior
 
         self.setName()
         self.logger.log('Detailed', 'Initial setting of names: ' + str(list(self.name.items())), True)
@@ -389,6 +390,8 @@ class Person(CustomObject):
         if isinstance(reign, Reign):
             self.reignList.update({reign.getID(): reign})
             self.connection('Add', reign.getID(), 'Reign')
+            if not reign.isJunior:
+                self.seniorReigns.update({reign.getID(): reign})
         else:
             self.logger.log('Error', 'Cannot add ' + str(reign) + ' as Reign. Invalid type')
         
@@ -401,133 +404,15 @@ class Person(CustomObject):
             place.removeReign(reignID)
 
         self.reignList.pop(reignID)
-        
-    ## Merges the junior reign with the senior reign 
-    def mergeReigns(self, juniorReign, seniorReign, window):
-        seniorReign.mergeReign(juniorReign, 'Junior')
-        
-        self.logger.log('Code', 'Senior Reign: ' + str(seniorReign.titleName))
-        self.logger.log('Code', 'Junior Reign: ' + str(juniorReign.titleName))
-        
-        # Transfer any junior reigns in the reign object to the target senior reign
-        for j in juniorReign.mergedReigns['Junior']:
-            reignObject = window.reignList[j]
-            seniorReign.mergeReign(reignObject, 'Junior')
-            reignObject.mergeReign(seniorReign, 'Senior')
-            
-        juniorReign.mergeReign(seniorReign, 'Senior')
-        
-        ## If the senior reign has a predecessor, make sure the junior reign has a similar predecessor
-        ##    1) Get the predecessor person
-        ##    2) Iterate through the reign list to find the equivalent title
-        ##        a) The title is found, look for the successor
-        ##            i) A successor is found, note it in the log and replace it with this reign
-        ##            ii) A successor is not found, so set this reign as the new successor
-        ##            iii) No other action needed
-        ##        b) The title is not found, create new reign
-        ##            i) Set the successor as this reign
-        ##            ii) Add it to the person, title, and global reignlist
-        ##            iii) Merge the reign with the senior (restart the process with the new person)
-        if seniorReign.hasConnectedReign('Predecessor'):
-            self.logger.log('Code', 'Add Predecessor')
-            
-            seniorPredecessor = window.get_object(seniorReign.predecessor)  # The predecessor to the senior reign
-            predecessorPerson = window.get_object(seniorPredecessor.rulerID)  # The person who has the predecessor senior reign
-            
-            allJuniorReigns = [juniorReign.getID()]
-            for j in juniorReign.mergedReigns['Junior']:
-                allJuniorReigns.append(j)
-            
-            for j in allJuniorReigns:
-                juniorReignObject = window.get_object(j)
-                juniorTitle = window.get_object(juniorReignObject.titleID)  # The title of the junior reign being merged
-                
-                self.logger.log('Code', 'Adding Predecessor to ' + str(juniorReignObject.titleName))
-                
-                noTitle = True
-                for r, predecessorReign in predecessorPerson.reignList.items():  # Iterate through the reigns of the predecessor
-                    if predecessorReign.titleID == juniorReignObject.titleID:  # Look for the junior reign-title in the list
-                        noTitle = False  # If found, then no need for new reign
-                        # Set the junior reign as this reign's successor
-                        if not predecessorReign.hasConnectedReign('Successor'):
-                            predecessorReign.setSuccessor(juniorReignObject.getID())
-                            juniorReignObject.setPredecessor(predecessorReign.getID())
-                        else:
-                            print(str(predecessorPerson.getAttribute('Name')) + ', ' + juniorTitle.getFullRulerTitle(predecessorPerson.gender) +
-                                  ' already has a successor in ' + str(juniorReignObject.getConnection('Person').getName()))
-                            predecessorReign.setSuccessor(juniorReignObject.getID())
-                            juniorReignObject.setPredecessor(predecessorReign.getID())
-                
-                if noTitle: ## Case when the title is not in the person's list
-                    juniorPredecessor = Reign(self.logger, predecessorPerson.getID(), predecessorPerson.getAttribute('Name'))
-                    juniorPredecessor.setSuccessor(juniorReignObject.getID())
-                    juniorReignObject.setPredecessor(juniorPredecessor.getID())
-                    juniorPredecessor.setTitle(juniorTitle)
-                    juniorPredecessor.setDate(seniorPredecessor.stDate, 'Start Date')
-                    juniorPredecessor.setDate(seniorPredecessor.endDate, 'End Date')
-                    
-                    predecessorPerson.addReign(juniorPredecessor)
-                    juniorTitle.addReign(juniorPredecessor)
-                    window.add_object(juniorPredecessor)
-                    
-                    # Merge the new junior reign with the existing senior predecessor
-                    predecessorPerson.mergeReigns(juniorPredecessor, seniorPredecessor, window)
-        
-        ## If the senior reign has a successor, make sure the junior reign has a similar successor
-        ##    1) Get the predecessor person
-        ##    2) Iterate through the reign list to find the equivalent title
-        ##        a) The title is found, look for the predecessor
-        ##            i) A predecessor is found, note it in the log and replace it with this reign
-        ##            ii) A predecessor is not found, so set this reign as the new predecessor
-        ##            iii) No other action needed
-        ##        b) The title is not found, create new reign
-        ##            i) Set the predecessor as this reign
-        ##            ii) Add it to the person, title, and global reignlist
-        ##            iii) No other action needed
-        ##    3) Merge the selected reign with the senior (restart the process with the new person)
-        if seniorReign.hasConnectedReign('Successor'):
-            self.logger.log('Code', 'Add Successor')
-            
-            seniorSuccessor = window.get_object(seniorReign.successor)
-            successorPerson = window.get_object(seniorSuccessor.rulerID)
-            
-            allJuniorReigns = [juniorReign.getID()]
-            for j in juniorReign.mergedReigns['Junior']:
-                allJuniorReigns.append(j)
-            
-            for j in allJuniorReigns:
-                juniorReignObject = window.get_object(j)
-                juniorTitle = juniorReign.getConnection('Title')
-                
-                self.logger.log('Code', 'Adding Successor to ' + str(juniorReignObject.titleName))
-                
-                noTitle = True
-                for r, successorReign in successorPerson.reignList.items():
-                    if successorReign.titleID == juniorReignObject.titleID:
-                        noTitle = False
-                        if not successorReign.hasConnectedReign('Successor'):
-                            successorReign.setPredecessor(juniorReignObject.getID())
-                            juniorReignObject.setSuccessor(successorReign.getID())
-                        else:
-                            print(str(successorPerson.getAttribute('Name')) + ', ' + juniorTitle.getFullRulerTitle(successorPerson.gender) +
-                                  ' already has a successor in ' + str(juniorReignObject.getConnection('Person').getName()))
-                            successorReign.setPredecessor(juniorReignObject.getID())
-                            juniorReignObject.setSuccessor(successorReign.getID())
-                
-                if noTitle:
-                    juniorSuccessor = Reign(self.logger, successorPerson.getID(), successorPerson.getAttribute('Name'))
-                    juniorSuccessor.setPredecessor(juniorReignObject.getID())
-                    juniorReignObject.setSuccessor(juniorSuccessor.getID())
-                    juniorSuccessor.setTitle(juniorTitle)
-                    juniorSuccessor.setDate(seniorSuccessor.stDate, 'Start Date')
-                    juniorSuccessor.setDate(seniorSuccessor.endDate, 'End Date')
-                    
-                    successorPerson.addReign(juniorSuccessor)
-                    juniorTitle.addReign(juniorSuccessor)
-                    window.add_object(juniorSuccessor)
-                    
-                    # Merge the new junior reign with the existing senior successor
-                    successorPerson.mergeReigns(juniorSuccessor, seniorSuccessor, window)
+
+    def removeSeniorReign(self, senior):
+        seniorID = self.check_argument(senior)
+
+        if seniorID in self.seniorReigns:
+            self.seniorReigns.pop(seniorID)
+            self.logger.log('Detailed', 'Remove {' + seniorID + '} from senior reigns dict of {' + self.getID() + '}')
+        else:
+            self.logger.log('Warning', 'Cannot remove {' + seniorID + '} from senior reigns dict as it is not an element of the list')
 
     ## Actions related to the primary title for this person
     def primary_title(self, action, title=None):
@@ -684,7 +569,6 @@ class Title(CustomObject):
             self.logger.log('Error', str(gender) + ' is not a valid gender')
             return None
 
-        
     def orderReigns(self):
         self.orderReignList = list(self.reignDict.keys())
         
@@ -879,6 +763,9 @@ class Reign(CustomObject):
 
         super().__init__(logger, 'Reign', reignID, attributes, simpleConnections)
 
+        self.isJunior = False  # Is this reign a junior to another reign
+        self.isPrimary = False  # Is this reign the primary for the person
+
         self.logger.log('Detailed', 'Setting initial connection to person: {' + ruler.getID() + '}', True)
         self.connection('Add', ruler, 'Person')
         ruler.addReign(self)
@@ -886,9 +773,6 @@ class Reign(CustomObject):
         self.logger.log('Detailed', 'Setting initial connection to title: {' + title.getID() + '}', True)
         self.connection('Add', title, 'Title')
         title.addReign(self)
-
-        self.isJunior = False  # Is this reign a junior to another reign
-        self.isPrimary = False  # Is this reign the primary for the person
 
         self.order = -1  # The order of this reign in the title
         self.connections.update({'Person': ruler, 'Title': title})
@@ -913,6 +797,7 @@ class Reign(CustomObject):
             if self.mergedReigns['Senior'] != -1 and self.mergedReigns['Senior'] is not None:
                 self.logger.log('Detailed', 'Reign is a junior reign', True)
                 self.isJunior = True
+                ruler.removeSeniorReign(self)
 
             self.isPrimary = init_dict['Is Primary']
             if self.isPrimary:
@@ -959,19 +844,50 @@ class Reign(CustomObject):
     # Will not have reigns as both senior/junior, cannot pick a junior reign as senior reign also
     
     def mergeReign(self, reign, relation):
+        reignID = self.check_argument(reign)
+
         if relation == 'Senior':
             ## Set <reign> as this reign's senior
-            self.mergedReigns[relation] = reign.getID()
+            self.mergedReigns[relation] = reignID
             self.isJunior = True
-            self.connection('Add', reign.getID(), 'Senior')
-            
+            self.connection('Add', reignID, relation)
+            self.getConnection('Person').removeSeniorReign(self)
+
             self.mergedReigns['Junior'] = []  # Remove all junior reigns from the list
         elif relation == 'Junior':
             ## Add <reign> as a junior to this reign
-            self.mergedReigns[relation].append(reign.getID())
-            self.connection('Add', reign.getID(), 'Junior')
+            self.mergedReigns[relation].append(reignID)
+            self.connection('Add', reignID, relation)
         else:
             self.logger.log('Error', str(relation) + ' is not a valid relation for merging reigns')
+
+    def transferJuniorReigns(self, globalReignList, newSenior):
+        for j in self.mergedReigns['Junior']:
+            juniorReign = globalReignList[j]  # Get the reign object for each junior reign
+            juniorReign.mergeReign(newSenior, 'Senior')
+            newSenior.mergeReign(juniorReign, 'Junior')
+
+    def unmerge(self, seniorReign):
+        if isinstance(seniorReign, Reign):
+            seniorID = seniorReign.getID()
+        else:
+            seniorID = -1
+            self.logger.log('Error', 'Cannot unmerge. ' + str(seniorReign) + ' is not a Reign object')
+
+        if self.isJunior:
+            if self.mergedReigns['Senior'] == seniorID:
+                self.isJunior = False
+                self.mergedReigns['Senior'] = -1
+                self.connection('Remove', seniorID)
+
+                seniorReign.mergedReigns['Junior'].pop(self.getID())
+                seniorReign.connection('Remove', self.getID())
+
+                self.logger.log('Detailed', 'Successfully removed {' + seniorID + '} as the senior reign for {' + self.getID() + '}')
+            else:
+                self.logger.log('Error', '{' + seniorID + '} is not the senior reign for {' + self.getID() + '} so cannot be removed')
+        else:
+            self.logger.log('Warning', '{' + self.getID() + '} is already a junior reign')
 
     def addPlace(self, placeObject):
         placeID = placeObject.getID()
@@ -1015,8 +931,9 @@ class Reign(CustomObject):
 ## Includes functionality to convert object IDs into their names
 
 class Logger:
-    def __init__(self, objectList):
+    def __init__(self, objectList, test):
         self.objectList = objectList
+        self.testFlag = test
 
         self.logDict = {'Code': {'Pages': {}, 'Log': {}},
                         'Error': {'Pages': {}, 'Log': {}},
@@ -1152,8 +1069,13 @@ class Logger:
                 json.dump(self.logDict[k]['Log'], outfile, indent=4)
 
     def handleError(self, message):
-        dlg = DisplayErrorDialog(message)
-        dlg.exec()
+        if not self.testFlag:
+            dlg = DisplayErrorDialog(message)
+            dlg.exec()
+        else:
+            print('The application encountered an error:')
+            print(message)
+            print('The application will now close')
 
         sys.exit()
 

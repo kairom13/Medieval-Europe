@@ -7,65 +7,635 @@
         "009_Opened \"titles.json\"",
         "1001_Finished reading \"titles.json\"",
         "1003_Opened \"people.json\"",
-        "10626_Finished reading \"people.json\"",
-        "10628_Opened \"places.json\"",
-        "12128_Finished reading \"places.json\"",
-        "12130_Correcting Reign Order",
-        "12132_Created Page Generator Object",
-        "12134_Generating view_object_list"
+        "10948_Finished reading \"people.json\"",
+        "10950_Opened \"places.json\"",
+        "12450_Finished reading \"places.json\"",
+        "12452_Correcting Reign Order",
+        "12454_Created Page Generator Object",
+        "12456_Generating view_object_list"
     ],
     "001_view_object_list": [
         "001_Viewing list of Person",
         "006_Adding list of Persons",
-        "009_Clicked to view Henry I, Duke of Bavaria",
-        "011_Generating display_person_page"
+        "009_Found 465 instances of \"f\" in object list",
+        "011_Found 6 instances of \"fe\" in object list",
+        "013_Found 1 instances of \"fea\" in object list",
+        "015_Clicked to view John I the Fearless, Duke of Burgundy",
+        "017_Generating display_person_page"
     ],
     "002_display_person_page": [
-        "002_Displaying Henry I, Duke of Bavaria",
+        "002_Displaying John I the Fearless, Duke of Burgundy",
         [
             "006_Add Name Widget",
             "008_Add Gender: Man",
-            "010_Add Birth Date: 919",
-            "012_Add Death Date: 11/1/955",
-            "014_Add Father: Henry the Fowler, King of East Francia",
-            "016_Add Mother: Matilda of Ringelheim",
-            "018_Add Child With No Spouse: Henry II the Quarrelsome, Duke of Bavaria"
+            "010_Add Birth Date: 5/28/1371",
+            "012_Add Death Date: 9/10/1419",
+            "014_Add Father: Philip the Bold, Duke of Burgundy",
+            "016_Add Mother: Margaret III, Countess of Flanders",
+            "018_Add Spouse: Margaret of Bavaria",
+            "020_Add Child With Margaret of Bavaria: Philip III the Good, Duke of Burgundy"
         ],
-        "020_Viewing reign of Duchy of Bavaria",
+        "022_Viewing reign of County of Burgundy",
         [
-            "022_Has successor: Henry II, Duke of Bavaria",
-            "024_Date of Reign: (948 - 11/1/955)"
+            "024_Has predecessor: Margaret III, Countess of Burgundy",
+            "026_Has successor: Philip III, Count of Burgundy",
+            "028_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "030_Add County of Artois as junior reign"
         ],
-        "026_Viewing reign of Duchy of Lorraine",
+        "032_Viewing reign of County of Flanders",
         [
-            "028_Has predecessor: Gilbert, Duke of Lorraine",
-            "030_Date of Reign: (940 - 941)"
+            "034_Date of Reign: (3/16/1405 - 9/10/1419)"
         ],
-        "033_Generating display_place_page"
-    ],
-    "003_display_place_page": [
-        "001_Displaying Place",
+        "036_Viewing reign of County of Tonnerre",
         [
-            "003_Displaying Name: Prague"
+            "038_Has successor: Philip III, Count of Tonnerre",
+            "040_Date of Reign: (1414 - 9/10/1419)"
         ],
-        "005_Generating view_object_list"
-    ],
-    "004_view_object_list": [
-        "001_Viewing list of Place",
-        "006_Adding list of Places",
-        "010_Adding map of places",
-        "013_Generating display_place_page"
-    ],
-    "005_display_place_page": [
-        "001_Displaying Place",
+        "042_Viewing reign of Duchy of Burgundy",
         [
-            "003_Displaying Name: Fulda"
+            "044_Has predecessor: Philip, Duke of Burgundy",
+            "046_Has successor: Philip III, Count of Auxerre",
+            "048_Date of Reign: (4/27/1404 - 9/10/1419)"
         ],
-        "005_Generating view_object_list"
+        "059_Clicked to display Margaret III, Countess of Burgundy",
+        "061_Generating display_person_page"
     ],
-    "006_view_object_list": [
-        "001_Viewing list of Place",
-        "006_Adding list of Places",
-        "010_Adding map of places"
+    "003_display_person_page": [
+        "002_Displaying Margaret III, Countess of Flanders",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Woman",
+            "010_Add Birth Date: 4/13/1350",
+            "012_Add Death Date: 3/18/1405",
+            "014_Add Father: Louis II of Male, Count of Flanders",
+            "016_Add Mother: Margaret of Brabant",
+            "018_Add Spouse: Philip I of Rouvres, Duke of Burgundy",
+            "020_Add Spouse: Philip the Bold, Duke of Burgundy",
+            "022_Add Child With Philip the Bold, Duke of Burgundy: John I the Fearless, Duke of Burgundy",
+            "024_Add Child With Philip the Bold, Duke of Burgundy: Margaret of Burgundy",
+            "026_Add Child With Philip the Bold, Duke of Burgundy: Catherine of Burgundy",
+            "028_Add Child With Philip the Bold, Duke of Burgundy: Anthony, Duke of Brabant"
+        ],
+        "030_Viewing reign of County of Burgundy",
+        [
+            "032_Has predecessor: Louis II, Count of Burgundy",
+            "034_Has successor: John I, Count of Burgundy",
+            "036_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "038_Add County of Artois as junior reign"
+        ],
+        "040_Viewing reign of County of Flanders",
+        [
+            "042_Has predecessor: Louis II, Count of Flanders",
+            "044_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "046_Add County of Nevers as junior reign",
+            "048_Add County of Rethel as junior reign"
+        ],
+        "061_Generating edit_person_page"
+    ],
+    "004_edit_person_page": [
+        "001_Editing Person: Margaret III, Countess of Flanders",
+        [
+            "003_Can edit Name: Margaret III",
+            "006_Can edit Nickname: ",
+            "010_Can edit Birth Date: 4/13/1350",
+            "013_Can edit Death Date: 3/18/1405",
+            "017_Can modify Father: Louis II of Male, Count of Flanders",
+            "020_Can modify Mother: Margaret of Brabant",
+            "024_Can modify spouse: Philip I of Rouvres, Duke of Burgundy",
+            "027_Can modify spouse: Philip the Bold, Duke of Burgundy",
+            "032_Can modify child: John I the Fearless, Duke of Burgundy",
+            "035_Can modify child: Margaret of Burgundy",
+            "038_Can modify child: Catherine of Burgundy",
+            "041_Can modify child: Anthony, Duke of Brabant"
+        ],
+        "043_Can edit 5 Reigns",
+        "045_Include ability to merge",
+        "047_Editing reign as Countess of Burgundy",
+        [
+            "049_Can edit Start Date: 1/30/1384",
+            "051_Can edit End Date: 3/18/1405",
+            "053_Add County of Artois as junior reign"
+        ],
+        "055_Editing reign as Countess of Flanders",
+        [
+            "057_This is the primary reign",
+            "059_Can edit Start Date: 1/30/1384",
+            "061_Can edit End Date: 3/18/1405",
+            "063_Add County of Nevers as junior reign",
+            "065_Add County of Rethel as junior reign"
+        ],
+        "070_Generating choose_object_list"
+    ],
+    "005_choose_object_list": [
+        "004_Choosing Successor for Margaret III, Countess of Flanders",
+        "007_Add list of objects",
+        "009_Clicked to choose John I, Count of Flanders as Successor for Margaret III, Countess of Flanders",
+        "011_Setting John I, Count of Flanders as Successor for Margaret III, Countess of Flanders",
+        "029_Transferring places for Margaret III, Countess of Flanders to John I, Count of Flanders",
+        "031_Transferring places for Margaret III, Countess of Nevers to John I, Count of Nevers",
+        "033_Transferring places for Margaret III, Countess of Rethel to John I, Count of Rethel",
+        "035_Transferred 3 places",
+        "037_Generating edit_person_page"
+    ],
+    "006_edit_person_page": [
+        "001_Editing Person: Margaret III, Countess of Flanders",
+        [
+            "003_Can edit Name: Margaret III",
+            "006_Can edit Nickname: ",
+            "010_Can edit Birth Date: 4/13/1350",
+            "013_Can edit Death Date: 3/18/1405",
+            "017_Can modify Father: Louis II of Male, Count of Flanders",
+            "020_Can modify Mother: Margaret of Brabant",
+            "024_Can modify spouse: Philip I of Rouvres, Duke of Burgundy",
+            "027_Can modify spouse: Philip the Bold, Duke of Burgundy",
+            "032_Can modify child: John I the Fearless, Duke of Burgundy",
+            "035_Can modify child: Margaret of Burgundy",
+            "038_Can modify child: Catherine of Burgundy",
+            "041_Can modify child: Anthony, Duke of Brabant"
+        ],
+        "043_Can edit 5 Reigns",
+        "045_Include ability to merge",
+        "047_Editing reign as Countess of Burgundy",
+        [
+            "049_Can edit Start Date: 1/30/1384",
+            "051_Can edit End Date: 3/18/1405",
+            "053_Add County of Artois as junior reign"
+        ],
+        "055_Editing reign as Countess of Flanders",
+        [
+            "057_This is the primary reign",
+            "059_Can edit Start Date: 1/30/1384",
+            "061_Can edit End Date: 3/18/1405",
+            "063_Add County of Nevers as junior reign",
+            "065_Add County of Rethel as junior reign"
+        ],
+        "070_Generating display_person_page"
+    ],
+    "007_display_person_page": [
+        "002_Displaying Margaret III, Countess of Flanders",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Woman",
+            "010_Add Birth Date: 4/13/1350",
+            "012_Add Death Date: 3/18/1405",
+            "014_Add Father: Louis II of Male, Count of Flanders",
+            "016_Add Mother: Margaret of Brabant",
+            "018_Add Spouse: Philip I of Rouvres, Duke of Burgundy",
+            "020_Add Spouse: Philip the Bold, Duke of Burgundy",
+            "022_Add Child With Philip the Bold, Duke of Burgundy: John I the Fearless, Duke of Burgundy",
+            "024_Add Child With Philip the Bold, Duke of Burgundy: Margaret of Burgundy",
+            "026_Add Child With Philip the Bold, Duke of Burgundy: Catherine of Burgundy",
+            "028_Add Child With Philip the Bold, Duke of Burgundy: Anthony, Duke of Brabant"
+        ],
+        "030_Viewing reign of County of Burgundy",
+        [
+            "032_Has predecessor: Louis II, Count of Burgundy",
+            "034_Has successor: John I, Count of Burgundy",
+            "036_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "038_Add County of Artois as junior reign"
+        ],
+        "040_Viewing reign of County of Flanders",
+        [
+            "042_Has predecessor: Louis II, Count of Flanders",
+            "044_Has successor: John I, Count of Flanders",
+            "046_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "048_Add County of Nevers as junior reign",
+            "050_Add County of Rethel as junior reign"
+        ],
+        "063_Clicked to display John I, Count of Flanders",
+        "065_Generating display_person_page"
+    ],
+    "008_display_person_page": [
+        "002_Displaying John I the Fearless, Duke of Burgundy",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Man",
+            "010_Add Birth Date: 5/28/1371",
+            "012_Add Death Date: 9/10/1419",
+            "014_Add Father: Philip the Bold, Duke of Burgundy",
+            "016_Add Mother: Margaret III, Countess of Flanders",
+            "018_Add Spouse: Margaret of Bavaria",
+            "020_Add Child With Margaret of Bavaria: Philip III the Good, Duke of Burgundy"
+        ],
+        "022_Viewing reign of County of Burgundy",
+        [
+            "024_Has predecessor: Margaret III, Countess of Burgundy",
+            "026_Has successor: Philip III, Count of Burgundy",
+            "028_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "030_Add County of Artois as junior reign"
+        ],
+        "032_Viewing reign of County of Flanders",
+        [
+            "034_Has predecessor: Margaret III, Countess of Flanders",
+            "036_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "038_Add County of Nevers as junior reign",
+            "040_Add County of Rethel as junior reign"
+        ],
+        "042_Viewing reign of County of Tonnerre",
+        [
+            "044_Has successor: Philip III, Count of Tonnerre",
+            "046_Date of Reign: (1414 - 9/10/1419)"
+        ],
+        "048_Viewing reign of Duchy of Burgundy",
+        [
+            "050_Has predecessor: Philip, Duke of Burgundy",
+            "052_Has successor: Philip III, Count of Auxerre",
+            "054_Date of Reign: (4/27/1404 - 9/10/1419)"
+        ],
+        "068_Clicked to display County of Nevers",
+        "070_Generating display_title_page"
+    ],
+    "009_display_title_page": [
+        "001_Displaying Title: County of Nevers",
+        [
+            "003_Is junior to John I, Count of Flanders"
+        ],
+        "005_Viewing reign of John I the Fearless, Duke of Burgundy",
+        [
+            "007_Has predecessor: Margaret III, Countess of Nevers",
+            "009_Date of Reign: (3/16/1405 - 9/10/1419)"
+        ],
+        "011_Viewing reign of Yolande I, Countess of Nevers",
+        [
+            "013_Has successor: Matilda II, Countess of Nevers",
+            "015_Date of Reign: ( - )"
+        ],
+        "017_Viewing reign of Matilda II of Dampierre, Countess of Nevers",
+        [
+            "019_Has predecessor: Yolande I, Countess of Nevers",
+            "021_Has successor: Yolande II, Countess of Nevers",
+            "023_Date of Reign: ( - 1262)"
+        ],
+        "025_Viewing reign of Yolande II",
+        [
+            "027_Has predecessor: Matilda II, Countess of Nevers",
+            "029_Has successor: Louis I, Count of Nevers",
+            "031_Date of Reign: (1262 - 6/2/1280)"
+        ],
+        "033_Viewing reign of Louis I, Count of Nevers",
+        [
+            "035_Has predecessor: Yolande II, Countess of Nevers",
+            "037_Has successor: Louis I, Count of Nevers",
+            "039_Date of Reign: (6/2/1280 - 7/22/1322)"
+        ],
+        "041_Viewing reign of Louis I, Count of Flanders",
+        [
+            "043_Has predecessor: Louis I, Count of Nevers",
+            "045_Has successor: Louis II, Count of Nevers",
+            "047_Date of Reign: (7/22/1322 - 8/26/1346)",
+            "049_Is junior to Louis II, Count of Flanders"
+        ],
+        "051_Viewing reign of Louis II of Male, Count of Flanders",
+        [
+            "053_Has predecessor: Louis I, Count of Nevers",
+            "055_Has successor: Margaret III, Countess of Nevers",
+            "057_Date of Reign: (8/26/1346 - 1/30/1384)",
+            "059_Is junior to Margaret III, Countess of Flanders"
+        ],
+        "061_Viewing reign of Margaret III, Countess of Flanders",
+        [
+            "063_Has predecessor: Louis II, Count of Nevers",
+            "065_Has successor: John I, Count of Nevers",
+            "067_Date of Reign: (1/30/1384 - 3/18/1405)"
+        ],
+        "069_Viewing reign of Agnes I, Countess of Nevers",
+        [
+            "071_Date of Reign: ( - 1192)"
+        ],
+        "073_Viewing reign of Matilda, Countess of Nevers",
+        [
+            "075_Date of Reign: ( - 1257)"
+        ],
+        "077_Clicked to display Margaret III, Countess of Nevers",
+        "079_Generating display_person_page"
+    ],
+    "010_display_person_page": [
+        "002_Displaying Margaret III, Countess of Flanders",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Woman",
+            "010_Add Birth Date: 4/13/1350",
+            "012_Add Death Date: 3/18/1405",
+            "014_Add Father: Louis II of Male, Count of Flanders",
+            "016_Add Mother: Margaret of Brabant",
+            "018_Add Spouse: Philip I of Rouvres, Duke of Burgundy",
+            "020_Add Spouse: Philip the Bold, Duke of Burgundy",
+            "022_Add Child With Philip the Bold, Duke of Burgundy: John I the Fearless, Duke of Burgundy",
+            "024_Add Child With Philip the Bold, Duke of Burgundy: Margaret of Burgundy",
+            "026_Add Child With Philip the Bold, Duke of Burgundy: Catherine of Burgundy",
+            "028_Add Child With Philip the Bold, Duke of Burgundy: Anthony, Duke of Brabant"
+        ],
+        "030_Viewing reign of County of Burgundy",
+        [
+            "032_Has predecessor: Louis II, Count of Burgundy",
+            "034_Has successor: John I, Count of Burgundy",
+            "036_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "038_Add County of Artois as junior reign"
+        ],
+        "040_Viewing reign of County of Flanders",
+        [
+            "042_Has predecessor: Louis II, Count of Flanders",
+            "044_Has successor: John I, Count of Flanders",
+            "046_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "048_Add County of Nevers as junior reign",
+            "050_Add County of Rethel as junior reign"
+        ],
+        "063_Clicked to display County of Flanders",
+        "065_Generating display_title_page"
+    ],
+    "011_display_title_page": [
+        "001_Displaying Title: County of Flanders",
+        "003_Viewing reign of Baldwin I the Constantinopolitan, Emperor of the Latins",
+        [
+            "005_Has successor: Joan, Countess of Flanders",
+            "007_Date of Reign: ( - 7/20/1205)"
+        ],
+        "009_Viewing reign of Joan, Countess of Flanders",
+        [
+            "011_Has predecessor: Baldwin I, Count of Flanders",
+            "013_Has successor: Margaret II, Countess of Flanders",
+            "015_Date of Reign: (7/20/1205 - 12/5/1244)"
+        ],
+        "017_Viewing reign of Margaret II, Countess of Flanders",
+        [
+            "019_Has predecessor: Joan, Countess of Flanders",
+            "021_Has successor: Guy, Count of Flanders",
+            "023_Date of Reign: (12/5/1244 - 12/29/1278)"
+        ],
+        "025_Viewing reign of Guy, Count of Flanders",
+        [
+            "027_Has predecessor: Margaret II, Countess of Flanders",
+            "029_Has successor: Robert III, Count of Flanders",
+            "031_Date of Reign: (12/29/1278 - 3/7/1305)"
+        ],
+        "033_Viewing reign of Robert III the Lion, Count of Flanders",
+        [
+            "035_Has predecessor: Guy, Count of Flanders",
+            "037_Has successor: Louis I, Count of Flanders",
+            "039_Date of Reign: (3/7/1305 - 9/17/1322)"
+        ],
+        "041_Viewing reign of Louis I, Count of Flanders",
+        [
+            "043_Has predecessor: Robert III, Count of Flanders",
+            "045_Has successor: Louis II, Count of Flanders",
+            "047_Date of Reign: (9/17/1322 - 8/26/1346)"
+        ],
+        "049_Viewing reign of Louis II of Male, Count of Flanders",
+        [
+            "051_Has predecessor: Louis I, Count of Flanders",
+            "053_Has successor: Margaret III, Countess of Flanders",
+            "055_Date of Reign: (8/26/1346 - 1/30/1384)"
+        ],
+        "057_Viewing reign of Margaret III, Countess of Flanders",
+        [
+            "059_Has predecessor: Louis II, Count of Flanders",
+            "061_Has successor: John I, Count of Flanders",
+            "063_Date of Reign: (1/30/1384 - 3/18/1405)"
+        ],
+        "065_Viewing reign of John I the Fearless, Duke of Burgundy",
+        [
+            "067_Has predecessor: Margaret III, Countess of Flanders",
+            "069_Date of Reign: (3/16/1405 - 9/10/1419)"
+        ],
+        "071_Viewing reign of Thierry of Alsace, Count of Flanders",
+        [
+            "073_Has successor: Philip I, Count of Flanders",
+            "075_Date of Reign: ( - 1/17/1168)"
+        ],
+        "077_Viewing reign of Philip I of Alsace, Count of Flanders",
+        [
+            "079_Has predecessor: Thierry, Count of Flanders",
+            "081_Has successor: Margaret I, Countess of Flanders",
+            "083_Date of Reign: ( - 8/1/1191)"
+        ],
+        "085_Viewing reign of Margaret I, Countess of Flanders",
+        [
+            "087_Has predecessor: Philip I, Count of Flanders",
+            "089_Date of Reign: (8/1/1191 - 11/15/1194)"
+        ],
+        "091_Viewing reign of Baldwin IV the Bearded, Count of Flanders",
+        [
+            "093_Has successor: Baldwin V, Count of Flanders",
+            "095_Date of Reign: (987 - 5/30/1035)"
+        ],
+        "097_Viewing reign of Baldwin V, Count of Flanders",
+        [
+            "099_Has predecessor: Baldwin IV, Count of Flanders",
+            "101_Has successor: Baldwin VI, Count of Flanders",
+            "103_Date of Reign: (5/30/1035 - 9/1/1067)"
+        ],
+        "105_Viewing reign of Baldwin VI the Good, Count of Flanders",
+        [
+            "107_Has predecessor: Baldwin V, Count of Flanders",
+            "109_Date of Reign: (9/1/1067 - 7/17/1070)"
+        ],
+        "111_Viewing reign of Robert I the Frisian, Count of Flanders",
+        [
+            "113_Has successor: Robert II, Count of Flanders",
+            "115_Date of Reign: ( - 10/13/1093)"
+        ],
+        "117_Viewing reign of Robert II the Crusader, Count of Flanders",
+        [
+            "119_Has predecessor: Robert I, Count of Flanders",
+            "121_Has successor: Baldwin VII, Count of Flanders",
+            "123_Date of Reign: (10/13/1093 - 10/5/1111)"
+        ],
+        "125_Viewing reign of Baldwin VII, Count of Flanders",
+        [
+            "127_Has predecessor: Robert II, Count of Flanders",
+            "129_Date of Reign: (10/5/1111 - 7/17/1119)"
+        ],
+        "131_Clicked to display John I the Fearless, Duke of Burgundy",
+        "133_Generating display_person_page"
+    ],
+    "012_display_person_page": [
+        "002_Displaying John I the Fearless, Duke of Burgundy",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Man",
+            "010_Add Birth Date: 5/28/1371",
+            "012_Add Death Date: 9/10/1419",
+            "014_Add Father: Philip the Bold, Duke of Burgundy",
+            "016_Add Mother: Margaret III, Countess of Flanders",
+            "018_Add Spouse: Margaret of Bavaria",
+            "020_Add Child With Margaret of Bavaria: Philip III the Good, Duke of Burgundy"
+        ],
+        "022_Viewing reign of County of Burgundy",
+        [
+            "024_Has predecessor: Margaret III, Countess of Burgundy",
+            "026_Has successor: Philip III, Count of Burgundy",
+            "028_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "030_Add County of Artois as junior reign"
+        ],
+        "032_Viewing reign of County of Flanders",
+        [
+            "034_Has predecessor: Margaret III, Countess of Flanders",
+            "036_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "038_Add County of Nevers as junior reign",
+            "040_Add County of Rethel as junior reign"
+        ],
+        "042_Viewing reign of County of Tonnerre",
+        [
+            "044_Has successor: Philip III, Count of Tonnerre",
+            "046_Date of Reign: (1414 - 9/10/1419)"
+        ],
+        "048_Viewing reign of Duchy of Burgundy",
+        [
+            "050_Has predecessor: Philip, Duke of Burgundy",
+            "052_Has successor: Philip III, Count of Auxerre",
+            "054_Date of Reign: (4/27/1404 - 9/10/1419)"
+        ],
+        "068_Clicked to display Philip III, Count of Burgundy",
+        "070_Generating display_person_page"
+    ],
+    "013_display_person_page": [
+        "002_Displaying Philip III the Good, Duke of Burgundy",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Man",
+            "010_Add Birth Date: 7/31/1396",
+            "012_Add Death Date: 6/15/1467",
+            "014_Add Father: John I the Fearless, Duke of Burgundy",
+            "016_Add Mother: Margaret of Bavaria",
+            "018_Add Child With No Spouse: Charles I the Bold, Duke of Burgundy"
+        ],
+        "020_Viewing reign of County of Tonnerre",
+        [
+            "022_Has predecessor: John I, Count of Tonnerre",
+            "024_Has successor: Charles VII, Count of Tonnerre",
+            "026_Date of Reign: (9/10/1419 - 9/20/1435)"
+        ],
+        "028_Viewing reign of County of Auxerre",
+        [
+            "030_Has predecessor: Charles VII, Count of Auxerre",
+            "032_Date of Reign: (9/20/1435 - 6/15/1467)"
+        ],
+        "034_Viewing reign of Duchy of Burgundy",
+        [
+            "036_Has predecessor: John I, Duke of Burgundy",
+            "038_Has successor: Charles I, Duke of Burgundy",
+            "040_Date of Reign: (9/10/1419 - 6/15/1467)",
+            "042_Add County of Burgundy as junior reign",
+            "044_Add County of Artois as junior reign"
+        ],
+        "046_Viewing reign of Duchy of Brabant",
+        [
+            "048_Has predecessor: Philip I, Duke of Brabant",
+            "050_Date of Reign: (8/4/1430 - 6/15/1467)"
+        ],
+        "057_Clicked to display John I, Count of Tonnerre",
+        "059_Generating display_person_page"
+    ],
+    "014_display_person_page": [
+        "002_Displaying John I the Fearless, Duke of Burgundy",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Man",
+            "010_Add Birth Date: 5/28/1371",
+            "012_Add Death Date: 9/10/1419",
+            "014_Add Father: Philip the Bold, Duke of Burgundy",
+            "016_Add Mother: Margaret III, Countess of Flanders",
+            "018_Add Spouse: Margaret of Bavaria",
+            "020_Add Child With Margaret of Bavaria: Philip III the Good, Duke of Burgundy"
+        ],
+        "022_Viewing reign of County of Burgundy",
+        [
+            "024_Has predecessor: Margaret III, Countess of Burgundy",
+            "026_Has successor: Philip III, Count of Burgundy",
+            "028_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "030_Add County of Artois as junior reign"
+        ],
+        "032_Viewing reign of County of Flanders",
+        [
+            "034_Has predecessor: Margaret III, Countess of Flanders",
+            "036_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "038_Add County of Nevers as junior reign",
+            "040_Add County of Rethel as junior reign"
+        ],
+        "042_Viewing reign of County of Tonnerre",
+        [
+            "044_Has successor: Philip III, Count of Tonnerre",
+            "046_Date of Reign: (1414 - 9/10/1419)"
+        ],
+        "048_Viewing reign of Duchy of Burgundy",
+        [
+            "050_Has predecessor: Philip, Duke of Burgundy",
+            "052_Has successor: Philip III, Count of Auxerre",
+            "054_Date of Reign: (4/27/1404 - 9/10/1419)"
+        ],
+        "068_Clicked to display Margaret III, Countess of Flanders",
+        "070_Generating display_person_page"
+    ],
+    "015_display_person_page": [
+        "002_Displaying Margaret III, Countess of Flanders",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Woman",
+            "010_Add Birth Date: 4/13/1350",
+            "012_Add Death Date: 3/18/1405",
+            "014_Add Father: Louis II of Male, Count of Flanders",
+            "016_Add Mother: Margaret of Brabant",
+            "018_Add Spouse: Philip I of Rouvres, Duke of Burgundy",
+            "020_Add Spouse: Philip the Bold, Duke of Burgundy",
+            "022_Add Child With Philip the Bold, Duke of Burgundy: John I the Fearless, Duke of Burgundy",
+            "024_Add Child With Philip the Bold, Duke of Burgundy: Margaret of Burgundy",
+            "026_Add Child With Philip the Bold, Duke of Burgundy: Catherine of Burgundy",
+            "028_Add Child With Philip the Bold, Duke of Burgundy: Anthony, Duke of Brabant"
+        ],
+        "030_Viewing reign of County of Burgundy",
+        [
+            "032_Has predecessor: Louis II, Count of Burgundy",
+            "034_Has successor: John I, Count of Burgundy",
+            "036_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "038_Add County of Artois as junior reign"
+        ],
+        "040_Viewing reign of County of Flanders",
+        [
+            "042_Has predecessor: Louis II, Count of Flanders",
+            "044_Has successor: John I, Count of Flanders",
+            "046_Date of Reign: (1/30/1384 - 3/18/1405)",
+            "048_Add County of Nevers as junior reign",
+            "050_Add County of Rethel as junior reign"
+        ],
+        "063_Clicked to display John I, Count of Flanders",
+        "065_Generating display_person_page"
+    ],
+    "016_display_person_page": [
+        "002_Displaying John I the Fearless, Duke of Burgundy",
+        [
+            "006_Add Name Widget",
+            "008_Add Gender: Man",
+            "010_Add Birth Date: 5/28/1371",
+            "012_Add Death Date: 9/10/1419",
+            "014_Add Father: Philip the Bold, Duke of Burgundy",
+            "016_Add Mother: Margaret III, Countess of Flanders",
+            "018_Add Spouse: Margaret of Bavaria",
+            "020_Add Child With Margaret of Bavaria: Philip III the Good, Duke of Burgundy"
+        ],
+        "022_Viewing reign of County of Burgundy",
+        [
+            "024_Has predecessor: Margaret III, Countess of Burgundy",
+            "026_Has successor: Philip III, Count of Burgundy",
+            "028_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "030_Add County of Artois as junior reign"
+        ],
+        "032_Viewing reign of County of Flanders",
+        [
+            "034_Has predecessor: Margaret III, Countess of Flanders",
+            "036_Date of Reign: (3/16/1405 - 9/10/1419)",
+            "038_Add County of Nevers as junior reign",
+            "040_Add County of Rethel as junior reign"
+        ],
+        "042_Viewing reign of County of Tonnerre",
+        [
+            "044_Has successor: Philip III, Count of Tonnerre",
+            "046_Date of Reign: (1414 - 9/10/1419)"
+        ],
+        "048_Viewing reign of Duchy of Burgundy",
+        [
+            "050_Has predecessor: Philip, Duke of Burgundy",
+            "052_Has successor: Philip III, Count of Auxerre",
+            "054_Date of Reign: (4/27/1404 - 9/10/1419)"
+        ]
     ]
 }

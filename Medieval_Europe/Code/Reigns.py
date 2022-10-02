@@ -74,52 +74,10 @@ class ReignWidget(QWidget):
 
             layout.addLayout(EditTitleWidget(self.window, self.reign), 0, 0, 1, 3)  # add at row 0, column 0, and stretch over 1 rows, and 3 columns
 
-            ## Make Reign "widget"
-            # preLabelLayout = QHBoxLayout()
-            # preLabelLayout.addStretch(1)
-            #
-            # preButtonVBox = QVBoxLayout()
-            #
-            # addPreButton = QPushButton('')
-            # preButtonVBox.addWidget(addPreButton)
-            #
-            # if self.reign.hasConnection('Predecessor'):  ## Use change and remove buttons when predecessor exists
-            #     predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
-            #     self.logger.log('Code', 'Reign has predecessor: ' + predecessorObject.getConnection('Person').getName(), True)
-            #
-            #     addPreButton.setText('Change')
-            #
-            #     preButtonVBox.addWidget(RemoveConnectionButton(self.window, self.reign, predecessorObject))
-            #     preLabelLayout.addLayout(preButtonVBox)
-            #
-            #     predecessorLabel = QLabel(predecessorObject.getConnection('Person').getAttribute('Name'))
-            #     preLabelLayout.addWidget(predecessorLabel)
-            #
-            # else:  ## Use Add button when no existing predecessor
-            #     self.logger.log('Code', 'Reign has no predecessor', True)
-            #     addPreButton.setText('Add')
-            #     preLabelLayout.addLayout(preButtonVBox)
-            #
-            # valid_pre = {}
-            #
-            # for r in self.title.reignDict:
-            #     potential_reign = self.window.get_object(r)
-            #     if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
-            #         valid_pre.update({r: potential_reign})
-            #
-            # # Get potential predecessor reigns from this title's successor
-            # if self.title.getConnection('Predecessor') is not None:
-            #     pre_title = self.window.get_object(self.title.getConnection('Predecessor'))
-            #
-            #     for r in pre_title.reignDict:
-            #         potential_reign = self.window.get_object(r)
-            #         if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
-            #             valid_pre.update({r: potential_reign})
-            #
-            # addPreButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': valid_pre, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Predecessor'}))
-            #layout.addLayout(preLabelLayout, 1, 0)
+            # Add widget to edit predecessor
             layout.addLayout(EditConnectedReignWidget(self.window, 'Predecessor', self.reign), 1, 0)
 
+            # Create center layout of reign dates
             centerLayout = QHBoxLayout()
 
             centerLayout.addWidget(QLabel('\u25C0'))  ## Left Arrow
@@ -135,50 +93,8 @@ class ReignWidget(QWidget):
 
             layout.addLayout(centerLayout, 1, 1)
 
-            sucLabelLayout = QHBoxLayout()
-            sucButtonVBox = QVBoxLayout()
-
-            addSucButton = QPushButton('')
-            sucButtonVBox.addWidget(addSucButton)
-
-            if self.reign.hasConnection('Successor'):  ## Use change and remove buttons when successor exists
-                successorObject = self.window.get_object(self.reign.getConnection('Successor'))
-                self.logger.log('Code', 'Reign has successor: ' + successorObject.getConnection('Person').getName(), True)
-
-                #successorLabel = QLabel(successorObject.getConnection('Person').getAttribute('Name'))
-                successorLabel = QLabel(successorObject.getName('Linker Object'))
-                sucLabelLayout.addWidget(successorLabel)
-
-                addSucButton.setText('Change')
-
-                sucButtonVBox.addWidget(RemoveConnectionButton(self.window, self.reign, successorObject))
-                sucLabelLayout.addLayout(sucButtonVBox)
-
-            else:  ## Use Add button when no existing successor
-                self.logger.log('Code', 'Reign has no Successor', True)
-                addSucButton.setText('Add')
-                sucLabelLayout.addLayout(sucButtonVBox)
-
-            valid_suc = {}
-
-            for r in self.title.reignDict:
-                potential_reign = self.window.get_object(r)
-                if r != self.reign.getID() and not potential_reign.hasConnection('Predecessor'):
-                    valid_suc.update({r: potential_reign})
-
-            # Get potential predecessor reigns from this title's successor
-            if self.title.getConnection('Successor') is not None:
-                suc_title = self.window.get_object(self.title.getConnection('Successor'))
-
-                for r in suc_title.reignDict:
-                    potential_reign = self.window.get_object(r)
-                    if r != self.reign.getID() and not potential_reign.hasConnection('Successor'):
-                        valid_suc.update({r: potential_reign})
-
-            addSucButton.clicked.connect(lambda: self.window.page_factory('choose_object_list', {'Object Type': 'Reign', 'Object List': valid_suc, 'Search Text': '', 'Subject': self.reign, 'Connection': 'Successor'}))
-
-            sucLabelLayout.addStretch(1)
-            layout.addLayout(sucLabelLayout, 1, 2)
+            # Add widget to edit successor
+            layout.addLayout(EditConnectedReignWidget(self.window, 'Successor', self.reign), 1, 2)
 
             juniorVBox = QVBoxLayout()
             juniorLabel = QLabel('Junior Reigns:')
@@ -248,7 +164,6 @@ class ReignWidget(QWidget):
             if self.reign.hasConnection('Predecessor'):  ## Only display the predecessor label if there is one
                 predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
                 self.logger.log('Code', 'Has predecessor: {' + predecessorObject.getID() + '}', True)
-                #self.logger.log('Code', 'Predecessor: ' + predecessorObject.getConnection('Person').getName())
 
                 layout.addLayout(DisplayConnectedReignWidget(self.window, 'Predecessor', predecessorObject), 1, 0, 2, 1)  # add at row 1, column 0, spans 2 rows and 1 column
 
@@ -339,8 +254,25 @@ class DisplayConnectedReignWidget(QHBoxLayout):
 ## The display of the junior title(s) will still show the reign as separate
 ##    (i.e. the Kings of France as Counts of Auxerre)
 class MergeButton(QPushButton):
-    def __init__(self, window, edit, connection, subject):
-        super().__init__()
+    def __init__(self, window, subject):
+        super().__init__('Merge')
+
+        self.window = window
+        self.subject = subject  # The reign that is looking for a senior reign
+
+        self.seniorReigns = self.subject.getConnection('Person').seniorReigns
+
+        self.installEventFilter(self)
+
+    def eventFilter(self, object, event):
+        if event.type() == QEvent.MouseButtonRelease:
+            self.window.logger.log('Detailed', 'Clicked to find senior reign for {' + self.subject.getID() + '}')
+
+            choose_params = {'Object Type': 'Reign', 'Object List': self.seniorReigns, 'Search Text': '', 'Subject': self.subject, 'Connection': 'Merge'}
+            self.window.page_factory('choose_object_list', choose_params)
+
+            return True
+        return False
 
 
 class EditConnectedReignWidget(QHBoxLayout):
@@ -429,9 +361,10 @@ class EditTitleWidget(QHBoxLayout):
         removeButton.clicked.connect(self.removeReign)
         self.addWidget(removeButton)
 
-        mergeButton = QPushButton('Merge')
-        mergeButton.setEnabled(False)
-        mergeButton.setToolTip('Merge functionality to be added in a later update')
+        #mergeButton = QPushButton('Merge')
+        #mergeButton.setEnabled(False)
+        mergeButton = MergeButton(self.window, self.reign)
+        #mergeButton.setToolTip('Merge functionality to be added in a later update')
         self.addWidget(mergeButton)
 
         ## Check box for marking as primary reign

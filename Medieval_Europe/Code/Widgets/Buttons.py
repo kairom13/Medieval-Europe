@@ -61,7 +61,7 @@ class ObjectButton(QPushButton):
 
                 # When setting predecessor or successor, transfer any places, if desired
                 if self.checkedPlace and self.connection in ('Predecessor', 'Successor'):
-                    self.logger.log('Code', 'Transferring places to {' + str(self.target.getID()) + '}')
+                    self.logger.log('Code', 'Transferring places for {' + self.subject.getID() + '} to {' + str(self.target.getID()) + '}')
                     # Transfer all the places in the subject reign to the target reign
                     count = 0
 
@@ -76,6 +76,7 @@ class ObjectButton(QPushButton):
                     for prev_j in self.subject.mergedReigns['Junior']:
                         sub_j = self.window.get_object(prev_j)  # Get the object of the junior reign
                         tar_j = self.window.get_object(sub_j.getConnection(self.connection))  # Get the target object
+                        self.logger.log('Code', 'Transferring places for {' + sub_j.getID() + '} to {' + str(tar_j.getID()) + '}')
                         for p, place in sub_j.placeList.items():
                             if p not in tar_j.placeList:
                                 tar_j.addPlace(place)
@@ -208,7 +209,14 @@ class RemoveConnectionButton(QPushButton):
                 # Self.subject is the reign
                 # Self.target is the connected reign to be removed
                 self.subject.removeConnection(self.connection)  # Remove the target reign as connection to the subject reign
+                for j in self.subject.mergedReigns['Junior']:
+                    juniorObject = self.window.get_object(j)
+                    juniorObject.removeConnection(self.connection)
+
                 self.target.removeConnection(opp_connection)  # Remove the subject reign as the opposite connection to the target reign
+                for j in self.target.mergedReigns['Junior']:
+                    juniorObject = self.window.get_object(j)
+                    juniorObject.removeConnection(opp_connection)
 
                 # Get the person of the subject reign to return to
                 person = self.subject.getConnection('Person')
@@ -240,10 +248,7 @@ class UnmergeButton(QPushButton):
 
     def eventFilter(self, object, event):
         if event.type() == QEvent.MouseButtonRelease:
-            self.juniorReign.mergedReigns['Senior'] = -1
-            self.juniorReign.isJunior = False
-
-            self.seniorReign.mergedReigns['Junior'].remove(self.juniorReign.getID())
+            self.juniorReign.unmerge()
 
             self.window.page_factory('edit_person_page', {'Person': self.person})
 

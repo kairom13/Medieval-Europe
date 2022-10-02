@@ -309,7 +309,7 @@ class PageGenerator:
         page.layout.addLayout(header_layout, 0, 0, 1, 2)  # row 0, column 0, spans 1 row, spans 2 columns
 
         page.layout.setColumnStretch(0, 1)  # column 0 is stretched to 1
-        page.layout.setColumnStretch(1, 2)  # column 1 is stretched to 2
+        page.layout.setColumnStretch(1, 1)  # column 1 is stretched to 2
 
         page.layout.setRowStretch(1, 1)  # row 2 is stretched to 1
         page.layout.setRowStretch(2, 2)  # row 2 is stretched to 2
@@ -327,11 +327,11 @@ class PageGenerator:
         mapLayout = QVBoxLayout(mapGroup)
 
         page.layout.addWidget(infoGroup, 1, 0)  # row 1, column 0, spans 1 row, spans 1 column
-        page.layout.addWidget(titleGroup, 1, 1)  # row 2, column 0, spans 2 rows, spans 1 column
+        page.layout.addWidget(titleGroup, 2, 0)  # row 2, column 0, spans 2 rows, spans 1 column
         page.layout.addWidget(mapGroup, 2, 1)  # row 2, column 1, spans 2 rows, spans 1 column
 
         ############ Events Group #############
-        page.layout.addWidget(EventsWidget(self.window, False, person), 2, 0)
+        page.layout.addWidget(EventsWidget(self.window, False, person), 1, 1)
         self.logger.log('Detailed', 'Successfully created and added the events widget in display mode')
 
         ## Label for the person's name
