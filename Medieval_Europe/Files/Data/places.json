@@ -46,8 +46,7 @@
             "6399bafb",
             "d4734810",
             "f30dec0f",
-            "a7978f35",
-            "ba37ee33"
+            "a7978f35"
         ]
     },
     "4bdf226c": {
@@ -70,7 +69,6 @@
             "3d8fd594",
             "c5a6861e",
             "19b1454e",
-            "49fc9c97",
             "131abe6b",
             "f78a81c3",
             "c1720aed",
@@ -78,7 +76,8 @@
             "c218151a",
             "2b29dabd",
             "89b5a07f",
-            "43f627e5"
+            "43f627e5",
+            "e175d417"
         ]
     },
     "97deb534": {
@@ -94,8 +93,7 @@
             "6088a3c5",
             "787a31db",
             "df116238",
-            "55235065",
-            "01d2642f"
+            "55235065"
         ]
     },
     "4328b446": {
@@ -112,11 +110,11 @@
             "04d5187f",
             "6349bf34",
             "9a1d02e5",
-            "2e712a06",
             "edf358c7",
             "b08d90ba",
             "d5c93449",
-            "1364b117"
+            "1364b117",
+            "a0dd0d41"
         ]
     },
     "57175a44": {
@@ -178,8 +176,7 @@
             "6399bafb",
             "d4734810",
             "f30dec0f",
-            "a7978f35",
-            "ba37ee33"
+            "a7978f35"
         ]
     },
     "05ef3cac": {
@@ -264,7 +261,12 @@
             "Latitude": "52.23",
             "Longitude": "11.01"
         },
-        "Events": {},
+        "Events": {
+            "0ca9142b": {
+                "Date": "1490",
+                "Content": "Bought by the Duke of Brunswick-Luneburg"
+            }
+        },
         "Reign List": [
             "c8be2402",
             "ea81a8f1"
@@ -849,7 +851,10 @@
             "Longitude": "9.95"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "426ee5bc",
+            "eb2da1e6"
+        ]
     },
     "b2b4aa8a": {
         "Attributes": {
@@ -876,7 +881,9 @@
             "Longitude": "11.14"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "a87ac022"
+        ]
     },
     "ca6f5730": {
         "Attributes": {
@@ -2667,6 +2674,185 @@
             "Name": "Orbe",
             "Latitude": "46.725",
             "Longitude": "6.53"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1b42c822": {
+        "Attributes": {
+            "Name": "K\u00f6nigslutter",
+            "Latitude": "52.25",
+            "Longitude": "10.81"
+        },
+        "Events": {},
+        "Reign List": [
+            "2d48130f",
+            "d4488877"
+        ]
+    },
+    "257c3d24": {
+        "Attributes": {
+            "Name": "Bornum",
+            "Latitude": "52.26",
+            "Longitude": "10.75"
+        },
+        "Events": {},
+        "Reign List": [
+            "2d48130f",
+            "d4488877"
+        ]
+    },
+    "5825e902": {
+        "Attributes": {
+            "Name": "Goslar",
+            "Latitude": "51.905",
+            "Longitude": "10.43"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "5db1f6e4": {
+        "Attributes": {
+            "Name": "Gandersheim",
+            "Latitude": "51.87",
+            "Longitude": "10.025"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "4a8ec8b1": {
+        "Attributes": {
+            "Name": "Holzminden",
+            "Latitude": "51.83",
+            "Longitude": "9.445"
+        },
+        "Events": {
+            "a0e23777": {
+                "Date": "1200",
+                "Content": "Came under the protection of the counts of Everstein"
+            },
+            "917bf4aa": {
+                "Date": "1408",
+                "Content": "Came to the Welfs"
+            },
+            "1d7e3056": {
+                "Date": "16th Century",
+                "Content": "A part of the Principality of Brunswick-Wolfenbuttel"
+            }
+        },
+        "Reign List": []
+    },
+    "27209cb7": {
+        "Attributes": {
+            "Name": "Winzenburg",
+            "Latitude": "51.94",
+            "Longitude": "9.94"
+        },
+        "Events": {
+            "39c62aae": {
+                "Date": "1109",
+                "Content": "Hermann I received it from the Counts of Formbach by direction of the Bishop of Hildesheim as a fiefdom"
+            },
+            "f52939f2": {
+                "Date": "1130",
+                "Content": "After a dispute, was returned to Hildesheim"
+            },
+            "a052f064": {
+                "Date": "1150",
+                "Content": "Returned to Hermann II"
+            },
+            "4a96905b": {
+                "Date": "1152",
+                "Content": "After Hermann's murder, returned to Hildesheim"
+            },
+            "13b62590": {
+                "Date": "1522",
+                "Content": "Following the Hildesheim Feud, gained by the Principality of Brunswick-Wolfenbuttel"
+            }
+        },
+        "Reign List": [
+            "ef5e08c0",
+            "d52e4f23",
+            "4f370cf0"
+        ]
+    },
+    "943c7657": {
+        "Attributes": {
+            "Name": "Formbach",
+            "Latitude": "48.485",
+            "Longitude": "13.44"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1ff16355": {
+        "Attributes": {
+            "Name": "Brandenburg",
+            "Latitude": "52.41",
+            "Longitude": "12.56"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "1f443b46": {
+        "Attributes": {
+            "Name": "Havelberg",
+            "Latitude": "52.825",
+            "Longitude": "12.075"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "2cd0038b": {
+        "Attributes": {
+            "Name": "Celle",
+            "Latitude": "52.625",
+            "Longitude": "10.08"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "8928c951": {
+        "Attributes": {
+            "Name": "L\u00fcneburg",
+            "Latitude": "53.25",
+            "Longitude": "10.41"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "85fc072c": {
+        "Attributes": {
+            "Name": "Hamburg",
+            "Latitude": "53.55",
+            "Longitude": "9.99"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "ef0754b5": {
+        "Attributes": {
+            "Name": "Verden",
+            "Latitude": "52.92",
+            "Longitude": "9.23"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b111d105": {
+        "Attributes": {
+            "Name": "Bremen",
+            "Latitude": "53.08",
+            "Longitude": "8.81"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c35baab7": {
+        "Attributes": {
+            "Name": "Bardowick",
+            "Latitude": "53.295",
+            "Longitude": "10.385"
         },
         "Events": {},
         "Reign List": []

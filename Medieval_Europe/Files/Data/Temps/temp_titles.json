@@ -44,7 +44,9 @@
             "8a5bacda",
             "5eba9084",
             "997862c3",
-            "1364b117"
+            "1364b117",
+            "a0dd0d41",
+            "b80264f3"
         ]
     },
     "192ed49e": {
@@ -451,9 +453,11 @@
         "Reign List": [
             "d4734810",
             "f30dec0f",
+            "62fc097c",
+            "2d132f13",
             "6399bafb",
             "a7978f35",
-            "ba37ee33"
+            "735fa487"
         ]
     },
     "7732aebc": {
@@ -631,7 +635,9 @@
             "7c21863c",
             "7e06a0cd",
             "c626f2a6",
+            "c1f0344a",
             "eb7552ee",
+            "77d3e8f3",
             "78782829",
             "f1fa7912",
             "5348c00c",
@@ -667,10 +673,11 @@
             "43070645",
             "e8f9b51b",
             "3efc8dad",
+            "aaaa6ddc",
             "55235065",
+            "4c40da1d",
             "ae5f3bfc",
-            "596ce4fa",
-            "01d2642f"
+            "596ce4fa"
         ]
     },
     "cd2b5a9e": {
@@ -819,7 +826,6 @@
             "5eeed9ee",
             "6ee4cacf",
             "bec12993",
-            "49fc9c97",
             "f78a81c3",
             "df08292c",
             "708a00de",
@@ -827,7 +833,9 @@
             "89b5a07f",
             "43f627e5",
             "c218151a",
-            "7b667344"
+            "7b667344",
+            "e175d417",
+            "6b02ac93"
         ]
     },
     "f31c2324": {
@@ -2462,5 +2470,59 @@
         },
         "Events": {},
         "Reign List": []
+    },
+    "5b51df8e": {
+        "Attributes": {
+            "Realm Name": "Winzenburg",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "ef5e08c0",
+            "d52e4f23",
+            "4f370cf0"
+        ]
+    },
+    "0eb38e68": {
+        "Attributes": {
+            "Realm Name": "Hildesheim",
+            "Realm Title": "Bishopric",
+            "Male Ruler Title": "Bishop",
+            "Female Ruler Title": ""
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "426ee5bc",
+            "eb2da1e6"
+        ]
+    },
+    "d16dd438": {
+        "Attributes": {
+            "Realm Name": "Quedlinburg",
+            "Realm Title": "Abbey",
+            "Male Ruler Title": "Abbot",
+            "Female Ruler Title": "Abbess"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "a87ac022"
+        ]
     }
 }

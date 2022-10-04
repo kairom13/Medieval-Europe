@@ -20,6 +20,7 @@ logger = Logger(objectLists, True)
 objectLists['Title'].update({'SeniorTitle': Title(logger, None, 'SeniorTitle')})
 objectLists['Title'].update({'JuniorTitle': Title(logger, None, 'JuniorTitle')})
 objectLists['Title'].update({'2ndJunTitle': Title(logger, None, '2ndJunTitle')})
+objectLists['Title'].update({'2ndSenTitle': Title(logger, None, '2ndSenTitle')})
 
 
 def createPerson(index, personType):
@@ -62,7 +63,7 @@ def getTestCaseDict():
 index = 0
 testCaseList = []
 
-def createTestCase(cases, index, hasJunior):
+def createTestCase(cases, index, xtraJun, xtraSen):
     cases = cases.split(',')
 
     testCasePeople = getTestCaseDict()
@@ -77,18 +78,25 @@ def createTestCase(cases, index, hasJunior):
 
     testCases = {'Senior': None,
                  'Junior': None,
-                 '2ndJunior': None}
+                 '2ndJunior': None,
+                 '2ndSenior': None}
 
     for lev in testCasePeople:
         testCaseDict = testCasePeople[lev]
         mainReign = Reign(logger, objectLists['Person'][testCaseDict['Main']], objectLists['Title'][lev + 'Title'], None, None)
         objectLists['Reign'].update({mainReign.getID(): mainReign})
 
-        if lev == 'Junior' and hasJunior:
+        if lev == 'Junior' and xtraJun:
             secJuniorReign = Reign(logger, objectLists['Person'][testCaseDict['Main']], objectLists['Title']['2ndJunTitle'], None, None)
             objectLists['Reign'].update({secJuniorReign.getID(): secJuniorReign})
 
             testCases.update({'2ndJunior': secJuniorReign})
+
+        if lev == 'Senior' and xtraSen:
+            secSeniorReign = Reign(logger, objectLists['Person'][testCaseDict['Main']], objectLists['Title']['2ndSenTitle'], None, None)
+            objectLists['Reign'].update({secSeniorReign.getID(): secSeniorReign})
+
+            testCases.update({'2ndSenior': secSeniorReign})
 
         for connect in testCaseDict:
             if connect != 'Main' and testCaseDict[connect] is not None:
@@ -98,26 +106,38 @@ def createTestCase(cases, index, hasJunior):
                 mainReign.setConnection(reign.getID(), connect)
                 reign.setConnection(mainReign.getID(), oppConnect[connect])
 
-                if lev == 'Junior' and hasJunior:
+                if lev == 'Junior' and xtraJun:
                     secReign = Reign(logger, objectLists['Person'][testCaseDict[connect]], objectLists['Title']['2ndJunTitle'], None, None)
                     objectLists['Reign'].update({secReign.getID(): secReign})
 
                     secJuniorReign.setConnection(secReign.getID(), connect)
                     secReign.setConnection(secJuniorReign.getID(), oppConnect[connect])
 
+                if lev == 'Senior' and xtraSen:
+                    secReign = Reign(logger, objectLists['Person'][testCaseDict[connect]], objectLists['Title']['2ndSenTitle'], None, None)
+                    objectLists['Reign'].update({secReign.getID(): secReign})
+
+                    secSeniorReign.setConnection(secReign.getID(), connect)
+                    secReign.setConnection(secSeniorReign.getID(), oppConnect[connect])
+
         testCases.update({lev: mainReign})
 
-    if hasJunior:
+    if xtraJun:
         testCases['Junior'].mergeReign(testCases['2ndJunior'], 'Junior')
         testCases['2ndJunior'].mergeReign(testCases['Junior'], 'Senior')
+
+    if xtraSen:
+        testCases['Senior'].mergeReign(testCases['2ndSenior'], 'Junior')
+        testCases['2ndSenior'].mergeReign(testCases['Senior'], 'Senior')
 
     return testCases
 
 
 def recursiveFunction(key, catList, axes):
     if len(axes) == 0:
-        testCaseList.append(createTestCase(key[:-1], len(testCaseList), False))
-        testCaseList.append(createTestCase(key[:-1], len(testCaseList), True))
+        for j in range(2):
+            for s in range(2):
+                testCaseList.append(createTestCase(key[:-1], len(testCaseList), j, s))
 
     else:
         axis = axes[0]
@@ -132,12 +152,14 @@ testingDict = {'Junior Pre': [],
                'Junior Suc': [],
                'Senior Suc': [],
                '2nd Junior': [],
+               '2nd Senior': [],
                'Merge Flag': [],
                'Pre Equal': [],
                'Suc Equal': [],
                'Senior Check': [],
-               'Junior 1 Check': [],
-               'Junior 2 Check': [],
+               'Junior Check': [],
+               '2nd Junior Check': [],
+               '2nd Senior Check': [],
                'Consistent Person': [],
                'Good Connections': [],
                'Overall Check': []}
@@ -167,7 +189,7 @@ def getReignName(reignID):
     return 'None'
 
 
-print('|\t\t\t\t\t\t\tPredecessor Reign\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\tMain Reign\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\tSuccessor Reign\t\t\t\t\t\t\t\t|Title Check|')
+print('|\t\t\t\t\t\t\tPredecessor Reign\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\tMain Reign\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\tSuccessor Reign\t\t\t\t\t\t\t\t|')
 print('')
 
 count = 0
@@ -220,6 +242,7 @@ for case in testCaseList:
         testingDict['Senior Suc'].append(reign.getConnection('Person').getID())
 
     testingDict['2nd Junior'].append(bool(len(juniorReign.mergedReigns['Junior'])))
+    testingDict['2nd Senior'].append(bool(len(seniorReign.mergedReigns['Junior'])))
 
     testingDict['Merge Flag'].append(mergeFlag)
     testingDict['Pre Equal'].append(openPre)
@@ -229,6 +252,10 @@ for case in testCaseList:
 
     if mergeFlag:
         actions.append('Merge')
+
+        prevJuniors = []
+        for j in seniorReign.mergedReigns['Junior']:
+            prevJuniors.append(j)
 
         seniorReign.mergeReign(juniorReign, 'Junior')
         juniorReign.transferJuniorReigns(objectLists['Reign'], seniorReign)
@@ -240,12 +267,13 @@ for case in testCaseList:
 
                 SPObject = objectLists['Reign'][seniorPre]
                 for j in seniorReign.mergedReigns['Junior']:
-                    junReign = objectLists['Reign'][j]
-                    newJuniorPre = Reign(logger, SPObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
-                    objectLists['Reign'].update({newJuniorPre.getID(): newJuniorPre})
+                    if j not in prevJuniors:
+                        junReign = objectLists['Reign'][j]
+                        newJuniorPre = Reign(logger, SPObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                        objectLists['Reign'].update({newJuniorPre.getID(): newJuniorPre})
 
-                    junReign.setConnection(newJuniorPre, 'Predecessor')
-                    newJuniorPre.setConnection(junReign, 'Successor')
+                        junReign.setConnection(newJuniorPre, 'Predecessor')
+                        newJuniorPre.setConnection(junReign, 'Successor')
 
                 actions.append("Propagate")
 
@@ -259,18 +287,28 @@ for case in testCaseList:
                 seniorReign.setConnection(newSeniorPre, 'Predecessor')
                 newSeniorPre.setConnection(seniorReign, 'Successor')
 
+                for j in seniorReign.mergedReigns['Junior']:
+                    if j in prevJuniors:
+                        junReign = objectLists['Reign'][j]
+                        newSeniorPre = Reign(logger, JPObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                        objectLists['Reign'].update({newSeniorPre.getID(): newSeniorPre})
+
+                        junReign.setConnection(newSeniorPre, 'Predecessor')
+                        newSeniorPre.setConnection(junReign, 'Successor')
+
         if openSuc:
             if juniorSuc is None:
                 actions.append('Set junior successor as ' + getReignName(seniorSuc))
 
                 SSObject = objectLists['Reign'][seniorSuc]
                 for j in seniorReign.mergedReigns['Junior']:
-                    junReign = objectLists['Reign'][j]
-                    newJuniorSuc = Reign(logger, SSObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
-                    objectLists['Reign'].update({newJuniorSuc.getID(): newJuniorSuc})
+                    if j not in prevJuniors:
+                        junReign = objectLists['Reign'][j]
+                        newJuniorSuc = Reign(logger, SSObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                        objectLists['Reign'].update({newJuniorSuc.getID(): newJuniorSuc})
 
-                    junReign.setConnection(newJuniorSuc, 'Successor')
-                    newJuniorSuc.setConnection(junReign, 'Predecessor')
+                        junReign.setConnection(newJuniorSuc, 'Successor')
+                        newJuniorSuc.setConnection(junReign, 'Predecessor')
 
                 actions.append("Propagate")
 
@@ -283,6 +321,15 @@ for case in testCaseList:
 
                 seniorReign.setConnection(newSeniorSuc, 'Successor')
                 newSeniorSuc.setConnection(seniorReign, 'Predecessor')
+
+                for j in seniorReign.mergedReigns['Junior']:
+                    if j in prevJuniors:
+                        junReign = objectLists['Reign'][j]
+                        newSeniorSuc = Reign(logger, JSObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                        objectLists['Reign'].update({newSeniorSuc.getID(): newSeniorSuc})
+
+                        junReign.setConnection(newSeniorSuc, 'Successor')
+                        newSeniorSuc.setConnection(junReign, 'Predecessor')
 
 
     def getReignTitle(reignID):
@@ -302,8 +349,9 @@ for case in testCaseList:
     # SS predecessor
 
 
-    def checkTitleConsistency(reign):
-        reign_check = [getReignTitle(reign.getID())]
+    def checkTitleConsistency(reignID):
+        reign = objectLists['Reign'][reignID]
+        reign_check = [getReignTitle(reignID)]
 
         if reign.hasConnection('Predecessor'):
             PreObject = objectLists['Reign'][reign.getConnection('Predecessor')]
@@ -318,19 +366,19 @@ for case in testCaseList:
         return len(set(reign_check)) == 1
 
 
-    testingDict['Senior Check'].append(checkTitleConsistency(seniorReign))
-    jrIndex = 1
+    testingDict['Senior Check'].append(checkTitleConsistency(seniorReign.getID()))
+
+    jrDict = {'JuniorTitle': ['Junior Check', ''],
+              '2ndJunTitle': ['2nd Junior Check', ''],
+              '2ndSenTitle': ['2nd Senior Check', '']}
+
     for j in seniorReign.mergedReigns['Junior']:
-        junReignObject = objectLists['Reign'][j]
-        testingDict['Junior ' + str(jrIndex) + ' Check'].append(checkTitleConsistency(junReignObject))
+        givenDict = jrDict[getReignTitle(j)]
+        givenDict[1] = checkTitleConsistency(j)
 
-        jrIndex += 1
-
-    if len(seniorReign.mergedReigns['Junior']) < 2:
-        testingDict['Junior 2 Check'].append('')
-
-    if len(seniorReign.mergedReigns['Junior']) == 0:
-        testingDict['Junior 1 Check'].append('')
+    for j in jrDict:
+        givenDict = jrDict[j]
+        testingDict[givenDict[0]].append(givenDict[1])
 
     checkDict = {'Predecessor': {'Pre': [], 'Main': [], 'Suc': []},
                  'Main': {'Pre': [], 'Main': [], 'Suc': []},
@@ -366,16 +414,11 @@ for case in testCaseList:
 
 
     print(str(count) + ': ' + str(actions))
-    print('|\t' + displayReign(seniorReign.getConnection('Predecessor'), 'Predecessor') + '\t|\t' + displayReign(seniorReign.getID(), 'Main') + '\t|\t' + displayReign(seniorReign.getConnection('Successor'), 'Successor') +
-          '\t|\t' + str(testingDict['Senior Check'][-1]) + '\t|')
+    print('|\t' + displayReign(seniorReign.getConnection('Predecessor'), 'Predecessor') + '\t|\t' + displayReign(seniorReign.getID(), 'Main') + '\t|\t' + displayReign(seniorReign.getConnection('Successor'), 'Successor') + '\t|')
 
-    jrIndex = 1
     for j in seniorReign.mergedReigns['Junior']:
         juniorObject = objectLists['Reign'][j]
-        print('|\t' + displayReign(juniorObject.getConnection('Predecessor'), 'Predecessor') + '\t|\t' + displayReign(juniorObject.getID(), 'Main') + '\t|\t' + displayReign(juniorObject.getConnection('Successor'), 'Successor') +
-              '\t|\t' + str(testingDict['Junior ' + str(jrIndex) + ' Check'][-1]) + '\t|')
-
-        jrIndex += 1
+        print('|\t' + displayReign(juniorObject.getConnection('Predecessor'), 'Predecessor') + '\t|\t' + displayReign(juniorObject.getID(), 'Main') + '\t|\t' + displayReign(juniorObject.getConnection('Successor'), 'Successor') + '\t|')
 
     consistentPersonList = []
     for cd in checkDict:
@@ -396,10 +439,12 @@ for case in testCaseList:
 
     overall_check = []
     overall_check.append(testingDict['Senior Check'][-1])
-    if testingDict['Junior 1 Check'][-1] != '':
-        overall_check.append(testingDict['Junior 1 Check'][-1])
-    if testingDict['Junior 2 Check'][-1] != '':
-        overall_check.append(testingDict['Junior 2 Check'][-1])
+    if testingDict['Junior Check'][-1] != '':
+        overall_check.append(testingDict['Junior Check'][-1])
+    if testingDict['2nd Junior Check'][-1] != '':
+        overall_check.append(testingDict['2nd Junior Check'][-1])
+    if testingDict['2nd Senior Check'][-1] != '':
+        overall_check.append(testingDict['2nd Senior Check'][-1])
     overall_check.append(testingDict['Consistent Person'][-1])
     overall_check.append(testingDict['Good Connections'][-1])
 

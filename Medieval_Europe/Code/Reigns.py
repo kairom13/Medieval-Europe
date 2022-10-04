@@ -3,7 +3,7 @@ import sys
 from PyQt5.QtWidgets import QWidget, QGridLayout, QLabel, QPushButton, QHBoxLayout, QCheckBox, QVBoxLayout
 from PyQt5.QtCore import *
 
-from Medieval_Europe.Code.Widgets.Buttons import RemoveConnectionButton, UnmergeButton
+from Medieval_Europe.Code.Widgets.Buttons import RemoveConnectionButton
 from Medieval_Europe.Code.Widgets.Displays import ObjectLabel
 from Medieval_Europe.Code.Widgets.Interactives import AttributeWidget
 
@@ -20,6 +20,7 @@ from Medieval_Europe.Code.Widgets.Interactives import AttributeWidget
 # Title
 # Edit
 # Personal Info (to flow through)
+
 
 class ReignWidget(QWidget):
     def __init__(self, parameters):
@@ -275,6 +276,27 @@ class MergeButton(QPushButton):
         return False
 
 
+class UnmergeButton(QPushButton):
+    def __init__(self, window, juniorReign):
+        super(UnmergeButton, self).__init__('Unmerge')
+        self.window = window
+        self.juniorReign = juniorReign
+        self.seniorReign = self.window.get_object(juniorReign.mergedReigns['Senior'])
+        self.person = juniorReign.getConnection('Person')
+
+        self.installEventFilter(self)
+
+    def eventFilter(self, object, event):
+        if event.type() == QEvent.MouseButtonRelease:
+            self.window.logger.log('Code', 'Clicked to remove {' + self.juniorReign.getID() + '} as junior to {' + self.seniorReign.getID() + '}')
+            self.juniorReign.unmerge(self.seniorReign)
+
+            self.window.page_factory('edit_person_page', {'Person': self.person})
+
+            return True
+        return False
+
+
 class EditConnectedReignWidget(QHBoxLayout):
     def __init__(self, window, connection, reign):
         super().__init__()
@@ -361,10 +383,9 @@ class EditTitleWidget(QHBoxLayout):
         removeButton.clicked.connect(self.removeReign)
         self.addWidget(removeButton)
 
-        #mergeButton = QPushButton('Merge')
-        #mergeButton.setEnabled(False)
         mergeButton = MergeButton(self.window, self.reign)
-        #mergeButton.setToolTip('Merge functionality to be added in a later update')
+        mergeButton.setEnabled(False)
+        mergeButton.setToolTip('Merge functionality to be added in a later update')
         self.addWidget(mergeButton)
 
         ## Check box for marking as primary reign
@@ -420,18 +441,28 @@ class EditTitleWidget(QHBoxLayout):
                 predecessorObject = self.window.get_object(juniorReign.getConnection('Predecessor'))
                 predecessorObject.removeConnection('Successor')
 
+                if predecessorObject.isJunior:
+                    predecessorObject.unmerge(self.window.get_object(predecessorObject.mergedReigns['Senior']))
+
             if juniorReign.hasConnection('Successor'):
                 successorObject = self.window.get_object(juniorReign.getConnection('Successor'))
                 successorObject.removeConnection('Predecessor')
 
-        # self.lineEditDict.pop(self.reign.id)
+                if successorObject.isJunior:
+                    successorObject.unmerge(self.window.get_object(successorObject.mergedReigns['Senior']))
 
         if self.reign.hasConnection('Predecessor'):
             predecessorObject = self.window.get_object(self.reign.getConnection('Predecessor'))
             predecessorObject.removeConnection('Successor')
 
+            if predecessorObject.isJunior:
+                predecessorObject.unmerge(self.window.get_object(predecessorObject.mergedReigns['Senior']))
+
         if self.reign.hasConnection('Successor'):
             successorObject = self.window.get_object(self.reign.getConnection('Successor'))
             successorObject.removeConnection('Predecessor')
+
+            if successorObject.isJunior:
+                successorObject.unmerge(self.window.get_object(successorObject.mergedReigns['Senior']))
 
         self.window.page_factory('edit_person_page', {'Person': self.ruler})

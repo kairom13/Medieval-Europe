@@ -877,10 +877,10 @@ class Reign(CustomObject):
         if self.isJunior:
             if self.mergedReigns['Senior'] == seniorID:
                 self.isJunior = False
-                self.mergedReigns['Senior'] = -1
+                self.mergedReigns['Senior'] = None
                 self.connection('Remove', seniorID)
 
-                seniorReign.mergedReigns['Junior'].pop(self.getID())
+                seniorReign.mergedReigns['Junior'].remove(self.getID())
                 seniorReign.connection('Remove', self.getID())
 
                 self.logger.log('Detailed', 'Successfully removed {' + seniorID + '} as the senior reign for {' + self.getID() + '}')

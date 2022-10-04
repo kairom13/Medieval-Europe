@@ -214,9 +214,12 @@ class RemoveConnectionButton(QPushButton):
                     juniorObject.removeConnection(self.connection)
 
                 self.target.removeConnection(opp_connection)  # Remove the subject reign as the opposite connection to the target reign
-                for j in self.target.mergedReigns['Junior']:
-                    juniorObject = self.window.get_object(j)
-                    juniorObject.removeConnection(opp_connection)
+                if self.target.isJunior:  # If the target reign is a junior, unmerge it from its senior
+                    self.target.unmerge(self.window.get_object(self.target.mergedReigns['Senior']))
+                else:  # If the target reign is not a junior, make sure all of its juniors are not connected to the opposite connection
+                    for j in self.target.mergedReigns['Junior']:
+                        juniorObject = self.window.get_object(j)
+                        juniorObject.removeConnection(opp_connection)
 
                 # Get the person of the subject reign to return to
                 person = self.subject.getConnection('Person')
@@ -230,27 +233,6 @@ class RemoveConnectionButton(QPushButton):
 
             else:
                 self.window.logger.log('Error', str(self.connection) + ' is not a valid connection to removal')
-
-            return True
-        return False
-
-
-class UnmergeButton(QPushButton):
-    def __init__(self, window, juniorReign):
-        super(UnmergeButton, self).__init__('Unmerge')
-
-        self.window = window
-        self.juniorReign = juniorReign
-        self.seniorReign = juniorReign.mergedReigns['Senior']
-        self.person = juniorReign.getConnection('Person')
-
-        self.installEventFilter(self)
-
-    def eventFilter(self, object, event):
-        if event.type() == QEvent.MouseButtonRelease:
-            self.juniorReign.unmerge()
-
-            self.window.page_factory('edit_person_page', {'Person': self.person})
 
             return True
         return False

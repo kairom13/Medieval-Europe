@@ -450,7 +450,7 @@ class MainWindow(QMainWindow):
                 juniorObject = self.get_object(j)
 
                 # Create new reign with this reign's ruler but the target junior reign's title
-                self.logger.log('Detailed', 'Creating new junior reign: {' + juniorObject.getConnection('Title').getID() + '} for {' + target.getConnection('Person').getID() + '}')
+                self.logger.log('Detailed', 'Creating new junior reign: {' + juniorObject.getConnection('Title').getID() + '} for {' + subject.getConnection('Person').getID() + '}')
                 newJunior = Reign(self.logger, subject.getConnection('Person'), juniorObject.getConnection('Title'), None, None)
                 self.add_object(newJunior)
 
@@ -472,7 +472,7 @@ class MainWindow(QMainWindow):
                 juniorObject = self.get_object(j)
 
                 # Create new reign with this reign's ruler but the target junior reign's title
-                self.logger.log('Detailed', 'Creating new junior reign: {' + juniorObject.getConnection('Title').getID() + '} for {' + subject.getConnection('Person').getID() + '}')
+                self.logger.log('Detailed', 'Creating new junior reign: {' + juniorObject.getConnection('Title').getID() + '} for {' + target.getConnection('Person').getID() + '}')
                 newJunior = Reign(self.logger, target.getConnection('Person'), juniorObject.getConnection('Title'), None, None)
                 self.add_object(newJunior)
 
@@ -522,29 +522,34 @@ class MainWindow(QMainWindow):
             if mergeFlag:
                 self.logger.log('Detailed', 'Allowed to Merge')
 
+                prevJuniors = []
+                for j in target.mergedReigns['Junior']:
+                    prevJuniors.append(j)
+
                 target.mergeReign(subject, 'Junior')
                 subject.transferJuniorReigns(self.objectLists['Reign'], target)
                 subject.mergeReign(target, 'Senior')
 
                 if openPre:
                     if juniorPre is None:
-                        self.logger.log('Set junior predecessor as {' + seniorPre + '}')
+                        self.logger.log('Detailed', 'Set junior predecessor as {' + seniorPre + '}')
 
                         SPObject = self.get_object(seniorPre)
                         for j in target.mergedReigns['Junior']:
-                            junReign = self.get_object(j)
-                            newJuniorPre = Reign(self.logger, SPObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
-                            newJuniorPre.updateAttribute('Start Date', SPObject.getAttribute('Start Date'))
-                            newJuniorPre.updateAttribute('End Date', SPObject.getAttribute('End Date'))
-                            self.add_object(newJuniorPre)
+                            if j not in prevJuniors:
+                                junReign = self.get_object(j)
+                                newJuniorPre = Reign(self.logger, SPObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                                newJuniorPre.updateAttribute('Start Date', SPObject.getAttribute('Start Date'))
+                                newJuniorPre.updateAttribute('End Date', SPObject.getAttribute('End Date'))
+                                self.add_object(newJuniorPre)
 
-                            junReign.setConnection(newJuniorPre, 'Predecessor')
-                            newJuniorPre.setConnection(junReign, 'Successor')
+                                junReign.setConnection(newJuniorPre, 'Predecessor')
+                                newJuniorPre.setConnection(junReign, 'Successor')
 
                         self.logger.log('Detailed', 'Propagate merge to predecessor')
 
                     if seniorPre is None:
-                        self.logger.log('Set senior predecessor as {' + juniorPre + '}')
+                        self.logger.log('Detailed', 'Set senior predecessor as {' + juniorPre + '}')
 
                         JPObject = self.get_object(juniorPre)
                         newSeniorPre = Reign(self.logger, JPObject.getConnection('Person'), target.getConnection('Title'), None, None)
@@ -555,25 +560,37 @@ class MainWindow(QMainWindow):
                         target.setConnection(newSeniorPre, 'Predecessor')
                         newSeniorPre.setConnection(target, 'Successor')
 
+                        for j in target.mergedReigns['Junior']:
+                            if j in prevJuniors:
+                                junReign = self.get_object(j)
+                                newSeniorPre = Reign(self.logger, JPObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                                newSeniorPre.updateAttribute('Start Date', JPObject.getAttribute('Start Date'))
+                                newSeniorPre.updateAttribute('End Date', JPObject.getAttribute('End Date'))
+                                self.add_object(newSeniorPre)
+
+                                junReign.setConnection(newSeniorPre, 'Predecessor')
+                                newSeniorPre.setConnection(junReign, 'Successor')
+
                 if openSuc:
                     if juniorSuc is None:
-                        self.logger.log('Set junior successor as {' + seniorSuc + '}')
+                        self.logger.log('Detailed', 'Set junior successor as {' + seniorSuc + '}')
 
                         SSObject = self.get_object(seniorSuc)
                         for j in target.mergedReigns['Junior']:
-                            junReign = self.get_object(j)
-                            newJuniorSuc = Reign(self.logger, SSObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
-                            newJuniorSuc.updateAttribute('Start Date', SSObject.getAttribute('Start Date'))
-                            newJuniorSuc.updateAttribute('End Date', SSObject.getAttribute('End Date'))
-                            self.add_object(newJuniorSuc)
+                            if j not in prevJuniors:
+                                junReign = self.get_object(j)
+                                newJuniorSuc = Reign(self.logger, SSObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                                newJuniorSuc.updateAttribute('Start Date', SSObject.getAttribute('Start Date'))
+                                newJuniorSuc.updateAttribute('End Date', SSObject.getAttribute('End Date'))
+                                self.add_object(newJuniorSuc)
 
-                            junReign.setConnection(newJuniorSuc, 'Successor')
-                            newJuniorSuc.setConnection(junReign, 'Predecessor')
+                                junReign.setConnection(newJuniorSuc, 'Successor')
+                                newJuniorSuc.setConnection(junReign, 'Predecessor')
 
                         self.logger.log('Detailed', 'Propagate merge to successor')
 
                     if seniorSuc is None:
-                        self.logger.log('Set senior successor as {' + juniorSuc + '}')
+                        self.logger.log('Detailed', 'Set senior successor as {' + juniorSuc + '}')
 
                         JSObject = self.get_object(juniorSuc)
                         newSeniorSuc = Reign(self.logger, JSObject.getConnection('Person'), target.getConnection('Title'), None, None)
@@ -583,6 +600,17 @@ class MainWindow(QMainWindow):
 
                         target.setConnection(newSeniorSuc, 'Successor')
                         newSeniorSuc.setConnection(target, 'Predecessor')
+
+                        for j in target.mergedReigns['Junior']:
+                            if j in prevJuniors:
+                                junReign = self.get_object(j)
+                                newSeniorSuc = Reign(self.logger, JSObject.getConnection('Person'), junReign.getConnection('Title'), None, None)
+                                newSeniorSuc.updateAttribute('Start Date', JSObject.getAttribute('Start Date'))
+                                newSeniorSuc.updateAttribute('End Date', JSObject.getAttribute('End Date'))
+                                self.add_object(newSeniorSuc)
+
+                                junReign.setConnection(newSeniorSuc, 'Successor')
+                                newSeniorSuc.setConnection(junReign, 'Predecessor')
 
         # Get reign from title in target for place in subject
         elif connection == 'Reign':

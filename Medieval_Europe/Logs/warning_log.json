@@ -9,17 +9,38 @@
         "1913_Could not enhance df116238. ID not found in object lists",
         "1924_Could not enhance f30dec0f. ID not found in object lists",
         "1972_Could not enhance 822348bf. ID not found in object lists",
-        "2191_Could not enhance edf358c7. ID not found in object lists",
-        "2578_Could not enhance 72cba135. ID not found in object lists",
-        "2950_Could not enhance c1720aed. ID not found in object lists",
-        "2960_Could not enhance d5c93449. ID not found in object lists",
-        "3396_Could not enhance 2e712a06. ID not found in object lists",
-        "3413_Could not enhance 55235065. ID not found in object lists",
-        "3423_Could not enhance a7978f35. ID not found in object lists",
-        "3513_Could not enhance 3a7159f1. ID not found in object lists",
-        "3637_Could not enhance b08d90ba. ID not found in object lists",
-        "3648_Could not enhance f78a81c3. ID not found in object lists",
-        "3777_Could not enhance c6083014. ID not found in object lists",
-        "3861_Could not enhance 76cd0392. ID not found in object lists"
+        "2165_Could not enhance 131abe6b. ID not found in object lists",
+        "2197_Could not enhance edf358c7. ID not found in object lists",
+        "2589_Could not enhance 72cba135. ID not found in object lists",
+        "2961_Could not enhance c1720aed. ID not found in object lists",
+        "2971_Could not enhance d5c93449. ID not found in object lists",
+        "3425_Could not enhance 2e712a06. ID not found in object lists",
+        "3448_Could not enhance a7978f35. ID not found in object lists",
+        "3539_Could not enhance 3a7159f1. ID not found in object lists",
+        "3663_Could not enhance b08d90ba. ID not found in object lists",
+        "3674_Could not enhance f78a81c3. ID not found in object lists",
+        "3691_Could not enhance 77d3e8f3. ID not found in object lists",
+        "3826_Could not enhance c6083014. ID not found in object lists",
+        "3910_Could not enhance 76cd0392. ID not found in object lists"
+    ],
+    "004_edit_person_page": [
+        "076_Cannot remove connection. Margaret III, Countess of Flanders is not a connection of Margaret III, Countess of Rethel",
+        "078_Cannot remove connection. Margaret III, Countess of Rethel is not a connection of Margaret III, Countess of Flanders"
+    ],
+    "013_choose_object_list": [
+        "016_Cannot remove Margaret III, Countess of Rethel from senior reigns dict as it is not an element of the list"
+    ],
+    "022_choose_object_list": [
+        "049_Pontarlier is already associated with Margaret III",
+        "051_Arras is already associated with Margaret III"
+    ],
+    "025_edit_person_page": [
+        "088_Cannot remove Margaret III, Countess of Artois; Not in dictionary of reigns",
+        "092_Cannot remove connection. Louis II, Count of Burgundy is not a connection of Louis II, Count of Artois",
+        "094_Cannot remove connection. Louis II, Count of Artois is not a connection of Louis II, Count of Burgundy",
+        "097_Cannot remove connection. John I, Count of Flanders is not a connection of John I, Count of Artois",
+        "099_Cannot remove connection. John I, Count of Artois is not a connection of John I, Count of Flanders",
+        "102_Cannot remove connection. John I, Count of Flanders is not a connection of John I, Count of Burgundy",
+        "104_Cannot remove connection. John I, Count of Burgundy is not a connection of John I, Count of Flanders"
     ]
 }
