@@ -1027,7 +1027,12 @@
             "Father": "41465b77",
             "Mother": "2bd69de4"
         },
-        "Events": {},
+        "Events": {
+            "deb78092": {
+                "Date": "9/16/929",
+                "Content": "Gained as dowry Quedlinburg, Pohlde, Nordhausen, Grone, and Duderstadt"
+            }
+        },
         "Reign List": {}
     },
     "234eca22": {
@@ -10182,7 +10187,8 @@
             "Spouses": {
                 "unknown_spouse": [
                     "6d5ade0a",
-                    "3cef74bf"
+                    "3cef74bf",
+                    "651f77c2"
                 ]
             },
             "Father": "fca7dc82",
@@ -21872,6 +21878,76 @@
                 },
                 "Connections": {
                     "Title": "d16dd438",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "651f77c2": {
+        "Attributes": {
+            "Name": "Kunigunde",
+            "Nickname": "of Weimar",
+            "Birth Date": "c. 1055",
+            "Death Date": "after 3/20/1117"
+        },
+        "Gender": 1,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": "07186362",
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "cbb1fc07": {
+                "Attributes": {
+                    "Start Date": "",
+                    "End Date": "3/20/1117"
+                },
+                "Connections": {
+                    "Title": "9254bb06",
+                    "Predecessor": null,
+                    "Successor": null
+                },
+                "Is Primary": true,
+                "Merged Reigns": {
+                    "Senior": null,
+                    "Junior": []
+                }
+            }
+        }
+    },
+    "89adb024": {
+        "Attributes": {
+            "Name": "Adalbert I",
+            "Nickname": "",
+            "Birth Date": "",
+            "Death Date": "6/23/1137"
+        },
+        "Gender": 0,
+        "Connections": {
+            "Spouses": {
+                "unknown_spouse": []
+            },
+            "Father": null,
+            "Mother": null
+        },
+        "Events": {},
+        "Reign List": {
+            "80ca24fb": {
+                "Attributes": {
+                    "Start Date": "1111",
+                    "End Date": "6/23/1137"
+                },
+                "Connections": {
+                    "Title": "da07f41c",
                     "Predecessor": null,
                     "Successor": null
                 },

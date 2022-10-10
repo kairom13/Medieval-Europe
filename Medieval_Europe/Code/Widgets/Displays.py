@@ -4,7 +4,9 @@ Created on Aug 1, 2022
 @author: kairom13
 """
 import math
-import sys
+import random
+
+import numpy as np
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -16,6 +18,9 @@ import uuid
 
 from Medieval_Europe import get_parent_path
 import os
+from Medieval_Europe.Code.CustomObjects import Title
+
+from foronoi import Voronoi, Polygon, Visualizer, VoronoiObserver
 
 
 ## Widget for choosing/viewing person from list
@@ -67,7 +72,7 @@ class ObjectLabelWidget(QWidget):
 
 
 class PlaceMap(QWidget):
-    def __init__(self, window, placeList):
+    def __init__(self, window, placeTitleDict={}, multiColor=False, vPolygons=[]):
         super().__init__()
 
         self.window = window
@@ -75,18 +80,60 @@ class PlaceMap(QWidget):
         transformer = Transformer.from_crs(4326, 3035, always_xy=True)
 
         self.placeList = {}
-        if placeList:
-            self.localPlaces = True
+        self.multiColor = multiColor
+        self.vPolygons = vPolygons
+
+        # placeTitleDict is the list of places to highlight
+        # If none, then no places to highlight, therefore don't zoom on reign
+        if placeTitleDict:
+            self.reignZoom = True
         else:
-            self.localPlaces = False
+            self.reignZoom = False
+
+        dummyTitle = Title(self.window.logger, None, None)
 
         for p, place in self.window.objectLists['Place'].items():
+            if p in placeTitleDict:
+                title = placeTitleDict[p]  # Dictionary of both places and titles for the person (if applicable)
+                # Expected format is: {<placeID>:<titleObject>}
+            else:
+                title = None
             try:
                 self.placeList.update({p: {'Coordinates': (transformer.transform(float(place.getAttribute('Longitude')), float(place.getAttribute('Latitude')))),
                                            'Object': place,
-                                           'Local': p in placeList}})
+                                           'Title': title}})
             except ValueError:
                 self.window.logger.log('Warning', 'Could not add {' + p + '} to Place Map, coordinates are not numbers.')
+
+            # Go through each place and check if it has any reigns
+            # If so, get the associated title and tally the frequency of them
+            # Map the place to the most common title
+            # Format: {<placeID>: <titleObject>}
+            if self.multiColor:  # Only run if wanting colors for all titles
+                maxTitleCount = {}
+                maxTitle = ''
+
+                for r in place.reignList:  # Go through each reign for this place
+                    reignObject = self.window.get_object(r)
+                    titleObject = reignObject.getConnection('Title')
+                    if titleObject.getID() in maxTitleCount:
+                        maxTitleCount[titleObject.getID()] += 1  # Increase the count by one if the title already exists
+                    else:
+                        maxTitleCount.update({titleObject.getID(): 1})  # Add new title with count of 1
+                        if maxTitle == '':
+                            maxTitle = titleObject.getID()  # Set the max title if the new title is the first title
+
+                    if maxTitleCount[titleObject.getID()] > maxTitleCount[maxTitle]:  # Compare the updated title to the max title to find new max
+                        maxTitle = titleObject.getID()
+
+                if maxTitle == '':
+                    self.window.logger.log('Detailed', place.getName() + ': Dummy Title')
+                    self.placeList[p]['Title'] = dummyTitle
+                else:
+                    self.window.logger.log('Detailed', place.getName() + ': {' + maxTitle + '}')
+                    self.placeList[p]['Title'] = self.window.get_object(maxTitle)
+
+        self.window.logger.log('Detailed', 'Successfully initialized all places in PlaceMap')
 
         self.adjustCoords = {}  # Global values to adjust shapefile to desired dimensions
         self.polygons = []  # Array of shapefile polygons
@@ -145,16 +192,51 @@ class PlaceMap(QWidget):
 
         self.get_focus_area()
 
-        # print(str(self.width()) + ', ' + str(self.height()))
+        vPoints = []
+        vPolygon = Polygon([(0, 0), (0, -self.height()), (self.width(), -self.height()), (self.width(), 0)])
 
-        # Move polygons to list to be drawn
-        #self.drawShapefile()
+        for p_id, p in self.placeList.items():
+            xPos = p['Coordinates'][0]
+            yPos = p['Coordinates'][1]
+
+            p.update({'Map Coords': (self.adjustCoords['X Origin'] + (xPos - self.adjustCoords['Left']) * self.adjustCoords['Ratio'],
+                                     self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - yPos) * self.adjustCoords['Ratio'])})
+
+            if self.multiColor:
+                vPoints.append((p['Map Coords'][0], p['Map Coords'][1]))
+
+            #titleHex = p['Title'].getAttribute('Color')
+            #titleColor = QColor('#' + titleHex)
+            titleColor = QColor('#' + uuid.uuid4().hex[:6])
+
+        if self.multiColor:
+            v = Voronoi(vPolygon)
+            v.create_diagram(points=vPoints)
+
+            for pSite in v.sites:
+                print('\nPoint: (' + str(pSite.x) + ', ' + str(pSite.y) + ')')
+                edge = pSite.first_edge
+                edgeCt = 1
+                print('Start: ' + str(edge))
+                print('Next: ' + str(edge.next))
+                while edge.next != pSite.first_edge:
+                    print('\tEdge: ' + str(edgeCt))
+                    edge = edge.next
+                    edgeCt += 1
 
         self.initialized = True
+
+    def seedDist(self, ptOne, ptTwo):
+        return math.sqrt(math.pow(ptOne.x() - ptTwo.x(), 2) + math.pow(ptOne.y() - ptTwo.y(), 2))
+
+    def divideInt(self, integer, divisor=2):
+        return int(math.ceil(integer/divisor))
 
     def paintEvent(self, event):
         if not self.initialized:
             self.initialize()
+
+        self.window.logger.log('Detailed', 'Drawing map of places with dimensions: (' + str(self.width()) + ', ' + str(self.height()) + ')')
 
         painter = QPainter(self)
         painter.setRenderHints(painter.Antialiasing)
@@ -163,7 +245,9 @@ class PlaceMap(QWidget):
         painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
 
         painter.drawRect(self.rect())
-        radius = 5
+
+        #painter.drawPixmap(0, 0, self.pixmap)
+        #painter.drawPixmap(0, 0, self.testpixmap)
 
         for s in self.shapes:
             poly_points = []
@@ -188,6 +272,13 @@ class PlaceMap(QWidget):
 
             painter.drawPolygon(QPolygon(poly_points))
 
+        for v in self.vPolygons:
+            if isinstance(v, QPolygon):
+                painter.setBrush(QBrush(QColor('#' + uuid.uuid4().hex[:6]), Qt.SolidPattern))
+                painter.drawPolygon(v)
+
+        radius = 3
+
         for p_id, p in self.placeList.items():
             xPos = p['Coordinates'][0]
             yPos = p['Coordinates'][1]
@@ -195,15 +286,22 @@ class PlaceMap(QWidget):
             p.update({'Map Coords': (self.adjustCoords['X Origin'] + (xPos - self.adjustCoords['Left']) * self.adjustCoords['Ratio'],
                                      self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - yPos) * self.adjustCoords['Ratio'])})
 
-            #print(p['Object'].getName() + ': (' + str((p['Map Coords'][0] - radius)/self.width()) + ', ' + str((p['Map Coords'][1] - radius)/self.height()) + ')')
-            if p['Local']:
-                painter.setBrush(QBrush(QColor(245, 223, 77), Qt.SolidPattern))
-            else:
-                painter.setBrush(QBrush(QColor(147, 149, 151), Qt.SolidPattern))
+            if 0 < p['Map Coords'][0] < self.width() and 0 < p['Map Coords'][1] < self.height():
+                #print(p['Object'].getName() + ': (' + str((p['Map Coords'][0] - radius)/self.width()) + ', ' + str((p['Map Coords'][1] - radius)/self.height()) + ')')
 
-            if self.selectedPlace is None or p_id != self.selectedPlace.getID():
-                painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
-                painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
+                if p['Title'] is None:
+                    painter.setBrush(QBrush(QColor(147, 149, 151), Qt.SolidPattern))
+                else:
+                    painter.setBrush(QBrush(QColor(245, 223, 77), Qt.SolidPattern))
+
+                    titleHex = p['Title'].getAttribute('Color')
+                    titleColor = QColor('#' + titleHex)
+                    painter.setBrush(QBrush(titleColor, Qt.SolidPattern))
+                    #print('Title: ' + str(p['Title'].getName()) + ', Color: ' + str(QColor(p['Title'].getAttribute('Color'))))
+
+                if self.selectedPlace is None or p_id != self.selectedPlace.getID():
+                    painter.setPen(QPen(Qt.black, .5, Qt.SolidLine))
+                    painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
 
         if self.selectedPlace is not None:
             p = self.placeList[self.selectedPlace.getID()]
@@ -213,10 +311,14 @@ class PlaceMap(QWidget):
             p.update({'Map Coords': (self.adjustCoords['X Origin'] + (xPos - self.adjustCoords['Left']) * self.adjustCoords['Ratio'],
                                      self.adjustCoords['Y Origin'] + (self.adjustCoords['Top'] - yPos) * self.adjustCoords['Ratio'])})
 
-            if p['Local']:
-                painter.setBrush(QBrush(QColor(245, 223, 77), Qt.SolidPattern))
-            else:
+            if p['Title'] is None:
                 painter.setBrush(QBrush(QColor(147, 149, 151), Qt.SolidPattern))
+            else:
+                painter.setBrush(QBrush(QColor(245, 223, 77), Qt.SolidPattern))
+
+                titleHex = p['Title'].getAttribute('Color')
+                titleColor = QColor('#' + titleHex)
+                painter.setBrush(QBrush(titleColor, Qt.SolidPattern))
 
             painter.setPen(QPen(Qt.blue, 1.75, Qt.SolidLine))
             painter.drawEllipse(int(p['Map Coords'][0] - radius), int(p['Map Coords'][1] - radius), int(radius * 2), int(radius * 2))
@@ -282,7 +384,8 @@ class PlaceMap(QWidget):
                 self.dragMapFlag = False
                 if event.button() == Qt.LeftButton:
                     if self.selectedPlace is not None:
-                        self.window.page_factory('display_place_page', {'Place': self.selectedPlace})
+                        pass
+                        #self.window.page_factory('display_place_page', {'Place': self.selectedPlace})
 
                 return True
             elif event.type() == QEvent.MouseMove:
@@ -291,7 +394,7 @@ class PlaceMap(QWidget):
                 for p_id, p in self.placeList.items():
                     map_coords = p['Map Coords']
 
-                    if self.withinDistance(map_coords, (event.pos().x(), event.pos().y()), 10):
+                    if self.withinDistance(map_coords, (event.pos().x(), event.pos().y()), 7):
                         self.selectedPlace = p['Object']
                         self.setCursor(QCursor(Qt.PointingHandCursor))
                         break
@@ -322,12 +425,16 @@ class PlaceMap(QWidget):
             return False
 
     def get_focus_area(self):
-        # Get bounding box of whole shapefile by iterating through shapes and finding maximas
+        # Get bounding box of for just the places by iterating through places and finding maximas
         map_edges = {}
 
         localPoint = None
         for p_id, p in self.placeList.items():
-            if p['Local'] or not self.localPlaces:
+            # Need to differentiate b/w bounding box of all places or just those for the person
+            print('Associated Title: ' + str(p['Title']) + ', Reign Zoom: ' + str(self.reignZoom))
+
+            # When self.reignZoom is true, only use places where p['Title'] is not None, else use all places
+            if p['Title'] is not None or not self.reignZoom:
                 localPoint = p['Coordinates']
                 if 'left' in map_edges:
                     if localPoint[0] < map_edges['left']:
@@ -346,7 +453,7 @@ class PlaceMap(QWidget):
 
         self.buffer = .075
 
-        if map_edges['top'] == map_edges['bottom'] and localPoint is not None:
+        if localPoint is not None and map_edges['top'] == map_edges['bottom']:
             self.zoom = 10
             map_edges['left'] = localPoint[0] - (2 ** (self.zoom - 1))
             map_edges['bottom'] = localPoint[1] - (2 ** (self.zoom - 1))
@@ -455,6 +562,7 @@ class PlaceMap(QWidget):
 
         # print(self.adjustCoords)
 
+
 ## Interactive Object Label for Relations and Titles
 class ObjectLabel(QLabel):
     def __init__(self, window, subject, context=None):
@@ -491,6 +599,7 @@ class ObjectLabel(QLabel):
                 self.window.logger.log('Error', str(objectType) + ' is not a valid object type for ObjectLabel')
             return True
         return False
+
 
 ## Display widget for events (actual editing within separate event widget
 class EventsWidget(QGroupBox):

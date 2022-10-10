@@ -734,7 +734,9 @@
             "Longitude": "8.274"
         },
         "Events": {},
-        "Reign List": []
+        "Reign List": [
+            "80ca24fb"
+        ]
     },
     "d89674dc": {
         "Attributes": {
@@ -2853,6 +2855,452 @@
             "Name": "Bardowick",
             "Latitude": "53.295",
             "Longitude": "10.385"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "737b73b2": {
+        "Attributes": {
+            "Name": "K\u00f6lleda",
+            "Latitude": "51.19",
+            "Longitude": "11.25"
+        },
+        "Events": {
+            "ded778d6": {
+                "Date": "6/11/1519",
+                "Content": "Given to Counts of Werthern"
+            },
+            "03f50f3c": {
+                "Date": "1547",
+                "Content": "Following Schmalkaldic War, given to Saxony"
+            }
+        },
+        "Reign List": [
+            "cbb1fc07"
+        ]
+    },
+    "1474aef0": {
+        "Attributes": {
+            "Name": "Beichlingen",
+            "Latitude": "51.23",
+            "Longitude": "11.255"
+        },
+        "Events": {},
+        "Reign List": [
+            "cbb1fc07"
+        ]
+    },
+    "e82116a8": {
+        "Attributes": {
+            "Name": "Krayenburg",
+            "Latitude": "50.84",
+            "Longitude": "10.13"
+        },
+        "Events": {
+            "15434ea1": {
+                "Date": "",
+                "Content": "Originally owned by the Hersfeld monastery"
+            },
+            "cffddb8c": {
+                "Date": "",
+                "Content": "Held as a fiefdom by the lords of Frankenstein"
+            },
+            "a1acadb2": {
+                "Date": "1407",
+                "Content": "Given to Thuringian Landgraves"
+            },
+            "7c0184ca": {
+                "Date": "1516",
+                "Content": "Bought by Adam of Beichlingen"
+            },
+            "18553bd6": {
+                "Date": "1567",
+                "Content": "Transferred to Ernestine Duchy of Saxony"
+            },
+            "0c507b1a": {
+                "Date": "1596",
+                "Content": "Becomes a part of Saxony-Eisenach"
+            }
+        },
+        "Reign List": []
+    },
+    "724d9a2c": {
+        "Attributes": {
+            "Name": "Kelbra",
+            "Latitude": "51.435",
+            "Longitude": "11.04"
+        },
+        "Events": {
+            "2cc9f4f0": {
+                "Date": "1103",
+                "Content": "Inherited by the Counts of the Rothenburg"
+            },
+            "a8acc5a8": {
+                "Date": "1223",
+                "Content": "Count Christian of Rothenburg died childless, so Kelbra was inherited into Beichlingen"
+            },
+            "7ca40f31": {
+                "Date": "1348",
+                "Content": "Sold to the counts of Hohnstein"
+            }
+        },
+        "Reign List": []
+    },
+    "f453a2af": {
+        "Attributes": {
+            "Name": "Br\u00fccken (Helme)",
+            "Latitude": "51.445",
+            "Longitude": "11.2"
+        },
+        "Events": {
+            "a90eed9f": {
+                "Date": "",
+                "Content": "Originally owned by the Hersfeld monastery"
+            },
+            "986c63ab": {
+                "Date": "",
+                "Content": "Apparently part of the early County of Beichlingen"
+            },
+            "d1491279": {
+                "Date": "8/28/1498",
+                "Content": "Hans of Werthen bought the castle from Christoph of Witzleben"
+            }
+        },
+        "Reign List": []
+    },
+    "c7d41aac": {
+        "Attributes": {
+            "Name": "Hanstein",
+            "Latitude": "51.34",
+            "Longitude": "9.94"
+        },
+        "Events": {
+            "8389c663": {
+                "Date": "1209",
+                "Content": "Given to Archbishop of Mainz, Siegfried"
+            }
+        },
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "1181a0af": {
+        "Attributes": {
+            "Name": "Heiligenstadt",
+            "Latitude": "51.38",
+            "Longitude": "10.135"
+        },
+        "Events": {},
+        "Reign List": [
+            "80ca24fb"
+        ]
+    },
+    "13e0efea": {
+        "Attributes": {
+            "Name": "Gleichenstein",
+            "Latitude": "51.29",
+            "Longitude": "10.205"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "c68dc3ad": {
+        "Attributes": {
+            "Name": "Rusteberg",
+            "Latitude": "51.385",
+            "Longitude": "10"
+        },
+        "Events": {},
+        "Reign List": [
+            "80ca24fb"
+        ]
+    },
+    "a7114f54": {
+        "Attributes": {
+            "Name": "Sichelnstein",
+            "Latitude": "51.35",
+            "Longitude": "9.64"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "02e91398": {
+        "Attributes": {
+            "Name": "Benterode",
+            "Latitude": "51.345",
+            "Longitude": "9.62"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "35838add": {
+        "Attributes": {
+            "Name": "Uschlag",
+            "Latitude": "51.33",
+            "Longitude": "9.62"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "b113021f": {
+        "Attributes": {
+            "Name": "Spiekershausen",
+            "Latitude": "51.35",
+            "Longitude": "9.56"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "496b91cd": {
+        "Attributes": {
+            "Name": "Speele",
+            "Latitude": "51.38",
+            "Longitude": "9.565"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "991e1375": {
+        "Attributes": {
+            "Name": "Lutterberg",
+            "Latitude": "51.375",
+            "Longitude": "9.62"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "7bf7c0e5": {
+        "Attributes": {
+            "Name": "Nienhagen",
+            "Latitude": "51.34",
+            "Longitude": "9.66"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "2c2a7d1a": {
+        "Attributes": {
+            "Name": "Escherode",
+            "Latitude": "51.325",
+            "Longitude": "9.665"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "f5fce94d": {
+        "Attributes": {
+            "Name": "Landwehrhagen",
+            "Latitude": "51.35",
+            "Longitude": "9.59"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "04891563": {
+        "Attributes": {
+            "Name": "Dahlheim",
+            "Latitude": "51.32",
+            "Longitude": "9.64"
+        },
+        "Events": {},
+        "Reign List": [
+            "5bfb4864",
+            "865de97b",
+            "0eae0dc3",
+            "f6af5955"
+        ]
+    },
+    "55a96a81": {
+        "Attributes": {
+            "Name": "Frieda",
+            "Latitude": "51.2",
+            "Longitude": "10.13"
+        },
+        "Events": {
+            "a2db8389": {
+                "Date": "",
+                "Content": "Given as a dowry to Theophanu, wife of Otto II"
+            },
+            "5834e9b0": {
+                "Date": "967",
+                "Content": "Property of the counts of Bilstein"
+            },
+            "11351848": {
+                "Date": "1301",
+                "Content": "Sold to Henry I, Landgrave of Hesse"
+            },
+            "fe207df7": {
+                "Date": "1358",
+                "Content": "Given to the lords of Boyneburg"
+            },
+            "d9765515": {
+                "Date": "1583",
+                "Content": "Returned to Hesse"
+            }
+        },
+        "Reign List": []
+    },
+    "e0577a62": {
+        "Attributes": {
+            "Name": "Trent",
+            "Latitude": "46.07",
+            "Longitude": "11.12"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "a4646535": {
+        "Attributes": {
+            "Name": "Venice",
+            "Latitude": "45.435",
+            "Longitude": "12.33"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "679345e4": {
+        "Attributes": {
+            "Name": "Gorizia",
+            "Latitude": "45.945",
+            "Longitude": "13.625"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "9d1bc6fa": {
+        "Attributes": {
+            "Name": "Plesse",
+            "Latitude": "51.6",
+            "Longitude": "9.965"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "7fdc1b92": {
+        "Attributes": {
+            "Name": "Duderstadt",
+            "Latitude": "51.51",
+            "Longitude": "10.26"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "ce7dfeb4": {
+        "Attributes": {
+            "Name": "Muhlhausen",
+            "Latitude": "51.21",
+            "Longitude": "10.46"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "84294f72": {
+        "Attributes": {
+            "Name": "Eisenach",
+            "Latitude": "50.975",
+            "Longitude": "10.32"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "b66d7940": {
+        "Attributes": {
+            "Name": "Gotha",
+            "Latitude": "50.95",
+            "Longitude": "10.705"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "f673c1df": {
+        "Attributes": {
+            "Name": "Erfurt",
+            "Latitude": "50.978",
+            "Longitude": "11.03"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "afcfa140": {
+        "Attributes": {
+            "Name": "Munden",
+            "Latitude": "51.417",
+            "Longitude": "9.65"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "3b959581": {
+        "Attributes": {
+            "Name": "Bursfelde",
+            "Latitude": "51.542",
+            "Longitude": "9.62"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "d368b4c3": {
+        "Attributes": {
+            "Name": "Grubenhagen",
+            "Latitude": "51.765",
+            "Longitude": "9.82"
+        },
+        "Events": {},
+        "Reign List": []
+    },
+    "44fd69e1": {
+        "Attributes": {
+            "Name": "Wolfenbuttel",
+            "Latitude": "52.16",
+            "Longitude": "10.535"
         },
         "Events": {},
         "Reign List": []

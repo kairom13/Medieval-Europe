@@ -21,6 +21,7 @@ from Medieval_Europe import get_parent_path
 ###                                ###
 ######################################
 
+
 class CustomObject(ABC):
     def __init__(self, logger, objectType, objectID, attribute_list, simple_connections):
         if objectID is None:
@@ -510,7 +511,9 @@ class Title(CustomObject):
         attributes = ['Realm Name',  # The name of the realm the title refers to (e.g. Bavaria, Tirol, France, etc)
                       'Realm Title',  # The type of title (e.g. Duchy, County, Kingdom, etc)
                       'Male Ruler Title',  # How the male ruler is referred to, vis-à-vis their title (e.g. Duke, Count, King, etc)
-                      'Female Ruler Title']  # How the female ruler is referred to, vis-à-vis their title (e.g. Duchess, Countess, Queen, etc)
+                      'Female Ruler Title',  # How the female ruler is referred to, vis-à-vis their title (e.g. Duchess, Countess, Queen, etc)
+                      'Color']  # A unique but random hexidecimal value that describes the color of this title
+
         simpleConnections = ['Predecessor', 'Successor']  # The types of connections this object can have that are unique
 
         super().__init__(logger, 'Title', titleID, attributes, simpleConnections)
@@ -522,8 +525,11 @@ class Title(CustomObject):
             self.isTitular = False
         else:
             for a in self.attributes:
-                self.logger.log('Detailed', 'Initial setting of attribute: ' + str(a), True)
-                self.updateAttribute(a, init_dict['Attributes'][a])
+                if a in init_dict['Attributes']:
+                    self.logger.log('Detailed', 'Initial setting of attribute: ' + str(a), True)
+                    self.updateAttribute(a, init_dict['Attributes'][a])
+                else:
+                    self.logger.log('Warning', str(a) + ' is listed as an attribute but none was found to initialize')
             self.isTitular = init_dict['Titular']
             self.logger.log('Detailed', 'Initial setting of isTitular: ' + str(self.isTitular), True)
 
@@ -535,6 +541,8 @@ class Title(CustomObject):
             self.logger.log('Detailed', 'Initial setting of ' + str(len(init_dict['Events'])) + ' events', True)
             for e in init_dict['Events']:
                 self.updateEvent(e, init_dict['Events'][e])
+
+        self.updateAttribute('Color', uuid.uuid4().hex[:6])
 
         self.setName()
         self.logger.log('Detailed', 'Initial setting of names: ' + str(list(self.name.items())), True)

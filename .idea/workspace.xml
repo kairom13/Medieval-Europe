@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1cc36cf-d2b0-4cc3-94a5-f47e3187f9cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Scratch/VoronoiTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scratch/VoronoiTitles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/CustomObjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/CustomObjects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/Reigns.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/Reigns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Displays.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/Widgets/Displays.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medieval_Europe/Code/page_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Code/page_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_people.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_people.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_places.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_places.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_titles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Files/Data/Temps/temp_titles.json" afterDir="false" />
@@ -19,8 +21,7 @@
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Logs/code_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Logs/code_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Logs/detailed_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Logs/detailed_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medieval_Europe/Logs/warning_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/Logs/warning_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scratch/ReignTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scratch/ReignTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scratch/test_cases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Scratch/test_cases.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medieval_Europe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medieval_Europe/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <recent name="$PROJECT_DIR$/Medieval_Europe/Code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.VoronoiTest">
     <configuration name="ReignTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Medieval-Europe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,6 +103,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scratch/ReignTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VoronoiTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medieval-Europe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scratch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scratch/VoronoiTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VoronoiTitles" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medieval-Europe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scratch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scratch/VoronoiTitles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,62 +195,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Medieval-Europe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Medieval-Europe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Medieval Europe/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.ReignTest" />
+      <item itemvalue="Python.VoronoiTest" />
+      <item itemvalue="Python.VoronoiTitles" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.network_test" />
-      <item itemvalue="Python.scratch" />
-      <item itemvalue="Python.setup" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.VoronoiTest" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.VoronoiTitles" />
         <item itemvalue="Python.ReignTest" />
         <item itemvalue="Python.network_test" />
-        <item itemvalue="Python.setup" />
-        <item itemvalue="Python.scratch" />
       </list>
     </recent_temporary>
   </component>

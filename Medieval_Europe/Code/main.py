@@ -14,6 +14,7 @@ from Medieval_Europe.Code.Widgets.Interactives import ChooseGenderDialog
 from Medieval_Europe.Code.page_generator import PageGenerator
 from Medieval_Europe import get_parent_path
 
+
 # Main Window to display application
 class MainWindow(QMainWindow):
     def __init__(self, app, *args, **kwargs):

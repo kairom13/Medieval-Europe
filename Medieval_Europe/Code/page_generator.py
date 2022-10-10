@@ -134,7 +134,7 @@ class PageGenerator:
 
             mapLayout = QVBoxLayout(mapGroup)
 
-            placeMap = PlaceMap(self.window, {})
+            placeMap = PlaceMap(self.window)
             mapLayout.addWidget(placeMap)
             self.logger.log('Detailed', 'Successfully created place map and added to view object list')
 
@@ -549,14 +549,14 @@ class PageGenerator:
         titleGroup.layout.addWidget(scroll)
 
         ############ Map Group #############
-        placeList = {}
+        placeTitleDict = {}
         for r, reign in person.reignList.items():
             for p, place in reign.placeList.items():
-                if p not in placeList:
-                    placeList.update({p: place})
+                if p not in placeTitleDict:
+                    placeTitleDict.update({p: reign.getConnection('Title')})
                     self.logger.log('Detailed', 'Added {' + p + '} as a place for {' + person.getID() + '}')
 
-        placeMap = PlaceMap(self.window, placeList)
+        placeMap = PlaceMap(self.window, placeTitleDict)
         mapLayout.addWidget(placeMap)
         self.logger.log('Detailed', 'Successfully created and added the map of places')
 
@@ -1115,12 +1115,8 @@ class PageGenerator:
 
             reignLabel = QHBoxLayout()
             reignLabel.addStretch(1)
-
-            ruler = reignObject.getConnection('Person')
-
             reignLabel.addWidget(ObjectLabel(self.window, reignObject, 'Page Title'))
             reignLabel.addWidget(QLabel(reignObject.getDateString()))
-
             reignLabel.addStretch(1)
 
             reignScrollWidget.layout.addLayout(reignLabel)

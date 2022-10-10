@@ -4,7 +4,8 @@
             "Realm Name": "Castile",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "f70223"
         },
         "Titular": false,
         "Connections": {
@@ -21,7 +22,8 @@
             "Realm Name": "Artois",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "a1fe6a"
         },
         "Titular": false,
         "Connections": {
@@ -34,19 +36,18 @@
             "6349bf34",
             "9a1d02e5",
             "edf358c7",
+            "b80264f3",
             "72cba135",
             "c14427d8",
             "d5c93449",
             "c62ada3e",
-            "2e712a06",
+            "a0dd0d41",
             "b08d90ba",
             "715ea14d",
             "8a5bacda",
             "5eba9084",
             "997862c3",
-            "1364b117",
-            "a0dd0d41",
-            "b80264f3"
+            "1364b117"
         ]
     },
     "192ed49e": {
@@ -54,7 +55,8 @@
             "Realm Name": "Austria",
             "Realm Title": "Archduchy",
             "Male Ruler Title": "Archduke",
-            "Female Ruler Title": "Archduchess"
+            "Female Ruler Title": "Archduchess",
+            "Color": "27b432"
         },
         "Titular": false,
         "Connections": {
@@ -69,7 +71,8 @@
             "Realm Name": "Luxembourg",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "8d1437"
         },
         "Titular": false,
         "Connections": {
@@ -88,7 +91,8 @@
             "Realm Name": "Brandenburg",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "10097c"
         },
         "Titular": false,
         "Connections": {
@@ -103,7 +107,8 @@
             "Realm Name": "France",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "174d1d"
         },
         "Titular": false,
         "Connections": {
@@ -133,7 +138,8 @@
             "Realm Name": "Austria",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "708f49"
         },
         "Titular": false,
         "Connections": {
@@ -154,7 +160,8 @@
             "Realm Name": "Hainaut",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "82dcca"
         },
         "Titular": false,
         "Connections": {
@@ -173,7 +180,8 @@
             "Realm Name": "Austria",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "fa5399"
         },
         "Titular": false,
         "Connections": {
@@ -197,7 +205,8 @@
             "Realm Name": "Inner Austria",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "3718ab"
         },
         "Titular": true,
         "Connections": {
@@ -212,7 +221,8 @@
             "Realm Name": "the Rhine",
             "Realm Title": "County Palatine",
             "Male Ruler Title": "Count Palatine",
-            "Female Ruler Title": "Countess Palatine"
+            "Female Ruler Title": "Countess Palatine",
+            "Color": "8f99ad"
         },
         "Titular": false,
         "Connections": {
@@ -239,7 +249,8 @@
             "Realm Name": "Bavaria",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "931105"
         },
         "Titular": false,
         "Connections": {
@@ -278,7 +289,8 @@
             "Realm Name": "Lorraine",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "1df891"
         },
         "Titular": false,
         "Connections": {
@@ -301,7 +313,8 @@
             "Realm Name": "Germany",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "1a83b3"
         },
         "Titular": false,
         "Connections": {
@@ -320,7 +333,8 @@
             "Realm Name": "Auvergne",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "72ca84"
         },
         "Titular": false,
         "Connections": {
@@ -343,7 +357,8 @@
             "Realm Name": "Zeeland",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "3e1571"
         },
         "Titular": false,
         "Connections": {
@@ -360,7 +375,8 @@
             "Realm Name": "Styria",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "6d334b"
         },
         "Titular": false,
         "Connections": {
@@ -380,7 +396,8 @@
             "Realm Name": "Lothier",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "da447c"
         },
         "Titular": false,
         "Connections": {
@@ -397,7 +414,8 @@
             "Realm Name": "Saxony",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "38703c"
         },
         "Titular": false,
         "Connections": {
@@ -424,7 +442,8 @@
             "Realm Name": "Merania",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "40abed"
         },
         "Titular": false,
         "Connections": {
@@ -442,7 +461,8 @@
             "Realm Name": "Rethel",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "3a94c3"
         },
         "Titular": false,
         "Connections": {
@@ -465,7 +485,8 @@
             "Realm Name": "Charolais",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "516ce6"
         },
         "Titular": false,
         "Connections": {
@@ -480,7 +501,8 @@
             "Realm Name": "Guelders",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "c215ee"
         },
         "Titular": false,
         "Connections": {
@@ -495,7 +517,8 @@
             "Realm Name": "Bourbon",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "fddc47"
         },
         "Titular": false,
         "Connections": {
@@ -517,7 +540,8 @@
             "Realm Name": "Limburg",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "3ca076"
         },
         "Titular": false,
         "Connections": {
@@ -535,7 +559,8 @@
             "Realm Name": "Zutphen",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "190a38"
         },
         "Titular": false,
         "Connections": {
@@ -550,7 +575,8 @@
             "Realm Name": "Namur",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": "Margravine"
+            "Female Ruler Title": "Margravine",
+            "Color": "c73c4d"
         },
         "Titular": false,
         "Connections": {
@@ -571,7 +597,8 @@
             "Realm Name": "Franconia",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "965e3f"
         },
         "Titular": false,
         "Connections": {
@@ -586,7 +613,8 @@
             "Realm Name": "Chalon",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "d4e130"
         },
         "Titular": false,
         "Connections": {
@@ -604,7 +632,8 @@
             "Realm Name": "Holland",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "9fa0ae"
         },
         "Titular": false,
         "Connections": {
@@ -622,7 +651,8 @@
             "Realm Name": "Flanders",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "dce12f"
         },
         "Titular": false,
         "Connections": {
@@ -658,7 +688,8 @@
             "Realm Name": "Nevers",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "b116c0"
         },
         "Titular": false,
         "Connections": {
@@ -685,7 +716,8 @@
             "Realm Name": "Tyrol",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "a5b2cf"
         },
         "Titular": false,
         "Connections": {
@@ -700,7 +732,8 @@
             "Realm Name": "East Francia",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "725c9d"
         },
         "Titular": false,
         "Connections": {
@@ -725,7 +758,8 @@
             "Realm Name": "Burgundy",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "fad971"
         },
         "Titular": false,
         "Connections": {
@@ -754,7 +788,8 @@
             "Realm Name": "Auxerre",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "555302"
         },
         "Titular": false,
         "Connections": {
@@ -781,7 +816,8 @@
             "Realm Name": "Swabia",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "d26768"
         },
         "Titular": false,
         "Connections": {
@@ -805,7 +841,8 @@
             "Realm Name": "Burgundy",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "5d4896"
         },
         "Titular": false,
         "Connections": {
@@ -820,12 +857,14 @@
             "19b1454e",
             "e8104db8",
             "131abe6b",
+            "6b02ac93",
             "53e2822c",
             "c1720aed",
             "f6682136",
             "5eeed9ee",
             "6ee4cacf",
             "bec12993",
+            "e175d417",
             "f78a81c3",
             "df08292c",
             "708a00de",
@@ -833,9 +872,7 @@
             "89b5a07f",
             "43f627e5",
             "c218151a",
-            "7b667344",
-            "e175d417",
-            "6b02ac93"
+            "7b667344"
         ]
     },
     "f31c2324": {
@@ -843,7 +880,8 @@
             "Realm Name": "Brabant",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "37d4dd"
         },
         "Titular": false,
         "Connections": {
@@ -868,7 +906,8 @@
             "Realm Name": "Boulogne",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "46b1bd"
         },
         "Titular": false,
         "Connections": {
@@ -891,7 +930,8 @@
             "Realm Name": "Tonnerre",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "bd6b83"
         },
         "Titular": false,
         "Connections": {
@@ -913,7 +953,8 @@
             "Realm Name": "Hungary",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "b11360"
         },
         "Titular": false,
         "Connections": {
@@ -928,7 +969,8 @@
             "Realm Name": "Rome",
             "Realm Title": "Empire",
             "Male Ruler Title": "Emperor",
-            "Female Ruler Title": "Empress"
+            "Female Ruler Title": "Empress",
+            "Color": "4eb1d7"
         },
         "Titular": false,
         "Connections": {
@@ -963,7 +1005,8 @@
             "Realm Name": "Lower Lorraine",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "2683db"
         },
         "Titular": false,
         "Connections": {
@@ -980,7 +1023,8 @@
             "Realm Name": "Brunswick-Luneburg",
             "Realm Title": "Duchy",
             "Male Ruler Title": "Duke",
-            "Female Ruler Title": "Duchess"
+            "Female Ruler Title": "Duchess",
+            "Color": "24aa68"
         },
         "Titular": false,
         "Connections": {
@@ -997,7 +1041,8 @@
             "Realm Name": "the Nordmark",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": "Margravine"
+            "Female Ruler Title": "Margravine",
+            "Color": "4ab511"
         },
         "Titular": false,
         "Connections": {
@@ -1012,7 +1057,8 @@
             "Realm Name": "Styria",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": "Margravine"
+            "Female Ruler Title": "Margravine",
+            "Color": "662f12"
         },
         "Titular": false,
         "Connections": {
@@ -1032,7 +1078,8 @@
             "Realm Name": "West Francia",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "407a81"
         },
         "Titular": false,
         "Connections": {
@@ -1062,7 +1109,8 @@
             "Realm Name": "Cologne",
             "Realm Title": "Archbishopric",
             "Male Ruler Title": "Archbishop",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "adf6a3"
         },
         "Titular": false,
         "Connections": {
@@ -1079,7 +1127,8 @@
             "Realm Name": "Worms",
             "Realm Title": "Prince-Bishopric",
             "Male Ruler Title": "Prince-Bishop",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "cc8d6d"
         },
         "Titular": false,
         "Connections": {
@@ -1096,7 +1145,8 @@
             "Realm Name": "Ballenstedt",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "df2859"
         },
         "Titular": false,
         "Connections": {
@@ -1117,7 +1167,8 @@
             "Realm Name": "Northeim",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "a49acc"
         },
         "Titular": false,
         "Connections": {
@@ -1137,7 +1188,8 @@
             "Realm Name": "Magdeburg",
             "Realm Title": "Prince Archbishopric",
             "Male Ruler Title": "Prince Archbishop",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "8e09fb"
         },
         "Titular": false,
         "Connections": {
@@ -1156,7 +1208,8 @@
             "Realm Name": "Brunswick",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "f8ee0a"
         },
         "Titular": false,
         "Connections": {
@@ -1180,7 +1233,8 @@
             "Realm Name": "Werden-Helmstedt",
             "Realm Title": "Abbey",
             "Male Ruler Title": "Abbot",
-            "Female Ruler Title": "Abbess"
+            "Female Ruler Title": "Abbess",
+            "Color": "80099b"
         },
         "Titular": false,
         "Connections": {
@@ -1198,7 +1252,8 @@
             "Realm Name": "Haldensleben",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "7a8977"
         },
         "Titular": false,
         "Connections": {
@@ -1217,7 +1272,8 @@
             "Realm Name": "Walbeck",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "460318"
         },
         "Titular": false,
         "Connections": {
@@ -1240,7 +1296,8 @@
             "Realm Name": "Corvey",
             "Realm Title": "Abbey",
             "Male Ruler Title": "Abbot",
-            "Female Ruler Title": "Abbess"
+            "Female Ruler Title": "Abbess",
+            "Color": "2022ed"
         },
         "Titular": false,
         "Connections": {
@@ -1257,7 +1314,8 @@
             "Realm Name": "Supplinburg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "d5abf9"
         },
         "Titular": false,
         "Connections": {
@@ -1276,7 +1334,8 @@
             "Realm Name": "Plotzkau",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "193906"
         },
         "Titular": false,
         "Connections": {
@@ -1293,7 +1352,8 @@
             "Realm Name": "Schaumburg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "33e050"
         },
         "Titular": false,
         "Connections": {
@@ -1316,7 +1376,8 @@
             "Realm Name": "Dassel",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "867221"
         },
         "Titular": false,
         "Connections": {
@@ -1334,7 +1395,8 @@
             "Realm Name": "Boyneburg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "a6d3cf"
         },
         "Titular": false,
         "Connections": {
@@ -1351,7 +1413,8 @@
             "Realm Name": "M\u00e2con",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "73476d"
         },
         "Titular": false,
         "Connections": {
@@ -1373,7 +1436,8 @@
             "Realm Name": "Weimar",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "8b558c"
         },
         "Titular": false,
         "Connections": {
@@ -1396,7 +1460,8 @@
             "Realm Name": "Orlamunde",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "d5607b"
         },
         "Titular": false,
         "Connections": {
@@ -1413,7 +1478,8 @@
             "Realm Name": "Katlenburg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "966df4"
         },
         "Titular": false,
         "Connections": {
@@ -1436,7 +1502,8 @@
             "Realm Name": "Hallermund",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "46b587"
         },
         "Titular": false,
         "Connections": {
@@ -1456,7 +1523,8 @@
             "Realm Name": "Rheineck",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "74bf08"
         },
         "Titular": false,
         "Connections": {
@@ -1471,7 +1539,8 @@
             "Realm Name": "Montbeliard",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "c5de9b"
         },
         "Titular": false,
         "Connections": {
@@ -1499,7 +1568,8 @@
             "Realm Name": "Wurttemberg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "ef5922"
         },
         "Titular": false,
         "Connections": {
@@ -1520,7 +1590,8 @@
             "Realm Name": "Montfaucon",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "bcd04c"
         },
         "Titular": false,
         "Connections": {
@@ -1543,7 +1614,8 @@
             "Realm Name": "Belfort",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "88db76"
         },
         "Titular": false,
         "Connections": {
@@ -1560,7 +1632,8 @@
             "Realm Name": "Hericourt",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "10b529"
         },
         "Titular": false,
         "Connections": {
@@ -1577,7 +1650,8 @@
             "Realm Name": "Pfirt",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "5ea89e"
         },
         "Titular": false,
         "Connections": {
@@ -1596,7 +1670,8 @@
             "Realm Name": "Arlay",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "bb1f49"
         },
         "Titular": false,
         "Connections": {
@@ -1615,7 +1690,8 @@
             "Realm Name": "Vitteaux",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "122148"
         },
         "Titular": false,
         "Connections": {
@@ -1632,7 +1708,8 @@
             "Realm Name": "La Riviere",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "5d7b74"
         },
         "Titular": false,
         "Connections": {
@@ -1649,7 +1726,8 @@
             "Realm Name": "Scheyern",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "f90f3f"
         },
         "Titular": false,
         "Connections": {
@@ -1668,7 +1746,8 @@
             "Realm Name": "Pettendorf",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "df6c52"
         },
         "Titular": false,
         "Connections": {
@@ -1689,7 +1768,8 @@
             "Realm Name": "Waldeck (Upper Palatinate)",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "c6bc9f"
         },
         "Titular": false,
         "Connections": {
@@ -1709,7 +1789,8 @@
             "Realm Name": "Ebersberg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "ed39c7"
         },
         "Titular": false,
         "Connections": {
@@ -1731,7 +1812,8 @@
             "Realm Name": "the Latins",
             "Realm Title": "Empire",
             "Male Ruler Title": "Emperor",
-            "Female Ruler Title": "Empress"
+            "Female Ruler Title": "Empress",
+            "Color": "377210"
         },
         "Titular": false,
         "Connections": {
@@ -1752,7 +1834,8 @@
             "Realm Name": "Francia",
             "Realm Title": "Empire",
             "Male Ruler Title": "Emperor",
-            "Female Ruler Title": "Empress"
+            "Female Ruler Title": "Empress",
+            "Color": "5bca7e"
         },
         "Titular": false,
         "Connections": {
@@ -1770,7 +1853,8 @@
             "Realm Name": "Luxembourg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "ab6fdd"
         },
         "Titular": false,
         "Connections": {
@@ -1793,7 +1877,8 @@
             "Realm Name": "Vermandois",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "7bd396"
         },
         "Titular": false,
         "Connections": {
@@ -1813,7 +1898,8 @@
             "Realm Name": "Meaux",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "3ff727"
         },
         "Titular": false,
         "Connections": {
@@ -1837,7 +1923,8 @@
             "Realm Name": "Soissons",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "d14f41"
         },
         "Titular": false,
         "Connections": {
@@ -1854,7 +1941,8 @@
             "Realm Name": "Champagne",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "f99705"
         },
         "Titular": false,
         "Connections": {
@@ -1869,7 +1957,8 @@
             "Realm Name": "Autun",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "0207e5"
         },
         "Titular": false,
         "Connections": {
@@ -1886,7 +1975,8 @@
             "Realm Name": "Troyes",
             "Realm Title": "Count",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "afa2d6"
         },
         "Titular": false,
         "Connections": {
@@ -1909,7 +1999,8 @@
             "Realm Name": "Maine",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "91aeec"
         },
         "Titular": false,
         "Connections": {
@@ -1935,7 +2026,8 @@
             "Realm Name": "Blois",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "9e31a5"
         },
         "Titular": false,
         "Connections": {
@@ -1955,7 +2047,8 @@
             "Realm Name": "Touraine",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "cc0dfc"
         },
         "Titular": false,
         "Connections": {
@@ -1973,7 +2066,8 @@
             "Realm Name": "Anjou",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "35f839"
         },
         "Titular": false,
         "Connections": {
@@ -1992,7 +2086,8 @@
             "Realm Name": "Omois",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "d12bbf"
         },
         "Titular": false,
         "Connections": {
@@ -2009,7 +2104,8 @@
             "Realm Name": "Chartres",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "37135d"
         },
         "Titular": false,
         "Connections": {
@@ -2024,7 +2120,8 @@
             "Realm Name": "Meissen",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": "Margravine"
+            "Female Ruler Title": "Margravine",
+            "Color": "eea6bc"
         },
         "Titular": false,
         "Connections": {
@@ -2042,7 +2139,8 @@
             "Realm Name": "Valois",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "822489"
         },
         "Titular": false,
         "Connections": {
@@ -2060,7 +2158,8 @@
             "Realm Name": "Turin",
             "Realm Title": "March",
             "Male Ruler Title": "Margrave",
-            "Female Ruler Title": "Margravine"
+            "Female Ruler Title": "Margravine",
+            "Color": "412caf"
         },
         "Titular": false,
         "Connections": {
@@ -2077,7 +2176,8 @@
             "Realm Name": "Italy",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "e970ae"
         },
         "Titular": false,
         "Connections": {
@@ -2096,7 +2196,8 @@
             "Realm Name": "Laon",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "b7b0b2"
         },
         "Titular": false,
         "Connections": {
@@ -2113,7 +2214,8 @@
             "Realm Name": "Senlis",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "2a423d"
         },
         "Titular": false,
         "Connections": {
@@ -2128,7 +2230,8 @@
             "Realm Name": "Bethune",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "221bf8"
         },
         "Titular": false,
         "Connections": {
@@ -2146,7 +2249,8 @@
             "Realm Name": "Avesnes",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "2d7b9a"
         },
         "Titular": false,
         "Connections": {
@@ -2163,7 +2267,8 @@
             "Realm Name": "Dampierre",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "ccc031"
         },
         "Titular": false,
         "Connections": {
@@ -2183,7 +2288,8 @@
             "Realm Name": "Bohemia",
             "Realm Title": "Kingdom",
             "Male Ruler Title": "King",
-            "Female Ruler Title": "Queen"
+            "Female Ruler Title": "Queen",
+            "Color": "53a342"
         },
         "Titular": false,
         "Connections": {
@@ -2202,7 +2308,8 @@
             "Realm Name": "Ligny",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "7f75d4"
         },
         "Titular": false,
         "Connections": {
@@ -2224,7 +2331,8 @@
             "Realm Name": "La Roche",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "b952fa"
         },
         "Titular": false,
         "Connections": {
@@ -2245,7 +2353,8 @@
             "Realm Name": "Beaurevoir",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "6f3e3f"
         },
         "Titular": false,
         "Connections": {
@@ -2263,7 +2372,8 @@
             "Realm Name": "Roussy",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "cf2e5c"
         },
         "Titular": false,
         "Connections": {
@@ -2281,7 +2391,8 @@
             "Realm Name": "Zweibr\u00fccken",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "56f12b"
         },
         "Titular": false,
         "Connections": {
@@ -2298,7 +2409,8 @@
             "Realm Name": "Durbuy",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "61b3e7"
         },
         "Titular": false,
         "Connections": {
@@ -2317,7 +2429,8 @@
             "Realm Name": "Arlon",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "fecd68"
         },
         "Titular": false,
         "Connections": {
@@ -2337,7 +2450,8 @@
             "Realm Name": "Monschau",
             "Realm Title": "Lordship",
             "Male Ruler Title": "Lord",
-            "Female Ruler Title": "Lady"
+            "Female Ruler Title": "Lady",
+            "Color": "359009"
         },
         "Titular": false,
         "Connections": {
@@ -2354,7 +2468,8 @@
             "Realm Name": "Latins",
             "Realm Title": "Empire",
             "Male Ruler Title": "Emperor",
-            "Female Ruler Title": "Empress"
+            "Female Ruler Title": "Empress",
+            "Color": "64155f"
         },
         "Titular": true,
         "Connections": {
@@ -2373,7 +2488,8 @@
             "Realm Name": "Saint Pol",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "8aa2b2"
         },
         "Titular": false,
         "Connections": {
@@ -2391,7 +2507,8 @@
             "Realm Name": "the Palatinate",
             "Realm Title": "Electorate",
             "Male Ruler Title": "Elector",
-            "Female Ruler Title": "Electress"
+            "Female Ruler Title": "Electress",
+            "Color": "3c1a37"
         },
         "Titular": false,
         "Connections": {
@@ -2408,7 +2525,8 @@
             "Realm Name": "Altkirch",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "76bcf4"
         },
         "Titular": false,
         "Connections": {
@@ -2425,7 +2543,8 @@
             "Realm Name": "Bar",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "bb3178"
         },
         "Titular": false,
         "Connections": {
@@ -2442,7 +2561,8 @@
             "Realm Name": "Neuch\u00e2tel",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "9f79b0"
         },
         "Titular": false,
         "Connections": {
@@ -2461,7 +2581,8 @@
             "Realm Name": "Empty",
             "Realm Title": "",
             "Male Ruler Title": "",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "f729e0"
         },
         "Titular": false,
         "Connections": {
@@ -2476,7 +2597,8 @@
             "Realm Name": "Winzenburg",
             "Realm Title": "County",
             "Male Ruler Title": "Count",
-            "Female Ruler Title": "Countess"
+            "Female Ruler Title": "Countess",
+            "Color": "c5b916"
         },
         "Titular": false,
         "Connections": {
@@ -2495,7 +2617,8 @@
             "Realm Name": "Hildesheim",
             "Realm Title": "Bishopric",
             "Male Ruler Title": "Bishop",
-            "Female Ruler Title": ""
+            "Female Ruler Title": "",
+            "Color": "1df071"
         },
         "Titular": false,
         "Connections": {
@@ -2513,7 +2636,8 @@
             "Realm Name": "Quedlinburg",
             "Realm Title": "Abbey",
             "Male Ruler Title": "Abbot",
-            "Female Ruler Title": "Abbess"
+            "Female Ruler Title": "Abbess",
+            "Color": "e569cb"
         },
         "Titular": false,
         "Connections": {
@@ -2523,6 +2647,42 @@
         "Events": {},
         "Reign List": [
             "a87ac022"
+        ]
+    },
+    "9254bb06": {
+        "Attributes": {
+            "Realm Name": "Beichlingen",
+            "Realm Title": "County",
+            "Male Ruler Title": "Count",
+            "Female Ruler Title": "Countess",
+            "Color": "ef4a11"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "cbb1fc07"
+        ]
+    },
+    "da07f41c": {
+        "Attributes": {
+            "Realm Name": "Mainz",
+            "Realm Title": "Elector Archbishopric",
+            "Male Ruler Title": "Archbishop",
+            "Female Ruler Title": "",
+            "Color": "48ac19"
+        },
+        "Titular": false,
+        "Connections": {
+            "Predecessor": null,
+            "Successor": null
+        },
+        "Events": {},
+        "Reign List": [
+            "80ca24fb"
         ]
     }
 }
